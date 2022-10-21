@@ -142,6 +142,10 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 virtual std::map&lt; std::string, float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1FastDeployModel.html#a195f27d4a81454b830e359ba3998fb97">PrintStatisInfoOfRuntime</a> ()</td></tr>
 <tr class="memdesc:a195f27d4a81454b830e359ba3998fb97 inherit pub_methods_classfastdeploy_1_1FastDeployModel"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the statistic information of runtime in the console, see function <code><a class="el" href="classfastdeploy_1_1FastDeployModel.html#a4d52262130489235c09bb53429d3dd33" title="This is a debug interface, used to record the time of backend runtime. ">EnableRecordTimeOfRuntime()</a></code> for more detail. <br /></td></tr>
 <tr class="separator:a195f27d4a81454b830e359ba3998fb97 inherit pub_methods_classfastdeploy_1_1FastDeployModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8340bd9bc6a5f479138d7f966bba5ea6 inherit pub_methods_classfastdeploy_1_1FastDeployModel"><td class="memItemLeft" align="right" valign="top"><a id="a8340bd9bc6a5f479138d7f966bba5ea6"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1FastDeployModel.html#a8340bd9bc6a5f479138d7f966bba5ea6">EnabledRecordTimeOfRuntime</a> ()</td></tr>
+<tr class="memdesc:a8340bd9bc6a5f479138d7f966bba5ea6 inherit pub_methods_classfastdeploy_1_1FastDeployModel"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the <code><a class="el" href="classfastdeploy_1_1FastDeployModel.html#a4d52262130489235c09bb53429d3dd33" title="This is a debug interface, used to record the time of backend runtime. ">EnableRecordTimeOfRuntime()</a></code> method is enabled. <br /></td></tr>
+<tr class="separator:a8340bd9bc6a5f479138d7f966bba5ea6 inherit pub_methods_classfastdeploy_1_1FastDeployModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -252,7 +256,7 @@ std::vector&lt; <a class="el" href="namespacefastdeploy.html#addd441db144b083efc
 <p>Predict the detection result for an input image. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">im</td><td>The input image data, comes from cv::imread() </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">im</td><td>The input image data, comes from cv::imread(), is a 3-D array with layout HWC, BGR format </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">result</td><td>The output detection result will be writen to this structure </td></tr>
   </table>
   </dd>
@@ -262,8 +266,8 @@ std::vector&lt; <a class="el" href="namespacefastdeploy.html#addd441db144b083efc
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/fastdeploy/1008/FastDeploy/fastdeploy/vision/detection/ppdet/<a class="el" href="ppyoloe_8h_source.html">ppyoloe.h</a></li>
-<li>/fastdeploy/1008/FastDeploy/fastdeploy/vision/detection/ppdet/ppyoloe.cc</li>
+<li>/fastdeploy/1021/FastDeploy/fastdeploy/vision/detection/ppdet/<a class="el" href="ppyoloe_8h_source.html">ppyoloe.h</a></li>
+<li>/fastdeploy/1021/FastDeploy/fastdeploy/vision/detection/ppdet/ppyoloe.cc</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

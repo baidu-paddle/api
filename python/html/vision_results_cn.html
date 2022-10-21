@@ -1,0 +1,367 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" />
+
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.09.15"/>
+        <title>视觉模型预测结果说明 - FastDeploy Python API latest documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=9ec31e2665bf879c1d47d93a8ec4893870ee1e45" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="index.html"><div class="brand">FastDeploy Python API latest documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
+  
+  
+  <span class="sidebar-brand-text">FastDeploy Python API latest documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">文档目录</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="object_detection.html">Object Detection API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ocr.html">OCR API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="semantic_segmentation.html">Semantic Segmentation API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="image_classification.html">Image Classification API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="keypoint_detection.html">Keypoint Detection API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matting.html">Matting API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vision_results_en.html">Description of Vision Results</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="id1">
+<h1>视觉模型预测结果说明<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h1>
+<section id="classifyresult">
+<h2>ClassifyResult<a class="headerlink" href="#classifyresult" title="Permalink to this headline">#</a></h2>
+<p>ClassifyResult代码定义在<code class="docutils literal notranslate"><span class="pre">fastdeploy/vision/common/result.h</span></code>中，用于表明图像的分类结果和置信度.</p>
+<p>API:<code class="docutils literal notranslate"><span class="pre">fastdeploy.vision.ClassifyResult</span></code>, 该结果返回:</p>
+<ul class="simple">
+<li><p><strong>label_ids</strong>(list of int): 成员变量，表示单张图片的分类结果，其个数根据在使用分类模型时传入的<code class="docutils literal notranslate"><span class="pre">topk</span></code>决定，例如可以返回<code class="docutils literal notranslate"><span class="pre">top5</span></code>的分类结果.</p></li>
+<li><p><strong>scores</strong>(list of float): 成员变量，表示单张图片在相应分类结果上的置信度，其个数根据在使用分类模型时传入的<code class="docutils literal notranslate"><span class="pre">topk</span></code>决定，例如可以返回<code class="docutils literal notranslate"><span class="pre">top5</span></code>的分类置信度.</p></li>
+</ul>
+</section>
+<section id="segmentationresult">
+<h2>SegmentationResult<a class="headerlink" href="#segmentationresult" title="Permalink to this headline">#</a></h2>
+<p>SegmentationResult代码定义在<code class="docutils literal notranslate"><span class="pre">fastdeploy/vision/ttommon/result.h</span></code>中，用于表明图像中每个像素预测出来的分割类别和分割类别的概率值.</p>
+<p>API:<code class="docutils literal notranslate"><span class="pre">fastdeploy.vision.SegmentationResult</span></code>, 该结果返回:</p>
+<ul class="simple">
+<li><p><strong>label_map</strong>(list of int): 成员变量，表示单张图片每个像素点的分割类别.</p></li>
+<li><p><strong>score_map</strong>(list of float): 成员变量，与label_map一一对应的所预测的分割类别概率值(当导出模型时指定<code class="docutils literal notranslate"><span class="pre">--output_op</span> <span class="pre">argmax</span></code>)或者经过softmax归一化化后的概率值(当导出模型时指定<code class="docutils literal notranslate"><span class="pre">--output_op</span> <span class="pre">softmax</span></code>或者导出模型时指定<code class="docutils literal notranslate"><span class="pre">--output_op</span> <span class="pre">none</span></code>同时模型初始化的时候设置模型类成员属性<code class="docutils literal notranslate"><span class="pre">apply_softmax=true</span></code>).</p></li>
+<li><p><strong>shape</strong>(list of int): 成员变量，表示输出图片的尺寸，为<code class="docutils literal notranslate"><span class="pre">H*W</span></code>.</p></li>
+</ul>
+</section>
+<section id="detectionresult">
+<h2>DetectionResult<a class="headerlink" href="#detectionresult" title="Permalink to this headline">#</a></h2>
+<p>DetectionResult代码定义在<code class="docutils literal notranslate"><span class="pre">fastdeploy/vision/common/result.h</span></code>中，用于表明图像检测出来的目标框、目标类别和目标置信度.</p>
+<p>API:<code class="docutils literal notranslate"><span class="pre">fastdeploy.vision.DetectionResult</span></code> , 该结果返回:</p>
+<ul class="simple">
+<li><p><strong>boxes</strong>(list of list(float)): 成员变量，表示单张图片检测出来的所有目标框坐标. boxes是一个list，其每个元素为一个长度为4的list， 表示为一个框，每个框以4个float数值依次表示xmin, ymin, xmax, ymax， 即左上角和右下角坐标.</p></li>
+<li><p><strong>scores</strong>(list of float): 成员变量，表示单张图片检测出来的所有目标置信度.</p></li>
+<li><p><strong>label_ids</strong>(list of int): 成员变量，表示单张图片检测出来的所有目标类别.</p></li>
+<li><p><strong>masks</strong>: 成员变量，表示单张图片检测出来的所有实例mask，其元素个数及shape大小与boxes一致.</p></li>
+<li><p><strong>contain_masks</strong>: 成员变量，表示检测结果中是否包含实例mask，实例分割模型的结果此项一般为<code class="docutils literal notranslate"><span class="pre">True</span></code>.</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">fastdeploy.vision.Mask</span></code> , 该结果返回:</p>
+<ul class="simple">
+<li><p><strong>data</strong>: 成员变量，表示检测到的一个mask.</p></li>
+<li><p><strong>shape</strong>: 成员变量，表示mask的尺寸，如 <code class="docutils literal notranslate"><span class="pre">H*W</span></code>.</p></li>
+</ul>
+</section>
+<section id="facedetectionresult">
+<h2>FaceDetectionResult<a class="headerlink" href="#facedetectionresult" title="Permalink to this headline">#</a></h2>
+<p>FaceDetectionResult 代码定义在<code class="docutils literal notranslate"><span class="pre">fastdeploy/vision/common/result.h</span></code>中，用于表明人脸检测出来的目标框、人脸landmarks，目标置信度和每张人脸的landmark数量.</p>
+<p>API:<code class="docutils literal notranslate"><span class="pre">fastdeploy.vision.FaceDetectionResult</span></code> , 该结果返回:</p>
+<ul class="simple">
+<li><p><strong>boxes</strong>(list of list(float)): 成员变量，表示单张图片检测出来的所有目标框坐标。boxes是一个list，其每个元素为一个长度为4的list， 表示为一个框，每个框以4个float数值依次表示xmin, ymin, xmax, ymax， 即左上角和右下角坐标.</p></li>
+<li><p><strong>scores</strong>(list of float): 成员变量，表示单张图片检测出来的所有目标置信度.</p></li>
+<li><p><strong>landmarks</strong>(list of list(float)): 成员变量，表示单张图片检测出来的所有人脸的关键点.</p></li>
+<li><p><strong>landmarks_per_face</strong>(int): 成员变量，表示每个人脸框中的关键点的数量.</p></li>
+</ul>
+</section>
+<section id="keypointdetectionresult">
+<h2>KeyPointDetectionResult<a class="headerlink" href="#keypointdetectionresult" title="Permalink to this headline">#</a></h2>
+<p>KeyPointDetectionResult 代码定义在<code class="docutils literal notranslate"><span class="pre">fastdeploy/vision/common/result.h</span></code>中，用于表明图像中目标行为的各个关键点坐标和置信度。</p>
+<p>API:<code class="docutils literal notranslate"><span class="pre">fastdeploy.vision.KeyPointDetectionResult</span></code> , 该结果返回:</p>
+<ul class="simple">
+<li><p><strong>keypoints</strong>(list of list(float)): 成员变量，表示识别到的目标行为的关键点坐标。<code class="docutils literal notranslate"><span class="pre">keypoints.size()=</span> <span class="pre">N</span> <span class="pre">*</span> <span class="pre">J</span> <span class="pre">*</span> <span class="pre">2</span></code>，</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">N</span></code>：图片中的目标数量</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">J</span></code>：num_joints（一个目标的关键点数量）</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">3</span></code>:坐标信息[x, y]</p></li>
+</ul>
+</li>
+<li><p><strong>scores</strong>(list of float): 成员变量，表示识别到的目标行为的关键点坐标的置信度。<code class="docutils literal notranslate"><span class="pre">scores.size()=</span> <span class="pre">N</span> <span class="pre">*</span> <span class="pre">J</span></code></p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">N</span></code>：图片中的目标数量</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">J</span></code>:num_joints（一个目标的关键点数量）</p></li>
+</ul>
+</li>
+<li><p><strong>num_joints</strong>(int): 成员变量，表示一个目标的关键点数量</p></li>
+</ul>
+</section>
+<section id="facerecognitionresult">
+<h2>FaceRecognitionResult<a class="headerlink" href="#facerecognitionresult" title="Permalink to this headline">#</a></h2>
+<p>FaceRecognitionResult 代码定义在<code class="docutils literal notranslate"><span class="pre">fastdeploy/vision/common/result.h</span></code>中，用于表明人脸识别模型对图像特征的embedding.</p>
+<p>API:<code class="docutils literal notranslate"><span class="pre">fastdeploy.vision.FaceRecognitionResult</span></code>, 该结果返回:</p>
+<ul class="simple">
+<li><p><strong>embedding</strong>(list of float): 成员变量，表示人脸识别模型最终提取的特征embedding，可以用来计算人脸之间的特征相似度.</p></li>
+</ul>
+</section>
+<section id="mattingresult">
+<h2>MattingResult<a class="headerlink" href="#mattingresult" title="Permalink to this headline">#</a></h2>
+<p>MattingResult 代码定义在<code class="docutils literal notranslate"><span class="pre">fastdeploy/vision/common/result.h</span></code>中，用于表明模型预测的alpha透明度的值，预测的前景等.</p>
+<p>API:<code class="docutils literal notranslate"><span class="pre">fastdeploy.vision.MattingResult</span></code>, 该结果返回:</p>
+<ul class="simple">
+<li><p><strong>alpha</strong>(list of float): 是一维向量，为预测的alpha透明度的值，值域为<code class="docutils literal notranslate"><span class="pre">[0.,1.]</span></code>，长度为<code class="docutils literal notranslate"><span class="pre">H*W</span></code>，H,W为输入图像的高和宽.</p></li>
+<li><p><strong>foreground</strong>(list of float): 是一维向量，为预测的前景，值域为<code class="docutils literal notranslate"><span class="pre">[0.,255.]</span></code>，长度为<code class="docutils literal notranslate"><span class="pre">H*W*C</span></code>，H,W为输入图像的高和宽，C一般为3，<code class="docutils literal notranslate"><span class="pre">foreground</span></code>不是一定有的，只有模型本身预测了前景，这个属性才会有效.</p></li>
+<li><p><strong>contain_foreground</strong>(bool): 表示预测的结果是否包含前景.</p></li>
+<li><p><strong>shape</strong>(list of int): 表示输出结果的shape，当<code class="docutils literal notranslate"><span class="pre">contain_foreground</span></code>为<code class="docutils literal notranslate"><span class="pre">false</span></code>，shape只包含<code class="docutils literal notranslate"><span class="pre">(H,W)</span></code>，当<code class="docutils literal notranslate"><span class="pre">contain_foreground</span></code>为<code class="docutils literal notranslate"><span class="pre">true</span></code>，shape包含<code class="docutils literal notranslate"><span class="pre">(H,W,C)</span></code>, C一般为3.</p></li>
+</ul>
+</section>
+<section id="ocrresult">
+<h2>OCRResult<a class="headerlink" href="#ocrresult" title="Permalink to this headline">#</a></h2>
+<p>OCRResult代码定义在<code class="docutils literal notranslate"><span class="pre">fastdeploy/vision/common/result.h</span></code>中，用于表明图像检测和识别出来的文本框，文本框方向分类，以及文本框内的文本内容.</p>
+<p>API:<code class="docutils literal notranslate"><span class="pre">fastdeploy.vision.OCRResult</span></code>, 该结果返回:</p>
+<ul class="simple">
+<li><p><strong>boxes</strong>(list of list(int)): 成员变量，表示单张图片检测出来的所有目标框坐标，boxes.size()表示单张图内检测出的框的个数，每个框以8个int数值依次表示框的4个坐标点，顺序为左下，右下，右上，左上.</p></li>
+<li><p><strong>text</strong>(list of string): 成员变量，表示多个文本框内被识别出来的文本内容，其元素个数与<code class="docutils literal notranslate"><span class="pre">boxes.size()</span></code>一致.</p></li>
+<li><p><strong>rec_scores</strong>(list of float): 成员变量，表示文本框内识别出来的文本的置信度，其元素个数与<code class="docutils literal notranslate"><span class="pre">boxes.size()</span></code>一致.</p></li>
+<li><p><strong>cls_scores</strong>(list of float): 成员变量，表示文本框的分类结果的置信度，其元素个数与<code class="docutils literal notranslate"><span class="pre">boxes.size()</span></code>一致.</p></li>
+<li><p><strong>cls_labels</strong>(list of int): 成员变量，表示文本框的方向分类类别，其元素个数与<code class="docutils literal notranslate"><span class="pre">boxes.size()</span></code>一致.</p></li>
+</ul>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2022, PaddlePaddle
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">视觉模型预测结果说明</a><ul>
+<li><a class="reference internal" href="#classifyresult">ClassifyResult</a></li>
+<li><a class="reference internal" href="#segmentationresult">SegmentationResult</a></li>
+<li><a class="reference internal" href="#detectionresult">DetectionResult</a></li>
+<li><a class="reference internal" href="#facedetectionresult">FaceDetectionResult</a></li>
+<li><a class="reference internal" href="#keypointdetectionresult">KeyPointDetectionResult</a></li>
+<li><a class="reference internal" href="#facerecognitionresult">FaceRecognitionResult</a></li>
+<li><a class="reference internal" href="#mattingresult">MattingResult</a></li>
+<li><a class="reference internal" href="#ocrresult">OCRResult</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/scripts/furo.js"></script>
+    </body>
+</html>

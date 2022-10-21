@@ -106,6 +106,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stru
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1RuntimeOption.html#a9f08901e06aabd15303cf516eb4587cc">UseTrtBackend</a> ()</td></tr>
 <tr class="memdesc:a9f08901e06aabd15303cf516eb4587cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set TensorRT as inference backend, only support GPU. <br /></td></tr>
 <tr class="separator:a9f08901e06aabd15303cf516eb4587cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04ade14294b97e3b71e961a888e5fcaa"><td class="memItemLeft" align="right" valign="top"><a id="a04ade14294b97e3b71e961a888e5fcaa"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1RuntimeOption.html#a04ade14294b97e3b71e961a888e5fcaa">UsePorosBackend</a> ()</td></tr>
+<tr class="memdesc:a04ade14294b97e3b71e961a888e5fcaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set Poros backend as inference backend, support CPU/GPU. <br /></td></tr>
+<tr class="separator:a04ade14294b97e3b71e961a888e5fcaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7992b766e32988373e85ca859f0ea533"><td class="memItemLeft" align="right" valign="top"><a id="a7992b766e32988373e85ca859f0ea533"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1RuntimeOption.html#a7992b766e32988373e85ca859f0ea533">UseOpenVINOBackend</a> ()</td></tr>
 <tr class="memdesc:a7992b766e32988373e85ca859f0ea533"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set OpenVINO as inference backend, only support CPU. <br /></td></tr>
@@ -169,6 +173,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stru
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1RuntimeOption.html#a8c5ddc670250bb771775e6a385014051">SetTrtCacheFile</a> (const std::string &amp;cache_file_path)</td></tr>
 <tr class="memdesc:a8c5ddc670250bb771775e6a385014051"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set cache file path while use TensorRT backend. Loadding a Paddle/ONNX model and initialize TensorRT will take a long time, by this interface it will save the tensorrt engine to <code>cache_file_path</code>, and load it directly while execute the code again. <br /></td></tr>
 <tr class="separator:a8c5ddc670250bb771775e6a385014051"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac837691ea03b51eb33908bf807354030"><td class="memItemLeft" align="right" valign="top"><a id="ac837691ea03b51eb33908bf807354030"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1RuntimeOption.html#ac837691ea03b51eb33908bf807354030">EnablePaddleTrtCollectShape</a> ()</td></tr>
+<tr class="memdesc:ac837691ea03b51eb33908bf807354030"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable to collect shape in paddle trt backend. <br /></td></tr>
+<tr class="separator:ac837691ea03b51eb33908bf807354030"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91232808106866c55453f31a2dcfeccf"><td class="memItemLeft" align="right" valign="top"><a id="a91232808106866c55453f31a2dcfeccf"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1RuntimeOption.html#a91232808106866c55453f31a2dcfeccf">DisablePaddleTrtCollectShape</a> ()</td></tr>
+<tr class="memdesc:a91232808106866c55453f31a2dcfeccf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable to collect shape in paddle trt backend. <br /></td></tr>
+<tr class="separator:a91232808106866c55453f31a2dcfeccf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Option object used when create a new <a class="el" href="structfastdeploy_1_1Runtime.html" title="Runtime object used to inference the loaded model on different devices. ">Runtime</a> object. </p>
@@ -269,8 +281,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stru
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following files:<ul>
-<li>/fastdeploy/1008/FastDeploy/fastdeploy/<a class="el" href="runtime_8h_source.html">runtime.h</a></li>
-<li>/fastdeploy/1008/FastDeploy/fastdeploy/runtime.cc</li>
+<li>/fastdeploy/1021/FastDeploy/fastdeploy/<a class="el" href="runtime_8h_source.html">runtime.h</a></li>
+<li>/fastdeploy/1021/FastDeploy/fastdeploy/runtime.cc</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -134,7 +134,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -162,6 +162,7 @@
 <li class="toctree-l1"><a class="reference internal" href="image_classification.html">Image Classification API</a></li>
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Keypoint Detection API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matting.html">Matting API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vision_results_en.html">Description of Vision Results</a></li>
 </ul>
 
 </div>
@@ -189,7 +190,7 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
@@ -197,7 +198,51 @@
         <article role="main">
           <section id="keypoint-detection-api">
 <h1>Keypoint Detection API<a class="headerlink" href="#keypoint-detection-api" title="Permalink to this headline">#</a></h1>
-<p>comming soon…</p>
+<section id="fastdeploy-vision-keypointdetection-pptinypose">
+<h2>fastdeploy.vision.keypointdetection.PPTinyPose<a class="headerlink" href="#fastdeploy-vision-keypointdetection-pptinypose" title="Permalink to this headline">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="fastdeploy.vision.keypointdetection.PPTinyPose">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.keypointdetection.</span></span><span class="sig-name descname"><span class="pre">PPTinyPose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.PADDLE:</span> <span class="pre">1&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/keypointdetection/pptinypose.html#PPTinyPose"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.keypointdetection.PPTinyPose" title="Permalink to this definition">#</a></dt>
+<dd><p>load a PPTinyPose model exported by PaddleDetection.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model_file</strong> – (str)Path of model file, e.g pptinypose/model.pdmodel</p></li>
+<li><p><strong>params_file</strong> – (str)Path of parameters file, e.g pptinypose/model.pdiparams, if the model_fomat is ModelFormat.ONNX, this param will be ignored, can be set as empty string</p></li>
+<li><p><strong>config_file</strong> – (str)Path of configuration file for deployment, e.g pptinypose/infer_cfg.yml</p></li>
+<li><p><strong>runtime_option</strong> – (fastdeploy.RuntimeOption)RuntimeOption for inference this model, if it’s None, will use the default backend on CPU</p></li>
+<li><p><strong>model_format</strong> – (fastdeploy.ModelForamt)Model format of the loaded model</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.vision.keypointdetection.PPTinyPose.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_image</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/keypointdetection/pptinypose.html#PPTinyPose.predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.keypointdetection.PPTinyPose.predict" title="Permalink to this definition">#</a></dt>
+<dd><p>Detect keypoints in an input image</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>im</strong> – (numpy.ndarray)The input image data, 3-D array with layout HWC, BGR format</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>KeyPointDetectionResult</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fastdeploy.vision.keypointdetection.PPTinyPose.use_dark">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">use_dark</span></span><a class="headerlink" href="#fastdeploy.vision.keypointdetection.PPTinyPose.use_dark" title="Permalink to this definition">#</a></dt>
+<dd><p>Atrribute of PPTinyPose model. Stating whether using Distribution-Aware Coordinate Representation for Human Pose Estimation(DARK for short) in postprocess, default is True</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>value of use_dark(bool)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
 </section>
 
         </article>
@@ -245,8 +290,27 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Keypoint Detection API</a><ul>
+<li><a class="reference internal" href="#fastdeploy-vision-keypointdetection-pptinypose">fastdeploy.vision.keypointdetection.PPTinyPose</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>

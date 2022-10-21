@@ -1,0 +1,5 @@
+<map id="fastdeploy::vision::faceid::CosFace" name="fastdeploy::vision::faceid::CosFace">
+<area shape="rect" id="node2" href="$classfastdeploy_1_1vision_1_1faceid_1_1InsightFaceRecognitionModel.html" title="CosFace model object used when to load a CosFace model exported by IngsightFace. " alt="" coords="5,171,232,227"/>
+<area shape="rect" id="node3" href="$classfastdeploy_1_1FastDeployModel.html" title="Base model object for all the vision models. " alt="" coords="14,95,223,121"/>
+<area shape="rect" id="node4" href="$structfastdeploy_1_1RuntimeOption.html" title="Option object used when create a new Runtime object. " alt="" coords="21,5,216,32"/>
+</map>

@@ -1,5 +1,10 @@
 var searchData=
 [
-  ['valid_5fcpu_5fbackends',['valid_cpu_backends',['../classfastdeploy_1_1FastDeployModel.html#ad2b0a8ea11294f12f6075c118966ba1c',1,'fastdeploy::FastDeployModel']]],
-  ['valid_5fgpu_5fbackends',['valid_gpu_backends',['../classfastdeploy_1_1FastDeployModel.html#a89b2f24322acc18f38b4ea5fd6b7189d',1,'fastdeploy::FastDeployModel']]]
+  ['masks',['masks',['../structfastdeploy_1_1vision_1_1DetectionResult.html#af55475523861b7bcdfda75904723e51d',1,'fastdeploy::vision::DetectionResult']]],
+  ['max_5fnms',['max_nms',['../classfastdeploy_1_1vision_1_1facedet_1_1SCRFD.html#a6dadf8663b601aee3d47537eab98e90b',1,'fastdeploy::vision::facedet::SCRFD']]],
+  ['max_5fwh',['max_wh',['../classfastdeploy_1_1vision_1_1detection_1_1NanoDetPlus.html#af65a397c6eb3cef4ea1576b54d3b7961',1,'fastdeploy::vision::detection::NanoDetPlus::max_wh()'],['../classfastdeploy_1_1vision_1_1detection_1_1ScaledYOLOv4.html#a14a6c5431bddb584482962bdc9710210',1,'fastdeploy::vision::detection::ScaledYOLOv4::max_wh()'],['../classfastdeploy_1_1vision_1_1detection_1_1YOLOR.html#aa5ee0a4116e93e8bad1ada5f7c38c07e',1,'fastdeploy::vision::detection::YOLOR::max_wh()'],['../classfastdeploy_1_1vision_1_1detection_1_1YOLOv5Lite.html#a7d18b33f14f6374310d6550dfe29b5d9',1,'fastdeploy::vision::detection::YOLOv5Lite::max_wh()'],['../classfastdeploy_1_1vision_1_1detection_1_1YOLOv6.html#a0ad425d046fb3fc0892acfa7165f8de1',1,'fastdeploy::vision::detection::YOLOv6::max_wh()'],['../classfastdeploy_1_1vision_1_1detection_1_1YOLOv7.html#a3f8d63b8c0e2a86f6dd95c5438de8e4f',1,'fastdeploy::vision::detection::YOLOv7::max_wh()'],['../classfastdeploy_1_1vision_1_1detection_1_1YOLOX.html#a3d0b94b354813e8dc5daf650784347aa',1,'fastdeploy::vision::detection::YOLOX::max_wh()']]],
+  ['max_5fwh_5f',['max_wh_',['../classfastdeploy_1_1vision_1_1detection_1_1YOLOv5.html#a098d6ef44c50d64c3b3f313da36c1a64',1,'fastdeploy::vision::detection::YOLOv5']]],
+  ['mean_5fvals',['mean_vals',['../classfastdeploy_1_1vision_1_1classification_1_1ResNet.html#a5109c71970114ef4dc9977d82c53c219',1,'fastdeploy::vision::classification::ResNet']]],
+  ['min_5fsizes',['min_sizes',['../classfastdeploy_1_1vision_1_1facedet_1_1RetinaFace.html#a525f41a243ea8041b42779c2307b1ef2',1,'fastdeploy::vision::facedet::RetinaFace']]],
+  ['multi_5flabel_5f',['multi_label_',['../classfastdeploy_1_1vision_1_1detection_1_1YOLOv5.html#a83d109e53c49a75b80826a54b61f47f3',1,'fastdeploy::vision::detection::YOLOv5']]]
 ];

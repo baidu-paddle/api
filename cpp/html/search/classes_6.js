@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['tensorinfo',['TensorInfo',['../structfastdeploy_1_1TensorInfo.html',1,'fastdeploy']]]
+  ['mask',['Mask',['../structfastdeploy_1_1vision_1_1Mask.html',1,'fastdeploy::vision']]],
+  ['modnet',['MODNet',['../classfastdeploy_1_1vision_1_1matting_1_1MODNet.html',1,'fastdeploy::vision::matting']]]
 ];

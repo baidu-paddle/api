@@ -162,6 +162,7 @@
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Image Classification API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="keypoint_detection.html">Keypoint Detection API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matting.html">Matting API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vision_results_en.html">Description of Vision Results</a></li>
 </ul>
 
 </div>
@@ -234,6 +235,102 @@
 </dd></dl>
 
 </section>
+<section id="fastdeploy-vision-classification-yolov5cls">
+<h2>fastdeploy.vision.classification.YOLOv5Cls<a class="headerlink" href="#fastdeploy-vision-classification-yolov5cls" title="Permalink to this headline">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="fastdeploy.vision.classification.YOLOv5Cls">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.classification.</span></span><span class="sig-name descname"><span class="pre">YOLOv5Cls</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.ONNX:</span> <span class="pre">2&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/classification/contrib/yolov5cls.html#YOLOv5Cls"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.classification.YOLOv5Cls" title="Permalink to this definition">#</a></dt>
+<dd><p>Load a image classification model exported by YOLOv5.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model_file</strong> – (str)Path of model file, e.g yolov5cls/yolov5n-cls.onnx</p></li>
+<li><p><strong>params_file</strong> – (str)Path of parameters file, if the model_fomat is ModelFormat.ONNX, this param will be ignored, can be set as empty string</p></li>
+<li><p><strong>runtime_option</strong> – (fastdeploy.RuntimeOption)RuntimeOption for inference this model, if it’s None, will use the default backend on CPU</p></li>
+<li><p><strong>model_format</strong> – (fastdeploy.ModelForamt)Model format of the loaded model, default is ONNX</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.vision.classification.YOLOv5Cls.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">topk</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/classification/contrib/yolov5cls.html#YOLOv5Cls.predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.classification.YOLOv5Cls.predict" title="Permalink to this definition">#</a></dt>
+<dd><p>Classify an input image</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>im</strong> – (numpy.ndarray)The input image data, 3-D array with layout HWC, BGR format</p></li>
+<li><p><strong>topk</strong> – (int)The topk result by the classify confidence score, default 1</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>ClassifyResult</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fastdeploy.vision.classification.YOLOv5Cls.size">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#fastdeploy.vision.classification.YOLOv5Cls.size" title="Permalink to this definition">#</a></dt>
+<dd><p>Returns the preprocess image size</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="fastdeploy-vision-classification-resnet">
+<h2>fastdeploy.vision.classification.ResNet<a class="headerlink" href="#fastdeploy-vision-classification-resnet" title="Permalink to this headline">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="fastdeploy.vision.classification.ResNet">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.classification.</span></span><span class="sig-name descname"><span class="pre">ResNet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.ONNX:</span> <span class="pre">2&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/classification/contrib/resnet.html#ResNet"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.classification.ResNet" title="Permalink to this definition">#</a></dt>
+<dd><p>Load a image classification model exported by ResNet.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model_file</strong> – (str)Path of model file, e.g resnet/resnet50.onnx</p></li>
+<li><p><strong>params_file</strong> – (str)Path of parameters file, if the model_fomat is ModelFormat.ONNX, this param will be ignored, can be set as empty string</p></li>
+<li><p><strong>runtime_option</strong> – (fastdeploy.RuntimeOption)RuntimeOption for inference this model, if it’s None, will use the default backend on CPU</p></li>
+<li><p><strong>model_format</strong> – (fastdeploy.ModelForamt)Model format of the loaded model, default is ONNX</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="fastdeploy.vision.classification.ResNet.mean_vals">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mean_vals</span></span><a class="headerlink" href="#fastdeploy.vision.classification.ResNet.mean_vals" title="Permalink to this definition">#</a></dt>
+<dd><p>Returns the mean value of normlization</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.vision.classification.ResNet.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">topk</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/classification/contrib/resnet.html#ResNet.predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.classification.ResNet.predict" title="Permalink to this definition">#</a></dt>
+<dd><p>Classify an input image</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input_image</strong> – (numpy.ndarray)The input image data, 3-D array with layout HWC, BGR format</p></li>
+<li><p><strong>topk</strong> – (int)The topk result by the classify confidence score, default 1</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>ClassifyResult</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fastdeploy.vision.classification.ResNet.size">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#fastdeploy.vision.classification.ResNet.size" title="Permalink to this definition">#</a></dt>
+<dd><p>Returns the preprocess image size</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fastdeploy.vision.classification.ResNet.std_vals">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">std_vals</span></span><a class="headerlink" href="#fastdeploy.vision.classification.ResNet.std_vals" title="Permalink to this definition">#</a></dt>
+<dd><p>Returns the std value of normlization</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
 </section>
 
         </article>
@@ -295,6 +392,8 @@
             <ul>
 <li><a class="reference internal" href="#">Image Classification API</a><ul>
 <li><a class="reference internal" href="#fastdeploy-vision-classification-paddleclasmodel">fastdeploy.vision.classification.PaddleClasModel</a></li>
+<li><a class="reference internal" href="#fastdeploy-vision-classification-yolov5cls">fastdeploy.vision.classification.YOLOv5Cls</a></li>
+<li><a class="reference internal" href="#fastdeploy-vision-classification-resnet">fastdeploy.vision.classification.ResNet</a></li>
 </ul>
 </li>
 </ul>

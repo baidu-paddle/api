@@ -134,7 +134,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -162,6 +162,7 @@
 <li class="toctree-l1"><a class="reference internal" href="image_classification.html">Image Classification API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="keypoint_detection.html">Keypoint Detection API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matting.html">Matting API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vision_results_en.html">Description of Vision Results</a></li>
 </ul>
 
 </div>
@@ -189,7 +190,7 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
@@ -197,7 +198,128 @@
         <article role="main">
           <section id="ocr-api">
 <h1>OCR API<a class="headerlink" href="#ocr-api" title="Permalink to this headline">#</a></h1>
-<p>comming soon…</p>
+<section id="fastdeploy-vision-ocr-dbdetector">
+<h2>fastdeploy.vision.ocr.DBDetector<a class="headerlink" href="#fastdeploy-vision-ocr-dbdetector" title="Permalink to this headline">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="fastdeploy.vision.ocr.DBDetector">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.ocr.</span></span><span class="sig-name descname"><span class="pre">DBDetector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.PADDLE:</span> <span class="pre">1&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/ocr/ppocr.html#DBDetector"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.ocr.DBDetector" title="Permalink to this definition">#</a></dt>
+<dd><p>Load OCR detection model provided by PaddleOCR.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model_file</strong> – (str)Path of model file, e.g ./ch_PP-OCRv3_det_infer/model.pdmodel.</p></li>
+<li><p><strong>params_file</strong> – (str)Path of parameter file, e.g ./ch_PP-OCRv3_det_infer/model.pdiparams, if the model format is ONNX, this parameter will be ignored.</p></li>
+<li><p><strong>runtime_option</strong> – (fastdeploy.RuntimeOption)RuntimeOption for inference this model, if it’s None, will use the default backend on CPU.</p></li>
+<li><p><strong>model_format</strong> – (fastdeploy.ModelForamt)Model format of the loaded model.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="fastdeploy-vision-ocr-classifier">
+<h2>fastdeploy.vision.ocr.Classifier<a class="headerlink" href="#fastdeploy-vision-ocr-classifier" title="Permalink to this headline">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="fastdeploy.vision.ocr.Classifier">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.ocr.</span></span><span class="sig-name descname"><span class="pre">Classifier</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.PADDLE:</span> <span class="pre">1&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/ocr/ppocr.html#Classifier"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.ocr.Classifier" title="Permalink to this definition">#</a></dt>
+<dd><p>Load OCR classification model provided by PaddleOCR.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model_file</strong> – (str)Path of model file, e.g ./ch_ppocr_mobile_v2.0_cls_infer/model.pdmodel.</p></li>
+<li><p><strong>params_file</strong> – (str)Path of parameter file, e.g ./ch_ppocr_mobile_v2.0_cls_infer/model.pdiparams, if the model format is ONNX, this parameter will be ignored.</p></li>
+<li><p><strong>runtime_option</strong> – (fastdeploy.RuntimeOption)RuntimeOption for inference this model, if it’s None, will use the default backend on CPU.</p></li>
+<li><p><strong>model_format</strong> – (fastdeploy.ModelForamt)Model format of the loaded model.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="fastdeploy-vision-ocr-recognizer">
+<h2>fastdeploy.vision.ocr.Recognizer<a class="headerlink" href="#fastdeploy-vision-ocr-recognizer" title="Permalink to this headline">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="fastdeploy.vision.ocr.Recognizer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.ocr.</span></span><span class="sig-name descname"><span class="pre">Recognizer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_path=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.PADDLE:</span> <span class="pre">1&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/ocr/ppocr.html#Recognizer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.ocr.Recognizer" title="Permalink to this definition">#</a></dt>
+<dd><p>Load OCR recognition model provided by PaddleOCR</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model_file</strong> – (str)Path of model file, e.g ./ch_PP-OCRv3_rec_infer/model.pdmodel.</p></li>
+<li><p><strong>params_file</strong> – (str)Path of parameter file, e.g ./ch_PP-OCRv3_rec_infer/model.pdiparams, if the model format is ONNX, this parameter will be ignored.</p></li>
+<li><p><strong>label_path</strong> – (str)Path of label file used by OCR recognition model. e.g ./ppocr_keys_v1.txt</p></li>
+<li><p><strong>runtime_option</strong> – (fastdeploy.RuntimeOption)RuntimeOption for inference this model, if it’s None, will use the default backend on CPU.</p></li>
+<li><p><strong>model_format</strong> – (fastdeploy.ModelForamt)Model format of the loaded model.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="fastdeploy-vision-ocr-ppocrv2">
+<h2>fastdeploy.vision.ocr.PPOCRv2<a class="headerlink" href="#fastdeploy-vision-ocr-ppocrv2" title="Permalink to this headline">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="fastdeploy.vision.ocr.PPOCRv2">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.ocr.</span></span><span class="sig-name descname"><span class="pre">PPOCRv2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">det_model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cls_model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rec_model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/ocr/ppocr.html#PPOCRv2"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.ocr.PPOCRv2" title="Permalink to this definition">#</a></dt>
+<dd><p>Consruct a pipeline with text detector, direction classifier and text recognizer models</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>det_model</strong> – (FastDeployModel) The detection model object created by fastdeploy.vision.ocr.DBDetector.</p></li>
+<li><p><strong>cls_model</strong> – (FastDeployModel) The classification model object created by fastdeploy.vision.ocr.Classifier.</p></li>
+<li><p><strong>rec_model</strong> – (FastDeployModel) The recognition model object created by fastdeploy.vision.ocr.Recognizer.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.vision.ocr.PPOCRv2.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_image</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/ocr/ppocr.html#PPOCRv2.predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.ocr.PPOCRv2.predict" title="Permalink to this definition">#</a></dt>
+<dd><p>Predict an input image</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>input_image</strong> – (numpy.ndarray)The input image data, 3-D array with layout HWC, BGR format</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>OCRResult</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="fastdeploy-vision-ocr-ppocrv3">
+<h2>fastdeploy.vision.ocr.PPOCRv3<a class="headerlink" href="#fastdeploy-vision-ocr-ppocrv3" title="Permalink to this headline">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="fastdeploy.vision.ocr.PPOCRv3">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.ocr.</span></span><span class="sig-name descname"><span class="pre">PPOCRv3</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">det_model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cls_model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rec_model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/ocr/ppocr.html#PPOCRv3"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.ocr.PPOCRv3" title="Permalink to this definition">#</a></dt>
+<dd><p>Consruct a pipeline with text detector, direction classifier and text recognizer models</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>det_model</strong> – (FastDeployModel) The detection model object created by fastdeploy.vision.ocr.DBDetector.</p></li>
+<li><p><strong>cls_model</strong> – (FastDeployModel) The classification model object created by fastdeploy.vision.ocr.Classifier.</p></li>
+<li><p><strong>rec_model</strong> – (FastDeployModel) The recognition model object created by fastdeploy.vision.ocr.Recognizer.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.vision.ocr.PPOCRv3.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_image</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/ocr/ppocr.html#PPOCRv3.predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.ocr.PPOCRv3.predict" title="Permalink to this definition">#</a></dt>
+<dd><p>Predict an input image</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>input_image</strong> – (numpy.ndarray)The input image data, 3-D array with layout HWC, BGR format</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>OCRResult</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
 </section>
 
         </article>
@@ -245,8 +367,31 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">OCR API</a><ul>
+<li><a class="reference internal" href="#fastdeploy-vision-ocr-dbdetector">fastdeploy.vision.ocr.DBDetector</a></li>
+<li><a class="reference internal" href="#fastdeploy-vision-ocr-classifier">fastdeploy.vision.ocr.Classifier</a></li>
+<li><a class="reference internal" href="#fastdeploy-vision-ocr-recognizer">fastdeploy.vision.ocr.Recognizer</a></li>
+<li><a class="reference internal" href="#fastdeploy-vision-ocr-ppocrv2">fastdeploy.vision.ocr.PPOCRv2</a></li>
+<li><a class="reference internal" href="#fastdeploy-vision-ocr-ppocrv3">fastdeploy.vision.ocr.PPOCRv3</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>

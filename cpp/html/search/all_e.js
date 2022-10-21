@@ -1,17 +1,12 @@
 var searchData=
 [
-  ['scores',['scores',['../structfastdeploy_1_1vision_1_1ClassifyResult.html#ac6c2fddb76bdce26f2b0f8a385b405f9',1,'fastdeploy::vision::ClassifyResult::scores()'],['../structfastdeploy_1_1vision_1_1DetectionResult.html#ae6ea0bdbbafea33ee197bb9f640c7589',1,'fastdeploy::vision::DetectionResult::scores()']]],
-  ['setliteoptimizedmodeldir',['SetLiteOptimizedModelDir',['../structfastdeploy_1_1RuntimeOption.html#a3cafb8f411faaac71268f42c0ae28363',1,'fastdeploy::RuntimeOption']]],
-  ['setlitepowermode',['SetLitePowerMode',['../structfastdeploy_1_1RuntimeOption.html#a7dc0d4d3d86537164778ca55e0632793',1,'fastdeploy::RuntimeOption']]],
-  ['setmodelpath',['SetModelPath',['../structfastdeploy_1_1RuntimeOption.html#a0e1b51ddc437d5369e33205cb4c0ac0f',1,'fastdeploy::RuntimeOption']]],
-  ['setortgraphoptlevel',['SetOrtGraphOptLevel',['../structfastdeploy_1_1RuntimeOption.html#a986f2fba4fb9176c4283ca6ba77ac112',1,'fastdeploy::RuntimeOption']]],
-  ['setpaddlemkldnn',['SetPaddleMKLDNN',['../structfastdeploy_1_1RuntimeOption.html#a5f7dc3caa5a0f5d003b4ceb96c6446cc',1,'fastdeploy::RuntimeOption']]],
-  ['setpaddlemkldnncachesize',['SetPaddleMKLDNNCacheSize',['../structfastdeploy_1_1RuntimeOption.html#a71fd19a74de5577e7e99278b235f5cdc',1,'fastdeploy::RuntimeOption']]],
-  ['settrtcachefile',['SetTrtCacheFile',['../structfastdeploy_1_1RuntimeOption.html#a8c5ddc670250bb771775e6a385014051',1,'fastdeploy::RuntimeOption']]],
-  ['settrtinputshape',['SetTrtInputShape',['../structfastdeploy_1_1RuntimeOption.html#a4eb85e7bec8a429b6127054b28752d5c',1,'fastdeploy::RuntimeOption']]],
-  ['settrtmaxworkspacesize',['SetTrtMaxWorkspaceSize',['../structfastdeploy_1_1RuntimeOption.html#ad28e335b29b7971701cef819fb32f520',1,'fastdeploy::RuntimeOption']]],
-  ['shape',['shape',['../structfastdeploy_1_1TensorInfo.html#aed39ae54c0ce982903f3a6e7bb218577',1,'fastdeploy::TensorInfo::shape()'],['../structfastdeploy_1_1vision_1_1Mask.html#a3c00a5888ccb4871b4153a7a5963801c',1,'fastdeploy::vision::Mask::shape()']]],
-  ['softmax',['Softmax',['../namespacefastdeploy.html#a522a8bf49a2309bdfdf0ad62c0541fd6',1,'fastdeploy']]],
-  ['str',['Str',['../structfastdeploy_1_1vision_1_1ClassifyResult.html#ac687740c8fe0ea417d27308787bdbe18',1,'fastdeploy::vision::ClassifyResult::Str()'],['../structfastdeploy_1_1vision_1_1Mask.html#a06ff26070c8c5baa59eaa7cea516b42a',1,'fastdeploy::vision::Mask::Str()'],['../structfastdeploy_1_1vision_1_1DetectionResult.html#a41db67badbfc1e035cf58cb5bda5c079',1,'fastdeploy::vision::DetectionResult::Str()']]],
-  ['sum',['Sum',['../namespacefastdeploy.html#a5d39b92a72d521a369162fe238a1a4d9',1,'fastdeploy']]]
+  ['recognizer',['Recognizer',['../classfastdeploy_1_1vision_1_1ocr_1_1Recognizer.html',1,'fastdeploy::vision::ocr::Recognizer'],['../classfastdeploy_1_1vision_1_1ocr_1_1Recognizer.html#a5cad42d48677831071d0b01952cbb4a0',1,'fastdeploy::vision::ocr::Recognizer::Recognizer()']]],
+  ['reg_5fmax',['reg_max',['../classfastdeploy_1_1vision_1_1detection_1_1NanoDetPlus.html#a7ab5871acb0896be960af0140db26e5e',1,'fastdeploy::vision::detection::NanoDetPlus']]],
+  ['reserve',['Reserve',['../structfastdeploy_1_1vision_1_1Mask.html#a0846cf12283fe1445b3c4a1e1a36ddea',1,'fastdeploy::vision::Mask']]],
+  ['resize',['Resize',['../structfastdeploy_1_1vision_1_1Mask.html#a3eafed318dfcd0248668c36d009f6e56',1,'fastdeploy::vision::Mask']]],
+  ['resnet',['ResNet',['../classfastdeploy_1_1vision_1_1classification_1_1ResNet.html',1,'fastdeploy::vision::classification::ResNet'],['../classfastdeploy_1_1vision_1_1classification_1_1ResNet.html#a9367e6af461ceac5951e5b1623c47d62',1,'fastdeploy::vision::classification::ResNet::ResNet()']]],
+  ['retinaface',['RetinaFace',['../classfastdeploy_1_1vision_1_1facedet_1_1RetinaFace.html',1,'fastdeploy::vision::facedet::RetinaFace'],['../classfastdeploy_1_1vision_1_1facedet_1_1RetinaFace.html#a078ab7e36a40fb2c63550be9077e880c',1,'fastdeploy::vision::facedet::RetinaFace::RetinaFace()']]],
+  ['runtime',['Runtime',['../structfastdeploy_1_1Runtime.html',1,'fastdeploy']]],
+  ['runtime_2eh',['runtime.h',['../runtime_8h.html',1,'']]],
+  ['runtimeoption',['RuntimeOption',['../structfastdeploy_1_1RuntimeOption.html',1,'fastdeploy']]]
 ];

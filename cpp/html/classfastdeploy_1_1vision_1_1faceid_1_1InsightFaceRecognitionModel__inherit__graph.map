@@ -1,0 +1,8 @@
+<map id="fastdeploy::vision::faceid::InsightFaceRecognitionModel" name="fastdeploy::vision::faceid::InsightFaceRecognitionModel">
+<area shape="rect" id="node3" href="$classfastdeploy_1_1vision_1_1faceid_1_1AdaFace.html" title="AdaFace model object used when to load a AdaFace model exported by AdaFacePaddleCLas. " alt="" coords="537,5,675,47"/>
+<area shape="rect" id="node4" href="$classfastdeploy_1_1vision_1_1faceid_1_1ArcFace.html" title="ArcFace model object used when to load a ArcFace model exported by IngsightFace. " alt="" coords="537,71,675,112"/>
+<area shape="rect" id="node5" href="$classfastdeploy_1_1vision_1_1faceid_1_1CosFace.html" title="CosFace model object used when to load a CosFace model exported by IngsightFace. " alt="" coords="537,136,675,177"/>
+<area shape="rect" id="node6" href="$classfastdeploy_1_1vision_1_1faceid_1_1PartialFC.html" title="PartialFC model object used when to load a PartialFC model exported by IngsightFace. " alt="" coords="537,201,675,243"/>
+<area shape="rect" id="node7" href="$classfastdeploy_1_1vision_1_1faceid_1_1VPL.html" title="VPL model object used when to load a VPL model exported by IngsightFace. " alt="" coords="537,267,675,308"/>
+<area shape="rect" id="node2" href="$classfastdeploy_1_1FastDeployModel.html" title="Base model object for all the vision models. " alt="" coords="5,143,215,170"/>
+</map>

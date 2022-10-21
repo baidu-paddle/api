@@ -75,6 +75,9 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
+<tr class="memitem:namespacefastdeploy_1_1pipeline"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefastdeploy_1_1pipeline.html">pipeline</a></td></tr>
+<tr class="memdesc:namespacefastdeploy_1_1pipeline"><td class="mdescLeft">&#160;</td><td class="mdescRight">All pipeline model APIs are defined inside this namespace. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespacefastdeploy_1_1vision"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefastdeploy_1_1vision.html">vision</a></td></tr>
 <tr class="memdesc:namespacefastdeploy_1_1vision"><td class="mdescLeft">&#160;</td><td class="mdescRight">All C++ FastDeploy Vision Models APIs are defined inside this namespace. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -102,14 +105,16 @@ Enumerations</h2></td></tr>
 <a class="el" href="namespacefastdeploy.html#addd441db144b083efc919b63cef2bebca02884fdac1db2c6e739861ab0b4daf2a">TRT</a>, 
 <a class="el" href="namespacefastdeploy.html#addd441db144b083efc919b63cef2bebca1427ae94bd35e3b644c34acd93f45a63">PDINFER</a>, 
 <br />
-&#160;&#160;<a class="el" href="namespacefastdeploy.html#addd441db144b083efc919b63cef2bebcaf0ee0f97b39571419adec34ffd0c142e">OPENVINO</a>, 
+&#160;&#160;<a class="el" href="namespacefastdeploy.html#addd441db144b083efc919b63cef2bebca352e93278db2ce2db2eef7cab115a8fc">POROS</a>, 
+<a class="el" href="namespacefastdeploy.html#addd441db144b083efc919b63cef2bebcaf0ee0f97b39571419adec34ffd0c142e">OPENVINO</a>, 
 <a class="el" href="namespacefastdeploy.html#addd441db144b083efc919b63cef2bebca3c7aaab4db7728cf0231607246b40dff">LITE</a>
 <br />
  }</td></tr>
 <tr class="separator:addd441db144b083efc919b63cef2bebc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3493c6d2ca1a50ca5506a0e195d0d723"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefastdeploy.html#a3493c6d2ca1a50ca5506a0e195d0d723">ModelFormat</a> { <a class="el" href="namespacefastdeploy.html#a3493c6d2ca1a50ca5506a0e195d0d723ab7f7321a62359db08fed419ee8b14ed0">AUTOREC</a>, 
 <a class="el" href="namespacefastdeploy.html#a3493c6d2ca1a50ca5506a0e195d0d723a075d90767b2b23c4f53638c7c6d4f605">PADDLE</a>, 
-<a class="el" href="namespacefastdeploy.html#a3493c6d2ca1a50ca5506a0e195d0d723a966ad1db46a615dc493d376737c2343b">ONNX</a>
+<a class="el" href="namespacefastdeploy.html#a3493c6d2ca1a50ca5506a0e195d0d723a966ad1db46a615dc493d376737c2343b">ONNX</a>, 
+<a class="el" href="namespacefastdeploy.html#a3493c6d2ca1a50ca5506a0e195d0d723afb02538a126c74eef66a7f6c8a9173b3">TORCHSCRIPT</a>
  }</td></tr>
 <tr class="separator:a3493c6d2ca1a50ca5506a0e195d0d723"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae7ba2fd1a203144360532ffde81c8dcf"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefastdeploy.html#ae7ba2fd1a203144360532ffde81c8dcf">LitePowerMode</a> { <br />
@@ -181,6 +186,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="name
 </td></tr>
 <tr><td class="fieldname"><a id="addd441db144b083efc919b63cef2bebca1427ae94bd35e3b644c34acd93f45a63"></a>PDINFER&#160;</td><td class="fielddoc"><p>Paddle Inference, support Paddle format model, CPU / Nvidia GPU. </p>
 </td></tr>
+<tr><td class="fieldname"><a id="addd441db144b083efc919b63cef2bebca352e93278db2ce2db2eef7cab115a8fc"></a>POROS&#160;</td><td class="fielddoc"><p>Poros, support TorchScript format model, CPU / Nvidia GPU. </p>
+</td></tr>
 <tr><td class="fieldname"><a id="addd441db144b083efc919b63cef2bebcaf0ee0f97b39571419adec34ffd0c142e"></a>OPENVINO&#160;</td><td class="fielddoc"><p>Intel OpenVINO, support Paddle/ONNX format, CPU only. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="addd441db144b083efc919b63cef2bebca3c7aaab4db7728cf0231607246b40dff"></a>LITE&#160;</td><td class="fielddoc"><p>Paddle Lite, support Paddle format model, ARM CPU only. </p>
@@ -236,6 +243,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="name
 <tr><td class="fieldname"><a id="a3493c6d2ca1a50ca5506a0e195d0d723a075d90767b2b23c4f53638c7c6d4f605"></a>PADDLE&#160;</td><td class="fielddoc"><p>Model with paddlepaddle format. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a3493c6d2ca1a50ca5506a0e195d0d723a966ad1db46a615dc493d376737c2343b"></a>ONNX&#160;</td><td class="fielddoc"><p>Model with ONNX format. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3493c6d2ca1a50ca5506a0e195d0d723afb02538a126c74eef66a7f6c8a9173b3"></a>TORCHSCRIPT&#160;</td><td class="fielddoc"><p>Model with TorchScript format. </p>
 </td></tr>
 </table>
 

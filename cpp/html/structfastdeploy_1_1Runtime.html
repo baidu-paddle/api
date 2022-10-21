@@ -94,6 +94,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stru
 <tr class="memitem:a69f60b76a745bd4cc53c9c9f04487313"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1Runtime.html#a69f60b76a745bd4cc53c9c9f04487313">Infer</a> (std::vector&lt; FDTensor &gt; &amp;input_tensors, std::vector&lt; FDTensor &gt; *output_tensors)</td></tr>
 <tr class="memdesc:a69f60b76a745bd4cc53c9c9f04487313"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inference the model by the input data, and write to the output.  <a href="#a69f60b76a745bd4cc53c9c9f04487313">More...</a><br /></td></tr>
 <tr class="separator:a69f60b76a745bd4cc53c9c9f04487313"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9987998af18e9f0d9912d5e90b10eae3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1Runtime.html#a9987998af18e9f0d9912d5e90b10eae3">Compile</a> (std::vector&lt; std::vector&lt; FDTensor &gt;&gt; &amp;prewarm_tensors, const <a class="el" href="structfastdeploy_1_1RuntimeOption.html">RuntimeOption</a> &amp;_option)</td></tr>
+<tr class="memdesc:a9987998af18e9f0d9912d5e90b10eae3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compile TorchScript Module, only for Poros backend.  <a href="#a9987998af18e9f0d9912d5e90b10eae3">More...</a><br /></td></tr>
+<tr class="separator:a9987998af18e9f0d9912d5e90b10eae3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4312c23b5107c39ef991084155570f8b"><td class="memItemLeft" align="right" valign="top"><a id="a4312c23b5107c39ef991084155570f8b"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1Runtime.html#a4312c23b5107c39ef991084155570f8b">NumInputs</a> ()</td></tr>
 <tr class="memdesc:a4312c23b5107c39ef991084155570f8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of inputs. <br /></td></tr>
@@ -122,6 +125,44 @@ std::vector&lt; <a class="el" href="structfastdeploy_1_1TensorInfo.html">TensorI
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="structfastdeploy_1_1Runtime.html" title="Runtime object used to inference the loaded model on different devices. ">Runtime</a> object used to inference the loaded model on different devices. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a9987998af18e9f0d9912d5e90b10eae3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9987998af18e9f0d9912d5e90b10eae3">&#9670;&nbsp;</a></span>Compile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool fastdeploy::Runtime::Compile </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; std::vector&lt; FDTensor &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>prewarm_tensors</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structfastdeploy_1_1RuntimeOption.html">RuntimeOption</a> &amp;&#160;</td>
+          <td class="paramname"><em>_option</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compile TorchScript Module, only for Poros backend. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">prewarm_tensors</td><td>Prewarm datas for compile </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">_option</td><td><a class="el" href="structfastdeploy_1_1Runtime.html" title="Runtime object used to inference the loaded model on different devices. ">Runtime</a> option </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if compile successed, otherwise false </dd></dl>
+
+</div>
+</div>
 <a id="a69f60b76a745bd4cc53c9c9f04487313"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a69f60b76a745bd4cc53c9c9f04487313">&#9670;&nbsp;</a></span>Infer()</h2>
 
@@ -161,8 +202,8 @@ std::vector&lt; <a class="el" href="structfastdeploy_1_1TensorInfo.html">TensorI
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following files:<ul>
-<li>/fastdeploy/1008/FastDeploy/fastdeploy/<a class="el" href="runtime_8h_source.html">runtime.h</a></li>
-<li>/fastdeploy/1008/FastDeploy/fastdeploy/runtime.cc</li>
+<li>/fastdeploy/1021/FastDeploy/fastdeploy/<a class="el" href="runtime_8h_source.html">runtime.h</a></li>
+<li>/fastdeploy/1021/FastDeploy/fastdeploy/runtime.cc</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

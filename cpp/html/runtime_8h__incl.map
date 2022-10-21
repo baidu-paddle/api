@@ -1,4 +1,4 @@
-<map id="/fastdeploy/1008/FastDeploy/fastdeploy/runtime.h" name="/fastdeploy/1008/FastDeploy/fastdeploy/runtime.h">
+<map id="/fastdeploy/1021/FastDeploy/fastdeploy/runtime.h" name="/fastdeploy/1021/FastDeploy/fastdeploy/runtime.h">
 <area shape="rect" id="node5" href="$backend_8h_source.html" title="fastdeploy/backends\l/backend.h" alt="" coords="305,95,463,136"/>
 <area shape="rect" id="node22" href="$perf_8h_source.html" title="fastdeploy/utils/perf.h" alt="" coords="1426,102,1590,129"/>
 <area shape="rect" id="node9" href="$common_2multiclass__nms_8h_source.html" title="fastdeploy/backends\l/common/multiclass_nms.h" alt="" coords="94,184,295,225"/>
@@ -6,4 +6,5 @@
 <area shape="rect" id="node12" href="$allocate_8h_source.html" title="fastdeploy/core/allocate.h" alt="" coords="606,281,797,307"/>
 <area shape="rect" id="node19" href="$fd__type_8h_source.html" title="fastdeploy/core/fd\l_type.h" alt="" coords="1031,273,1171,315"/>
 <area shape="rect" id="node14" href="$utils_2utils_8h_source.html" title="fastdeploy/utils/utils.h" alt="" coords="1303,363,1470,389"/>
+<area shape="rect" id="node21" href="$config_8h_source.html" title="fastdeploy/core/config.h" alt="" coords="949,363,1128,389"/>
 </map>
