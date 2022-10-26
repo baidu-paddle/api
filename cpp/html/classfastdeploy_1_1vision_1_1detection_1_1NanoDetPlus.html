@@ -152,27 +152,11 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 Public Attributes</h2></td></tr>
 <tr class="memitem:acd9690f5affbed7ad7247343210251b9"><td class="memItemLeft" align="right" valign="top"><a id="acd9690f5affbed7ad7247343210251b9"></a>
 std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1detection_1_1NanoDetPlus.html#acd9690f5affbed7ad7247343210251b9">size</a></td></tr>
-<tr class="memdesc:acd9690f5affbed7ad7247343210251b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">tuple of input size (width, height), e.g (320, 320) <br /></td></tr>
+<tr class="memdesc:acd9690f5affbed7ad7247343210251b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Argument for image preprocessing step, tuple of input size (width, height), e.g (320, 320) <br /></td></tr>
 <tr class="separator:acd9690f5affbed7ad7247343210251b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a69fb5e188f45e569c54cf3950ac6216e"><td class="memItemLeft" align="right" valign="top"><a id="a69fb5e188f45e569c54cf3950ac6216e"></a>
-std::vector&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1detection_1_1NanoDetPlus.html#a69fb5e188f45e569c54cf3950ac6216e">padding_value</a></td></tr>
-<tr class="memdesc:a69fb5e188f45e569c54cf3950ac6216e"><td class="mdescLeft">&#160;</td><td class="mdescRight">padding value, size should be the same as channels <br /></td></tr>
-<tr class="separator:a69fb5e188f45e569c54cf3950ac6216e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a7ed31ee4eebc1be74a639f66ff629f"><td class="memItemLeft" align="right" valign="top"><a id="a4a7ed31ee4eebc1be74a639f66ff629f"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1detection_1_1NanoDetPlus.html#a4a7ed31ee4eebc1be74a639f66ff629f">keep_ratio</a></td></tr>
-<tr class="memdesc:a4a7ed31ee4eebc1be74a639f66ff629f"><td class="mdescLeft">&#160;</td><td class="mdescRight">keep aspect ratio or not when perform resize operation. This option is set as <code>false</code> by default in NanoDet-Plus <br /></td></tr>
-<tr class="separator:a4a7ed31ee4eebc1be74a639f66ff629f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a947af730fd7ab1b47b146b7b4a02be22"><td class="memItemLeft" align="right" valign="top"><a id="a947af730fd7ab1b47b146b7b4a02be22"></a>
-std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1detection_1_1NanoDetPlus.html#a947af730fd7ab1b47b146b7b4a02be22">downsample_strides</a></td></tr>
-<tr class="memdesc:a947af730fd7ab1b47b146b7b4a02be22"><td class="mdescLeft">&#160;</td><td class="mdescRight">downsample strides for NanoDet-Plus to generate anchors, will take (8, 16, 32, 64) as default values <br /></td></tr>
-<tr class="separator:a947af730fd7ab1b47b146b7b4a02be22"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af65a397c6eb3cef4ea1576b54d3b7961"><td class="memItemLeft" align="right" valign="top"><a id="af65a397c6eb3cef4ea1576b54d3b7961"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1detection_1_1NanoDetPlus.html#af65a397c6eb3cef4ea1576b54d3b7961">max_wh</a></td></tr>
-<tr class="memdesc:af65a397c6eb3cef4ea1576b54d3b7961"><td class="mdescLeft">&#160;</td><td class="mdescRight">for offseting the boxes by classes when using NMS, default 4096 <br /></td></tr>
-<tr class="separator:af65a397c6eb3cef4ea1576b54d3b7961"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ab5871acb0896be960af0140db26e5e"><td class="memItemLeft" align="right" valign="top"><a id="a7ab5871acb0896be960af0140db26e5e"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1detection_1_1NanoDetPlus.html#a7ab5871acb0896be960af0140db26e5e">reg_max</a></td></tr>
-<tr class="memdesc:a7ab5871acb0896be960af0140db26e5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">reg_max for GFL regression, default 7 <br /></td></tr>
+<tr class="memdesc:a7ab5871acb0896be960af0140db26e5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Argument for image postprocessing step, reg_max for GFL regression, default 7. <br /></td></tr>
 <tr class="separator:a7ab5871acb0896be960af0140db26e5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_classfastdeploy_1_1FastDeployModel"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classfastdeploy_1_1FastDeployModel')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classfastdeploy_1_1FastDeployModel.html">fastdeploy::FastDeployModel</a></td></tr>
 <tr class="memitem:ad2b0a8ea11294f12f6075c118966ba1c inherit pub_attribs_classfastdeploy_1_1FastDeployModel"><td class="memItemLeft" align="right" valign="top"><a id="ad2b0a8ea11294f12f6075c118966ba1c"></a>
@@ -298,8 +282,8 @@ std::vector&lt; <a class="el" href="namespacefastdeploy.html#addd441db144b083efc
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/fastdeploy/1021/FastDeploy/fastdeploy/vision/detection/contrib/<a class="el" href="nanodet__plus_8h_source.html">nanodet_plus.h</a></li>
-<li>/fastdeploy/1021/FastDeploy/fastdeploy/vision/detection/contrib/nanodet_plus.cc</li>
+<li>/fastdeploy/1026/FastDeploy/fastdeploy/vision/detection/contrib/<a class="el" href="nanodet__plus_8h_source.html">nanodet_plus.h</a></li>
+<li>/fastdeploy/1026/FastDeploy/fastdeploy/vision/detection/contrib/nanodet_plus.cc</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

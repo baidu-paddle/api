@@ -1,0 +1,4 @@
+<map id="fastdeploy::vision::matting::RobustVideoMatting" name="fastdeploy::vision::matting::RobustVideoMatting">
+<area shape="rect" id="node2" href="$classfastdeploy_1_1FastDeployModel.html" title="Base model object for all the vision models. " alt="" coords="10,95,219,121"/>
+<area shape="rect" id="node3" href="$structfastdeploy_1_1RuntimeOption.html" title="Option object used when create a new Runtime object. " alt="" coords="17,5,212,32"/>
+</map>

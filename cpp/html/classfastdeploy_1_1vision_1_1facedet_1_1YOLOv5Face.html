@@ -104,7 +104,7 @@ Public Member Functions</h2></td></tr>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1facedet_1_1YOLOv5Face.html#acb9d01a77aafbb7706cf363d6ddca492">ModelName</a> () const</td></tr>
 <tr class="memdesc:acb9d01a77aafbb7706cf363d6ddca492"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get model's name. <br /></td></tr>
 <tr class="separator:acb9d01a77aafbb7706cf363d6ddca492"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a46cc199cead5d360491e4e3de7cf1e58"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1facedet_1_1YOLOv5Face.html#a46cc199cead5d360491e4e3de7cf1e58">Predict</a> (cv::Mat *im, FaceDetectionResult *result, float conf_threshold=0.25, float nms_iou_threshold=0.5)</td></tr>
+<tr class="memitem:a46cc199cead5d360491e4e3de7cf1e58"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1facedet_1_1YOLOv5Face.html#a46cc199cead5d360491e4e3de7cf1e58">Predict</a> (cv::Mat *im, <a class="el" href="structfastdeploy_1_1vision_1_1FaceDetectionResult.html">FaceDetectionResult</a> *result, float conf_threshold=0.25, float nms_iou_threshold=0.5)</td></tr>
 <tr class="memdesc:a46cc199cead5d360491e4e3de7cf1e58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Predict the face detection result for an input image.  <a href="#a46cc199cead5d360491e4e3de7cf1e58">More...</a><br /></td></tr>
 <tr class="separator:a46cc199cead5d360491e4e3de7cf1e58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classfastdeploy_1_1FastDeployModel"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classfastdeploy_1_1FastDeployModel')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classfastdeploy_1_1FastDeployModel.html">fastdeploy::FastDeployModel</a></td></tr>
@@ -152,31 +152,11 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 Public Attributes</h2></td></tr>
 <tr class="memitem:a225becc93748600da96f0523caf5d265"><td class="memItemLeft" align="right" valign="top"><a id="a225becc93748600da96f0523caf5d265"></a>
 std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1facedet_1_1YOLOv5Face.html#a225becc93748600da96f0523caf5d265">size</a></td></tr>
-<tr class="memdesc:a225becc93748600da96f0523caf5d265"><td class="mdescLeft">&#160;</td><td class="mdescRight">tuple of (width, height) <br /></td></tr>
+<tr class="memdesc:a225becc93748600da96f0523caf5d265"><td class="mdescLeft">&#160;</td><td class="mdescRight">Argument for image preprocessing step, tuple of (width, height), decide the target size after resize. <br /></td></tr>
 <tr class="separator:a225becc93748600da96f0523caf5d265"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3482822957dda3fbb54fef4b19baeb5e"><td class="memItemLeft" align="right" valign="top"><a id="a3482822957dda3fbb54fef4b19baeb5e"></a>
-std::vector&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1facedet_1_1YOLOv5Face.html#a3482822957dda3fbb54fef4b19baeb5e">padding_value</a></td></tr>
-<tr class="memdesc:a3482822957dda3fbb54fef4b19baeb5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">padding value, size should be the same as channels <br /></td></tr>
-<tr class="separator:a3482822957dda3fbb54fef4b19baeb5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a94e005c960ac9d306235599a10d909bb"><td class="memItemLeft" align="right" valign="top"><a id="a94e005c960ac9d306235599a10d909bb"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1facedet_1_1YOLOv5Face.html#a94e005c960ac9d306235599a10d909bb">is_mini_pad</a></td></tr>
-<tr class="memdesc:a94e005c960ac9d306235599a10d909bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">only pad to the minimum rectange which height and width is times of stride <br /></td></tr>
-<tr class="separator:a94e005c960ac9d306235599a10d909bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae077a92fd0e1c7596d43c10686ea452"><td class="memItemLeft" align="right" valign="top"><a id="aae077a92fd0e1c7596d43c10686ea452"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1facedet_1_1YOLOv5Face.html#aae077a92fd0e1c7596d43c10686ea452">is_no_pad</a></td></tr>
-<tr class="memdesc:aae077a92fd0e1c7596d43c10686ea452"><td class="mdescLeft">&#160;</td><td class="mdescRight">while is_mini_pad = false and is_no_pad = true, will resize the image to the set size <br /></td></tr>
-<tr class="separator:aae077a92fd0e1c7596d43c10686ea452"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a211a2e8aafd284a849851ddbc3590027"><td class="memItemLeft" align="right" valign="top"><a id="a211a2e8aafd284a849851ddbc3590027"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1facedet_1_1YOLOv5Face.html#a211a2e8aafd284a849851ddbc3590027">is_scale_up</a></td></tr>
-<tr class="memdesc:a211a2e8aafd284a849851ddbc3590027"><td class="mdescLeft">&#160;</td><td class="mdescRight">if is_scale_up is false, the input image only can be zoom out, the maximum resize scale cannot exceed 1.0 <br /></td></tr>
-<tr class="separator:a211a2e8aafd284a849851ddbc3590027"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5288697689973701e35451c75bed80c8"><td class="memItemLeft" align="right" valign="top"><a id="a5288697689973701e35451c75bed80c8"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1facedet_1_1YOLOv5Face.html#a5288697689973701e35451c75bed80c8">stride</a></td></tr>
-<tr class="memdesc:a5288697689973701e35451c75bed80c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">padding stride, for is_mini_pad <br /></td></tr>
-<tr class="separator:a5288697689973701e35451c75bed80c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae7775a829c593df52d22e628b0905bf9"><td class="memItemLeft" align="right" valign="top"><a id="ae7775a829c593df52d22e628b0905bf9"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1facedet_1_1YOLOv5Face.html#ae7775a829c593df52d22e628b0905bf9">landmarks_per_face</a></td></tr>
-<tr class="memdesc:ae7775a829c593df52d22e628b0905bf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">setup the number of landmarks for per face (if have), default 5 in official yolov5face note that, the outupt tensor's shape must be: (1,n,4+1+2*landmarks_per_face+1=box+obj+landmarks+cls) <br /></td></tr>
+<tr class="memdesc:ae7775a829c593df52d22e628b0905bf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Argument for image postprocessing step, setup the number of landmarks for per face (if have), default 5 in official yolov5face note that, the outupt tensor's shape must be: (1,n,4+1+2*landmarks_per_face+1=box+obj+landmarks+cls) <br /></td></tr>
 <tr class="separator:ae7775a829c593df52d22e628b0905bf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_classfastdeploy_1_1FastDeployModel"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classfastdeploy_1_1FastDeployModel')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classfastdeploy_1_1FastDeployModel.html">fastdeploy::FastDeployModel</a></td></tr>
 <tr class="memitem:ad2b0a8ea11294f12f6075c118966ba1c inherit pub_attribs_classfastdeploy_1_1FastDeployModel"><td class="memItemLeft" align="right" valign="top"><a id="ad2b0a8ea11294f12f6075c118966ba1c"></a>
@@ -259,7 +239,7 @@ std::vector&lt; <a class="el" href="namespacefastdeploy.html#addd441db144b083efc
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">FaceDetectionResult *&#160;</td>
+          <td class="paramtype"><a class="el" href="structfastdeploy_1_1vision_1_1FaceDetectionResult.html">FaceDetectionResult</a> *&#160;</td>
           <td class="paramname"><em>result</em>, </td>
         </tr>
         <tr>
@@ -302,8 +282,8 @@ std::vector&lt; <a class="el" href="namespacefastdeploy.html#addd441db144b083efc
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/fastdeploy/1021/FastDeploy/fastdeploy/vision/facedet/contrib/<a class="el" href="yolov5face_8h_source.html">yolov5face.h</a></li>
-<li>/fastdeploy/1021/FastDeploy/fastdeploy/vision/facedet/contrib/yolov5face.cc</li>
+<li>/fastdeploy/1026/FastDeploy/fastdeploy/vision/facedet/contrib/<a class="el" href="yolov5face_8h_source.html">yolov5face.h</a></li>
+<li>/fastdeploy/1026/FastDeploy/fastdeploy/vision/facedet/contrib/yolov5face.cc</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

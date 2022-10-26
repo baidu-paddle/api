@@ -162,6 +162,8 @@
 <li class="toctree-l1"><a class="reference internal" href="image_classification.html">Image Classification API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="keypoint_detection.html">Keypoint Detection API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matting.html">Matting API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="face_recognition.html">Face Recognition API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="face_detection.html">Face Detection API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="vision_results_en.html">Description of Vision Results</a></li>
 </ul>
 
@@ -455,6 +457,512 @@
 </dd></dl>
 
 </section>
+<section id="fastdeploy-vision-detection-nanodetplus">
+<h2>fastdeploy.vision.detection.NanoDetPlus<a class="headerlink" href="#fastdeploy-vision-detection-nanodetplus" title="Permalink to this headline">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="fastdeploy.vision.detection.NanoDetPlus">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.detection.</span></span><span class="sig-name descname"><span class="pre">NanoDetPlus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.ONNX:</span> <span class="pre">2&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/detection/contrib/nanodet_plus.html#NanoDetPlus"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.detection.NanoDetPlus" title="Permalink to this definition">#</a></dt>
+<dd><p>Load a NanoDetPlus model exported by NanoDet.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model_file</strong> – (str)Path of model file, e.g ./nanodet.onnx</p></li>
+<li><p><strong>params_file</strong> – (str)Path of parameters file, e.g yolox/model.pdiparams, if the model_fomat is ModelFormat.ONNX, this param will be ignored, can be set as empty string</p></li>
+<li><p><strong>runtime_option</strong> – (fastdeploy.RuntimeOption)RuntimeOption for inference this model, if it’s None, will use the default backend on CPU</p></li>
+<li><p><strong>model_format</strong> – (fastdeploy.ModelForamt)Model format of the loaded model</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.vision.detection.NanoDetPlus.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conf_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.25</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nms_iou_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/detection/contrib/nanodet_plus.html#NanoDetPlus.predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.detection.NanoDetPlus.predict" title="Permalink to this definition">#</a></dt>
+<dd><p>Detect an input image</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input_image</strong> – (numpy.ndarray)The input image data, 3-D array with layout HWC, BGR format</p></li>
+<li><p><strong>conf_threshold</strong> – confidence threashold for postprocessing, default is 0.25</p></li>
+<li><p><strong>nms_iou_threshold</strong> – iou threashold for NMS, default is 0.5</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DetectionResult</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fastdeploy.vision.detection.NanoDetPlus.reg_max">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">reg_max</span></span><a class="headerlink" href="#fastdeploy.vision.detection.NanoDetPlus.reg_max" title="Permalink to this definition">#</a></dt>
+<dd><p>reg_max for GFL regression, default 7</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fastdeploy.vision.detection.NanoDetPlus.size">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#fastdeploy.vision.detection.NanoDetPlus.size" title="Permalink to this definition">#</a></dt>
+<dd><p>Argument for image preprocessing step, the preprocess image size, tuple of (width, height)</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="fastdeploy-vision-detection-scaledyolov4">
+<h2>fastdeploy.vision.detection.ScaledYOLOv4<a class="headerlink" href="#fastdeploy-vision-detection-scaledyolov4" title="Permalink to this headline">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="fastdeploy.vision.detection.ScaledYOLOv4">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.detection.</span></span><span class="sig-name descname"><span class="pre">ScaledYOLOv4</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.ONNX:</span> <span class="pre">2&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/detection/contrib/scaled_yolov4.html#ScaledYOLOv4"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.detection.ScaledYOLOv4" title="Permalink to this definition">#</a></dt>
+<dd><p>Load a ScaledYOLOv4 model exported by ScaledYOLOv4.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model_file</strong> – (str)Path of model file, e.g ./scaled_yolov4.onnx</p></li>
+<li><p><strong>params_file</strong> – (str)Path of parameters file, e.g yolox/model.pdiparams, if the model_fomat is ModelFormat.ONNX, this param will be ignored, can be set as empty string</p></li>
+<li><p><strong>runtime_option</strong> – (fastdeploy.RuntimeOption)RuntimeOption for inference this model, if it’s None, will use the default backend on CPU</p></li>
+<li><p><strong>model_format</strong> – (fastdeploy.ModelForamt)Model format of the loaded model</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.vision.detection.ScaledYOLOv4.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conf_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.25</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nms_iou_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/detection/contrib/scaled_yolov4.html#ScaledYOLOv4.predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.detection.ScaledYOLOv4.predict" title="Permalink to this definition">#</a></dt>
+<dd><p>Detect an input image</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input_image</strong> – (numpy.ndarray)The input image data, 3-D array with layout HWC, BGR format</p></li>
+<li><p><strong>conf_threshold</strong> – confidence threashold for postprocessing, default is 0.25</p></li>
+<li><p><strong>nms_iou_threshold</strong> – iou threashold for NMS, default is 0.5</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DetectionResult</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fastdeploy.vision.detection.ScaledYOLOv4.size">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#fastdeploy.vision.detection.ScaledYOLOv4.size" title="Permalink to this definition">#</a></dt>
+<dd><p>Argument for image preprocessing step, the preprocess image size, tuple of (width, height)</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="fastdeploy-vision-detection-yolor">
+<h2>fastdeploy.vision.detection.YOLOR<a class="headerlink" href="#fastdeploy-vision-detection-yolor" title="Permalink to this headline">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="fastdeploy.vision.detection.YOLOR">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.detection.</span></span><span class="sig-name descname"><span class="pre">YOLOR</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.ONNX:</span> <span class="pre">2&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/detection/contrib/yolor.html#YOLOR"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.detection.YOLOR" title="Permalink to this definition">#</a></dt>
+<dd><p>Load a YOLOR model exported by YOLOR</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model_file</strong> – (str)Path of model file, e.g ./yolor.onnx</p></li>
+<li><p><strong>params_file</strong> – (str)Path of parameters file, e.g yolox/model.pdiparams, if the model_fomat is ModelFormat.ONNX, this param will be ignored, can be set as empty string</p></li>
+<li><p><strong>runtime_option</strong> – (fastdeploy.RuntimeOption)RuntimeOption for inference this model, if it’s None, will use the default backend on CPU</p></li>
+<li><p><strong>model_format</strong> – (fastdeploy.ModelForamt)Model format of the loaded model</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.vision.detection.YOLOR.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conf_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.25</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nms_iou_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/detection/contrib/yolor.html#YOLOR.predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.detection.YOLOR.predict" title="Permalink to this definition">#</a></dt>
+<dd><p>Detect an input image</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input_image</strong> – (numpy.ndarray)The input image data, 3-D array with layout HWC, BGR format</p></li>
+<li><p><strong>conf_threshold</strong> – confidence threashold for postprocessing, default is 0.25</p></li>
+<li><p><strong>nms_iou_threshold</strong> – iou threashold for NMS, default is 0.5</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DetectionResult</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fastdeploy.vision.detection.YOLOR.size">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#fastdeploy.vision.detection.YOLOR.size" title="Permalink to this definition">#</a></dt>
+<dd><p>Argument for image preprocessing step, the preprocess image size, tuple of (width, height)</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="fastdeploy-vision-detection-yolov5">
+<h2>fastdeploy.vision.detection.YOLOv5<a class="headerlink" href="#fastdeploy-vision-detection-yolov5" title="Permalink to this headline">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="fastdeploy.vision.detection.YOLOv5">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.detection.</span></span><span class="sig-name descname"><span class="pre">YOLOv5</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.ONNX:</span> <span class="pre">2&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/detection/contrib/yolov5.html#YOLOv5"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.detection.YOLOv5" title="Permalink to this definition">#</a></dt>
+<dd><p>Load a YOLOv5 model exported by YOLOv5.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model_file</strong> – (str)Path of model file, e.g ./yolov5.onnx</p></li>
+<li><p><strong>params_file</strong> – (str)Path of parameters file, e.g yolox/model.pdiparams, if the model_fomat is ModelFormat.ONNX, this param will be ignored, can be set as empty string</p></li>
+<li><p><strong>runtime_option</strong> – (fastdeploy.RuntimeOption)RuntimeOption for inference this model, if it’s None, will use the default backend on CPU</p></li>
+<li><p><strong>model_format</strong> – (fastdeploy.ModelForamt)Model format of the loaded model</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.vision.detection.YOLOv5.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conf_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.25</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nms_iou_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/detection/contrib/yolov5.html#YOLOv5.predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.detection.YOLOv5.predict" title="Permalink to this definition">#</a></dt>
+<dd><p>Detect an input image</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input_image</strong> – (numpy.ndarray)The input image data, 3-D array with layout HWC, BGR format</p></li>
+<li><p><strong>conf_threshold</strong> – confidence threashold for postprocessing, default is 0.25</p></li>
+<li><p><strong>nms_iou_threshold</strong> – iou threashold for NMS, default is 0.5</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DetectionResult</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fastdeploy.vision.detection.YOLOv5.size">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#fastdeploy.vision.detection.YOLOv5.size" title="Permalink to this definition">#</a></dt>
+<dd><p>Argument for image preprocessing step, the preprocess image size, tuple of (width, height)</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="fastdeploy-vision-detection-yolov5lite">
+<h2>fastdeploy.vision.detection.YOLOv5Lite<a class="headerlink" href="#fastdeploy-vision-detection-yolov5lite" title="Permalink to this headline">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="fastdeploy.vision.detection.YOLOv5Lite">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.detection.</span></span><span class="sig-name descname"><span class="pre">YOLOv5Lite</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.ONNX:</span> <span class="pre">2&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/detection/contrib/yolov5lite.html#YOLOv5Lite"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.detection.YOLOv5Lite" title="Permalink to this definition">#</a></dt>
+<dd><p>Load a YOLOv5Lite model exported by YOLOv5Lite.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model_file</strong> – (str)Path of model file, e.g ./yolov5lite.onnx</p></li>
+<li><p><strong>params_file</strong> – (str)Path of parameters file, e.g yolox/model.pdiparams, if the model_fomat is ModelFormat.ONNX, this param will be ignored, can be set as empty string</p></li>
+<li><p><strong>runtime_option</strong> – (fastdeploy.RuntimeOption)RuntimeOption for inference this model, if it’s None, will use the default backend on CPU</p></li>
+<li><p><strong>model_format</strong> – (fastdeploy.ModelForamt)Model format of the loaded model</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="fastdeploy.vision.detection.YOLOv5Lite.downsample_strides">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">downsample_strides</span></span><a class="headerlink" href="#fastdeploy.vision.detection.YOLOv5Lite.downsample_strides" title="Permalink to this definition">#</a></dt>
+<dd><p>downsample strides for YOLOv5Lite to generate anchors, will take (8,16,32) as default values, might have stride=64.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fastdeploy.vision.detection.YOLOv5Lite.is_decode_exported">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_decode_exported</span></span><a class="headerlink" href="#fastdeploy.vision.detection.YOLOv5Lite.is_decode_exported" title="Permalink to this definition">#</a></dt>
+<dd><p>whether the model_file was exported with decode module.
+The official YOLOv5Lite/export.py script will export ONNX file without decode module.
+Please set it ‘true’ manually if the model file was exported with decode module.
+false : ONNX files without decode module. true : ONNX file with decode module.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.vision.detection.YOLOv5Lite.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conf_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.25</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nms_iou_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/detection/contrib/yolov5lite.html#YOLOv5Lite.predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.detection.YOLOv5Lite.predict" title="Permalink to this definition">#</a></dt>
+<dd><p>Detect an input image</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input_image</strong> – (numpy.ndarray)The input image data, 3-D array with layout HWC, BGR format</p></li>
+<li><p><strong>conf_threshold</strong> – confidence threashold for postprocessing, default is 0.25</p></li>
+<li><p><strong>nms_iou_threshold</strong> – iou threashold for NMS, default is 0.5</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DetectionResult</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fastdeploy.vision.detection.YOLOv5Lite.size">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#fastdeploy.vision.detection.YOLOv5Lite.size" title="Permalink to this definition">#</a></dt>
+<dd><p>Argument for image preprocessing step, the preprocess image size, tuple of (width, height)</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="fastdeploy-vision-detection-yolov6">
+<h2>fastdeploy.vision.detection.YOLOv6<a class="headerlink" href="#fastdeploy-vision-detection-yolov6" title="Permalink to this headline">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="fastdeploy.vision.detection.YOLOv6">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.detection.</span></span><span class="sig-name descname"><span class="pre">YOLOv6</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.ONNX:</span> <span class="pre">2&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/detection/contrib/yolov6.html#YOLOv6"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.detection.YOLOv6" title="Permalink to this definition">#</a></dt>
+<dd><p>Load a YOLOv6 model exported by YOLOv6.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model_file</strong> – (str)Path of model file, e.g ./yolov6.onnx</p></li>
+<li><p><strong>params_file</strong> – (str)Path of parameters file, e.g yolox/model.pdiparams, if the model_fomat is ModelFormat.ONNX, this param will be ignored, can be set as empty string</p></li>
+<li><p><strong>runtime_option</strong> – (fastdeploy.RuntimeOption)RuntimeOption for inference this model, if it’s None, will use the default backend on CPU</p></li>
+<li><p><strong>model_format</strong> – (fastdeploy.ModelForamt)Model format of the loaded model</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.vision.detection.YOLOv6.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conf_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.25</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nms_iou_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/detection/contrib/yolov6.html#YOLOv6.predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.detection.YOLOv6.predict" title="Permalink to this definition">#</a></dt>
+<dd><p>Detect an input image</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input_image</strong> – (numpy.ndarray)The input image data, 3-D array with layout HWC, BGR format</p></li>
+<li><p><strong>conf_threshold</strong> – confidence threashold for postprocessing, default is 0.25</p></li>
+<li><p><strong>nms_iou_threshold</strong> – iou threashold for NMS, default is 0.5</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DetectionResult</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fastdeploy.vision.detection.YOLOv6.size">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#fastdeploy.vision.detection.YOLOv6.size" title="Permalink to this definition">#</a></dt>
+<dd><p>Argument for image preprocessing step, the preprocess image size, tuple of (width, height)</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="fastdeploy-vision-detection-yolov7">
+<h2>fastdeploy.vision.detection.YOLOv7<a class="headerlink" href="#fastdeploy-vision-detection-yolov7" title="Permalink to this headline">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="fastdeploy.vision.detection.YOLOv7">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.detection.</span></span><span class="sig-name descname"><span class="pre">YOLOv7</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.ONNX:</span> <span class="pre">2&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/detection/contrib/yolov7.html#YOLOv7"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.detection.YOLOv7" title="Permalink to this definition">#</a></dt>
+<dd><p>Load a YOLOv7 model exported by YOLOv7.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model_file</strong> – (str)Path of model file, e.g ./yolov7.onnx</p></li>
+<li><p><strong>params_file</strong> – (str)Path of parameters file, e.g yolox/model.pdiparams, if the model_fomat is ModelFormat.ONNX, this param will be ignored, can be set as empty string</p></li>
+<li><p><strong>runtime_option</strong> – (fastdeploy.RuntimeOption)RuntimeOption for inference this model, if it’s None, will use the default backend on CPU</p></li>
+<li><p><strong>model_format</strong> – (fastdeploy.ModelForamt)Model format of the loaded model</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.vision.detection.YOLOv7.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conf_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.25</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nms_iou_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/detection/contrib/yolov7.html#YOLOv7.predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.detection.YOLOv7.predict" title="Permalink to this definition">#</a></dt>
+<dd><p>Detect an input image</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input_image</strong> – (numpy.ndarray)The input image data, 3-D array with layout HWC, BGR format</p></li>
+<li><p><strong>conf_threshold</strong> – confidence threashold for postprocessing, default is 0.25</p></li>
+<li><p><strong>nms_iou_threshold</strong> – iou threashold for NMS, default is 0.5</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DetectionResult</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fastdeploy.vision.detection.YOLOv7.size">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#fastdeploy.vision.detection.YOLOv7.size" title="Permalink to this definition">#</a></dt>
+<dd><p>Argument for image preprocessing step, the preprocess image size, tuple of (width, height)</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="id1">
+<h2>fastdeploy.vision.detection.YOLOR<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="fastdeploy.vision.detection.YOLOR">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.detection.</span></span><span class="sig-name descname"><span class="pre">YOLOR</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.ONNX:</span> <span class="pre">2&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/detection/contrib/yolor.html#YOLOR"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.detection.YOLOR" title="Permalink to this definition">#</a></dt>
+<dd><p>Load a YOLOR model exported by YOLOR</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model_file</strong> – (str)Path of model file, e.g ./yolor.onnx</p></li>
+<li><p><strong>params_file</strong> – (str)Path of parameters file, e.g yolox/model.pdiparams, if the model_fomat is ModelFormat.ONNX, this param will be ignored, can be set as empty string</p></li>
+<li><p><strong>runtime_option</strong> – (fastdeploy.RuntimeOption)RuntimeOption for inference this model, if it’s None, will use the default backend on CPU</p></li>
+<li><p><strong>model_format</strong> – (fastdeploy.ModelForamt)Model format of the loaded model</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.vision.detection.YOLOR.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conf_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.25</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nms_iou_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/detection/contrib/yolor.html#YOLOR.predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.detection.YOLOR.predict" title="Permalink to this definition">#</a></dt>
+<dd><p>Detect an input image</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input_image</strong> – (numpy.ndarray)The input image data, 3-D array with layout HWC, BGR format</p></li>
+<li><p><strong>conf_threshold</strong> – confidence threashold for postprocessing, default is 0.25</p></li>
+<li><p><strong>nms_iou_threshold</strong> – iou threashold for NMS, default is 0.5</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DetectionResult</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fastdeploy.vision.detection.YOLOR.size">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#fastdeploy.vision.detection.YOLOR.size" title="Permalink to this definition">#</a></dt>
+<dd><p>Argument for image preprocessing step, the preprocess image size, tuple of (width, height)</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="fastdeploy-vision-detection-yolov7end2endort">
+<h2>fastdeploy.vision.detection.YOLOv7End2EndORT<a class="headerlink" href="#fastdeploy-vision-detection-yolov7end2endort" title="Permalink to this headline">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="fastdeploy.vision.detection.YOLOv7End2EndORT">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.detection.</span></span><span class="sig-name descname"><span class="pre">YOLOv7End2EndORT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.ONNX:</span> <span class="pre">2&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/detection/contrib/yolov7end2end_ort.html#YOLOv7End2EndORT"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.detection.YOLOv7End2EndORT" title="Permalink to this definition">#</a></dt>
+<dd><p>Load a YOLOv7End2EndORT model exported by YOLOv7.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model_file</strong> – (str)Path of model file, e.g ./yolov7end2end_ort.onnx</p></li>
+<li><p><strong>params_file</strong> – (str)Path of parameters file, e.g yolox/model.pdiparams, if the model_fomat is ModelFormat.ONNX, this param will be ignored, can be set as empty string</p></li>
+<li><p><strong>runtime_option</strong> – (fastdeploy.RuntimeOption)RuntimeOption for inference this model, if it’s None, will use the default backend on CPU</p></li>
+<li><p><strong>model_format</strong> – (fastdeploy.ModelForamt)Model format of the loaded model</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.vision.detection.YOLOv7End2EndORT.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conf_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.25</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/detection/contrib/yolov7end2end_ort.html#YOLOv7End2EndORT.predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.detection.YOLOv7End2EndORT.predict" title="Permalink to this definition">#</a></dt>
+<dd><p>Detect an input image</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input_image</strong> – (numpy.ndarray)The input image data, 3-D array with layout HWC, BGR format</p></li>
+<li><p><strong>conf_threshold</strong> – confidence threashold for postprocessing, default is 0.25</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DetectionResult</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fastdeploy.vision.detection.YOLOv7End2EndORT.size">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#fastdeploy.vision.detection.YOLOv7End2EndORT.size" title="Permalink to this definition">#</a></dt>
+<dd><p>Argument for image preprocessing step, the preprocess image size, tuple of (width, height)</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="fastdeploy-vision-detection-yolov7end2endtrt">
+<h2>fastdeploy.vision.detection.YOLOv7End2EndTRT<a class="headerlink" href="#fastdeploy-vision-detection-yolov7end2endtrt" title="Permalink to this headline">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="fastdeploy.vision.detection.YOLOv7End2EndTRT">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.detection.</span></span><span class="sig-name descname"><span class="pre">YOLOv7End2EndTRT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.ONNX:</span> <span class="pre">2&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/detection/contrib/yolov7end2end_trt.html#YOLOv7End2EndTRT"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.detection.YOLOv7End2EndTRT" title="Permalink to this definition">#</a></dt>
+<dd><p>Load a YOLOv7End2EndTRT model exported by YOLOv7.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model_file</strong> – (str)Path of model file, e.g ./yolov7end2end_trt.onnx</p></li>
+<li><p><strong>params_file</strong> – (str)Path of parameters file, e.g yolox/model.pdiparams, if the model_fomat is ModelFormat.ONNX, this param will be ignored, can be set as empty string</p></li>
+<li><p><strong>runtime_option</strong> – (fastdeploy.RuntimeOption)RuntimeOption for inference this model, if it’s None, will use the default backend on CPU</p></li>
+<li><p><strong>model_format</strong> – (fastdeploy.ModelForamt)Model format of the loaded model</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.vision.detection.YOLOv7End2EndTRT.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conf_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.25</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/detection/contrib/yolov7end2end_trt.html#YOLOv7End2EndTRT.predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.detection.YOLOv7End2EndTRT.predict" title="Permalink to this definition">#</a></dt>
+<dd><p>Detect an input image</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input_image</strong> – (numpy.ndarray)The input image data, 3-D array with layout HWC, BGR format</p></li>
+<li><p><strong>conf_threshold</strong> – confidence threashold for postprocessing, default is 0.25</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DetectionResult</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fastdeploy.vision.detection.YOLOv7End2EndTRT.size">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#fastdeploy.vision.detection.YOLOv7End2EndTRT.size" title="Permalink to this definition">#</a></dt>
+<dd><p>Argument for image preprocessing step, the preprocess image size, tuple of (width, height)</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="fastdeploy-vision-detection-yolox">
+<h2>fastdeploy.vision.detection.YOLOX<a class="headerlink" href="#fastdeploy-vision-detection-yolox" title="Permalink to this headline">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="fastdeploy.vision.detection.YOLOX">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.detection.</span></span><span class="sig-name descname"><span class="pre">YOLOX</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.ONNX:</span> <span class="pre">2&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/detection/contrib/yolox.html#YOLOX"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.detection.YOLOX" title="Permalink to this definition">#</a></dt>
+<dd><p>Load a YOLOX model exported by YOLOX.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model_file</strong> – (str)Path of model file, e.g ./yolox.onnx</p></li>
+<li><p><strong>params_file</strong> – (str)Path of parameters file, e.g yolox/model.pdiparams, if the model_fomat is ModelFormat.ONNX, this param will be ignored, can be set as empty string</p></li>
+<li><p><strong>runtime_option</strong> – (fastdeploy.RuntimeOption)RuntimeOption for inference this model, if it’s None, will use the default backend on CPU</p></li>
+<li><p><strong>model_format</strong> – (fastdeploy.ModelForamt)Model format of the loaded model</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="fastdeploy.vision.detection.YOLOX.downsample_strides">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">downsample_strides</span></span><a class="headerlink" href="#fastdeploy.vision.detection.YOLOX.downsample_strides" title="Permalink to this definition">#</a></dt>
+<dd><p>downsample strides for YOLOX to generate anchors, will take (8,16,32) as default values, might have stride=64.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fastdeploy.vision.detection.YOLOX.is_decode_exported">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_decode_exported</span></span><a class="headerlink" href="#fastdeploy.vision.detection.YOLOX.is_decode_exported" title="Permalink to this definition">#</a></dt>
+<dd><p>whether the model_file was exported with decode module.
+The official YOLOX/tools/export_onnx.py script will export ONNX file without decode module.
+Please set it ‘true’ manually if the model file was exported with decode module.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.vision.detection.YOLOX.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conf_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.25</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nms_iou_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/detection/contrib/yolox.html#YOLOX.predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.detection.YOLOX.predict" title="Permalink to this definition">#</a></dt>
+<dd><p>Detect an input image</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input_image</strong> – (numpy.ndarray)The input image data, 3-D array with layout HWC, BGR format</p></li>
+<li><p><strong>conf_threshold</strong> – confidence threashold for postprocessing, default is 0.25</p></li>
+<li><p><strong>nms_iou_threshold</strong> – iou threashold for NMS, default is 0.5</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DetectionResult</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fastdeploy.vision.detection.YOLOX.size">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#fastdeploy.vision.detection.YOLOX.size" title="Permalink to this definition">#</a></dt>
+<dd><p>Argument for image preprocessing step, the preprocess image size, tuple of (width, height)</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
 </section>
 
         </article>
@@ -523,6 +1031,17 @@
 <li><a class="reference internal" href="#fastdeploy-vision-detection-yolov3">fastdeploy.vision.detection.YOLOv3</a></li>
 <li><a class="reference internal" href="#fastdeploy-vision-detection-fasterrcnn">fastdeploy.vision.detection.FasterRCNN</a></li>
 <li><a class="reference internal" href="#fastdeploy-vision-detection-maskrcnn">fastdeploy.vision.detection.MaskRCNN</a></li>
+<li><a class="reference internal" href="#fastdeploy-vision-detection-nanodetplus">fastdeploy.vision.detection.NanoDetPlus</a></li>
+<li><a class="reference internal" href="#fastdeploy-vision-detection-scaledyolov4">fastdeploy.vision.detection.ScaledYOLOv4</a></li>
+<li><a class="reference internal" href="#fastdeploy-vision-detection-yolor">fastdeploy.vision.detection.YOLOR</a></li>
+<li><a class="reference internal" href="#fastdeploy-vision-detection-yolov5">fastdeploy.vision.detection.YOLOv5</a></li>
+<li><a class="reference internal" href="#fastdeploy-vision-detection-yolov5lite">fastdeploy.vision.detection.YOLOv5Lite</a></li>
+<li><a class="reference internal" href="#fastdeploy-vision-detection-yolov6">fastdeploy.vision.detection.YOLOv6</a></li>
+<li><a class="reference internal" href="#fastdeploy-vision-detection-yolov7">fastdeploy.vision.detection.YOLOv7</a></li>
+<li><a class="reference internal" href="#id1">fastdeploy.vision.detection.YOLOR</a></li>
+<li><a class="reference internal" href="#fastdeploy-vision-detection-yolov7end2endort">fastdeploy.vision.detection.YOLOv7End2EndORT</a></li>
+<li><a class="reference internal" href="#fastdeploy-vision-detection-yolov7end2endtrt">fastdeploy.vision.detection.YOLOv7End2EndTRT</a></li>
+<li><a class="reference internal" href="#fastdeploy-vision-detection-yolox">fastdeploy.vision.detection.YOLOX</a></li>
 </ul>
 </li>
 </ul>

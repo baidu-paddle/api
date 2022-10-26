@@ -6,6 +6,7 @@ var searchData=
   ['resize',['Resize',['../structfastdeploy_1_1vision_1_1Mask.html#a3eafed318dfcd0248668c36d009f6e56',1,'fastdeploy::vision::Mask']]],
   ['resnet',['ResNet',['../classfastdeploy_1_1vision_1_1classification_1_1ResNet.html',1,'fastdeploy::vision::classification::ResNet'],['../classfastdeploy_1_1vision_1_1classification_1_1ResNet.html#a9367e6af461ceac5951e5b1623c47d62',1,'fastdeploy::vision::classification::ResNet::ResNet()']]],
   ['retinaface',['RetinaFace',['../classfastdeploy_1_1vision_1_1facedet_1_1RetinaFace.html',1,'fastdeploy::vision::facedet::RetinaFace'],['../classfastdeploy_1_1vision_1_1facedet_1_1RetinaFace.html#a078ab7e36a40fb2c63550be9077e880c',1,'fastdeploy::vision::facedet::RetinaFace::RetinaFace()']]],
+  ['robustvideomatting',['RobustVideoMatting',['../classfastdeploy_1_1vision_1_1matting_1_1RobustVideoMatting.html',1,'fastdeploy::vision::matting::RobustVideoMatting'],['../classfastdeploy_1_1vision_1_1matting_1_1RobustVideoMatting.html#a4c2af0942704d117e2b8a7f78b0959b2',1,'fastdeploy::vision::matting::RobustVideoMatting::RobustVideoMatting()']]],
   ['runtime',['Runtime',['../structfastdeploy_1_1Runtime.html',1,'fastdeploy']]],
   ['runtime_2eh',['runtime.h',['../runtime_8h.html',1,'']]],
   ['runtimeoption',['RuntimeOption',['../structfastdeploy_1_1RuntimeOption.html',1,'fastdeploy']]]

@@ -79,8 +79,12 @@ $(function() {
 <li>Clear()
 : <a class="el" href="structfastdeploy_1_1vision_1_1ClassifyResult.html#a01377cd1f63fdbb75cbd4136b406b267">fastdeploy::vision::ClassifyResult</a>
 , <a class="el" href="structfastdeploy_1_1vision_1_1DetectionResult.html#a7b93ffaa98cc11d2c07efc5d1d613b4b">fastdeploy::vision::DetectionResult</a>
+, <a class="el" href="structfastdeploy_1_1vision_1_1FaceDetectionResult.html#adf569bba4547d5b4547ee4b46bfbc647">fastdeploy::vision::FaceDetectionResult</a>
+, <a class="el" href="structfastdeploy_1_1vision_1_1FaceRecognitionResult.html#af29e3b440a8cdbbfa9bf1f5aca19b484">fastdeploy::vision::FaceRecognitionResult</a>
 , <a class="el" href="structfastdeploy_1_1vision_1_1KeyPointDetectionResult.html#a47a7602c7ab939f30396abc810528067">fastdeploy::vision::KeyPointDetectionResult</a>
 , <a class="el" href="structfastdeploy_1_1vision_1_1Mask.html#a1591eb44f43ef3bf2e0e81295b24e0c6">fastdeploy::vision::Mask</a>
+, <a class="el" href="structfastdeploy_1_1vision_1_1MattingResult.html#a67c1193f34af71bd388d87e7417f2107">fastdeploy::vision::MattingResult</a>
+, <a class="el" href="structfastdeploy_1_1vision_1_1SegmentationResult.html#a2aec4c58e77e39948f283bedd8a0b242">fastdeploy::vision::SegmentationResult</a>
 </li>
 <li>Compile()
 : <a class="el" href="structfastdeploy_1_1Runtime.html#a9987998af18e9f0d9912d5e90b10eae3">fastdeploy::Runtime</a>
@@ -110,6 +114,9 @@ $(function() {
 <li>DisablePaddleTrtCollectShape()
 : <a class="el" href="structfastdeploy_1_1RuntimeOption.html#a91232808106866c55453f31a2dcfeccf">fastdeploy::RuntimeOption</a>
 </li>
+<li>DisablePinnedMemory()
+: <a class="el" href="structfastdeploy_1_1RuntimeOption.html#ad42ba8fea3322838160a49b8b90a18df">fastdeploy::RuntimeOption</a>
+</li>
 <li>DisableRecordTimeOfRuntime()
 : <a class="el" href="classfastdeploy_1_1FastDeployModel.html#a7c1586af5d28d109ab7e73138e6549aa">fastdeploy::FastDeployModel</a>
 </li>
@@ -131,6 +138,9 @@ $(function() {
 </li>
 <li>EnablePaddleTrtCollectShape()
 : <a class="el" href="structfastdeploy_1_1RuntimeOption.html#ac837691ea03b51eb33908bf807354030">fastdeploy::RuntimeOption</a>
+</li>
+<li>EnablePinnedMemory()
+: <a class="el" href="structfastdeploy_1_1RuntimeOption.html#afed5cda1762c8d35e22eeb2fbe407d00">fastdeploy::RuntimeOption</a>
 </li>
 <li>EnableRecordTimeOfRuntime()
 : <a class="el" href="classfastdeploy_1_1FastDeployModel.html#a4d52262130489235c09bb53429d3dd33">fastdeploy::FastDeployModel</a>
@@ -208,6 +218,7 @@ $(function() {
 , <a class="el" href="classfastdeploy_1_1vision_1_1keypointdetection_1_1PPTinyPose.html#ad2542caac7472fddb46007bf3ebef70c">fastdeploy::vision::keypointdetection::PPTinyPose</a>
 , <a class="el" href="classfastdeploy_1_1vision_1_1matting_1_1MODNet.html#a98b50312869da5d82651b642789820dd">fastdeploy::vision::matting::MODNet</a>
 , <a class="el" href="classfastdeploy_1_1vision_1_1matting_1_1PPMatting.html#a6a24570b01fdbbb8a178a9ab6eef717f">fastdeploy::vision::matting::PPMatting</a>
+, <a class="el" href="classfastdeploy_1_1vision_1_1matting_1_1RobustVideoMatting.html#a0216f43d3407d3a0fb40114c3dae15f9">fastdeploy::vision::matting::RobustVideoMatting</a>
 , <a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1Classifier.html#ad9c4f0c74961e251998012bc26e0bd72">fastdeploy::vision::ocr::Classifier</a>
 , <a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1DBDetector.html#a8eefa6e74658517a8e7670ffe670c47c">fastdeploy::vision::ocr::DBDetector</a>
 , <a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1Recognizer.html#adad1ffb4e1bc9cd49c2029a05d91c291">fastdeploy::vision::ocr::Recognizer</a>
@@ -298,9 +309,10 @@ $(function() {
 , <a class="el" href="classfastdeploy_1_1vision_1_1faceid_1_1InsightFaceRecognitionModel.html#aa6f91c93b176ed780f83a2acc65a0ec2">fastdeploy::vision::faceid::InsightFaceRecognitionModel</a>
 , <a class="el" href="classfastdeploy_1_1vision_1_1faceid_1_1PartialFC.html#aa7b7c5e13c4040d58f2071081eb7d09f">fastdeploy::vision::faceid::PartialFC</a>
 , <a class="el" href="classfastdeploy_1_1vision_1_1faceid_1_1VPL.html#af8155e357d611b8a89e7c135a7d17dbc">fastdeploy::vision::faceid::VPL</a>
-, <a class="el" href="classfastdeploy_1_1vision_1_1keypointdetection_1_1PPTinyPose.html#a9e01f29abc2a04dfc2e00c7c081fded2">fastdeploy::vision::keypointdetection::PPTinyPose</a>
+, <a class="el" href="classfastdeploy_1_1vision_1_1keypointdetection_1_1PPTinyPose.html#a7242bdd7281818a6999eeff6c8708898">fastdeploy::vision::keypointdetection::PPTinyPose</a>
 , <a class="el" href="classfastdeploy_1_1vision_1_1matting_1_1MODNet.html#a700dc00a6b5f83f4b2d88725c43cc4e2">fastdeploy::vision::matting::MODNet</a>
 , <a class="el" href="classfastdeploy_1_1vision_1_1matting_1_1PPMatting.html#a6b1777d9080bf1fe3cd460d19f7df49e">fastdeploy::vision::matting::PPMatting</a>
+, <a class="el" href="classfastdeploy_1_1vision_1_1matting_1_1RobustVideoMatting.html#a8aa70cf1717c4b0fde9ecc3211f4a381">fastdeploy::vision::matting::RobustVideoMatting</a>
 , <a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1Classifier.html#aac5a4d39bba90488e694fd14ee8de7bc">fastdeploy::vision::ocr::Classifier</a>
 , <a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1DBDetector.html#a978e254553c531e3401fe38fe50a3451">fastdeploy::vision::ocr::DBDetector</a>
 , <a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1Recognizer.html#af897aad1d8d8508c757274453ec49516">fastdeploy::vision::ocr::Recognizer</a>
@@ -327,6 +339,9 @@ $(function() {
 </li>
 <li>RetinaFace()
 : <a class="el" href="classfastdeploy_1_1vision_1_1facedet_1_1RetinaFace.html#a078ab7e36a40fb2c63550be9077e880c">fastdeploy::vision::facedet::RetinaFace</a>
+</li>
+<li>RobustVideoMatting()
+: <a class="el" href="classfastdeploy_1_1vision_1_1matting_1_1RobustVideoMatting.html#a4c2af0942704d117e2b8a7f78b0959b2">fastdeploy::vision::matting::RobustVideoMatting</a>
 </li>
 </ul>
 
@@ -368,8 +383,12 @@ $(function() {
 <li>Str()
 : <a class="el" href="structfastdeploy_1_1vision_1_1ClassifyResult.html#ac687740c8fe0ea417d27308787bdbe18">fastdeploy::vision::ClassifyResult</a>
 , <a class="el" href="structfastdeploy_1_1vision_1_1DetectionResult.html#a41db67badbfc1e035cf58cb5bda5c079">fastdeploy::vision::DetectionResult</a>
+, <a class="el" href="structfastdeploy_1_1vision_1_1FaceDetectionResult.html#a6dff8b2b7eb28e20f81e836314257b3c">fastdeploy::vision::FaceDetectionResult</a>
+, <a class="el" href="structfastdeploy_1_1vision_1_1FaceRecognitionResult.html#a304a3a0212186eb78f1156e0083215cd">fastdeploy::vision::FaceRecognitionResult</a>
 , <a class="el" href="structfastdeploy_1_1vision_1_1KeyPointDetectionResult.html#a1eac8e65210eb6ddc3f48f45eefaac68">fastdeploy::vision::KeyPointDetectionResult</a>
 , <a class="el" href="structfastdeploy_1_1vision_1_1Mask.html#a06ff26070c8c5baa59eaa7cea516b42a">fastdeploy::vision::Mask</a>
+, <a class="el" href="structfastdeploy_1_1vision_1_1MattingResult.html#a6d5f74d12c2a222c8607a8ae1be75308">fastdeploy::vision::MattingResult</a>
+, <a class="el" href="structfastdeploy_1_1vision_1_1SegmentationResult.html#a7efc6b260819702d8b4475a1ecdd9a37">fastdeploy::vision::SegmentationResult</a>
 </li>
 </ul>
 

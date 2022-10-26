@@ -73,7 +73,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="classfastdeploy_1_1vision_1_1classification_1_1ResNet.html" title="ResNet series model. ">ResNet</a> series model.  
+<p>Torchvision <a class="el" href="classfastdeploy_1_1vision_1_1classification_1_1ResNet.html" title="Torchvision ResNet series model. ">ResNet</a> series model.  
  <a href="classfastdeploy_1_1vision_1_1classification_1_1ResNet.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="resnet_8h_source.html">resnet.h</a>&gt;</code></p>
@@ -152,15 +152,15 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 Public Attributes</h2></td></tr>
 <tr class="memitem:acd88ae7a174061abaeb443fa031b7e1f"><td class="memItemLeft" align="right" valign="top"><a id="acd88ae7a174061abaeb443fa031b7e1f"></a>
 std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1classification_1_1ResNet.html#acd88ae7a174061abaeb443fa031b7e1f">size</a></td></tr>
-<tr class="memdesc:acd88ae7a174061abaeb443fa031b7e1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tuple of (width, height) <br /></td></tr>
+<tr class="memdesc:acd88ae7a174061abaeb443fa031b7e1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Argument for image preprocessing step, tuple of (width, height), decide the target size after resize. <br /></td></tr>
 <tr class="separator:acd88ae7a174061abaeb443fa031b7e1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5109c71970114ef4dc9977d82c53c219"><td class="memItemLeft" align="right" valign="top"><a id="a5109c71970114ef4dc9977d82c53c219"></a>
 std::vector&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1classification_1_1ResNet.html#a5109c71970114ef4dc9977d82c53c219">mean_vals</a></td></tr>
-<tr class="memdesc:a5109c71970114ef4dc9977d82c53c219"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mean parameters for normalize. <br /></td></tr>
+<tr class="memdesc:a5109c71970114ef4dc9977d82c53c219"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mean parameters for normalize, size should be the the same as channels. <br /></td></tr>
 <tr class="separator:a5109c71970114ef4dc9977d82c53c219"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a967e918879f6fd56f496d63e0206146f"><td class="memItemLeft" align="right" valign="top"><a id="a967e918879f6fd56f496d63e0206146f"></a>
 std::vector&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1classification_1_1ResNet.html#a967e918879f6fd56f496d63e0206146f">std_vals</a></td></tr>
-<tr class="memdesc:a967e918879f6fd56f496d63e0206146f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Std parameters for normalize. <br /></td></tr>
+<tr class="memdesc:a967e918879f6fd56f496d63e0206146f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Std parameters for normalize, size should be the the same as channels. <br /></td></tr>
 <tr class="separator:a967e918879f6fd56f496d63e0206146f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_classfastdeploy_1_1FastDeployModel"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classfastdeploy_1_1FastDeployModel')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classfastdeploy_1_1FastDeployModel.html">fastdeploy::FastDeployModel</a></td></tr>
 <tr class="memitem:ad2b0a8ea11294f12f6075c118966ba1c inherit pub_attribs_classfastdeploy_1_1FastDeployModel"><td class="memItemLeft" align="right" valign="top"><a id="ad2b0a8ea11294f12f6075c118966ba1c"></a>
@@ -171,7 +171,7 @@ std::vector&lt; <a class="el" href="namespacefastdeploy.html#addd441db144b083efc
 <tr class="separator:a89b2f24322acc18f38b4ea5fd6b7189d inherit pub_attribs_classfastdeploy_1_1FastDeployModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classfastdeploy_1_1vision_1_1classification_1_1ResNet.html" title="ResNet series model. ">ResNet</a> series model. </p>
+<div class="textblock"><p>Torchvision <a class="el" href="classfastdeploy_1_1vision_1_1classification_1_1ResNet.html" title="Torchvision ResNet series model. ">ResNet</a> series model. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a9367e6af461ceac5951e5b1623c47d62"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9367e6af461ceac5951e5b1623c47d62">&#9670;&nbsp;</a></span>ResNet()</h2>
@@ -268,7 +268,7 @@ std::vector&lt; <a class="el" href="namespacefastdeploy.html#addd441db144b083efc
 <p>Predict for the input "im", the result will be saved in "result". </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">im</td><td>Input image for inference. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">im</td><td>The input image data, comes from cv::imread(), is a 3-D array with layout HWC, BGR format </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">result</td><td>Saving the inference result. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">topk</td><td>The length of return values, e.g., if topk==2, the result will include the 2 most possible class label for input image. </td></tr>
   </table>
@@ -278,8 +278,8 @@ std::vector&lt; <a class="el" href="namespacefastdeploy.html#addd441db144b083efc
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/fastdeploy/1021/FastDeploy/fastdeploy/vision/classification/contrib/<a class="el" href="resnet_8h_source.html">resnet.h</a></li>
-<li>/fastdeploy/1021/FastDeploy/fastdeploy/vision/classification/contrib/resnet.cc</li>
+<li>/fastdeploy/1026/FastDeploy/fastdeploy/vision/classification/contrib/<a class="el" href="resnet_8h_source.html">resnet.h</a></li>
+<li>/fastdeploy/1026/FastDeploy/fastdeploy/vision/classification/contrib/resnet.cc</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

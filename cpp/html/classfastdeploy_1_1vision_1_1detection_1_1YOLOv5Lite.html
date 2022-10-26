@@ -152,40 +152,8 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 Public Attributes</h2></td></tr>
 <tr class="memitem:afb06e2b8fee4cfc775d9a6ea49defb42"><td class="memItemLeft" align="right" valign="top"><a id="afb06e2b8fee4cfc775d9a6ea49defb42"></a>
 std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1detection_1_1YOLOv5Lite.html#afb06e2b8fee4cfc775d9a6ea49defb42">size</a></td></tr>
-<tr class="memdesc:afb06e2b8fee4cfc775d9a6ea49defb42"><td class="mdescLeft">&#160;</td><td class="mdescRight">tuple of (width, height) <br /></td></tr>
+<tr class="memdesc:afb06e2b8fee4cfc775d9a6ea49defb42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Argument for image preprocessing step, tuple of (width, height), decide the target size after resize. <br /></td></tr>
 <tr class="separator:afb06e2b8fee4cfc775d9a6ea49defb42"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a6f21a791b1b8e948ac3a9f52073897"><td class="memItemLeft" align="right" valign="top"><a id="a9a6f21a791b1b8e948ac3a9f52073897"></a>
-std::vector&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1detection_1_1YOLOv5Lite.html#a9a6f21a791b1b8e948ac3a9f52073897">padding_value</a></td></tr>
-<tr class="memdesc:a9a6f21a791b1b8e948ac3a9f52073897"><td class="mdescLeft">&#160;</td><td class="mdescRight">padding value, size should be the same as channels <br /></td></tr>
-<tr class="separator:a9a6f21a791b1b8e948ac3a9f52073897"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae6a684e675ab45f336e27272a56b0f22"><td class="memItemLeft" align="right" valign="top"><a id="ae6a684e675ab45f336e27272a56b0f22"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1detection_1_1YOLOv5Lite.html#ae6a684e675ab45f336e27272a56b0f22">is_mini_pad</a></td></tr>
-<tr class="memdesc:ae6a684e675ab45f336e27272a56b0f22"><td class="mdescLeft">&#160;</td><td class="mdescRight">only pad to the minimum rectange which height and width is times of stride <br /></td></tr>
-<tr class="separator:ae6a684e675ab45f336e27272a56b0f22"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18ffe591430c3972e9f4bb41999ebe1f"><td class="memItemLeft" align="right" valign="top"><a id="a18ffe591430c3972e9f4bb41999ebe1f"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1detection_1_1YOLOv5Lite.html#a18ffe591430c3972e9f4bb41999ebe1f">is_no_pad</a></td></tr>
-<tr class="memdesc:a18ffe591430c3972e9f4bb41999ebe1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">while is_mini_pad = false and is_no_pad = true, will resize the image to the set size <br /></td></tr>
-<tr class="separator:a18ffe591430c3972e9f4bb41999ebe1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56d46b061db29e4383eb8e1aeea71a34"><td class="memItemLeft" align="right" valign="top"><a id="a56d46b061db29e4383eb8e1aeea71a34"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1detection_1_1YOLOv5Lite.html#a56d46b061db29e4383eb8e1aeea71a34">is_scale_up</a></td></tr>
-<tr class="memdesc:a56d46b061db29e4383eb8e1aeea71a34"><td class="mdescLeft">&#160;</td><td class="mdescRight">if is_scale_up is false, the input image only can be zoom out, the maximum resize scale cannot exceed 1.0 <br /></td></tr>
-<tr class="separator:a56d46b061db29e4383eb8e1aeea71a34"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51643785dde53d7cbb8ceb7e2dc52f8a"><td class="memItemLeft" align="right" valign="top"><a id="a51643785dde53d7cbb8ceb7e2dc52f8a"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1detection_1_1YOLOv5Lite.html#a51643785dde53d7cbb8ceb7e2dc52f8a">stride</a></td></tr>
-<tr class="memdesc:a51643785dde53d7cbb8ceb7e2dc52f8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">padding stride, for is_mini_pad <br /></td></tr>
-<tr class="separator:a51643785dde53d7cbb8ceb7e2dc52f8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d18b33f14f6374310d6550dfe29b5d9"><td class="memItemLeft" align="right" valign="top"><a id="a7d18b33f14f6374310d6550dfe29b5d9"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1detection_1_1YOLOv5Lite.html#a7d18b33f14f6374310d6550dfe29b5d9">max_wh</a></td></tr>
-<tr class="memdesc:a7d18b33f14f6374310d6550dfe29b5d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">for offseting the boxes by classes when using NMS <br /></td></tr>
-<tr class="separator:a7d18b33f14f6374310d6550dfe29b5d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8cf7a7ce039c112922fd897d5882bf91"><td class="memItemLeft" align="right" valign="top"><a id="a8cf7a7ce039c112922fd897d5882bf91"></a>
-std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1detection_1_1YOLOv5Lite.html#a8cf7a7ce039c112922fd897d5882bf91">downsample_strides</a></td></tr>
-<tr class="memdesc:a8cf7a7ce039c112922fd897d5882bf91"><td class="mdescLeft">&#160;</td><td class="mdescRight">downsample strides for <a class="el" href="classfastdeploy_1_1vision_1_1detection_1_1YOLOv5Lite.html" title="YOLOv5Lite model object used when to load a YOLOv5Lite model exported by YOLOv5Lite. ">YOLOv5Lite</a> to generate anchors, will take (8,16,32) as default values, might have stride=64. <br /></td></tr>
-<tr class="separator:a8cf7a7ce039c112922fd897d5882bf91"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f6140bbe9ab16389a117754f73524cf"><td class="memItemLeft" align="right" valign="top"><a id="a1f6140bbe9ab16389a117754f73524cf"></a>
-std::vector&lt; std::vector&lt; float &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1detection_1_1YOLOv5Lite.html#a1f6140bbe9ab16389a117754f73524cf">anchor_config</a></td></tr>
-<tr class="memdesc:a1f6140bbe9ab16389a117754f73524cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">anchors parameters, downsample_strides will take (8,16,32), each stride has three anchors with width and hight <br /></td></tr>
-<tr class="separator:a1f6140bbe9ab16389a117754f73524cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae515ae014590f36d35567780ad0a7e37"><td class="memItemLeft" align="right" valign="top"><a id="ae515ae014590f36d35567780ad0a7e37"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1detection_1_1YOLOv5Lite.html#ae515ae014590f36d35567780ad0a7e37">is_decode_exported</a></td></tr>
 <tr class="memdesc:ae515ae014590f36d35567780ad0a7e37"><td class="mdescLeft">&#160;</td><td class="mdescRight">whether the model_file was exported with decode module. The official YOLOv5Lite/export.py script will export ONNX file without decode module. Please set it 'true' manually if the model file was exported with decode module. false : ONNX files without decode module. true : ONNX file with decode module. <br /></td></tr>
@@ -314,8 +282,8 @@ std::vector&lt; <a class="el" href="namespacefastdeploy.html#addd441db144b083efc
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/fastdeploy/1021/FastDeploy/fastdeploy/vision/detection/contrib/<a class="el" href="yolov5lite_8h_source.html">yolov5lite.h</a></li>
-<li>/fastdeploy/1021/FastDeploy/fastdeploy/vision/detection/contrib/yolov5lite.cc</li>
+<li>/fastdeploy/1026/FastDeploy/fastdeploy/vision/detection/contrib/<a class="el" href="yolov5lite_8h_source.html">yolov5lite.h</a></li>
+<li>/fastdeploy/1026/FastDeploy/fastdeploy/vision/detection/contrib/yolov5lite.cc</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

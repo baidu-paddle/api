@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Description of Vision Results" href="vision_results_en.html" /><link rel="prev" title="Keypoint Detection API" href="keypoint_detection.html" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Face Recognition API" href="face_recognition.html" /><link rel="prev" title="Keypoint Detection API" href="keypoint_detection.html" />
 
     <meta name="generator" content="sphinx-4.5.0, furo 2022.09.15"/>
         <title>Matting API - FastDeploy Python API latest documentation</title>
@@ -134,7 +134,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -162,6 +162,8 @@
 <li class="toctree-l1"><a class="reference internal" href="image_classification.html">Image Classification API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="keypoint_detection.html">Keypoint Detection API</a></li>
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Matting API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="face_recognition.html">Face Recognition API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="face_detection.html">Face Detection API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="vision_results_en.html">Description of Vision Results</a></li>
 </ul>
 
@@ -190,7 +192,7 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
@@ -198,7 +200,97 @@
         <article role="main">
           <section id="matting-api">
 <h1>Matting API<a class="headerlink" href="#matting-api" title="Permalink to this headline">#</a></h1>
-<p>comming soon…</p>
+<section id="fastdeploy-vision-matting-modnet">
+<h2>fastdeploy.vision.matting.MODNet<a class="headerlink" href="#fastdeploy-vision-matting-modnet" title="Permalink to this headline">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="fastdeploy.vision.matting.MODNet">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.matting.</span></span><span class="sig-name descname"><span class="pre">MODNet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.ONNX:</span> <span class="pre">2&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/matting/contrib/modnet.html#MODNet"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.matting.MODNet" title="Permalink to this definition">#</a></dt>
+<dd><p>Load a MODNet model exported by MODNet.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model_file</strong> – (str)Path of model file, e.g ./modnet.onnx</p></li>
+<li><p><strong>params_file</strong> – (str)Path of parameters file, e.g yolox/model.pdiparams, if the model_fomat is ModelFormat.ONNX, this param will be ignored, can be set as empty string</p></li>
+<li><p><strong>runtime_option</strong> – (fastdeploy.RuntimeOption)RuntimeOption for inference this model, if it’s None, will use the default backend on CPU</p></li>
+<li><p><strong>model_format</strong> – (fastdeploy.ModelForamt)Model format of the loaded model</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="fastdeploy.vision.matting.MODNet.alpha">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">alpha</span></span><a class="headerlink" href="#fastdeploy.vision.matting.MODNet.alpha" title="Permalink to this definition">#</a></dt>
+<dd><p>Argument for image preprocessing step, alpha value for normalization</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fastdeploy.vision.matting.MODNet.beta">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">beta</span></span><a class="headerlink" href="#fastdeploy.vision.matting.MODNet.beta" title="Permalink to this definition">#</a></dt>
+<dd><p>Argument for image preprocessing step, beta value for normalization</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.vision.matting.MODNet.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_image</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/matting/contrib/modnet.html#MODNet.predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.matting.MODNet.predict" title="Permalink to this definition">#</a></dt>
+<dd><p>Predict the matting result for an input image</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>input_image</strong> – (numpy.ndarray)The input image data, 3-D array with layout HWC, BGR format</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>MattingResult</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fastdeploy.vision.matting.MODNet.size">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#fastdeploy.vision.matting.MODNet.size" title="Permalink to this definition">#</a></dt>
+<dd><p>Argument for image preprocessing step, the preprocess image size, tuple of (width, height)</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fastdeploy.vision.matting.MODNet.swap_rb">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">swap_rb</span></span><a class="headerlink" href="#fastdeploy.vision.matting.MODNet.swap_rb" title="Permalink to this definition">#</a></dt>
+<dd><p>Argument for image preprocessing step, whether to swap the B and R channel, such as BGR-&gt;RGB, default true.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="fastdeploy-vision-matting-ppmatting">
+<h2>fastdeploy.vision.matting.PPMatting<a class="headerlink" href="#fastdeploy-vision-matting-ppmatting" title="Permalink to this headline">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="fastdeploy.vision.matting.PPMatting">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.matting.</span></span><span class="sig-name descname"><span class="pre">PPMatting</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.PADDLE:</span> <span class="pre">1&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/matting/ppmatting.html#PPMatting"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.matting.PPMatting" title="Permalink to this definition">#</a></dt>
+<dd><p>Load a PPMatting model exported by PaddleSeg.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model_file</strong> – (str)Path of model file, e.g PPMatting-512/model.pdmodel</p></li>
+<li><p><strong>params_file</strong> – (str)Path of parameters file, e.g PPMatting-512/model.pdiparams, if the model_fomat is ModelFormat.ONNX, this param will be ignored, can be set as empty string</p></li>
+<li><p><strong>config_file</strong> – (str)Path of configuration file for deployment, e.g PPMatting-512/deploy.yml</p></li>
+<li><p><strong>runtime_option</strong> – (fastdeploy.RuntimeOption)RuntimeOption for inference this model, if it’s None, will use the default backend on CPU</p></li>
+<li><p><strong>model_format</strong> – (fastdeploy.ModelForamt)Model format of the loaded model</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.vision.matting.PPMatting.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_image</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/matting/ppmatting.html#PPMatting.predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.matting.PPMatting.predict" title="Permalink to this definition">#</a></dt>
+<dd><p>Predict the matting result for an input image</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>input_image</strong> – (numpy.ndarray)The input image data, 3-D array with layout HWC, BGR format</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>MattingResult</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
 </section>
 
         </article>
@@ -206,12 +298,12 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="vision_results_en.html">
+          <a class="next-page" href="face_recognition.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Description of Vision Results</div>
+                <div class="title">Face Recognition API</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -246,8 +338,28 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Matting API</a><ul>
+<li><a class="reference internal" href="#fastdeploy-vision-matting-modnet">fastdeploy.vision.matting.MODNet</a></li>
+<li><a class="reference internal" href="#fastdeploy-vision-matting-ppmatting">fastdeploy.vision.matting.PPMatting</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>

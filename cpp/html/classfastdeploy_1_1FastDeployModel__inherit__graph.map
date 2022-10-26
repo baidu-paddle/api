@@ -1,7 +1,7 @@
 <map id="fastdeploy::FastDeployModel" name="fastdeploy::FastDeployModel">
 <area shape="rect" id="node2" href="$classfastdeploy_1_1pipeline_1_1PPOCRv2.html" title="PPOCRv2 is used to load PP&#45;OCRv2 series models provided by PaddleOCR. " alt="" coords="305,5,455,47"/>
 <area shape="rect" id="node4" href="$classfastdeploy_1_1vision_1_1classification_1_1PaddleClasModel.html" title="PaddleClas serials model object used when to load a PaddleClas model exported by PaddleClas repositor..." alt="" coords="283,71,477,127"/>
-<area shape="rect" id="node5" href="$classfastdeploy_1_1vision_1_1classification_1_1ResNet.html" title="ResNet series model. " alt="" coords="295,152,465,193"/>
+<area shape="rect" id="node5" href="$classfastdeploy_1_1vision_1_1classification_1_1ResNet.html" title="Torchvision ResNet series model. " alt="" coords="295,152,465,193"/>
 <area shape="rect" id="node6" href="$classfastdeploy_1_1vision_1_1classification_1_1YOLOv5Cls.html" title="YOLOv5Cls model object used when to load a YOLOv5Cls model exported by YOLOv5. " alt="" coords="283,217,477,259"/>
 <area shape="rect" id="node7" href="$classfastdeploy_1_1vision_1_1detection_1_1NanoDetPlus.html" title="NanoDetPlus model object used when to load a NanoDetPlus model exported by NanoDet. " alt="" coords="289,283,471,324"/>
 <area shape="rect" id="node8" href="$classfastdeploy_1_1vision_1_1detection_1_1PPYOLOE.html" title="PPYOLOE model object used when to load a PPYOLOE model exported by PaddleDetection. " alt="" coords="301,348,459,389"/>
@@ -22,10 +22,11 @@
 <area shape="rect" id="node28" href="$classfastdeploy_1_1vision_1_1keypointdetection_1_1PPTinyPose.html" title="PPTinyPose model object used when to load a PPTinyPose model exported by PaddleDetection. " alt="" coords="306,1343,454,1399"/>
 <area shape="rect" id="node29" href="$classfastdeploy_1_1vision_1_1matting_1_1MODNet.html" title="MODNet model object used when to load a MODNet model exported by MODNet. " alt="" coords="309,1424,451,1465"/>
 <area shape="rect" id="node30" href="$classfastdeploy_1_1vision_1_1matting_1_1PPMatting.html" title="PPMatting model object used when to load a PPMatting model exported by PPMatting. ..." alt="" coords="303,1489,457,1531"/>
-<area shape="rect" id="node31" href="$classfastdeploy_1_1vision_1_1ocr_1_1Classifier.html" title="Classifier object is used to load the classification model provided by PaddleOCR. ..." alt="" coords="311,1555,449,1596"/>
-<area shape="rect" id="node32" href="$classfastdeploy_1_1vision_1_1ocr_1_1DBDetector.html" title="DBDetector object is used to load the detection model provided by PaddleOCR. " alt="" coords="311,1620,449,1661"/>
-<area shape="rect" id="node33" href="$classfastdeploy_1_1vision_1_1ocr_1_1Recognizer.html" title="Recognizer object is used to load the recognition model provided by PaddleOCR. " alt="" coords="311,1685,449,1727"/>
-<area shape="rect" id="node34" href="$classfastdeploy_1_1vision_1_1segmentation_1_1PaddleSegModel.html" title="PaddleSeg serials model object used when to load a PaddleSeg model exported by PaddleSeg repository..." alt="" coords="263,1751,497,1792"/>
+<area shape="rect" id="node31" href="$classfastdeploy_1_1vision_1_1matting_1_1RobustVideoMatting.html" title="RobustVideoMatting model object used when to load a RobustVideoMatting model exported by RobustVideoM..." alt="" coords="271,1555,489,1596"/>
+<area shape="rect" id="node32" href="$classfastdeploy_1_1vision_1_1ocr_1_1Classifier.html" title="Classifier object is used to load the classification model provided by PaddleOCR. ..." alt="" coords="311,1620,449,1661"/>
+<area shape="rect" id="node33" href="$classfastdeploy_1_1vision_1_1ocr_1_1DBDetector.html" title="DBDetector object is used to load the detection model provided by PaddleOCR. " alt="" coords="311,1685,449,1727"/>
+<area shape="rect" id="node34" href="$classfastdeploy_1_1vision_1_1ocr_1_1Recognizer.html" title="Recognizer object is used to load the recognition model provided by PaddleOCR. " alt="" coords="311,1751,449,1792"/>
+<area shape="rect" id="node35" href="$classfastdeploy_1_1vision_1_1segmentation_1_1PaddleSegModel.html" title="PaddleSeg serials model object used when to load a PaddleSeg model exported by PaddleSeg repository..." alt="" coords="263,1816,497,1857"/>
 <area shape="rect" id="node3" href="$classfastdeploy_1_1pipeline_1_1PPOCRv3.html" title="PPOCRv3 is used to load PP&#45;OCRv3 series models provided by PaddleOCR. " alt="" coords="545,5,696,47"/>
 <area shape="rect" id="node23" href="$classfastdeploy_1_1vision_1_1faceid_1_1AdaFace.html" title="AdaFace model object used when to load a AdaFace model exported by AdaFacePaddleCLas. " alt="" coords="552,1140,689,1181"/>
 <area shape="rect" id="node24" href="$classfastdeploy_1_1vision_1_1faceid_1_1ArcFace.html" title="ArcFace model object used when to load a ArcFace model exported by IngsightFace. " alt="" coords="552,1205,689,1247"/>

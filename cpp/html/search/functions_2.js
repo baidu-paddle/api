@@ -6,6 +6,7 @@ var searchData=
   ['disablelitefp16',['DisableLiteFP16',['../structfastdeploy_1_1RuntimeOption.html#a17c1ee40eedd9967bcb72ee5fc1d01d3',1,'fastdeploy::RuntimeOption']]],
   ['disablepaddleloginfo',['DisablePaddleLogInfo',['../structfastdeploy_1_1RuntimeOption.html#a6b66505a53c379b42da0844adde4f76f',1,'fastdeploy::RuntimeOption']]],
   ['disablepaddletrtcollectshape',['DisablePaddleTrtCollectShape',['../structfastdeploy_1_1RuntimeOption.html#a91232808106866c55453f31a2dcfeccf',1,'fastdeploy::RuntimeOption']]],
+  ['disablepinnedmemory',['DisablePinnedMemory',['../structfastdeploy_1_1RuntimeOption.html#ad42ba8fea3322838160a49b8b90a18df',1,'fastdeploy::RuntimeOption']]],
   ['disablerecordtimeofruntime',['DisableRecordTimeOfRuntime',['../classfastdeploy_1_1FastDeployModel.html#a7c1586af5d28d109ab7e73138e6549aa',1,'fastdeploy::FastDeployModel']]],
   ['disabletrtfp16',['DisableTrtFP16',['../structfastdeploy_1_1RuntimeOption.html#a1267e51560c00a54d5f9c1ae8d0dc36b',1,'fastdeploy::RuntimeOption']]]
 ];

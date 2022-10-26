@@ -104,7 +104,7 @@ Public Member Functions</h2></td></tr>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1matting_1_1MODNet.html#a98b50312869da5d82651b642789820dd">ModelName</a> () const</td></tr>
 <tr class="memdesc:a98b50312869da5d82651b642789820dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get model's name. <br /></td></tr>
 <tr class="separator:a98b50312869da5d82651b642789820dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a700dc00a6b5f83f4b2d88725c43cc4e2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1matting_1_1MODNet.html#a700dc00a6b5f83f4b2d88725c43cc4e2">Predict</a> (cv::Mat *im, MattingResult *result)</td></tr>
+<tr class="memitem:a700dc00a6b5f83f4b2d88725c43cc4e2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1matting_1_1MODNet.html#a700dc00a6b5f83f4b2d88725c43cc4e2">Predict</a> (cv::Mat *im, <a class="el" href="structfastdeploy_1_1vision_1_1MattingResult.html">MattingResult</a> *result)</td></tr>
 <tr class="memdesc:a700dc00a6b5f83f4b2d88725c43cc4e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Predict the matting result for an input image.  <a href="#a700dc00a6b5f83f4b2d88725c43cc4e2">More...</a><br /></td></tr>
 <tr class="separator:a700dc00a6b5f83f4b2d88725c43cc4e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classfastdeploy_1_1FastDeployModel"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classfastdeploy_1_1FastDeployModel')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classfastdeploy_1_1FastDeployModel.html">fastdeploy::FastDeployModel</a></td></tr>
@@ -152,19 +152,19 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 Public Attributes</h2></td></tr>
 <tr class="memitem:ac7be4b1383f2d7fdb8bc6f7a36e4d202"><td class="memItemLeft" align="right" valign="top"><a id="ac7be4b1383f2d7fdb8bc6f7a36e4d202"></a>
 std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1matting_1_1MODNet.html#ac7be4b1383f2d7fdb8bc6f7a36e4d202">size</a></td></tr>
-<tr class="memdesc:ac7be4b1383f2d7fdb8bc6f7a36e4d202"><td class="mdescLeft">&#160;</td><td class="mdescRight">tuple of (width, height), default (256, 256) <br /></td></tr>
+<tr class="memdesc:ac7be4b1383f2d7fdb8bc6f7a36e4d202"><td class="mdescLeft">&#160;</td><td class="mdescRight">Argument for image preprocessing step, tuple of (width, height), decide the target size after resize, default (256, 256) <br /></td></tr>
 <tr class="separator:ac7be4b1383f2d7fdb8bc6f7a36e4d202"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41bf8d332cf045be0f716e199719029b"><td class="memItemLeft" align="right" valign="top"><a id="a41bf8d332cf045be0f716e199719029b"></a>
 std::vector&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1matting_1_1MODNet.html#a41bf8d332cf045be0f716e199719029b">alpha</a></td></tr>
-<tr class="memdesc:a41bf8d332cf045be0f716e199719029b"><td class="mdescLeft">&#160;</td><td class="mdescRight">parameters for normalization <br /></td></tr>
+<tr class="memdesc:a41bf8d332cf045be0f716e199719029b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Argument for image preprocessing step, parameters for normalization, size should be the the same as channels. <br /></td></tr>
 <tr class="separator:a41bf8d332cf045be0f716e199719029b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca5ffc1559bc4e0207ed1c499dd92f8f"><td class="memItemLeft" align="right" valign="top"><a id="aca5ffc1559bc4e0207ed1c499dd92f8f"></a>
 std::vector&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1matting_1_1MODNet.html#aca5ffc1559bc4e0207ed1c499dd92f8f">beta</a></td></tr>
-<tr class="memdesc:aca5ffc1559bc4e0207ed1c499dd92f8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">parameters for normalization <br /></td></tr>
+<tr class="memdesc:aca5ffc1559bc4e0207ed1c499dd92f8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Argument for image preprocessing step, parameters for normalization, size should be the the same as channels. <br /></td></tr>
 <tr class="separator:aca5ffc1559bc4e0207ed1c499dd92f8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c77cc7ef1d48f63b2f6758d510c952a"><td class="memItemLeft" align="right" valign="top"><a id="a6c77cc7ef1d48f63b2f6758d510c952a"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1matting_1_1MODNet.html#a6c77cc7ef1d48f63b2f6758d510c952a">swap_rb</a></td></tr>
-<tr class="memdesc:a6c77cc7ef1d48f63b2f6758d510c952a"><td class="mdescLeft">&#160;</td><td class="mdescRight">whether to swap the B and R channel, such as BGR-&gt;RGB, default true. <br /></td></tr>
+<tr class="memdesc:a6c77cc7ef1d48f63b2f6758d510c952a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Argument for image preprocessing step, whether to swap the B and R channel, such as BGR-&gt;RGB, default true. <br /></td></tr>
 <tr class="separator:a6c77cc7ef1d48f63b2f6758d510c952a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_classfastdeploy_1_1FastDeployModel"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classfastdeploy_1_1FastDeployModel')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classfastdeploy_1_1FastDeployModel.html">fastdeploy::FastDeployModel</a></td></tr>
 <tr class="memitem:ad2b0a8ea11294f12f6075c118966ba1c inherit pub_attribs_classfastdeploy_1_1FastDeployModel"><td class="memItemLeft" align="right" valign="top"><a id="ad2b0a8ea11294f12f6075c118966ba1c"></a>
@@ -244,7 +244,7 @@ std::vector&lt; <a class="el" href="namespacefastdeploy.html#addd441db144b083efc
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">MattingResult *&#160;</td>
+          <td class="paramtype"><a class="el" href="structfastdeploy_1_1vision_1_1MattingResult.html">MattingResult</a> *&#160;</td>
           <td class="paramname"><em>result</em>&#160;</td>
         </tr>
         <tr>
@@ -268,8 +268,8 @@ std::vector&lt; <a class="el" href="namespacefastdeploy.html#addd441db144b083efc
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/fastdeploy/1021/FastDeploy/fastdeploy/vision/matting/contrib/<a class="el" href="modnet_8h_source.html">modnet.h</a></li>
-<li>/fastdeploy/1021/FastDeploy/fastdeploy/vision/matting/contrib/modnet.cc</li>
+<li>/fastdeploy/1026/FastDeploy/fastdeploy/vision/matting/contrib/<a class="el" href="modnet_8h_source.html">modnet.h</a></li>
+<li>/fastdeploy/1026/FastDeploy/fastdeploy/vision/matting/contrib/modnet.cc</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

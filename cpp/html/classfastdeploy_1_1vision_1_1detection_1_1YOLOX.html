@@ -152,24 +152,12 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 Public Attributes</h2></td></tr>
 <tr class="memitem:a31ad84024b5a849594c298caf93e7fa1"><td class="memItemLeft" align="right" valign="top"><a id="a31ad84024b5a849594c298caf93e7fa1"></a>
 std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1detection_1_1YOLOX.html#a31ad84024b5a849594c298caf93e7fa1">size</a></td></tr>
-<tr class="memdesc:a31ad84024b5a849594c298caf93e7fa1"><td class="mdescLeft">&#160;</td><td class="mdescRight">tuple of (width, height) <br /></td></tr>
+<tr class="memdesc:a31ad84024b5a849594c298caf93e7fa1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Argument for image preprocessing step, tuple of (width, height), decide the target size after resize. <br /></td></tr>
 <tr class="separator:a31ad84024b5a849594c298caf93e7fa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b0a699c723cdfeb9947870b839a50a7"><td class="memItemLeft" align="right" valign="top"><a id="a7b0a699c723cdfeb9947870b839a50a7"></a>
-std::vector&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1detection_1_1YOLOX.html#a7b0a699c723cdfeb9947870b839a50a7">padding_value</a></td></tr>
-<tr class="memdesc:a7b0a699c723cdfeb9947870b839a50a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">padding value, size should be the same as channels <br /></td></tr>
-<tr class="separator:a7b0a699c723cdfeb9947870b839a50a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acdcb0b79b11b25b7d165a902c1a0d484"><td class="memItemLeft" align="right" valign="top"><a id="acdcb0b79b11b25b7d165a902c1a0d484"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1detection_1_1YOLOX.html#acdcb0b79b11b25b7d165a902c1a0d484">is_decode_exported</a></td></tr>
 <tr class="memdesc:acdcb0b79b11b25b7d165a902c1a0d484"><td class="mdescLeft">&#160;</td><td class="mdescRight">whether the model_file was exported with decode module. The official YOLOX/tools/export_onnx.py script will export ONNX file without decode module. Please set it 'true' manually if the model file was exported with decode module. <br /></td></tr>
 <tr class="separator:acdcb0b79b11b25b7d165a902c1a0d484"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd44e9b9ab6673a0f51b4db65502dd4f"><td class="memItemLeft" align="right" valign="top"><a id="acd44e9b9ab6673a0f51b4db65502dd4f"></a>
-std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1detection_1_1YOLOX.html#acd44e9b9ab6673a0f51b4db65502dd4f">downsample_strides</a></td></tr>
-<tr class="memdesc:acd44e9b9ab6673a0f51b4db65502dd4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">downsample strides for <a class="el" href="classfastdeploy_1_1vision_1_1detection_1_1YOLOX.html" title="YOLOX model object used when to load a YOLOX model exported by YOLOX. ">YOLOX</a> to generate anchors, will take (8,16,32) as default values, might have stride=64 <br /></td></tr>
-<tr class="separator:acd44e9b9ab6673a0f51b4db65502dd4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d0b94b354813e8dc5daf650784347aa"><td class="memItemLeft" align="right" valign="top"><a id="a3d0b94b354813e8dc5daf650784347aa"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1detection_1_1YOLOX.html#a3d0b94b354813e8dc5daf650784347aa">max_wh</a></td></tr>
-<tr class="memdesc:a3d0b94b354813e8dc5daf650784347aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">for offseting the boxes by classes when using NMS, default 4096 <br /></td></tr>
-<tr class="separator:a3d0b94b354813e8dc5daf650784347aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_classfastdeploy_1_1FastDeployModel"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classfastdeploy_1_1FastDeployModel')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classfastdeploy_1_1FastDeployModel.html">fastdeploy::FastDeployModel</a></td></tr>
 <tr class="memitem:ad2b0a8ea11294f12f6075c118966ba1c inherit pub_attribs_classfastdeploy_1_1FastDeployModel"><td class="memItemLeft" align="right" valign="top"><a id="ad2b0a8ea11294f12f6075c118966ba1c"></a>
 std::vector&lt; <a class="el" href="namespacefastdeploy.html#addd441db144b083efc919b63cef2bebc">Backend</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1FastDeployModel.html#ad2b0a8ea11294f12f6075c118966ba1c">valid_cpu_backends</a> = {Backend::ORT}</td></tr>
@@ -294,8 +282,8 @@ std::vector&lt; <a class="el" href="namespacefastdeploy.html#addd441db144b083efc
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/fastdeploy/1021/FastDeploy/fastdeploy/vision/detection/contrib/<a class="el" href="contrib_2yolox_8h_source.html">yolox.h</a></li>
-<li>/fastdeploy/1021/FastDeploy/fastdeploy/vision/detection/contrib/yolox.cc</li>
+<li>/fastdeploy/1026/FastDeploy/fastdeploy/vision/detection/contrib/<a class="el" href="contrib_2yolox_8h_source.html">yolox.h</a></li>
+<li>/fastdeploy/1026/FastDeploy/fastdeploy/vision/detection/contrib/yolox.cc</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

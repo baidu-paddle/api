@@ -152,28 +152,8 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 Public Attributes</h2></td></tr>
 <tr class="memitem:a74bb8404922382b8c008c0d85a63e37d"><td class="memItemLeft" align="right" valign="top"><a id="a74bb8404922382b8c008c0d85a63e37d"></a>
 std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1detection_1_1YOLOv7End2EndORT.html#a74bb8404922382b8c008c0d85a63e37d">size</a></td></tr>
-<tr class="memdesc:a74bb8404922382b8c008c0d85a63e37d"><td class="mdescLeft">&#160;</td><td class="mdescRight">tuple of (width, height) <br /></td></tr>
+<tr class="memdesc:a74bb8404922382b8c008c0d85a63e37d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Argument for image preprocessing step, tuple of (width, height), decide the target size after resize. <br /></td></tr>
 <tr class="separator:a74bb8404922382b8c008c0d85a63e37d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a38aa6385f060c42c01bd71aa1c8fd8c9"><td class="memItemLeft" align="right" valign="top"><a id="a38aa6385f060c42c01bd71aa1c8fd8c9"></a>
-std::vector&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1detection_1_1YOLOv7End2EndORT.html#a38aa6385f060c42c01bd71aa1c8fd8c9">padding_value</a></td></tr>
-<tr class="memdesc:a38aa6385f060c42c01bd71aa1c8fd8c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">padding value, size should be the same as channels <br /></td></tr>
-<tr class="separator:a38aa6385f060c42c01bd71aa1c8fd8c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeae1e384c2aa01b0ae0e0ac54439994f"><td class="memItemLeft" align="right" valign="top"><a id="aeae1e384c2aa01b0ae0e0ac54439994f"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1detection_1_1YOLOv7End2EndORT.html#aeae1e384c2aa01b0ae0e0ac54439994f">is_mini_pad</a></td></tr>
-<tr class="memdesc:aeae1e384c2aa01b0ae0e0ac54439994f"><td class="mdescLeft">&#160;</td><td class="mdescRight">only pad to the minimum rectange which height and width is times of stride <br /></td></tr>
-<tr class="separator:aeae1e384c2aa01b0ae0e0ac54439994f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e9182311af436d87ea93b38d2abcb58"><td class="memItemLeft" align="right" valign="top"><a id="a3e9182311af436d87ea93b38d2abcb58"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1detection_1_1YOLOv7End2EndORT.html#a3e9182311af436d87ea93b38d2abcb58">is_no_pad</a></td></tr>
-<tr class="memdesc:a3e9182311af436d87ea93b38d2abcb58"><td class="mdescLeft">&#160;</td><td class="mdescRight">while is_mini_pad = false and is_no_pad = true, will resize the image to the set size <br /></td></tr>
-<tr class="separator:a3e9182311af436d87ea93b38d2abcb58"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a74f94ce9c07933d2134bfd252fe522ff"><td class="memItemLeft" align="right" valign="top"><a id="a74f94ce9c07933d2134bfd252fe522ff"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1detection_1_1YOLOv7End2EndORT.html#a74f94ce9c07933d2134bfd252fe522ff">is_scale_up</a></td></tr>
-<tr class="memdesc:a74f94ce9c07933d2134bfd252fe522ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">if is_scale_up is false, the input image only can be zoom out, the maximum resize scale cannot exceed 1.0 <br /></td></tr>
-<tr class="separator:a74f94ce9c07933d2134bfd252fe522ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a34225ee24982a714815a7d7f71bb5c38"><td class="memItemLeft" align="right" valign="top"><a id="a34225ee24982a714815a7d7f71bb5c38"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1detection_1_1YOLOv7End2EndORT.html#a34225ee24982a714815a7d7f71bb5c38">stride</a></td></tr>
-<tr class="memdesc:a34225ee24982a714815a7d7f71bb5c38"><td class="mdescLeft">&#160;</td><td class="mdescRight">padding stride, for is_mini_pad <br /></td></tr>
-<tr class="separator:a34225ee24982a714815a7d7f71bb5c38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_classfastdeploy_1_1FastDeployModel"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classfastdeploy_1_1FastDeployModel')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classfastdeploy_1_1FastDeployModel.html">fastdeploy::FastDeployModel</a></td></tr>
 <tr class="memitem:ad2b0a8ea11294f12f6075c118966ba1c inherit pub_attribs_classfastdeploy_1_1FastDeployModel"><td class="memItemLeft" align="right" valign="top"><a id="ad2b0a8ea11294f12f6075c118966ba1c"></a>
 std::vector&lt; <a class="el" href="namespacefastdeploy.html#addd441db144b083efc919b63cef2bebc">Backend</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1FastDeployModel.html#ad2b0a8ea11294f12f6075c118966ba1c">valid_cpu_backends</a> = {Backend::ORT}</td></tr>
@@ -291,8 +271,8 @@ std::vector&lt; <a class="el" href="namespacefastdeploy.html#addd441db144b083efc
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/fastdeploy/1021/FastDeploy/fastdeploy/vision/detection/contrib/<a class="el" href="yolov7end2end__ort_8h_source.html">yolov7end2end_ort.h</a></li>
-<li>/fastdeploy/1021/FastDeploy/fastdeploy/vision/detection/contrib/yolov7end2end_ort.cc</li>
+<li>/fastdeploy/1026/FastDeploy/fastdeploy/vision/detection/contrib/<a class="el" href="yolov7end2end__ort_8h_source.html">yolov7end2end_ort.h</a></li>
+<li>/fastdeploy/1026/FastDeploy/fastdeploy/vision/detection/contrib/yolov7end2end_ort.cc</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
