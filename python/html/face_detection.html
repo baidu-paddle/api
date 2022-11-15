@@ -3,12 +3,12 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Description of Vision Results" href="vision_results_en.html" /><link rel="prev" title="Face Recognition API" href="face_recognition.html" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Face Alignment API" href="face_alignment.html" /><link rel="prev" title="Face Recognition API" href="face_recognition.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.09.15"/>
+    <meta name="generator" content="sphinx-5.3.0, furo 2022.09.29"/>
         <title>Face Detection API - FastDeploy Python API latest documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=9ec31e2665bf879c1d47d93a8ec4893870ee1e45" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=d81277517bee4d6b0349d71bb2661d4890b5617c" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -164,7 +164,11 @@
 <li class="toctree-l1"><a class="reference internal" href="matting.html">Matting API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="face_recognition.html">Face Recognition API</a></li>
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Face Detection API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="face_alignment.html">Face Alignment API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="headpose.html">Headpose API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="vision_results_en.html">Description of Vision Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="runtime.html">Runtime API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="runtime_option.html">Runtime Option API</a></li>
 </ul>
 
 </div>
@@ -184,7 +188,8 @@
           <span>Back to top</span>
         </a>
         <div class="content-icon-container">
-          <div class="theme-toggle-container theme-toggle-content">
+          
+<div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -199,9 +204,9 @@
         </div>
         <article role="main">
           <section id="face-detection-api">
-<h1>Face Detection API<a class="headerlink" href="#face-detection-api" title="Permalink to this headline">#</a></h1>
+<h1>Face Detection API<a class="headerlink" href="#face-detection-api" title="Permalink to this heading">#</a></h1>
 <section id="fastdeploy-vision-facedet-retinaface">
-<h2>fastdeploy.vision.facedet.RetinaFace<a class="headerlink" href="#fastdeploy-vision-facedet-retinaface" title="Permalink to this headline">#</a></h2>
+<h2>fastdeploy.vision.facedet.RetinaFace<a class="headerlink" href="#fastdeploy-vision-facedet-retinaface" title="Permalink to this heading">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="fastdeploy.vision.facedet.RetinaFace">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.facedet.</span></span><span class="sig-name descname"><span class="pre">RetinaFace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.ONNX:</span> <span class="pre">2&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/facedet/contrib/retinaface.html#RetinaFace"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.facedet.RetinaFace" title="Permalink to this definition">#</a></dt>
@@ -231,7 +236,7 @@
 <dl class="py property">
 <dt class="sig sig-object py" id="fastdeploy.vision.facedet.RetinaFace.min_sizes">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">min_sizes</span></span><a class="headerlink" href="#fastdeploy.vision.facedet.RetinaFace.min_sizes" title="Permalink to this definition">#</a></dt>
-<dd><p>Argument for image postprocessing step, min sizes, width and height for each anchor</p>
+<dd><p>Argument for image postprocessing step, min sizes, width and height for each anchor, default min_sizes = [[16, 32], [64, 128], [256, 512]]</p>
 </dd></dl>
 
 <dl class="py method">
@@ -255,7 +260,7 @@
 <dl class="py property">
 <dt class="sig sig-object py" id="fastdeploy.vision.facedet.RetinaFace.size">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#fastdeploy.vision.facedet.RetinaFace.size" title="Permalink to this definition">#</a></dt>
-<dd><p>Argument for image preprocessing step, the preprocess image size, tuple of (width, height)</p>
+<dd><p>Argument for image preprocessing step, the preprocess image size, tuple of (width, height), default (640, 640)</p>
 </dd></dl>
 
 <dl class="py property">
@@ -268,7 +273,7 @@
 
 </section>
 <section id="fastdeploy-vision-facedet-scrfd">
-<h2>fastdeploy.vision.facedet.SCRFD<a class="headerlink" href="#fastdeploy-vision-facedet-scrfd" title="Permalink to this headline">#</a></h2>
+<h2>fastdeploy.vision.facedet.SCRFD<a class="headerlink" href="#fastdeploy-vision-facedet-scrfd" title="Permalink to this heading">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="fastdeploy.vision.facedet.SCRFD">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.facedet.</span></span><span class="sig-name descname"><span class="pre">SCRFD</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.ONNX:</span> <span class="pre">2&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/facedet/contrib/scrfd.html#SCRFD"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.facedet.SCRFD" title="Permalink to this definition">#</a></dt>
@@ -283,6 +288,38 @@
 </ul>
 </dd>
 </dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.vision.facedet.SCRFD.disable_normalize_and_permute">
+<span class="sig-name descname"><span class="pre">disable_normalize_and_permute</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/facedet/contrib/scrfd.html#SCRFD.disable_normalize_and_permute"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.facedet.SCRFD.disable_normalize_and_permute" title="Permalink to this definition">#</a></dt>
+<dd><p>This function will disable normalize and hwc2chw in preprocessing step.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fastdeploy.vision.facedet.SCRFD.downsample_strides">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">downsample_strides</span></span><a class="headerlink" href="#fastdeploy.vision.facedet.SCRFD.downsample_strides" title="Permalink to this definition">#</a></dt>
+<dd><p>Argument for image postprocessing step,
+downsample strides (namely, steps) for SCRFD to generate anchors,
+will take (8,16,32) as default values</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fastdeploy.vision.facedet.SCRFD.landmarks_per_face">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">landmarks_per_face</span></span><a class="headerlink" href="#fastdeploy.vision.facedet.SCRFD.landmarks_per_face" title="Permalink to this definition">#</a></dt>
+<dd><p>Argument for image postprocessing step, landmarks_per_face, default 5 in SCRFD</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fastdeploy.vision.facedet.SCRFD.max_nms">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max_nms</span></span><a class="headerlink" href="#fastdeploy.vision.facedet.SCRFD.max_nms" title="Permalink to this definition">#</a></dt>
+<dd><p>Argument for image postprocessing step, the upperbond number of boxes processed by nms, default 30000</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fastdeploy.vision.facedet.SCRFD.num_anchors">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">num_anchors</span></span><a class="headerlink" href="#fastdeploy.vision.facedet.SCRFD.num_anchors" title="Permalink to this definition">#</a></dt>
+<dd><p>Argument for image postprocessing step, anchor number of each stride, default 2</p>
+</dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="fastdeploy.vision.facedet.SCRFD.predict">
 <span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conf_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.7</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nms_iou_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.3</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/facedet/contrib/scrfd.html#SCRFD.predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.facedet.SCRFD.predict" title="Permalink to this definition">#</a></dt>
@@ -304,14 +341,21 @@
 <dl class="py property">
 <dt class="sig sig-object py" id="fastdeploy.vision.facedet.SCRFD.size">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#fastdeploy.vision.facedet.SCRFD.size" title="Permalink to this definition">#</a></dt>
-<dd><p>Argument for image preprocessing step, the preprocess image size, tuple of (width, height)</p>
+<dd><p>Argument for image preprocessing step, the preprocess image size, tuple of (width, height), default (640, 640)</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fastdeploy.vision.facedet.SCRFD.use_kps">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">use_kps</span></span><a class="headerlink" href="#fastdeploy.vision.facedet.SCRFD.use_kps" title="Permalink to this definition">#</a></dt>
+<dd><p>Argument for image postprocessing step,
+the outputs of onnx file with key points features or not, default true</p>
 </dd></dl>
 
 </dd></dl>
 
 </section>
 <section id="fastdeploy-vision-facedet-ultraface">
-<h2>fastdeploy.vision.facedet.UltraFace<a class="headerlink" href="#fastdeploy-vision-facedet-ultraface" title="Permalink to this headline">#</a></h2>
+<h2>fastdeploy.vision.facedet.UltraFace<a class="headerlink" href="#fastdeploy-vision-facedet-ultraface" title="Permalink to this heading">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="fastdeploy.vision.facedet.UltraFace">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.facedet.</span></span><span class="sig-name descname"><span class="pre">UltraFace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.ONNX:</span> <span class="pre">2&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/facedet/contrib/ultraface.html#UltraFace"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.facedet.UltraFace" title="Permalink to this definition">#</a></dt>
@@ -347,14 +391,14 @@
 <dl class="py property">
 <dt class="sig sig-object py" id="fastdeploy.vision.facedet.UltraFace.size">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#fastdeploy.vision.facedet.UltraFace.size" title="Permalink to this definition">#</a></dt>
-<dd><p>Argument for image preprocessing step, the preprocess image size, tuple of (width, height)</p>
+<dd><p>Argument for image preprocessing step, the preprocess image size, tuple of (width, height), default (320, 240)</p>
 </dd></dl>
 
 </dd></dl>
 
 </section>
 <section id="fastdeploy-vision-facedet-yolov5face">
-<h2>fastdeploy.vision.facedet.YOLOv5Face<a class="headerlink" href="#fastdeploy-vision-facedet-yolov5face" title="Permalink to this headline">#</a></h2>
+<h2>fastdeploy.vision.facedet.YOLOv5Face<a class="headerlink" href="#fastdeploy-vision-facedet-yolov5face" title="Permalink to this heading">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="fastdeploy.vision.facedet.YOLOv5Face">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.facedet.</span></span><span class="sig-name descname"><span class="pre">YOLOv5Face</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.ONNX:</span> <span class="pre">2&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/facedet/contrib/yolov5face.html#YOLOv5Face"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.facedet.YOLOv5Face" title="Permalink to this definition">#</a></dt>
@@ -396,7 +440,7 @@
 <dl class="py property">
 <dt class="sig sig-object py" id="fastdeploy.vision.facedet.YOLOv5Face.size">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#fastdeploy.vision.facedet.YOLOv5Face.size" title="Permalink to this definition">#</a></dt>
-<dd><p>Argument for image preprocessing step, the preprocess image size, tuple of (width, height)</p>
+<dd><p>Argument for image preprocessing step, the preprocess image size, tuple of (width, height), default size = [640,640]</p>
 </dd></dl>
 
 </dd></dl>
@@ -409,12 +453,12 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="vision_results_en.html">
+          <a class="next-page" href="face_alignment.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Description of Vision Results</div>
+                <div class="title">Face Alignment API</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -462,10 +506,49 @@
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">Face Detection API</a><ul>
-<li><a class="reference internal" href="#fastdeploy-vision-facedet-retinaface">fastdeploy.vision.facedet.RetinaFace</a></li>
-<li><a class="reference internal" href="#fastdeploy-vision-facedet-scrfd">fastdeploy.vision.facedet.SCRFD</a></li>
-<li><a class="reference internal" href="#fastdeploy-vision-facedet-ultraface">fastdeploy.vision.facedet.UltraFace</a></li>
-<li><a class="reference internal" href="#fastdeploy-vision-facedet-yolov5face">fastdeploy.vision.facedet.YOLOv5Face</a></li>
+<li><a class="reference internal" href="#fastdeploy-vision-facedet-retinaface">fastdeploy.vision.facedet.RetinaFace</a><ul>
+<li><a class="reference internal" href="#fastdeploy.vision.facedet.RetinaFace"><code class="docutils literal notranslate"><span class="pre">RetinaFace</span></code></a><ul>
+<li><a class="reference internal" href="#fastdeploy.vision.facedet.RetinaFace.downsample_strides"><code class="docutils literal notranslate"><span class="pre">RetinaFace.downsample_strides</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.facedet.RetinaFace.landmarks_per_face"><code class="docutils literal notranslate"><span class="pre">RetinaFace.landmarks_per_face</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.facedet.RetinaFace.min_sizes"><code class="docutils literal notranslate"><span class="pre">RetinaFace.min_sizes</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.facedet.RetinaFace.predict"><code class="docutils literal notranslate"><span class="pre">RetinaFace.predict()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.facedet.RetinaFace.size"><code class="docutils literal notranslate"><span class="pre">RetinaFace.size</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.facedet.RetinaFace.variance"><code class="docutils literal notranslate"><span class="pre">RetinaFace.variance</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#fastdeploy-vision-facedet-scrfd">fastdeploy.vision.facedet.SCRFD</a><ul>
+<li><a class="reference internal" href="#fastdeploy.vision.facedet.SCRFD"><code class="docutils literal notranslate"><span class="pre">SCRFD</span></code></a><ul>
+<li><a class="reference internal" href="#fastdeploy.vision.facedet.SCRFD.disable_normalize_and_permute"><code class="docutils literal notranslate"><span class="pre">SCRFD.disable_normalize_and_permute()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.facedet.SCRFD.downsample_strides"><code class="docutils literal notranslate"><span class="pre">SCRFD.downsample_strides</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.facedet.SCRFD.landmarks_per_face"><code class="docutils literal notranslate"><span class="pre">SCRFD.landmarks_per_face</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.facedet.SCRFD.max_nms"><code class="docutils literal notranslate"><span class="pre">SCRFD.max_nms</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.facedet.SCRFD.num_anchors"><code class="docutils literal notranslate"><span class="pre">SCRFD.num_anchors</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.facedet.SCRFD.predict"><code class="docutils literal notranslate"><span class="pre">SCRFD.predict()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.facedet.SCRFD.size"><code class="docutils literal notranslate"><span class="pre">SCRFD.size</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.facedet.SCRFD.use_kps"><code class="docutils literal notranslate"><span class="pre">SCRFD.use_kps</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#fastdeploy-vision-facedet-ultraface">fastdeploy.vision.facedet.UltraFace</a><ul>
+<li><a class="reference internal" href="#fastdeploy.vision.facedet.UltraFace"><code class="docutils literal notranslate"><span class="pre">UltraFace</span></code></a><ul>
+<li><a class="reference internal" href="#fastdeploy.vision.facedet.UltraFace.predict"><code class="docutils literal notranslate"><span class="pre">UltraFace.predict()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.facedet.UltraFace.size"><code class="docutils literal notranslate"><span class="pre">UltraFace.size</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#fastdeploy-vision-facedet-yolov5face">fastdeploy.vision.facedet.YOLOv5Face</a><ul>
+<li><a class="reference internal" href="#fastdeploy.vision.facedet.YOLOv5Face"><code class="docutils literal notranslate"><span class="pre">YOLOv5Face</span></code></a><ul>
+<li><a class="reference internal" href="#fastdeploy.vision.facedet.YOLOv5Face.landmarks_per_face"><code class="docutils literal notranslate"><span class="pre">YOLOv5Face.landmarks_per_face</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.facedet.YOLOv5Face.predict"><code class="docutils literal notranslate"><span class="pre">YOLOv5Face.predict()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.facedet.YOLOv5Face.size"><code class="docutils literal notranslate"><span class="pre">YOLOv5Face.size</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -480,7 +563,9 @@
 </div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/scripts/furo.js"></script>
     </body>
 </html>

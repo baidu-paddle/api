@@ -4,10 +4,10 @@
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../../genindex.html" /><link rel="search" title="Search" href="../../../../search.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.09.15"/>
+    <meta name="generator" content="sphinx-5.3.0, furo 2022.09.29"/>
         <title>fastdeploy.vision.detection.ppdet - FastDeploy Python API latest documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/furo.css?digest=9ec31e2665bf879c1d47d93a8ec4893870ee1e45" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/furo.css?digest=d81277517bee4d6b0349d71bb2661d4890b5617c" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -163,7 +163,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../../matting.html">Matting API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../face_recognition.html">Face Recognition API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../face_detection.html">Face Detection API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../face_alignment.html">Face Alignment API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../headpose.html">Headpose API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../vision_results_en.html">Description of Vision Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../runtime.html">Runtime API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../runtime_option.html">Runtime Option API</a></li>
 </ul>
 
 </div>
@@ -219,6 +223,40 @@
 <span class="kn">from</span> <span class="nn">....</span> <span class="kn">import</span> <span class="n">c_lib_wrap</span> <span class="k">as</span> <span class="n">C</span>
 
 
+<span class="k">class</span> <span class="nc">PaddleDetPreprocessor</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">config_file</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Create a preprocessor for PaddleDetection Model from configuration file</span>
+
+<span class="sd">        :param config_file: (str)Path of configuration file, e.g ppyoloe/infer_cfg.yml</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_preprocessor</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">vision</span><span class="o">.</span><span class="n">detection</span><span class="o">.</span><span class="n">PaddleDetPreprocessor</span><span class="p">(</span>
+            <span class="n">config_file</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_ims</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Preprocess input images for PaddleDetection Model</span>
+
+<span class="sd">        :param: input_ims: (list of numpy.ndarray)The input image</span>
+<span class="sd">        :return: list of FDTensor, include image, scale_factor, im_shape</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_preprocessor</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">input_ims</span><span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">PaddleDetPostprocessor</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Create a postprocessor for PaddleDetection Model</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_postprocessor</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">vision</span><span class="o">.</span><span class="n">detection</span><span class="o">.</span><span class="n">PaddleDetPostprocessor</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">runtime_results</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Postprocess the runtime results for PaddleDetection Model</span>
+
+<span class="sd">        :param: runtime_results: (list of FDTensor)The output FDTensor results from runtime</span>
+<span class="sd">        :return: list of ClassifyResult(If the runtime_results is predict by batched samples, the length of this list equals to the batch size)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_postprocessor</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">runtime_results</span><span class="p">)</span>
+
+
 <div class="viewcode-block" id="PPYOLOE"><a class="viewcode-back" href="../../../../object_detection.html#fastdeploy.vision.detection.PPYOLOE">[docs]</a><span class="k">class</span> <span class="nc">PPYOLOE</span><span class="p">(</span><span class="n">FastDeployModel</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
                  <span class="n">model_file</span><span class="p">,</span>
@@ -250,7 +288,32 @@
 <span class="sd">        &quot;&quot;&quot;</span>
 
         <span class="k">assert</span> <span class="n">im</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;The input image data is None.&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">im</span><span class="p">)</span></div></div>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">im</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="PPYOLOE.batch_predict"><a class="viewcode-back" href="../../../../object_detection.html#fastdeploy.vision.detection.PPYOLOE.batch_predict">[docs]</a>    <span class="k">def</span> <span class="nf">batch_predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">images</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Detect a batch of input image list</span>
+
+<span class="sd">        :param im: (list of numpy.ndarray) The input image list, each element is a 3-D array with layout HWC, BGR format</span>
+<span class="sd">        :return list of DetectionResult</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">batch_predict</span><span class="p">(</span><span class="n">images</span><span class="p">)</span></div>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">preprocessor</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get PaddleDetPreprocessor object of the loaded model</span>
+
+<span class="sd">        :return PaddleDetPreprocessor</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">preprocessor</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">postprocessor</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get PaddleDetPostprocessor object of the loaded model</span>
+
+<span class="sd">        :return PaddleDetPostprocessor</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">postprocessor</span></div>
 
 
 <div class="viewcode-block" id="PPYOLO"><a class="viewcode-back" href="../../../../object_detection.html#fastdeploy.vision.detection.PPYOLO">[docs]</a><span class="k">class</span> <span class="nc">PPYOLO</span><span class="p">(</span><span class="n">PPYOLOE</span><span class="p">):</span>
@@ -275,31 +338,6 @@
             <span class="n">model_file</span><span class="p">,</span> <span class="n">params_file</span><span class="p">,</span> <span class="n">config_file</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_runtime_option</span><span class="p">,</span>
             <span class="n">model_format</span><span class="p">)</span>
         <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">initialized</span><span class="p">,</span> <span class="s2">&quot;PPYOLO model initialize failed.&quot;</span></div>
-
-
-<div class="viewcode-block" id="PPYOLOv2"><a class="viewcode-back" href="../../../../object_detection.html#fastdeploy.vision.detection.PPYOLOv2">[docs]</a><span class="k">class</span> <span class="nc">PPYOLOv2</span><span class="p">(</span><span class="n">PPYOLOE</span><span class="p">):</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
-                 <span class="n">model_file</span><span class="p">,</span>
-                 <span class="n">params_file</span><span class="p">,</span>
-                 <span class="n">config_file</span><span class="p">,</span>
-                 <span class="n">runtime_option</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">model_format</span><span class="o">=</span><span class="n">ModelFormat</span><span class="o">.</span><span class="n">PADDLE</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Load a PPYOLOv2 model exported by PaddleDetection.</span>
-
-<span class="sd">        :param model_file: (str)Path of model file, e.g ppyolov2/model.pdmodel</span>
-<span class="sd">        :param params_file: (str)Path of parameters file, e.g ppyolov2/model.pdiparams, if the model_fomat is ModelFormat.ONNX, this param will be ignored, can be set as empty string</span>
-<span class="sd">        :param config_file: (str)Path of configuration file for deployment, e.g ppyoloe/infer_cfg.yml</span>
-<span class="sd">        :param runtime_option: (fastdeploy.RuntimeOption)RuntimeOption for inference this model, if it&#39;s None, will use the default backend on CPU</span>
-<span class="sd">        :param model_format: (fastdeploy.ModelForamt)Model format of the loaded model</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-
-        <span class="nb">super</span><span class="p">(</span><span class="n">PPYOLOE</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">runtime_option</span><span class="p">)</span>
-
-        <span class="k">assert</span> <span class="n">model_format</span> <span class="o">==</span> <span class="n">ModelFormat</span><span class="o">.</span><span class="n">PADDLE</span><span class="p">,</span> <span class="s2">&quot;PPYOLOv2 model only support model format of ModelFormat.Paddle now.&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_model</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">vision</span><span class="o">.</span><span class="n">detection</span><span class="o">.</span><span class="n">PPYOLOv2</span><span class="p">(</span>
-            <span class="n">model_file</span><span class="p">,</span> <span class="n">params_file</span><span class="p">,</span> <span class="n">config_file</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_runtime_option</span><span class="p">,</span>
-            <span class="n">model_format</span><span class="p">)</span>
-        <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">initialized</span><span class="p">,</span> <span class="s2">&quot;PPYOLOv2 model initialize failed.&quot;</span></div>
 
 
 <div class="viewcode-block" id="PaddleYOLOX"><a class="viewcode-back" href="../../../../object_detection.html#fastdeploy.vision.detection.PaddleYOLOX">[docs]</a><span class="k">class</span> <span class="nc">PaddleYOLOX</span><span class="p">(</span><span class="n">PPYOLOE</span><span class="p">):</span>
@@ -402,7 +440,7 @@
         <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">initialized</span><span class="p">,</span> <span class="s2">&quot;YOLOv3 model initialize failed.&quot;</span>
 
 
-<div class="viewcode-block" id="MaskRCNN"><a class="viewcode-back" href="../../../../object_detection.html#fastdeploy.vision.detection.MaskRCNN">[docs]</a><span class="k">class</span> <span class="nc">MaskRCNN</span><span class="p">(</span><span class="n">FastDeployModel</span><span class="p">):</span>
+<div class="viewcode-block" id="MaskRCNN"><a class="viewcode-back" href="../../../../object_detection.html#fastdeploy.vision.detection.MaskRCNN">[docs]</a><span class="k">class</span> <span class="nc">MaskRCNN</span><span class="p">(</span><span class="n">PPYOLOE</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
                  <span class="n">model_file</span><span class="p">,</span>
                  <span class="n">params_file</span><span class="p">,</span>
@@ -411,14 +449,14 @@
                  <span class="n">model_format</span><span class="o">=</span><span class="n">ModelFormat</span><span class="o">.</span><span class="n">PADDLE</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Load a MaskRCNN model exported by PaddleDetection.</span>
 
-<span class="sd">        :param model_file: (str)Path of model file, e.g maskrcnn/model.pdmodel</span>
-<span class="sd">        :param params_file: (str)Path of parameters file, e.g maskrcnn/model.pdiparams, if the model_fomat is ModelFormat.ONNX, this param will be ignored, can be set as empty string</span>
+<span class="sd">        :param model_file: (str)Path of model file, e.g fasterrcnn/model.pdmodel</span>
+<span class="sd">        :param params_file: (str)Path of parameters file, e.g fasterrcnn/model.pdiparams, if the model_fomat is ModelFormat.ONNX, this param will be ignored, can be set as empty string</span>
 <span class="sd">        :param config_file: (str)Path of configuration file for deployment, e.g ppyoloe/infer_cfg.yml</span>
 <span class="sd">        :param runtime_option: (fastdeploy.RuntimeOption)RuntimeOption for inference this model, if it&#39;s None, will use the default backend on CPU</span>
 <span class="sd">        :param model_format: (fastdeploy.ModelForamt)Model format of the loaded model</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
-        <span class="nb">super</span><span class="p">(</span><span class="n">MaskRCNN</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">runtime_option</span><span class="p">)</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">PPYOLOE</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">runtime_option</span><span class="p">)</span>
 
         <span class="k">assert</span> <span class="n">model_format</span> <span class="o">==</span> <span class="n">ModelFormat</span><span class="o">.</span><span class="n">PADDLE</span><span class="p">,</span> <span class="s2">&quot;MaskRCNN model only support model format of ModelFormat.Paddle now.&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_model</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">vision</span><span class="o">.</span><span class="n">detection</span><span class="o">.</span><span class="n">MaskRCNN</span><span class="p">(</span>
@@ -426,9 +464,15 @@
             <span class="n">model_format</span><span class="p">)</span>
         <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">initialized</span><span class="p">,</span> <span class="s2">&quot;MaskRCNN model initialize failed.&quot;</span>
 
-    <span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_image</span><span class="p">):</span>
-        <span class="k">assert</span> <span class="n">input_image</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;The input image data is None.&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">input_image</span><span class="p">)</span></div>
+<div class="viewcode-block" id="MaskRCNN.batch_predict"><a class="viewcode-back" href="../../../../object_detection.html#fastdeploy.vision.detection.MaskRCNN.batch_predict">[docs]</a>    <span class="k">def</span> <span class="nf">batch_predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">images</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Detect a batch of input image list, batch_predict is not supported for maskrcnn now.</span>
+
+<span class="sd">        :param im: (list of numpy.ndarray) The input image list, each element is a 3-D array with layout HWC, BGR format</span>
+<span class="sd">        :return list of DetectionResult</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span>
+            <span class="s2">&quot;batch_predict is not supported for MaskRCNN model now.&quot;</span><span class="p">)</span></div></div>
 </pre></div>
         </article>
       </div>
@@ -466,7 +510,9 @@
 </div><script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
     <script src="../../../../_static/jquery.js"></script>
     <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/sphinx_highlight.js"></script>
     <script src="../../../../_static/scripts/furo.js"></script>
     </body>
 </html>

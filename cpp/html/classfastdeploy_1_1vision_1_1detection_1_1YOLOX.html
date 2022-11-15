@@ -76,7 +76,7 @@ $(function() {
 <p><a class="el" href="classfastdeploy_1_1vision_1_1detection_1_1YOLOX.html" title="YOLOX model object used when to load a YOLOX model exported by YOLOX. ">YOLOX</a> model object used when to load a <a class="el" href="classfastdeploy_1_1vision_1_1detection_1_1YOLOX.html" title="YOLOX model object used when to load a YOLOX model exported by YOLOX. ">YOLOX</a> model exported by <a class="el" href="classfastdeploy_1_1vision_1_1detection_1_1YOLOX.html" title="YOLOX model object used when to load a YOLOX model exported by YOLOX. ">YOLOX</a>.  
  <a href="classfastdeploy_1_1vision_1_1detection_1_1YOLOX.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="contrib_2yolox_8h_source.html">yolox.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="yolox_8h_source.html">yolox.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for fastdeploy::vision::detection::YOLOX:</div>
 <div class="dyncontent">
@@ -110,8 +110,12 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <tr class="inherit_header pub_methods_classfastdeploy_1_1FastDeployModel"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classfastdeploy_1_1FastDeployModel')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classfastdeploy_1_1FastDeployModel.html">fastdeploy::FastDeployModel</a></td></tr>
 <tr class="memitem:abfe20a31493c5cb9a540c65e721e96cf inherit pub_methods_classfastdeploy_1_1FastDeployModel"><td class="memItemLeft" align="right" valign="top"><a id="abfe20a31493c5cb9a540c65e721e96cf"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1FastDeployModel.html#abfe20a31493c5cb9a540c65e721e96cf">Infer</a> (std::vector&lt; FDTensor &gt; &amp;input_tensors, std::vector&lt; FDTensor &gt; *output_tensors)</td></tr>
-<tr class="memdesc:abfe20a31493c5cb9a540c65e721e96cf inherit pub_methods_classfastdeploy_1_1FastDeployModel"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inference the model by the runtime. This interface is included in the <code>Predict()</code> function, so we don't call <code><a class="el" href="classfastdeploy_1_1FastDeployModel.html#abfe20a31493c5cb9a540c65e721e96cf" title="Inference the model by the runtime. This interface is included in the Predict() function, so we don&#39;t call Infer() directly in most common situation. ">Infer()</a></code> directly in most common situation. <br /></td></tr>
+<tr class="memdesc:abfe20a31493c5cb9a540c65e721e96cf inherit pub_methods_classfastdeploy_1_1FastDeployModel"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inference the model by the runtime. This interface is included in the <code>Predict()</code> function, so we don't call <code><a class="el" href="classfastdeploy_1_1FastDeployModel.html#a4e98bd8ade2db8f55bcd69285a7ad54d" title="Inference the model by the runtime. This interface is using class member reused_input_tensors_ to do ...">Infer()</a></code> directly in most common situation. <br /></td></tr>
 <tr class="separator:abfe20a31493c5cb9a540c65e721e96cf inherit pub_methods_classfastdeploy_1_1FastDeployModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e98bd8ade2db8f55bcd69285a7ad54d inherit pub_methods_classfastdeploy_1_1FastDeployModel"><td class="memItemLeft" align="right" valign="top"><a id="a4e98bd8ade2db8f55bcd69285a7ad54d"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1FastDeployModel.html#a4e98bd8ade2db8f55bcd69285a7ad54d">Infer</a> ()</td></tr>
+<tr class="memdesc:a4e98bd8ade2db8f55bcd69285a7ad54d inherit pub_methods_classfastdeploy_1_1FastDeployModel"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inference the model by the runtime. This interface is using class member reused_input_tensors_ to do inference and writing results to reused_output_tensors_. <br /></td></tr>
+<tr class="separator:a4e98bd8ade2db8f55bcd69285a7ad54d inherit pub_methods_classfastdeploy_1_1FastDeployModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4968d33869bef58c87980d5e282288eb inherit pub_methods_classfastdeploy_1_1FastDeployModel"><td class="memItemLeft" align="right" valign="top"><a id="a4968d33869bef58c87980d5e282288eb"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1FastDeployModel.html#a4968d33869bef58c87980d5e282288eb">NumInputsOfRuntime</a> ()</td></tr>
 <tr class="memdesc:a4968d33869bef58c87980d5e282288eb inherit pub_methods_classfastdeploy_1_1FastDeployModel"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of inputs for this model. <br /></td></tr>
@@ -147,16 +151,20 @@ virtual std::map&lt; std::string, float &gt;&#160;</td><td class="memItemRight" 
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1FastDeployModel.html#a8340bd9bc6a5f479138d7f966bba5ea6">EnabledRecordTimeOfRuntime</a> ()</td></tr>
 <tr class="memdesc:a8340bd9bc6a5f479138d7f966bba5ea6 inherit pub_methods_classfastdeploy_1_1FastDeployModel"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the <code><a class="el" href="classfastdeploy_1_1FastDeployModel.html#a4d52262130489235c09bb53429d3dd33" title="This is a debug interface, used to record the time of backend runtime. ">EnableRecordTimeOfRuntime()</a></code> method is enabled. <br /></td></tr>
 <tr class="separator:a8340bd9bc6a5f479138d7f966bba5ea6 inherit pub_methods_classfastdeploy_1_1FastDeployModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69f6a787bbde56b2b2c864704ae7fb16 inherit pub_methods_classfastdeploy_1_1FastDeployModel"><td class="memItemLeft" align="right" valign="top"><a id="a69f6a787bbde56b2b2c864704ae7fb16"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1FastDeployModel.html#a69f6a787bbde56b2b2c864704ae7fb16">ReleaseReusedBuffer</a> ()</td></tr>
+<tr class="memdesc:a69f6a787bbde56b2b2c864704ae7fb16 inherit pub_methods_classfastdeploy_1_1FastDeployModel"><td class="mdescLeft">&#160;</td><td class="mdescRight">Release reused input/output buffers. <br /></td></tr>
+<tr class="separator:a69f6a787bbde56b2b2c864704ae7fb16 inherit pub_methods_classfastdeploy_1_1FastDeployModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a31ad84024b5a849594c298caf93e7fa1"><td class="memItemLeft" align="right" valign="top"><a id="a31ad84024b5a849594c298caf93e7fa1"></a>
 std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1detection_1_1YOLOX.html#a31ad84024b5a849594c298caf93e7fa1">size</a></td></tr>
-<tr class="memdesc:a31ad84024b5a849594c298caf93e7fa1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Argument for image preprocessing step, tuple of (width, height), decide the target size after resize. <br /></td></tr>
+<tr class="memdesc:a31ad84024b5a849594c298caf93e7fa1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Argument for image preprocessing step, tuple of (width, height), decide the target size after resize, default size = {640, 640}. <br /></td></tr>
 <tr class="separator:a31ad84024b5a849594c298caf93e7fa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acdcb0b79b11b25b7d165a902c1a0d484"><td class="memItemLeft" align="right" valign="top"><a id="acdcb0b79b11b25b7d165a902c1a0d484"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1detection_1_1YOLOX.html#acdcb0b79b11b25b7d165a902c1a0d484">is_decode_exported</a></td></tr>
-<tr class="memdesc:acdcb0b79b11b25b7d165a902c1a0d484"><td class="mdescLeft">&#160;</td><td class="mdescRight">whether the model_file was exported with decode module. The official YOLOX/tools/export_onnx.py script will export ONNX file without decode module. Please set it 'true' manually if the model file was exported with decode module. <br /></td></tr>
+<tr class="memdesc:acdcb0b79b11b25b7d165a902c1a0d484"><td class="mdescLeft">&#160;</td><td class="mdescRight">whether the model_file was exported with decode module. The official YOLOX/tools/export_onnx.py script will export ONNX file without decode module. Please set it 'true' manually if the model file was exported with decode module. default false. <br /></td></tr>
 <tr class="separator:acdcb0b79b11b25b7d165a902c1a0d484"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_classfastdeploy_1_1FastDeployModel"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classfastdeploy_1_1FastDeployModel')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classfastdeploy_1_1FastDeployModel.html">fastdeploy::FastDeployModel</a></td></tr>
 <tr class="memitem:ad2b0a8ea11294f12f6075c118966ba1c inherit pub_attribs_classfastdeploy_1_1FastDeployModel"><td class="memItemLeft" align="right" valign="top"><a id="ad2b0a8ea11294f12f6075c118966ba1c"></a>
@@ -165,6 +173,12 @@ std::vector&lt; <a class="el" href="namespacefastdeploy.html#addd441db144b083efc
 <tr class="separator:ad2b0a8ea11294f12f6075c118966ba1c inherit pub_attribs_classfastdeploy_1_1FastDeployModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a89b2f24322acc18f38b4ea5fd6b7189d inherit pub_attribs_classfastdeploy_1_1FastDeployModel"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespacefastdeploy.html#addd441db144b083efc919b63cef2bebc">Backend</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1FastDeployModel.html#a89b2f24322acc18f38b4ea5fd6b7189d">valid_gpu_backends</a> = {Backend::ORT}</td></tr>
 <tr class="separator:a89b2f24322acc18f38b4ea5fd6b7189d inherit pub_attribs_classfastdeploy_1_1FastDeployModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa45f804fe38aeb5f3e98b3f839339997 inherit pub_attribs_classfastdeploy_1_1FastDeployModel"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespacefastdeploy.html#addd441db144b083efc919b63cef2bebc">Backend</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1FastDeployModel.html#aa45f804fe38aeb5f3e98b3f839339997">valid_ipu_backends</a> = {}</td></tr>
+<tr class="separator:aa45f804fe38aeb5f3e98b3f839339997 inherit pub_attribs_classfastdeploy_1_1FastDeployModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f133fc256370b65a4b4436ed0a9b4c4 inherit pub_attribs_classfastdeploy_1_1FastDeployModel"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespacefastdeploy.html#addd441db144b083efc919b63cef2bebc">Backend</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1FastDeployModel.html#a1f133fc256370b65a4b4436ed0a9b4c4">valid_timvx_backends</a> = {}</td></tr>
+<tr class="separator:a1f133fc256370b65a4b4436ed0a9b4c4 inherit pub_attribs_classfastdeploy_1_1FastDeployModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14958071d6240a7f3fe07e594162bab0 inherit pub_attribs_classfastdeploy_1_1FastDeployModel"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespacefastdeploy.html#addd441db144b083efc919b63cef2bebc">Backend</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1FastDeployModel.html#a14958071d6240a7f3fe07e594162bab0">valid_rknpu_backends</a> = {}</td></tr>
+<tr class="separator:a14958071d6240a7f3fe07e594162bab0 inherit pub_attribs_classfastdeploy_1_1FastDeployModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classfastdeploy_1_1vision_1_1detection_1_1YOLOX.html" title="YOLOX model object used when to load a YOLOX model exported by YOLOX. ">YOLOX</a> model object used when to load a <a class="el" href="classfastdeploy_1_1vision_1_1detection_1_1YOLOX.html" title="YOLOX model object used when to load a YOLOX model exported by YOLOX. ">YOLOX</a> model exported by <a class="el" href="classfastdeploy_1_1vision_1_1detection_1_1YOLOX.html" title="YOLOX model object used when to load a YOLOX model exported by YOLOX. ">YOLOX</a>. </p>
@@ -282,8 +296,8 @@ std::vector&lt; <a class="el" href="namespacefastdeploy.html#addd441db144b083efc
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/fastdeploy/1026/FastDeploy/fastdeploy/vision/detection/contrib/<a class="el" href="contrib_2yolox_8h_source.html">yolox.h</a></li>
-<li>/fastdeploy/1026/FastDeploy/fastdeploy/vision/detection/contrib/yolox.cc</li>
+<li>/fastdeploy/new/FastDeploy/fastdeploy/vision/detection/contrib/<a class="el" href="yolox_8h_source.html">yolox.h</a></li>
+<li>/fastdeploy/new/FastDeploy/fastdeploy/vision/detection/contrib/yolox.cc</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

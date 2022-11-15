@@ -90,6 +90,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stru
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1RuntimeOption.html#a7a242e56140f3d2e4e8fd4c178580949">UseGpu</a> (int gpu_id=0)</td></tr>
 <tr class="memdesc:a7a242e56140f3d2e4e8fd4c178580949"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use Nvidia GPU to inference. <br /></td></tr>
 <tr class="separator:a7a242e56140f3d2e4e8fd4c178580949"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b132f7a7c01f7b96573494510090b39"><td class="memItemLeft" align="right" valign="top"><a id="a3b132f7a7c01f7b96573494510090b39"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1RuntimeOption.html#a3b132f7a7c01f7b96573494510090b39">UseTimVX</a> ()</td></tr>
+<tr class="memdesc:a3b132f7a7c01f7b96573494510090b39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use TimVX to inference. <br /></td></tr>
+<tr class="separator:a3b132f7a7c01f7b96573494510090b39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a4037f9768db7bf3f6bdda6673d3524"><td class="memItemLeft" align="right" valign="top"><a id="a4a4037f9768db7bf3f6bdda6673d3524"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1RuntimeOption.html#a4a4037f9768db7bf3f6bdda6673d3524">SetCpuThreadNum</a> (int thread_num)</td></tr>
+<tr class="memdesc:a4a4037f9768db7bf3f6bdda6673d3524"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set number of cpu threads while inference on CPU, by default it will decided by the different backends. <br /></td></tr>
+<tr class="separator:a4a4037f9768db7bf3f6bdda6673d3524"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a986f2fba4fb9176c4283ca6ba77ac112"><td class="memItemLeft" align="right" valign="top"><a id="a986f2fba4fb9176c4283ca6ba77ac112"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1RuntimeOption.html#a986f2fba4fb9176c4283ca6ba77ac112">SetOrtGraphOptLevel</a> (int level=-1)</td></tr>
 <tr class="memdesc:a986f2fba4fb9176c4283ca6ba77ac112"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set ORT graph opt level, default is decide by ONNX <a class="el" href="structfastdeploy_1_1Runtime.html" title="Runtime object used to inference the loaded model on different devices. ">Runtime</a> itself. <br /></td></tr>
@@ -98,6 +106,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stru
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1RuntimeOption.html#a3d5fa5ed3cbcc81e0275321d29f0fbd6">UsePaddleBackend</a> ()</td></tr>
 <tr class="memdesc:a3d5fa5ed3cbcc81e0275321d29f0fbd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set Paddle Inference as inference backend, support CPU/GPU. <br /></td></tr>
 <tr class="separator:a3d5fa5ed3cbcc81e0275321d29f0fbd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49c808f148157e9e3f4e49cdf4be77cd"><td class="memItemLeft" align="right" valign="top"><a id="a49c808f148157e9e3f4e49cdf4be77cd"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1RuntimeOption.html#a49c808f148157e9e3f4e49cdf4be77cd">UsePaddleInferBackend</a> ()</td></tr>
+<tr class="memdesc:a49c808f148157e9e3f4e49cdf4be77cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrapper function of <a class="el" href="structfastdeploy_1_1RuntimeOption.html#a3d5fa5ed3cbcc81e0275321d29f0fbd6" title="Set Paddle Inference as inference backend, support CPU/GPU. ">UsePaddleBackend()</a> <br /></td></tr>
+<tr class="separator:a49c808f148157e9e3f4e49cdf4be77cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad64cc21325c28b00a7627be347b8078"><td class="memItemLeft" align="right" valign="top"><a id="aad64cc21325c28b00a7627be347b8078"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1RuntimeOption.html#aad64cc21325c28b00a7627be347b8078">UseOrtBackend</a> ()</td></tr>
 <tr class="memdesc:aad64cc21325c28b00a7627be347b8078"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set ONNX <a class="el" href="structfastdeploy_1_1Runtime.html" title="Runtime object used to inference the loaded model on different devices. ">Runtime</a> as inference backend, support CPU/GPU. <br /></td></tr>
@@ -118,10 +130,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stru
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1RuntimeOption.html#aa0c4e607123b60df808c3ea279f8a6e4">UseLiteBackend</a> ()</td></tr>
 <tr class="memdesc:aa0c4e607123b60df808c3ea279f8a6e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set Paddle Lite as inference backend, only support arm cpu. <br /></td></tr>
 <tr class="separator:aa0c4e607123b60df808c3ea279f8a6e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a7365011acb7b10c1d67d0e5ee1e765"><td class="memItemLeft" align="right" valign="top"><a id="a1a7365011acb7b10c1d67d0e5ee1e765"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1RuntimeOption.html#a1a7365011acb7b10c1d67d0e5ee1e765">UsePaddleLiteBackend</a> ()</td></tr>
+<tr class="memdesc:a1a7365011acb7b10c1d67d0e5ee1e765"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrapper function of <a class="el" href="structfastdeploy_1_1RuntimeOption.html#aa0c4e607123b60df808c3ea279f8a6e4" title="Set Paddle Lite as inference backend, only support arm cpu. ">UseLiteBackend()</a> <br /></td></tr>
+<tr class="separator:a1a7365011acb7b10c1d67d0e5ee1e765"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f7dc3caa5a0f5d003b4ceb96c6446cc"><td class="memItemLeft" align="right" valign="top"><a id="a5f7dc3caa5a0f5d003b4ceb96c6446cc"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1RuntimeOption.html#a5f7dc3caa5a0f5d003b4ceb96c6446cc">SetPaddleMKLDNN</a> (bool pd_mkldnn=true)</td></tr>
 <tr class="memdesc:a5f7dc3caa5a0f5d003b4ceb96c6446cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set mkldnn switch while using Paddle Inference as inference backend. <br /></td></tr>
 <tr class="separator:a5f7dc3caa5a0f5d003b4ceb96c6446cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade3c1633cdcd7d63c2499afa0410b330"><td class="memItemLeft" align="right" valign="top"><a id="ade3c1633cdcd7d63c2499afa0410b330"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1RuntimeOption.html#ade3c1633cdcd7d63c2499afa0410b330">EnablePaddleToTrt</a> ()</td></tr>
+<tr class="memdesc:ade3c1633cdcd7d63c2499afa0410b330"><td class="mdescLeft">&#160;</td><td class="mdescRight">If TensorRT backend is used, EnablePaddleToTrt will change to use Paddle Inference backend, and use its integrated TensorRT instead. <br /></td></tr>
+<tr class="separator:ade3c1633cdcd7d63c2499afa0410b330"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18e659f82dc902f4f4fade0ce8492ae3"><td class="memItemLeft" align="right" valign="top"><a id="a18e659f82dc902f4f4fade0ce8492ae3"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1RuntimeOption.html#a18e659f82dc902f4f4fade0ce8492ae3">DeletePaddleBackendPass</a> (const std::string &amp;delete_pass_name)</td></tr>
 <tr class="memdesc:a18e659f82dc902f4f4fade0ce8492ae3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete pass by name while using Paddle Inference as inference backend, this can be called multiple times to delete a set of passes. <br /></td></tr>
@@ -142,6 +162,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stru
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1RuntimeOption.html#a3cafb8f411faaac71268f42c0ae28363">SetLiteOptimizedModelDir</a> (const std::string &amp;optimized_model_dir)</td></tr>
 <tr class="memdesc:a3cafb8f411faaac71268f42c0ae28363"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set optimzed model dir for Paddle Lite backend. <br /></td></tr>
 <tr class="separator:a3cafb8f411faaac71268f42c0ae28363"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a971496e5334204f34e7dbb0e7b195888"><td class="memItemLeft" align="right" valign="top"><a id="a971496e5334204f34e7dbb0e7b195888"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1RuntimeOption.html#a971496e5334204f34e7dbb0e7b195888">SetLiteSubgraphPartitionPath</a> (const std::string &amp;nnadapter_subgraph_partition_config_path)</td></tr>
+<tr class="memdesc:a971496e5334204f34e7dbb0e7b195888"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set nnadapter subgraph partition path for Paddle Lite backend. <br /></td></tr>
+<tr class="separator:a971496e5334204f34e7dbb0e7b195888"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad69d925ac55153a2ac5260c282193267"><td class="memItemLeft" align="right" valign="top"><a id="ad69d925ac55153a2ac5260c282193267"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1RuntimeOption.html#ad69d925ac55153a2ac5260c282193267">EnableLiteFP16</a> ()</td></tr>
 <tr class="memdesc:ad69d925ac55153a2ac5260c282193267"><td class="mdescLeft">&#160;</td><td class="mdescRight">enable half precision while use paddle lite backend <br /></td></tr>
@@ -150,6 +174,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stru
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1RuntimeOption.html#a17c1ee40eedd9967bcb72ee5fc1d01d3">DisableLiteFP16</a> ()</td></tr>
 <tr class="memdesc:a17c1ee40eedd9967bcb72ee5fc1d01d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">disable half precision, change to full precision(float32) <br /></td></tr>
 <tr class="separator:a17c1ee40eedd9967bcb72ee5fc1d01d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39ad9d3721a0760eb8ddfad9a0e32a2d"><td class="memItemLeft" align="right" valign="top"><a id="a39ad9d3721a0760eb8ddfad9a0e32a2d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1RuntimeOption.html#a39ad9d3721a0760eb8ddfad9a0e32a2d">EnableLiteInt8</a> ()</td></tr>
+<tr class="memdesc:a39ad9d3721a0760eb8ddfad9a0e32a2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">enable int8 precision while use paddle lite backend <br /></td></tr>
+<tr class="separator:a39ad9d3721a0760eb8ddfad9a0e32a2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6820ccf65dae1043dd676c08bf852fff"><td class="memItemLeft" align="right" valign="top"><a id="a6820ccf65dae1043dd676c08bf852fff"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1RuntimeOption.html#a6820ccf65dae1043dd676c08bf852fff">DisableLiteInt8</a> ()</td></tr>
+<tr class="memdesc:a6820ccf65dae1043dd676c08bf852fff"><td class="mdescLeft">&#160;</td><td class="mdescRight">disable int8 precision, change to full precision(float32) <br /></td></tr>
+<tr class="separator:a6820ccf65dae1043dd676c08bf852fff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7dc0d4d3d86537164778ca55e0632793"><td class="memItemLeft" align="right" valign="top"><a id="a7dc0d4d3d86537164778ca55e0632793"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1RuntimeOption.html#a7dc0d4d3d86537164778ca55e0632793">SetLitePowerMode</a> (<a class="el" href="namespacefastdeploy.html#ae7ba2fd1a203144360532ffde81c8dcf">LitePowerMode</a> mode)</td></tr>
 <tr class="memdesc:a7dc0d4d3d86537164778ca55e0632793"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set power mode while using Paddle Lite as inference backend, mode(0: LITE_POWER_HIGH; 1: LITE_POWER_LOW; 2: LITE_POWER_FULL; 3: LITE_POWER_NO_BIND, 4: LITE_POWER_RAND_HIGH; 5: LITE_POWER_RAND_LOW, refer <a href="https://paddle-lite.readthedocs.io/zh/latest/api_reference/cxx_api_doc.html#set-power-mode">paddle lite</a> for more details) <br /></td></tr>
@@ -161,6 +193,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stru
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1RuntimeOption.html#ad28e335b29b7971701cef819fb32f520">SetTrtMaxWorkspaceSize</a> (size_t trt_max_workspace_size)</td></tr>
 <tr class="memdesc:ad28e335b29b7971701cef819fb32f520"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set max_workspace_size for TensorRT, default 1&lt;&lt;30. <br /></td></tr>
 <tr class="separator:ad28e335b29b7971701cef819fb32f520"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5ee3a71edd89499547f6fbf9d450556"><td class="memItemLeft" align="right" valign="top"><a id="ae5ee3a71edd89499547f6fbf9d450556"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1RuntimeOption.html#ae5ee3a71edd89499547f6fbf9d450556">SetTrtMaxBatchSize</a> (size_t max_batch_size)</td></tr>
+<tr class="memdesc:ae5ee3a71edd89499547f6fbf9d450556"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set max_batch_size for TensorRT, default 32. <br /></td></tr>
+<tr class="separator:ae5ee3a71edd89499547f6fbf9d450556"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac92dc2030a3624042473242bb2d1dcd1"><td class="memItemLeft" align="right" valign="top"><a id="ac92dc2030a3624042473242bb2d1dcd1"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1RuntimeOption.html#ac92dc2030a3624042473242bb2d1dcd1">EnableTrtFP16</a> ()</td></tr>
 <tr class="memdesc:ac92dc2030a3624042473242bb2d1dcd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable FP16 inference while using TensorRT backend. Notice: not all the GPU device support FP16, on those device doesn't support FP16, FastDeploy will fallback to FP32 automaticly. <br /></td></tr>
@@ -189,10 +225,70 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stru
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1RuntimeOption.html#a91232808106866c55453f31a2dcfeccf">DisablePaddleTrtCollectShape</a> ()</td></tr>
 <tr class="memdesc:a91232808106866c55453f31a2dcfeccf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable to collect shape in paddle trt backend. <br /></td></tr>
 <tr class="separator:a91232808106866c55453f31a2dcfeccf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40e0401e3278fa16c1ef5a08834f72c5"><td class="memItemLeft" align="right" valign="top"><a id="a40e0401e3278fa16c1ef5a08834f72c5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1RuntimeOption.html#a40e0401e3278fa16c1ef5a08834f72c5">SetOpenVINOStreams</a> (int num_streams)</td></tr>
+<tr class="memdesc:a40e0401e3278fa16c1ef5a08834f72c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set number of streams by the OpenVINO backends. <br /></td></tr>
+<tr class="separator:a40e0401e3278fa16c1ef5a08834f72c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80b7a4e789ff431b79c97e6857a55e60"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1RuntimeOption.html#a80b7a4e789ff431b79c97e6857a55e60">UseIpu</a> (int device_num=1, int micro_batch_size=1, bool enable_pipelining=false, int batches_per_step=1)</td></tr>
+<tr class="separator:a80b7a4e789ff431b79c97e6857a55e60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76146cf87a23b620ef3f88bbfe6fb40c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1RuntimeOption.html#a76146cf87a23b620ef3f88bbfe6fb40c">SetIpuConfig</a> (bool enable_fp16=false, int replica_num=1, float available_memory_proportion=1.0, bool enable_half_partial=false)</td></tr>
+<tr class="memdesc:a76146cf87a23b620ef3f88bbfe6fb40c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set IPU config.  <a href="#a76146cf87a23b620ef3f88bbfe6fb40c">More...</a><br /></td></tr>
+<tr class="separator:a76146cf87a23b620ef3f88bbfe6fb40c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Option object used when create a new <a class="el" href="structfastdeploy_1_1Runtime.html" title="Runtime object used to inference the loaded model on different devices. ">Runtime</a> object. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a76146cf87a23b620ef3f88bbfe6fb40c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76146cf87a23b620ef3f88bbfe6fb40c">&#9670;&nbsp;</a></span>SetIpuConfig()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fastdeploy::RuntimeOption::SetIpuConfig </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>enable_fp16</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>replica_num</em> = <code>1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>available_memory_proportion</em> = <code>1.0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>enable_half_partial</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set IPU config. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">enable_fp16</td><td>enable fp16. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">replica_num</td><td>the number of graph replication. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">available_memory_proportion</td><td>the available memory proportion for matmul/conv. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">enable_half_partial</td><td>enable fp16 partial for matmul, only work with fp16. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a0e1b51ddc437d5369e33205cb4c0ac0f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0e1b51ddc437d5369e33205cb4c0ac0f">&#9670;&nbsp;</a></span>SetModelPath()</h2>
 
@@ -288,9 +384,59 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stru
 
 </div>
 </div>
+<a id="a80b7a4e789ff431b79c97e6857a55e60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80b7a4e789ff431b79c97e6857a55e60">&#9670;&nbsp;</a></span>UseIpu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fastdeploy::RuntimeOption::UseIpu </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>device_num</em> = <code>1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>micro_batch_size</em> = <code>1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>enable_pipelining</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>batches_per_step</em> = <code>1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Graphcore IPU to inference.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">device_num</td><td>the number of IPUs. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">micro_batch_size</td><td>the batch size in the graph, only work when graph has no batch shape info. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">enable_pipelining</td><td>enable pipelining. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">batches_per_step</td><td>the number of batches per run in pipelining. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following files:<ul>
-<li>/fastdeploy/1026/FastDeploy/fastdeploy/<a class="el" href="runtime_8h_source.html">runtime.h</a></li>
-<li>/fastdeploy/1026/FastDeploy/fastdeploy/runtime.cc</li>
+<li>/fastdeploy/new/FastDeploy/fastdeploy/<a class="el" href="runtime_8h_source.html">runtime.h</a></li>
+<li>/fastdeploy/new/FastDeploy/fastdeploy/runtime.cc</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

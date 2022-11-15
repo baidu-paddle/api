@@ -4,10 +4,10 @@
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../../../../genindex.html" /><link rel="search" title="Search" href="../../../../../search.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.09.15"/>
+    <meta name="generator" content="sphinx-5.3.0, furo 2022.09.29"/>
         <title>fastdeploy.vision.facedet.contrib.scrfd - FastDeploy Python API latest documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../../_static/styles/furo.css?digest=9ec31e2665bf879c1d47d93a8ec4893870ee1e45" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/styles/furo.css?digest=d81277517bee4d6b0349d71bb2661d4890b5617c" />
     <link rel="stylesheet" type="text/css" href="../../../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -163,7 +163,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../../../matting.html">Matting API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../../face_recognition.html">Face Recognition API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../../face_detection.html">Face Detection API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../face_alignment.html">Face Alignment API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../headpose.html">Headpose API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../../vision_results_en.html">Description of Vision Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../runtime.html">Runtime API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../runtime_option.html">Runtime Option API</a></li>
 </ul>
 
 </div>
@@ -251,12 +255,18 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">input_image</span><span class="p">,</span> <span class="n">conf_threshold</span><span class="p">,</span>
                                    <span class="n">nms_iou_threshold</span><span class="p">)</span></div>
 
+<div class="viewcode-block" id="SCRFD.disable_normalize_and_permute"><a class="viewcode-back" href="../../../../../face_detection.html#fastdeploy.vision.facedet.SCRFD.disable_normalize_and_permute">[docs]</a>    <span class="k">def</span> <span class="nf">disable_normalize_and_permute</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This function will disable normalize and hwc2chw in preprocessing step.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">disable_normalize_and_permute</span><span class="p">()</span></div>
+
     <span class="c1"># 一些跟SCRFD模型有关的属性封装</span>
     <span class="c1"># 多数是预处理相关，可通过修改如model.size = [640, 640]改变预处理时resize的大小（前提是模型支持）</span>
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">size</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Argument for image preprocessing step, the preprocess image size, tuple of (width, height)</span>
+<span class="sd">        Argument for image preprocessing step, the preprocess image size, tuple of (width, height), default (640, 640)</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">size</span>
 
@@ -287,22 +297,40 @@
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">downsample_strides</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Argument for image postprocessing step,</span>
+<span class="sd">        downsample strides (namely, steps) for SCRFD to generate anchors,</span>
+<span class="sd">        will take (8,16,32) as default values</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">downsample_strides</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">landmarks_per_face</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Argument for image postprocessing step, landmarks_per_face, default 5 in SCRFD</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">landmarks_per_face</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">use_kps</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Argument for image postprocessing step,</span>
+<span class="sd">        the outputs of onnx file with key points features or not, default true</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">use_kps</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">max_nms</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Argument for image postprocessing step, the upperbond number of boxes processed by nms, default 30000</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">max_nms</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">num_anchors</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Argument for image postprocessing step, anchor number of each stride, default 2</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">num_anchors</span>
 
     <span class="nd">@size</span><span class="o">.</span><span class="n">setter</span>
@@ -415,7 +443,9 @@
 </div><script data-url_root="../../../../../" id="documentation_options" src="../../../../../_static/documentation_options.js"></script>
     <script src="../../../../../_static/jquery.js"></script>
     <script src="../../../../../_static/underscore.js"></script>
+    <script src="../../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../../../_static/doctools.js"></script>
+    <script src="../../../../../_static/sphinx_highlight.js"></script>
     <script src="../../../../../_static/scripts/furo.js"></script>
     </body>
 </html>

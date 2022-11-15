@@ -1,0 +1,579 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="prev" title="Runtime API" href="runtime.html" />
+
+    <meta name="generator" content="sphinx-5.3.0, furo 2022.09.29"/>
+        <title>Runtime Option API - FastDeploy Python API latest documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=d81277517bee4d6b0349d71bb2661d4890b5617c" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="index.html"><div class="brand">FastDeploy Python API latest documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
+  
+  
+  <span class="sidebar-brand-text">FastDeploy Python API latest documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">文档目录</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="object_detection.html">Object Detection API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ocr.html">OCR API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="semantic_segmentation.html">Semantic Segmentation API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="image_classification.html">Image Classification API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="keypoint_detection.html">Keypoint Detection API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matting.html">Matting API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="face_recognition.html">Face Recognition API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="face_detection.html">Face Detection API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="face_alignment.html">Face Alignment API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="headpose.html">Headpose API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vision_results_en.html">Description of Vision Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="runtime.html">Runtime API</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Runtime Option API</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="runtime-option-api">
+<h1>Runtime Option API<a class="headerlink" href="#runtime-option-api" title="Permalink to this heading">#</a></h1>
+<section id="fastdeploy-runtimeoption">
+<h2>fastdeploy.RuntimeOption<a class="headerlink" href="#fastdeploy-runtimeoption" title="Permalink to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="fastdeploy.RuntimeOption">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.</span></span><span class="sig-name descname"><span class="pre">RuntimeOption</span></span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption" title="Permalink to this definition">#</a></dt>
+<dd><p>Options for FastDeploy Runtime.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.RuntimeOption.disable_lite_fp16">
+<span class="sig-name descname"><span class="pre">disable_lite_fp16</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.disable_lite_fp16"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.disable_lite_fp16" title="Permalink to this definition">#</a></dt>
+<dd><p>Disable half precision inference while using Paddle Lite backend on ARM CPU, fp16 is disabled by default.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.RuntimeOption.disable_paddle_log_info">
+<span class="sig-name descname"><span class="pre">disable_paddle_log_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.disable_paddle_log_info"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.disable_paddle_log_info" title="Permalink to this definition">#</a></dt>
+<dd><p>Disable print out the debug log information while using Paddle Inference backend, the log information is disabled by default.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.RuntimeOption.disable_pinned_memory">
+<span class="sig-name descname"><span class="pre">disable_pinned_memory</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.disable_pinned_memory"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.disable_pinned_memory" title="Permalink to this definition">#</a></dt>
+<dd><p>Disable pinned memory.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.RuntimeOption.disable_trt_fp16">
+<span class="sig-name descname"><span class="pre">disable_trt_fp16</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.disable_trt_fp16"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.disable_trt_fp16" title="Permalink to this definition">#</a></dt>
+<dd><p>Disable half precision inference while suing TensorRT backend.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.RuntimeOption.enable_lite_fp16">
+<span class="sig-name descname"><span class="pre">enable_lite_fp16</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.enable_lite_fp16"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.enable_lite_fp16" title="Permalink to this definition">#</a></dt>
+<dd><p>Enable half precision inference while using Paddle Lite backend on ARM CPU, fp16 is disabled by default.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.RuntimeOption.enable_paddle_log_info">
+<span class="sig-name descname"><span class="pre">enable_paddle_log_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.enable_paddle_log_info"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.enable_paddle_log_info" title="Permalink to this definition">#</a></dt>
+<dd><p>Enable print out the debug log information while using Paddle Inference backend, the log information is disabled by default.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.RuntimeOption.enable_paddle_to_trt">
+<span class="sig-name descname"><span class="pre">enable_paddle_to_trt</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.enable_paddle_to_trt"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.enable_paddle_to_trt" title="Permalink to this definition">#</a></dt>
+<dd><p>While using TensorRT backend, enable_paddle_to_trt() will change to use Paddle Inference backend, and use its integrated TensorRT instead.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.RuntimeOption.enable_pinned_memory">
+<span class="sig-name descname"><span class="pre">enable_pinned_memory</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.enable_pinned_memory"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.enable_pinned_memory" title="Permalink to this definition">#</a></dt>
+<dd><p>Enable pinned memory. Pinned memory can be utilized to speedup the data transfer between CPU and GPU. Currently it’s only suppurted in TRT backend and Paddle Inference backend.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.RuntimeOption.enable_trt_fp16">
+<span class="sig-name descname"><span class="pre">enable_trt_fp16</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.enable_trt_fp16"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.enable_trt_fp16" title="Permalink to this definition">#</a></dt>
+<dd><p>Enable half precision inference while using TensorRT backend, notice that not all the Nvidia GPU support FP16, in those cases, will fallback to FP32 inference.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fastdeploy.RuntimeOption.is_dynamic">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_dynamic</span></span><a class="headerlink" href="#fastdeploy.RuntimeOption.is_dynamic" title="Permalink to this definition">#</a></dt>
+<dd><p>Only for Poros backend</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>value</strong> – (bool)Whether to enable dynamic shape, default False</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fastdeploy.RuntimeOption.long_to_int">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">long_to_int</span></span><a class="headerlink" href="#fastdeploy.RuntimeOption.long_to_int" title="Permalink to this definition">#</a></dt>
+<dd><p>Only for Poros backend</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>value</strong> – (bool)Whether to convert long dtype to int dtype, default True</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.RuntimeOption.set_cpu_thread_num">
+<span class="sig-name descname"><span class="pre">set_cpu_thread_num</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">thread_num</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.set_cpu_thread_num"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.set_cpu_thread_num" title="Permalink to this definition">#</a></dt>
+<dd><p>Set number of threads if inference with CPU</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>thread_num</strong> – (int)Number of threads, if not positive, means the number of threads is decided by the backend, default -1</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.RuntimeOption.set_lite_power_mode">
+<span class="sig-name descname"><span class="pre">set_lite_power_mode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mode</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.set_lite_power_mode"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.set_lite_power_mode" title="Permalink to this definition">#</a></dt>
+<dd><p>Set POWER mode while using Paddle Lite backend on ARM CPU.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.RuntimeOption.set_model_path">
+<span class="sig-name descname"><span class="pre">set_model_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_path=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.PADDLE:</span> <span class="pre">1&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.set_model_path"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.set_model_path" title="Permalink to this definition">#</a></dt>
+<dd><p>Set path of model file and parameters file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model_path</strong> – (str)Path of model file</p></li>
+<li><p><strong>params_path</strong> – (str)Path of parameters file</p></li>
+<li><p><strong>model_format</strong> – (ModelFormat)Format of model, support ModelFormat.PADDLE/ModelFormat.ONNX</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.RuntimeOption.set_paddle_mkldnn">
+<span class="sig-name descname"><span class="pre">set_paddle_mkldnn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">use_mkldnn</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.set_paddle_mkldnn"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.set_paddle_mkldnn" title="Permalink to this definition">#</a></dt>
+<dd><p>Enable/Disable MKLDNN while using Paddle Inference backend, mkldnn is enabled by default.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.RuntimeOption.set_paddle_mkldnn_cache_size">
+<span class="sig-name descname"><span class="pre">set_paddle_mkldnn_cache_size</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cache_size</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.set_paddle_mkldnn_cache_size"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.set_paddle_mkldnn_cache_size" title="Permalink to this definition">#</a></dt>
+<dd><p>Set size of shape cache while using Paddle Inference backend with MKLDNN enabled, default will cache all the dynamic shape.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.RuntimeOption.set_trt_cache_file">
+<span class="sig-name descname"><span class="pre">set_trt_cache_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cache_file_path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.set_trt_cache_file"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.set_trt_cache_file" title="Permalink to this definition">#</a></dt>
+<dd><p>Set a cache file path while using TensorRT backend. While loading a Paddle/ONNX model with set_trt_cache_file(“./tensorrt_cache/model.trt”), if file <cite>./tensorrt_cache/model.trt</cite> exists, it will skip building tensorrt engine and load the cache file directly; if file <cite>./tensorrt_cache/model.trt</cite> doesn’t exist, it will building tensorrt engine and save the engine as binary string to the cache file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>cache_file_path</strong> – (str)Path of tensorrt cache file</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.RuntimeOption.set_trt_input_shape">
+<span class="sig-name descname"><span class="pre">set_trt_input_shape</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tensor_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_shape</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opt_shape</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_shape</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.set_trt_input_shape"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.set_trt_input_shape" title="Permalink to this definition">#</a></dt>
+<dd><p>Set shape range information while using TensorRT backend with loadding a model contains dynamic input shape. While inference with a new input shape out of the set shape range, the tensorrt engine will be rebuilt to expand the shape range information.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tensor_name</strong> – (str)Name of input which has dynamic shape</p></li>
+<li><p><strong>min_shape</strong> – (list of int)Minimum shape of the input, e.g [1, 3, 224, 224]</p></li>
+<li><p><strong>opt_shape</strong> – (list of int)Optimize shape of the input, this offten set as the most common input shape, if set to None, it will keep same with min_shape</p></li>
+<li><p><strong>max_shape</strong> – (list of int)Maximum shape of the input, e.g [8, 3, 224, 224], if set to None, it will keep same with the min_shape</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.RuntimeOption.set_trt_max_batch_size">
+<span class="sig-name descname"><span class="pre">set_trt_max_batch_size</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">trt_max_batch_size</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.set_trt_max_batch_size"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.set_trt_max_batch_size" title="Permalink to this definition">#</a></dt>
+<dd><p>Set max batch size while using TensorRT backend.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.RuntimeOption.set_trt_max_workspace_size">
+<span class="sig-name descname"><span class="pre">set_trt_max_workspace_size</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">trt_max_workspace_size</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.set_trt_max_workspace_size"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.set_trt_max_workspace_size" title="Permalink to this definition">#</a></dt>
+<dd><p>Set max workspace size while using TensorRT backend.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fastdeploy.RuntimeOption.unconst_ops_thres">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">unconst_ops_thres</span></span><a class="headerlink" href="#fastdeploy.RuntimeOption.unconst_ops_thres" title="Permalink to this definition">#</a></dt>
+<dd><p>Only for Poros backend</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>value</strong> – (int)Minimum number of subgraph OPs, default 10</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.RuntimeOption.use_cpu">
+<span class="sig-name descname"><span class="pre">use_cpu</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.use_cpu"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.use_cpu" title="Permalink to this definition">#</a></dt>
+<dd><p>Inference with CPU</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.RuntimeOption.use_gpu">
+<span class="sig-name descname"><span class="pre">use_gpu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">device_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.use_gpu"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.use_gpu" title="Permalink to this definition">#</a></dt>
+<dd><p>Inference with Nvidia GPU</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>device_id</strong> – (int)The index of GPU will be used for inference, default 0</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.RuntimeOption.use_lite_backend">
+<span class="sig-name descname"><span class="pre">use_lite_backend</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.use_lite_backend"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.use_lite_backend" title="Permalink to this definition">#</a></dt>
+<dd><p>Use Paddle Lite backend, support inference Paddle model on ARM CPU.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fastdeploy.RuntimeOption.use_nvidia_tf32">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">use_nvidia_tf32</span></span><a class="headerlink" href="#fastdeploy.RuntimeOption.use_nvidia_tf32" title="Permalink to this definition">#</a></dt>
+<dd><p>Only for Poros backend</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>value</strong> – (bool)The calculation accuracy of tf32 mode exists on the A card, which can bring some performance improvements, default False</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.RuntimeOption.use_openvino_backend">
+<span class="sig-name descname"><span class="pre">use_openvino_backend</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.use_openvino_backend"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.use_openvino_backend" title="Permalink to this definition">#</a></dt>
+<dd><p>Use OpenVINO backend, support inference Paddle/ONNX model on CPU.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.RuntimeOption.use_ort_backend">
+<span class="sig-name descname"><span class="pre">use_ort_backend</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.use_ort_backend"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.use_ort_backend" title="Permalink to this definition">#</a></dt>
+<dd><p>Use ONNX Runtime backend, support inference Paddle/ONNX model on CPU/Nvidia GPU.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.RuntimeOption.use_paddle_backend">
+<span class="sig-name descname"><span class="pre">use_paddle_backend</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.use_paddle_backend"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.use_paddle_backend" title="Permalink to this definition">#</a></dt>
+<dd><p>Use Paddle Inference backend, support inference Paddle model on CPU/Nvidia GPU.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.RuntimeOption.use_paddle_infer_backend">
+<span class="sig-name descname"><span class="pre">use_paddle_infer_backend</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.use_paddle_infer_backend"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.use_paddle_infer_backend" title="Permalink to this definition">#</a></dt>
+<dd><p>Wrapper function of use_paddle_backend(), use Paddle Inference backend, support inference Paddle model on CPU/Nvidia GPU.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.RuntimeOption.use_paddle_lite_backend">
+<span class="sig-name descname"><span class="pre">use_paddle_lite_backend</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.use_paddle_lite_backend"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.use_paddle_lite_backend" title="Permalink to this definition">#</a></dt>
+<dd><p>Wrapper function of use_lite_backend(), use Paddle Lite backend, support inference Paddle model on ARM CPU.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.RuntimeOption.use_poros_backend">
+<span class="sig-name descname"><span class="pre">use_poros_backend</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.use_poros_backend"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.use_poros_backend" title="Permalink to this definition">#</a></dt>
+<dd><p>Use Poros backend, support inference TorchScript model on CPU/Nvidia GPU.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.RuntimeOption.use_rknpu2">
+<span class="sig-name descname"><span class="pre">use_rknpu2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rknpu2_name=&lt;CpuName.RK3588:</span> <span class="pre">1&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rknpu2_core=&lt;CoreMask.RKNN_NPU_CORE_0:</span> <span class="pre">1&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.use_rknpu2"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.use_rknpu2" title="Permalink to this definition">#</a></dt>
+<dd><p>Inference with CPU</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.RuntimeOption.use_trt_backend">
+<span class="sig-name descname"><span class="pre">use_trt_backend</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.use_trt_backend"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.use_trt_backend" title="Permalink to this definition">#</a></dt>
+<dd><p>Use TensorRT backend, support inference Paddle/ONNX model on Nvidia GPU.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          <a class="prev-page" href="runtime.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Runtime API</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2022, PaddlePaddle
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Runtime Option API</a><ul>
+<li><a class="reference internal" href="#fastdeploy-runtimeoption">fastdeploy.RuntimeOption</a><ul>
+<li><a class="reference internal" href="#fastdeploy.RuntimeOption"><code class="docutils literal notranslate"><span class="pre">RuntimeOption</span></code></a><ul>
+<li><a class="reference internal" href="#fastdeploy.RuntimeOption.disable_lite_fp16"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.disable_lite_fp16()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.RuntimeOption.disable_paddle_log_info"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.disable_paddle_log_info()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.RuntimeOption.disable_pinned_memory"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.disable_pinned_memory()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.RuntimeOption.disable_trt_fp16"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.disable_trt_fp16()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.RuntimeOption.enable_lite_fp16"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.enable_lite_fp16()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.RuntimeOption.enable_paddle_log_info"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.enable_paddle_log_info()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.RuntimeOption.enable_paddle_to_trt"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.enable_paddle_to_trt()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.RuntimeOption.enable_pinned_memory"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.enable_pinned_memory()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.RuntimeOption.enable_trt_fp16"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.enable_trt_fp16()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.RuntimeOption.is_dynamic"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.is_dynamic</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.RuntimeOption.long_to_int"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.long_to_int</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.RuntimeOption.set_cpu_thread_num"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.set_cpu_thread_num()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.RuntimeOption.set_lite_power_mode"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.set_lite_power_mode()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.RuntimeOption.set_model_path"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.set_model_path()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.RuntimeOption.set_paddle_mkldnn"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.set_paddle_mkldnn()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.RuntimeOption.set_paddle_mkldnn_cache_size"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.set_paddle_mkldnn_cache_size()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.RuntimeOption.set_trt_cache_file"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.set_trt_cache_file()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.RuntimeOption.set_trt_input_shape"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.set_trt_input_shape()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.RuntimeOption.set_trt_max_batch_size"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.set_trt_max_batch_size()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.RuntimeOption.set_trt_max_workspace_size"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.set_trt_max_workspace_size()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.RuntimeOption.unconst_ops_thres"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.unconst_ops_thres</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.RuntimeOption.use_cpu"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.use_cpu()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.RuntimeOption.use_gpu"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.use_gpu()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.RuntimeOption.use_lite_backend"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.use_lite_backend()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.RuntimeOption.use_nvidia_tf32"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.use_nvidia_tf32</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.RuntimeOption.use_openvino_backend"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.use_openvino_backend()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.RuntimeOption.use_ort_backend"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.use_ort_backend()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.RuntimeOption.use_paddle_backend"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.use_paddle_backend()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.RuntimeOption.use_paddle_infer_backend"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.use_paddle_infer_backend()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.RuntimeOption.use_paddle_lite_backend"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.use_paddle_lite_backend()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.RuntimeOption.use_poros_backend"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.use_poros_backend()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.RuntimeOption.use_rknpu2"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.use_rknpu2()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.RuntimeOption.use_trt_backend"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.use_trt_backend()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/scripts/furo.js"></script>
+    </body>
+</html>

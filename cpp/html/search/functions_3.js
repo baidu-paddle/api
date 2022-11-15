@@ -1,10 +1,15 @@
 var searchData=
 [
-  ['enabledrecordtimeofruntime',['EnabledRecordTimeOfRuntime',['../classfastdeploy_1_1FastDeployModel.html#a8340bd9bc6a5f479138d7f966bba5ea6',1,'fastdeploy::FastDeployModel']]],
-  ['enablelitefp16',['EnableLiteFP16',['../structfastdeploy_1_1RuntimeOption.html#ad69d925ac55153a2ac5260c282193267',1,'fastdeploy::RuntimeOption']]],
-  ['enablepaddleloginfo',['EnablePaddleLogInfo',['../structfastdeploy_1_1RuntimeOption.html#a6278740cee778bf15fd20e8bfacaa6bf',1,'fastdeploy::RuntimeOption']]],
-  ['enablepaddletrtcollectshape',['EnablePaddleTrtCollectShape',['../structfastdeploy_1_1RuntimeOption.html#ac837691ea03b51eb33908bf807354030',1,'fastdeploy::RuntimeOption']]],
-  ['enablepinnedmemory',['EnablePinnedMemory',['../structfastdeploy_1_1RuntimeOption.html#afed5cda1762c8d35e22eeb2fbe407d00',1,'fastdeploy::RuntimeOption']]],
-  ['enablerecordtimeofruntime',['EnableRecordTimeOfRuntime',['../classfastdeploy_1_1FastDeployModel.html#a4d52262130489235c09bb53429d3dd33',1,'fastdeploy::FastDeployModel']]],
-  ['enabletrtfp16',['EnableTrtFP16',['../structfastdeploy_1_1RuntimeOption.html#ac92dc2030a3624042473242bb2d1dcd1',1,'fastdeploy::RuntimeOption']]]
+  ['data',['Data',['../structfastdeploy_1_1vision_1_1Mask.html#a7712dfd53856c700e36309cf82fee23a',1,'fastdeploy::vision::Mask::Data()'],['../structfastdeploy_1_1vision_1_1Mask.html#a5b52d764bf73887aed446187c3b96f61',1,'fastdeploy::vision::Mask::Data() const']]],
+  ['dbdetector',['DBDetector',['../classfastdeploy_1_1vision_1_1ocr_1_1DBDetector.html#a1ee0450a5c44d652d5a4aeb840ff7bd2',1,'fastdeploy::vision::ocr::DBDetector']]],
+  ['deletepaddlebackendpass',['DeletePaddleBackendPass',['../structfastdeploy_1_1RuntimeOption.html#a18e659f82dc902f4f4fade0ce8492ae3',1,'fastdeploy::RuntimeOption']]],
+  ['disableflycv',['DisableFlyCV',['../namespacefastdeploy_1_1vision.html#aa83d1b5a8d474d89d936e8d9927878cc',1,'fastdeploy::vision']]],
+  ['disablelitefp16',['DisableLiteFP16',['../structfastdeploy_1_1RuntimeOption.html#a17c1ee40eedd9967bcb72ee5fc1d01d3',1,'fastdeploy::RuntimeOption']]],
+  ['disableliteint8',['DisableLiteInt8',['../structfastdeploy_1_1RuntimeOption.html#a6820ccf65dae1043dd676c08bf852fff',1,'fastdeploy::RuntimeOption']]],
+  ['disablenormalizeandpermute',['DisableNormalizeAndPermute',['../classfastdeploy_1_1vision_1_1facedet_1_1SCRFD.html#a0f6843655425e91aff9331175192b109',1,'fastdeploy::vision::facedet::SCRFD']]],
+  ['disablepaddleloginfo',['DisablePaddleLogInfo',['../structfastdeploy_1_1RuntimeOption.html#a6b66505a53c379b42da0844adde4f76f',1,'fastdeploy::RuntimeOption']]],
+  ['disablepaddletrtcollectshape',['DisablePaddleTrtCollectShape',['../structfastdeploy_1_1RuntimeOption.html#a91232808106866c55453f31a2dcfeccf',1,'fastdeploy::RuntimeOption']]],
+  ['disablepinnedmemory',['DisablePinnedMemory',['../structfastdeploy_1_1RuntimeOption.html#ad42ba8fea3322838160a49b8b90a18df',1,'fastdeploy::RuntimeOption']]],
+  ['disablerecordtimeofruntime',['DisableRecordTimeOfRuntime',['../classfastdeploy_1_1FastDeployModel.html#a7c1586af5d28d109ab7e73138e6549aa',1,'fastdeploy::FastDeployModel']]],
+  ['disabletrtfp16',['DisableTrtFP16',['../structfastdeploy_1_1RuntimeOption.html#a1267e51560c00a54d5f9c1ae8d0dc36b',1,'fastdeploy::RuntimeOption']]]
 ];

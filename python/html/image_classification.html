@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Keypoint Detection API" href="keypoint_detection.html" /><link rel="prev" title="Semantic Segmentation API" href="semantic_segmentation.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.09.15"/>
+    <meta name="generator" content="sphinx-5.3.0, furo 2022.09.29"/>
         <title>Image Classification API - FastDeploy Python API latest documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=9ec31e2665bf879c1d47d93a8ec4893870ee1e45" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=d81277517bee4d6b0349d71bb2661d4890b5617c" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -164,7 +164,11 @@
 <li class="toctree-l1"><a class="reference internal" href="matting.html">Matting API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="face_recognition.html">Face Recognition API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="face_detection.html">Face Detection API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="face_alignment.html">Face Alignment API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="headpose.html">Headpose API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="vision_results_en.html">Description of Vision Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="runtime.html">Runtime API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="runtime_option.html">Runtime Option API</a></li>
 </ul>
 
 </div>
@@ -184,7 +188,8 @@
           <span>Back to top</span>
         </a>
         <div class="content-icon-container">
-          <div class="theme-toggle-container theme-toggle-content">
+          
+<div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -199,9 +204,9 @@
         </div>
         <article role="main">
           <section id="image-classification-api">
-<h1>Image Classification API<a class="headerlink" href="#image-classification-api" title="Permalink to this headline">#</a></h1>
+<h1>Image Classification API<a class="headerlink" href="#image-classification-api" title="Permalink to this heading">#</a></h1>
 <section id="fastdeploy-vision-classification-paddleclasmodel">
-<h2>fastdeploy.vision.classification.PaddleClasModel<a class="headerlink" href="#fastdeploy-vision-classification-paddleclasmodel" title="Permalink to this headline">#</a></h2>
+<h2>fastdeploy.vision.classification.PaddleClasModel<a class="headerlink" href="#fastdeploy-vision-classification-paddleclasmodel" title="Permalink to this heading">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="fastdeploy.vision.classification.PaddleClasModel">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.classification.</span></span><span class="sig-name descname"><span class="pre">PaddleClasModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.PADDLE:</span> <span class="pre">1&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/classification/ppcls.html#PaddleClasModel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.classification.PaddleClasModel" title="Permalink to this definition">#</a></dt>
@@ -218,14 +223,33 @@
 </dd>
 </dl>
 <dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.vision.classification.PaddleClasModel.batch_predict">
+<span class="sig-name descname"><span class="pre">batch_predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">images</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/classification/ppcls.html#PaddleClasModel.batch_predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.classification.PaddleClasModel.batch_predict" title="Permalink to this definition">#</a></dt>
+<dd><p>Classify a batch of input image</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>im</strong> – (list of numpy.ndarray) The input image list, each element is a 3-D array with layout HWC, BGR format</p>
+</dd>
+</dl>
+<p>:return list of ClassifyResult</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fastdeploy.vision.classification.PaddleClasModel.postprocessor">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">postprocessor</span></span><a class="headerlink" href="#fastdeploy.vision.classification.PaddleClasModel.postprocessor" title="Permalink to this definition">#</a></dt>
+<dd><p>Get PaddleClasPostprocessor object of the loaded model</p>
+<p>:return PaddleClasPostprocessor</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="fastdeploy.vision.classification.PaddleClasModel.predict">
 <span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">im</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">topk</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/classification/ppcls.html#PaddleClasModel.predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.classification.PaddleClasModel.predict" title="Permalink to this definition">#</a></dt>
 <dd><p>Classify an input image</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>im</strong> – (numpy.ndarray)The input image data, 3-D array with layout HWC, BGR format</p></li>
-<li><p><strong>topk</strong> – (int)The topk result by the classify confidence score, default 1</p></li>
+<li><p><strong>im</strong> – (numpy.ndarray) The input image data, a 3-D array with layout HWC, BGR format</p></li>
+<li><p><strong>topk</strong> – (int) Filter the topk classify result, default 1</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -234,11 +258,18 @@
 </dl>
 </dd></dl>
 
+<dl class="py property">
+<dt class="sig sig-object py" id="fastdeploy.vision.classification.PaddleClasModel.preprocessor">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">preprocessor</span></span><a class="headerlink" href="#fastdeploy.vision.classification.PaddleClasModel.preprocessor" title="Permalink to this definition">#</a></dt>
+<dd><p>Get PaddleClasPreprocessor object of the loaded model</p>
+<p>:return PaddleClasPreprocessor</p>
+</dd></dl>
+
 </dd></dl>
 
 </section>
 <section id="fastdeploy-vision-classification-yolov5cls">
-<h2>fastdeploy.vision.classification.YOLOv5Cls<a class="headerlink" href="#fastdeploy-vision-classification-yolov5cls" title="Permalink to this headline">#</a></h2>
+<h2>fastdeploy.vision.classification.YOLOv5Cls<a class="headerlink" href="#fastdeploy-vision-classification-yolov5cls" title="Permalink to this heading">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="fastdeploy.vision.classification.YOLOv5Cls">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.classification.</span></span><span class="sig-name descname"><span class="pre">YOLOv5Cls</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.ONNX:</span> <span class="pre">2&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/classification/contrib/yolov5cls.html#YOLOv5Cls"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.classification.YOLOv5Cls" title="Permalink to this definition">#</a></dt>
@@ -273,14 +304,14 @@
 <dl class="py property">
 <dt class="sig sig-object py" id="fastdeploy.vision.classification.YOLOv5Cls.size">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#fastdeploy.vision.classification.YOLOv5Cls.size" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns the preprocess image size</p>
+<dd><p>Returns the preprocess image size, default is (224, 224)</p>
 </dd></dl>
 
 </dd></dl>
 
 </section>
 <section id="fastdeploy-vision-classification-resnet">
-<h2>fastdeploy.vision.classification.ResNet<a class="headerlink" href="#fastdeploy-vision-classification-resnet" title="Permalink to this headline">#</a></h2>
+<h2>fastdeploy.vision.classification.ResNet<a class="headerlink" href="#fastdeploy-vision-classification-resnet" title="Permalink to this heading">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="fastdeploy.vision.classification.ResNet">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.classification.</span></span><span class="sig-name descname"><span class="pre">ResNet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.ONNX:</span> <span class="pre">2&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/classification/contrib/resnet.html#ResNet"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.classification.ResNet" title="Permalink to this definition">#</a></dt>
@@ -298,7 +329,7 @@
 <dl class="py property">
 <dt class="sig sig-object py" id="fastdeploy.vision.classification.ResNet.mean_vals">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mean_vals</span></span><a class="headerlink" href="#fastdeploy.vision.classification.ResNet.mean_vals" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns the mean value of normlization</p>
+<dd><p>Returns the mean value of normlization, default mean_vals = [0.485f, 0.456f, 0.406f];</p>
 </dd></dl>
 
 <dl class="py method">
@@ -321,13 +352,13 @@
 <dl class="py property">
 <dt class="sig sig-object py" id="fastdeploy.vision.classification.ResNet.size">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#fastdeploy.vision.classification.ResNet.size" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns the preprocess image size</p>
+<dd><p>Returns the preprocess image size, default size = [224, 224];</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="fastdeploy.vision.classification.ResNet.std_vals">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">std_vals</span></span><a class="headerlink" href="#fastdeploy.vision.classification.ResNet.std_vals" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns the std value of normlization</p>
+<dd><p>Returns the std value of normlization, default std_vals = [0.229f, 0.224f, 0.225f];</p>
 </dd></dl>
 
 </dd></dl>
@@ -393,9 +424,34 @@
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">Image Classification API</a><ul>
-<li><a class="reference internal" href="#fastdeploy-vision-classification-paddleclasmodel">fastdeploy.vision.classification.PaddleClasModel</a></li>
-<li><a class="reference internal" href="#fastdeploy-vision-classification-yolov5cls">fastdeploy.vision.classification.YOLOv5Cls</a></li>
-<li><a class="reference internal" href="#fastdeploy-vision-classification-resnet">fastdeploy.vision.classification.ResNet</a></li>
+<li><a class="reference internal" href="#fastdeploy-vision-classification-paddleclasmodel">fastdeploy.vision.classification.PaddleClasModel</a><ul>
+<li><a class="reference internal" href="#fastdeploy.vision.classification.PaddleClasModel"><code class="docutils literal notranslate"><span class="pre">PaddleClasModel</span></code></a><ul>
+<li><a class="reference internal" href="#fastdeploy.vision.classification.PaddleClasModel.batch_predict"><code class="docutils literal notranslate"><span class="pre">PaddleClasModel.batch_predict()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.classification.PaddleClasModel.postprocessor"><code class="docutils literal notranslate"><span class="pre">PaddleClasModel.postprocessor</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.classification.PaddleClasModel.predict"><code class="docutils literal notranslate"><span class="pre">PaddleClasModel.predict()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.classification.PaddleClasModel.preprocessor"><code class="docutils literal notranslate"><span class="pre">PaddleClasModel.preprocessor</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#fastdeploy-vision-classification-yolov5cls">fastdeploy.vision.classification.YOLOv5Cls</a><ul>
+<li><a class="reference internal" href="#fastdeploy.vision.classification.YOLOv5Cls"><code class="docutils literal notranslate"><span class="pre">YOLOv5Cls</span></code></a><ul>
+<li><a class="reference internal" href="#fastdeploy.vision.classification.YOLOv5Cls.predict"><code class="docutils literal notranslate"><span class="pre">YOLOv5Cls.predict()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.classification.YOLOv5Cls.size"><code class="docutils literal notranslate"><span class="pre">YOLOv5Cls.size</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#fastdeploy-vision-classification-resnet">fastdeploy.vision.classification.ResNet</a><ul>
+<li><a class="reference internal" href="#fastdeploy.vision.classification.ResNet"><code class="docutils literal notranslate"><span class="pre">ResNet</span></code></a><ul>
+<li><a class="reference internal" href="#fastdeploy.vision.classification.ResNet.mean_vals"><code class="docutils literal notranslate"><span class="pre">ResNet.mean_vals</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.classification.ResNet.predict"><code class="docutils literal notranslate"><span class="pre">ResNet.predict()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.classification.ResNet.size"><code class="docutils literal notranslate"><span class="pre">ResNet.size</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.classification.ResNet.std_vals"><code class="docutils literal notranslate"><span class="pre">ResNet.std_vals</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -410,7 +466,9 @@
 </div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/scripts/furo.js"></script>
     </body>
 </html>

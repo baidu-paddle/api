@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ultraface',['UltraFace',['../classfastdeploy_1_1vision_1_1facedet_1_1UltraFace.html',1,'fastdeploy::vision::facedet']]]
+  ['tensorinfo',['TensorInfo',['../structfastdeploy_1_1TensorInfo.html',1,'fastdeploy']]]
 ];

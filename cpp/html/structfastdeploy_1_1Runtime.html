@@ -121,10 +121,50 @@ std::vector&lt; <a class="el" href="structfastdeploy_1_1TensorInfo.html">TensorI
 std::vector&lt; <a class="el" href="structfastdeploy_1_1TensorInfo.html">TensorInfo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1Runtime.html#ae2d8e291f91fb9cdc5d32c6d928eaa19">GetOutputInfos</a> ()</td></tr>
 <tr class="memdesc:ae2d8e291f91fb9cdc5d32c6d928eaa19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get all the output information. <br /></td></tr>
 <tr class="separator:ae2d8e291f91fb9cdc5d32c6d928eaa19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a140a10e61f214a75fefb2825997a22"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structfastdeploy_1_1Runtime.html">Runtime</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1Runtime.html#a6a140a10e61f214a75fefb2825997a22">Clone</a> (void *stream=nullptr, int device_id=-1)</td></tr>
+<tr class="memdesc:a6a140a10e61f214a75fefb2825997a22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clone new <a class="el" href="structfastdeploy_1_1Runtime.html" title="Runtime object used to inference the loaded model on different devices. ">Runtime</a> when multiple instances of the same model are created.  <a href="#a6a140a10e61f214a75fefb2825997a22">More...</a><br /></td></tr>
+<tr class="separator:a6a140a10e61f214a75fefb2825997a22"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="structfastdeploy_1_1Runtime.html" title="Runtime object used to inference the loaded model on different devices. ">Runtime</a> object used to inference the loaded model on different devices. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a6a140a10e61f214a75fefb2825997a22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a140a10e61f214a75fefb2825997a22">&#9670;&nbsp;</a></span>Clone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structfastdeploy_1_1Runtime.html">Runtime</a> * fastdeploy::Runtime::Clone </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>stream</em> = <code>nullptr</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>device_id</em> = <code>-1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Clone new <a class="el" href="structfastdeploy_1_1Runtime.html" title="Runtime object used to inference the loaded model on different devices. ">Runtime</a> when multiple instances of the same model are created. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">stream</td><td>CUDA Stream, defualt param is nullptr </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>new Runtime* by this clone </dd></dl>
+
+</div>
+</div>
 <a id="a9987998af18e9f0d9912d5e90b10eae3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9987998af18e9f0d9912d5e90b10eae3">&#9670;&nbsp;</a></span>Compile()</h2>
 
@@ -202,8 +242,8 @@ std::vector&lt; <a class="el" href="structfastdeploy_1_1TensorInfo.html">TensorI
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following files:<ul>
-<li>/fastdeploy/1026/FastDeploy/fastdeploy/<a class="el" href="runtime_8h_source.html">runtime.h</a></li>
-<li>/fastdeploy/1026/FastDeploy/fastdeploy/runtime.cc</li>
+<li>/fastdeploy/new/FastDeploy/fastdeploy/<a class="el" href="runtime_8h_source.html">runtime.h</a></li>
+<li>/fastdeploy/new/FastDeploy/fastdeploy/runtime.cc</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

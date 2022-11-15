@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="OCR API" href="ocr.html" /><link rel="prev" title="FastDeploy" href="index.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.09.15"/>
+    <meta name="generator" content="sphinx-5.3.0, furo 2022.09.29"/>
         <title>Object Detection API - FastDeploy Python API latest documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=9ec31e2665bf879c1d47d93a8ec4893870ee1e45" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=d81277517bee4d6b0349d71bb2661d4890b5617c" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -164,7 +164,11 @@
 <li class="toctree-l1"><a class="reference internal" href="matting.html">Matting API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="face_recognition.html">Face Recognition API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="face_detection.html">Face Detection API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="face_alignment.html">Face Alignment API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="headpose.html">Headpose API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="vision_results_en.html">Description of Vision Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="runtime.html">Runtime API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="runtime_option.html">Runtime Option API</a></li>
 </ul>
 
 </div>
@@ -184,7 +188,8 @@
           <span>Back to top</span>
         </a>
         <div class="content-icon-container">
-          <div class="theme-toggle-container theme-toggle-content">
+          
+<div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -199,9 +204,9 @@
         </div>
         <article role="main">
           <section id="object-detection-api">
-<h1>Object Detection API<a class="headerlink" href="#object-detection-api" title="Permalink to this headline">#</a></h1>
+<h1>Object Detection API<a class="headerlink" href="#object-detection-api" title="Permalink to this heading">#</a></h1>
 <section id="fastdeploy-vision-detection-ppyoloe">
-<h2>fastdeploy.vision.detection.PPYOLOE<a class="headerlink" href="#fastdeploy-vision-detection-ppyoloe" title="Permalink to this headline">#</a></h2>
+<h2>fastdeploy.vision.detection.PPYOLOE<a class="headerlink" href="#fastdeploy-vision-detection-ppyoloe" title="Permalink to this heading">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="fastdeploy.vision.detection.PPYOLOE">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.detection.</span></span><span class="sig-name descname"><span class="pre">PPYOLOE</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.PADDLE:</span> <span class="pre">1&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/detection/ppdet.html#PPYOLOE"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.detection.PPYOLOE" title="Permalink to this definition">#</a></dt>
@@ -218,6 +223,25 @@
 </dd>
 </dl>
 <dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.vision.detection.PPYOLOE.batch_predict">
+<span class="sig-name descname"><span class="pre">batch_predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">images</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/detection/ppdet.html#PPYOLOE.batch_predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.detection.PPYOLOE.batch_predict" title="Permalink to this definition">#</a></dt>
+<dd><p>Detect a batch of input image list</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>im</strong> – (list of numpy.ndarray) The input image list, each element is a 3-D array with layout HWC, BGR format</p>
+</dd>
+</dl>
+<p>:return list of DetectionResult</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fastdeploy.vision.detection.PPYOLOE.postprocessor">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">postprocessor</span></span><a class="headerlink" href="#fastdeploy.vision.detection.PPYOLOE.postprocessor" title="Permalink to this definition">#</a></dt>
+<dd><p>Get PaddleDetPostprocessor object of the loaded model</p>
+<p>:return PaddleDetPostprocessor</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="fastdeploy.vision.detection.PPYOLOE.predict">
 <span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">im</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/detection/ppdet.html#PPYOLOE.predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.detection.PPYOLOE.predict" title="Permalink to this definition">#</a></dt>
 <dd><p>Detect an input image</p>
@@ -231,11 +255,18 @@
 </dl>
 </dd></dl>
 
+<dl class="py property">
+<dt class="sig sig-object py" id="fastdeploy.vision.detection.PPYOLOE.preprocessor">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">preprocessor</span></span><a class="headerlink" href="#fastdeploy.vision.detection.PPYOLOE.preprocessor" title="Permalink to this definition">#</a></dt>
+<dd><p>Get PaddleDetPreprocessor object of the loaded model</p>
+<p>:return PaddleDetPreprocessor</p>
+</dd></dl>
+
 </dd></dl>
 
 </section>
 <section id="fastdeploy-vision-detection-ppyolo">
-<h2>fastdeploy.vision.detection.PPYOLO<a class="headerlink" href="#fastdeploy-vision-detection-ppyolo" title="Permalink to this headline">#</a></h2>
+<h2>fastdeploy.vision.detection.PPYOLO<a class="headerlink" href="#fastdeploy-vision-detection-ppyolo" title="Permalink to this heading">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="fastdeploy.vision.detection.PPYOLO">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.detection.</span></span><span class="sig-name descname"><span class="pre">PPYOLO</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.PADDLE:</span> <span class="pre">1&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/detection/ppdet.html#PPYOLO"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.detection.PPYOLO" title="Permalink to this definition">#</a></dt>
@@ -251,6 +282,25 @@
 </dd>
 </dl>
 <dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.vision.detection.PPYOLO.batch_predict">
+<span class="sig-name descname"><span class="pre">batch_predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">images</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fastdeploy.vision.detection.PPYOLO.batch_predict" title="Permalink to this definition">#</a></dt>
+<dd><p>Detect a batch of input image list</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>im</strong> – (list of numpy.ndarray) The input image list, each element is a 3-D array with layout HWC, BGR format</p>
+</dd>
+</dl>
+<p>:return list of DetectionResult</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fastdeploy.vision.detection.PPYOLO.postprocessor">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">postprocessor</span></span><a class="headerlink" href="#fastdeploy.vision.detection.PPYOLO.postprocessor" title="Permalink to this definition">#</a></dt>
+<dd><p>Get PaddleDetPostprocessor object of the loaded model</p>
+<p>:return PaddleDetPostprocessor</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="fastdeploy.vision.detection.PPYOLO.predict">
 <span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">im</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fastdeploy.vision.detection.PPYOLO.predict" title="Permalink to this definition">#</a></dt>
 <dd><p>Detect an input image</p>
@@ -264,45 +314,21 @@
 </dl>
 </dd></dl>
 
+<dl class="py property">
+<dt class="sig sig-object py" id="fastdeploy.vision.detection.PPYOLO.preprocessor">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">preprocessor</span></span><a class="headerlink" href="#fastdeploy.vision.detection.PPYOLO.preprocessor" title="Permalink to this definition">#</a></dt>
+<dd><p>Get PaddleDetPreprocessor object of the loaded model</p>
+<p>:return PaddleDetPreprocessor</p>
+</dd></dl>
+
 </dd></dl>
 
 </section>
 <section id="fastdeploy-vision-detection-ppyolov2">
-<h2>fastdeploy.vision.detection.PPYOLOv2<a class="headerlink" href="#fastdeploy-vision-detection-ppyolov2" title="Permalink to this headline">#</a></h2>
-<dl class="py class">
-<dt class="sig sig-object py" id="fastdeploy.vision.detection.PPYOLOv2">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.detection.</span></span><span class="sig-name descname"><span class="pre">PPYOLOv2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.PADDLE:</span> <span class="pre">1&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/detection/ppdet.html#PPYOLOv2"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.detection.PPYOLOv2" title="Permalink to this definition">#</a></dt>
-<dd><p>Load a PPYOLOv2 model exported by PaddleDetection.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>model_file</strong> – (str)Path of model file, e.g ppyolov2/model.pdmodel</p></li>
-<li><p><strong>params_file</strong> – (str)Path of parameters file, e.g ppyolov2/model.pdiparams, if the model_fomat is ModelFormat.ONNX, this param will be ignored, can be set as empty string</p></li>
-<li><p><strong>config_file</strong> – (str)Path of configuration file for deployment, e.g ppyoloe/infer_cfg.yml</p></li>
-<li><p><strong>runtime_option</strong> – (fastdeploy.RuntimeOption)RuntimeOption for inference this model, if it’s None, will use the default backend on CPU</p></li>
-<li><p><strong>model_format</strong> – (fastdeploy.ModelForamt)Model format of the loaded model</p></li>
-</ul>
-</dd>
-</dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="fastdeploy.vision.detection.PPYOLOv2.predict">
-<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">im</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fastdeploy.vision.detection.PPYOLOv2.predict" title="Permalink to this definition">#</a></dt>
-<dd><p>Detect an input image</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>im</strong> – (numpy.ndarray)The input image data, 3-D array with layout HWC, BGR format</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>DetectionResult</p>
-</dd>
-</dl>
-</dd></dl>
-
-</dd></dl>
-
+<h2>fastdeploy.vision.detection.PPYOLOv2<a class="headerlink" href="#fastdeploy-vision-detection-ppyolov2" title="Permalink to this heading">#</a></h2>
 </section>
 <section id="fastdeploy-vision-detection-picodet">
-<h2>fastdeploy.vision.detection.PicoDet<a class="headerlink" href="#fastdeploy-vision-detection-picodet" title="Permalink to this headline">#</a></h2>
+<h2>fastdeploy.vision.detection.PicoDet<a class="headerlink" href="#fastdeploy-vision-detection-picodet" title="Permalink to this heading">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="fastdeploy.vision.detection.PicoDet">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.detection.</span></span><span class="sig-name descname"><span class="pre">PicoDet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.PADDLE:</span> <span class="pre">1&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/detection/ppdet.html#PicoDet"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.detection.PicoDet" title="Permalink to this definition">#</a></dt>
@@ -319,6 +345,25 @@
 </dd>
 </dl>
 <dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.vision.detection.PicoDet.batch_predict">
+<span class="sig-name descname"><span class="pre">batch_predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">images</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fastdeploy.vision.detection.PicoDet.batch_predict" title="Permalink to this definition">#</a></dt>
+<dd><p>Detect a batch of input image list</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>im</strong> – (list of numpy.ndarray) The input image list, each element is a 3-D array with layout HWC, BGR format</p>
+</dd>
+</dl>
+<p>:return list of DetectionResult</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fastdeploy.vision.detection.PicoDet.postprocessor">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">postprocessor</span></span><a class="headerlink" href="#fastdeploy.vision.detection.PicoDet.postprocessor" title="Permalink to this definition">#</a></dt>
+<dd><p>Get PaddleDetPostprocessor object of the loaded model</p>
+<p>:return PaddleDetPostprocessor</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="fastdeploy.vision.detection.PicoDet.predict">
 <span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">im</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fastdeploy.vision.detection.PicoDet.predict" title="Permalink to this definition">#</a></dt>
 <dd><p>Detect an input image</p>
@@ -332,11 +377,18 @@
 </dl>
 </dd></dl>
 
+<dl class="py property">
+<dt class="sig sig-object py" id="fastdeploy.vision.detection.PicoDet.preprocessor">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">preprocessor</span></span><a class="headerlink" href="#fastdeploy.vision.detection.PicoDet.preprocessor" title="Permalink to this definition">#</a></dt>
+<dd><p>Get PaddleDetPreprocessor object of the loaded model</p>
+<p>:return PaddleDetPreprocessor</p>
+</dd></dl>
+
 </dd></dl>
 
 </section>
 <section id="fastdeploy-vision-detection-paddleyolox">
-<h2>fastdeploy.vision.detection.PaddleYOLOX<a class="headerlink" href="#fastdeploy-vision-detection-paddleyolox" title="Permalink to this headline">#</a></h2>
+<h2>fastdeploy.vision.detection.PaddleYOLOX<a class="headerlink" href="#fastdeploy-vision-detection-paddleyolox" title="Permalink to this heading">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="fastdeploy.vision.detection.PaddleYOLOX">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.detection.</span></span><span class="sig-name descname"><span class="pre">PaddleYOLOX</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.PADDLE:</span> <span class="pre">1&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/detection/ppdet.html#PaddleYOLOX"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.detection.PaddleYOLOX" title="Permalink to this definition">#</a></dt>
@@ -353,6 +405,25 @@
 </dd>
 </dl>
 <dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.vision.detection.PaddleYOLOX.batch_predict">
+<span class="sig-name descname"><span class="pre">batch_predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">images</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fastdeploy.vision.detection.PaddleYOLOX.batch_predict" title="Permalink to this definition">#</a></dt>
+<dd><p>Detect a batch of input image list</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>im</strong> – (list of numpy.ndarray) The input image list, each element is a 3-D array with layout HWC, BGR format</p>
+</dd>
+</dl>
+<p>:return list of DetectionResult</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fastdeploy.vision.detection.PaddleYOLOX.postprocessor">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">postprocessor</span></span><a class="headerlink" href="#fastdeploy.vision.detection.PaddleYOLOX.postprocessor" title="Permalink to this definition">#</a></dt>
+<dd><p>Get PaddleDetPostprocessor object of the loaded model</p>
+<p>:return PaddleDetPostprocessor</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="fastdeploy.vision.detection.PaddleYOLOX.predict">
 <span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">im</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fastdeploy.vision.detection.PaddleYOLOX.predict" title="Permalink to this definition">#</a></dt>
 <dd><p>Detect an input image</p>
@@ -364,13 +435,20 @@
 <dd class="field-even"><p>DetectionResult</p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fastdeploy.vision.detection.PaddleYOLOX.preprocessor">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">preprocessor</span></span><a class="headerlink" href="#fastdeploy.vision.detection.PaddleYOLOX.preprocessor" title="Permalink to this definition">#</a></dt>
+<dd><p>Get PaddleDetPreprocessor object of the loaded model</p>
+<p>:return PaddleDetPreprocessor</p>
 </dd></dl>
 
 </dd></dl>
 
 </section>
 <section id="fastdeploy-vision-detection-yolov3">
-<h2>fastdeploy.vision.detection.YOLOv3<a class="headerlink" href="#fastdeploy-vision-detection-yolov3" title="Permalink to this headline">#</a></h2>
+<h2>fastdeploy.vision.detection.YOLOv3<a class="headerlink" href="#fastdeploy-vision-detection-yolov3" title="Permalink to this heading">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="fastdeploy.vision.detection.PaddleYOLOX">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.detection.</span></span><span class="sig-name descname"><span class="pre">PaddleYOLOX</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.PADDLE:</span> <span class="pre">1&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/detection/ppdet.html#PaddleYOLOX"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.detection.PaddleYOLOX" title="Permalink to this definition">#</a></dt>
@@ -387,6 +465,25 @@
 </dd>
 </dl>
 <dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.vision.detection.PaddleYOLOX.batch_predict">
+<span class="sig-name descname"><span class="pre">batch_predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">images</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fastdeploy.vision.detection.PaddleYOLOX.batch_predict" title="Permalink to this definition">#</a></dt>
+<dd><p>Detect a batch of input image list</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>im</strong> – (list of numpy.ndarray) The input image list, each element is a 3-D array with layout HWC, BGR format</p>
+</dd>
+</dl>
+<p>:return list of DetectionResult</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fastdeploy.vision.detection.PaddleYOLOX.postprocessor">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">postprocessor</span></span><a class="headerlink" href="#fastdeploy.vision.detection.PaddleYOLOX.postprocessor" title="Permalink to this definition">#</a></dt>
+<dd><p>Get PaddleDetPostprocessor object of the loaded model</p>
+<p>:return PaddleDetPostprocessor</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="fastdeploy.vision.detection.PaddleYOLOX.predict">
 <span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">im</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fastdeploy.vision.detection.PaddleYOLOX.predict" title="Permalink to this definition">#</a></dt>
 <dd><p>Detect an input image</p>
@@ -400,11 +497,18 @@
 </dl>
 </dd></dl>
 
+<dl class="py property">
+<dt class="sig sig-object py" id="fastdeploy.vision.detection.PaddleYOLOX.preprocessor">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">preprocessor</span></span><a class="headerlink" href="#fastdeploy.vision.detection.PaddleYOLOX.preprocessor" title="Permalink to this definition">#</a></dt>
+<dd><p>Get PaddleDetPreprocessor object of the loaded model</p>
+<p>:return PaddleDetPreprocessor</p>
+</dd></dl>
+
 </dd></dl>
 
 </section>
 <section id="fastdeploy-vision-detection-fasterrcnn">
-<h2>fastdeploy.vision.detection.FasterRCNN<a class="headerlink" href="#fastdeploy-vision-detection-fasterrcnn" title="Permalink to this headline">#</a></h2>
+<h2>fastdeploy.vision.detection.FasterRCNN<a class="headerlink" href="#fastdeploy-vision-detection-fasterrcnn" title="Permalink to this heading">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="fastdeploy.vision.detection.FasterRCNN">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.detection.</span></span><span class="sig-name descname"><span class="pre">FasterRCNN</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.PADDLE:</span> <span class="pre">1&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/detection/ppdet.html#FasterRCNN"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.detection.FasterRCNN" title="Permalink to this definition">#</a></dt>
@@ -421,6 +525,25 @@
 </dd>
 </dl>
 <dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.vision.detection.FasterRCNN.batch_predict">
+<span class="sig-name descname"><span class="pre">batch_predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">images</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fastdeploy.vision.detection.FasterRCNN.batch_predict" title="Permalink to this definition">#</a></dt>
+<dd><p>Detect a batch of input image list</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>im</strong> – (list of numpy.ndarray) The input image list, each element is a 3-D array with layout HWC, BGR format</p>
+</dd>
+</dl>
+<p>:return list of DetectionResult</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fastdeploy.vision.detection.FasterRCNN.postprocessor">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">postprocessor</span></span><a class="headerlink" href="#fastdeploy.vision.detection.FasterRCNN.postprocessor" title="Permalink to this definition">#</a></dt>
+<dd><p>Get PaddleDetPostprocessor object of the loaded model</p>
+<p>:return PaddleDetPostprocessor</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="fastdeploy.vision.detection.FasterRCNN.predict">
 <span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">im</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fastdeploy.vision.detection.FasterRCNN.predict" title="Permalink to this definition">#</a></dt>
 <dd><p>Detect an input image</p>
@@ -434,11 +557,18 @@
 </dl>
 </dd></dl>
 
+<dl class="py property">
+<dt class="sig sig-object py" id="fastdeploy.vision.detection.FasterRCNN.preprocessor">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">preprocessor</span></span><a class="headerlink" href="#fastdeploy.vision.detection.FasterRCNN.preprocessor" title="Permalink to this definition">#</a></dt>
+<dd><p>Get PaddleDetPreprocessor object of the loaded model</p>
+<p>:return PaddleDetPreprocessor</p>
+</dd></dl>
+
 </dd></dl>
 
 </section>
 <section id="fastdeploy-vision-detection-maskrcnn">
-<h2>fastdeploy.vision.detection.MaskRCNN<a class="headerlink" href="#fastdeploy-vision-detection-maskrcnn" title="Permalink to this headline">#</a></h2>
+<h2>fastdeploy.vision.detection.MaskRCNN<a class="headerlink" href="#fastdeploy-vision-detection-maskrcnn" title="Permalink to this heading">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="fastdeploy.vision.detection.MaskRCNN">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.detection.</span></span><span class="sig-name descname"><span class="pre">MaskRCNN</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.PADDLE:</span> <span class="pre">1&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/detection/ppdet.html#MaskRCNN"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.detection.MaskRCNN" title="Permalink to this definition">#</a></dt>
@@ -446,19 +576,59 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>model_file</strong> – (str)Path of model file, e.g maskrcnn/model.pdmodel</p></li>
-<li><p><strong>params_file</strong> – (str)Path of parameters file, e.g maskrcnn/model.pdiparams, if the model_fomat is ModelFormat.ONNX, this param will be ignored, can be set as empty string</p></li>
+<li><p><strong>model_file</strong> – (str)Path of model file, e.g fasterrcnn/model.pdmodel</p></li>
+<li><p><strong>params_file</strong> – (str)Path of parameters file, e.g fasterrcnn/model.pdiparams, if the model_fomat is ModelFormat.ONNX, this param will be ignored, can be set as empty string</p></li>
 <li><p><strong>config_file</strong> – (str)Path of configuration file for deployment, e.g ppyoloe/infer_cfg.yml</p></li>
 <li><p><strong>runtime_option</strong> – (fastdeploy.RuntimeOption)RuntimeOption for inference this model, if it’s None, will use the default backend on CPU</p></li>
 <li><p><strong>model_format</strong> – (fastdeploy.ModelForamt)Model format of the loaded model</p></li>
 </ul>
 </dd>
 </dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.vision.detection.MaskRCNN.batch_predict">
+<span class="sig-name descname"><span class="pre">batch_predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">images</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/detection/ppdet.html#MaskRCNN.batch_predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.detection.MaskRCNN.batch_predict" title="Permalink to this definition">#</a></dt>
+<dd><p>Detect a batch of input image list, batch_predict is not supported for maskrcnn now.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>im</strong> – (list of numpy.ndarray) The input image list, each element is a 3-D array with layout HWC, BGR format</p>
+</dd>
+</dl>
+<p>:return list of DetectionResult</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fastdeploy.vision.detection.MaskRCNN.postprocessor">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">postprocessor</span></span><a class="headerlink" href="#fastdeploy.vision.detection.MaskRCNN.postprocessor" title="Permalink to this definition">#</a></dt>
+<dd><p>Get PaddleDetPostprocessor object of the loaded model</p>
+<p>:return PaddleDetPostprocessor</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.vision.detection.MaskRCNN.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">im</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fastdeploy.vision.detection.MaskRCNN.predict" title="Permalink to this definition">#</a></dt>
+<dd><p>Detect an input image</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>im</strong> – (numpy.ndarray)The input image data, 3-D array with layout HWC, BGR format</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DetectionResult</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fastdeploy.vision.detection.MaskRCNN.preprocessor">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">preprocessor</span></span><a class="headerlink" href="#fastdeploy.vision.detection.MaskRCNN.preprocessor" title="Permalink to this definition">#</a></dt>
+<dd><p>Get PaddleDetPreprocessor object of the loaded model</p>
+<p>:return PaddleDetPreprocessor</p>
+</dd></dl>
+
 </dd></dl>
 
 </section>
 <section id="fastdeploy-vision-detection-nanodetplus">
-<h2>fastdeploy.vision.detection.NanoDetPlus<a class="headerlink" href="#fastdeploy-vision-detection-nanodetplus" title="Permalink to this headline">#</a></h2>
+<h2>fastdeploy.vision.detection.NanoDetPlus<a class="headerlink" href="#fastdeploy-vision-detection-nanodetplus" title="Permalink to this heading">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="fastdeploy.vision.detection.NanoDetPlus">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.detection.</span></span><span class="sig-name descname"><span class="pre">NanoDetPlus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.ONNX:</span> <span class="pre">2&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/detection/contrib/nanodet_plus.html#NanoDetPlus"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.detection.NanoDetPlus" title="Permalink to this definition">#</a></dt>
@@ -500,14 +670,14 @@
 <dl class="py property">
 <dt class="sig sig-object py" id="fastdeploy.vision.detection.NanoDetPlus.size">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#fastdeploy.vision.detection.NanoDetPlus.size" title="Permalink to this definition">#</a></dt>
-<dd><p>Argument for image preprocessing step, the preprocess image size, tuple of (width, height)</p>
+<dd><p>Argument for image preprocessing step, the preprocess image size, tuple of (width, height),  default (320, 320)</p>
 </dd></dl>
 
 </dd></dl>
 
 </section>
 <section id="fastdeploy-vision-detection-scaledyolov4">
-<h2>fastdeploy.vision.detection.ScaledYOLOv4<a class="headerlink" href="#fastdeploy-vision-detection-scaledyolov4" title="Permalink to this headline">#</a></h2>
+<h2>fastdeploy.vision.detection.ScaledYOLOv4<a class="headerlink" href="#fastdeploy-vision-detection-scaledyolov4" title="Permalink to this heading">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="fastdeploy.vision.detection.ScaledYOLOv4">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.detection.</span></span><span class="sig-name descname"><span class="pre">ScaledYOLOv4</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.ONNX:</span> <span class="pre">2&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/detection/contrib/scaled_yolov4.html#ScaledYOLOv4"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.detection.ScaledYOLOv4" title="Permalink to this definition">#</a></dt>
@@ -543,14 +713,14 @@
 <dl class="py property">
 <dt class="sig sig-object py" id="fastdeploy.vision.detection.ScaledYOLOv4.size">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#fastdeploy.vision.detection.ScaledYOLOv4.size" title="Permalink to this definition">#</a></dt>
-<dd><p>Argument for image preprocessing step, the preprocess image size, tuple of (width, height)</p>
+<dd><p>Argument for image preprocessing step, the preprocess image size, tuple of (width, height), default size = [640, 640]</p>
 </dd></dl>
 
 </dd></dl>
 
 </section>
 <section id="fastdeploy-vision-detection-yolor">
-<h2>fastdeploy.vision.detection.YOLOR<a class="headerlink" href="#fastdeploy-vision-detection-yolor" title="Permalink to this headline">#</a></h2>
+<h2>fastdeploy.vision.detection.YOLOR<a class="headerlink" href="#fastdeploy-vision-detection-yolor" title="Permalink to this heading">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="fastdeploy.vision.detection.YOLOR">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.detection.</span></span><span class="sig-name descname"><span class="pre">YOLOR</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.ONNX:</span> <span class="pre">2&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/detection/contrib/yolor.html#YOLOR"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.detection.YOLOR" title="Permalink to this definition">#</a></dt>
@@ -586,14 +756,14 @@
 <dl class="py property">
 <dt class="sig sig-object py" id="fastdeploy.vision.detection.YOLOR.size">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#fastdeploy.vision.detection.YOLOR.size" title="Permalink to this definition">#</a></dt>
-<dd><p>Argument for image preprocessing step, the preprocess image size, tuple of (width, height)</p>
+<dd><p>Argument for image preprocessing step, the preprocess image size, tuple of (width, height), default size = [640, 640]</p>
 </dd></dl>
 
 </dd></dl>
 
 </section>
 <section id="fastdeploy-vision-detection-yolov5">
-<h2>fastdeploy.vision.detection.YOLOv5<a class="headerlink" href="#fastdeploy-vision-detection-yolov5" title="Permalink to this headline">#</a></h2>
+<h2>fastdeploy.vision.detection.YOLOv5<a class="headerlink" href="#fastdeploy-vision-detection-yolov5" title="Permalink to this heading">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="fastdeploy.vision.detection.YOLOv5">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.detection.</span></span><span class="sig-name descname"><span class="pre">YOLOv5</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.ONNX:</span> <span class="pre">2&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/detection/contrib/yolov5.html#YOLOv5"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.detection.YOLOv5" title="Permalink to this definition">#</a></dt>
@@ -609,6 +779,25 @@
 </dd>
 </dl>
 <dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.vision.detection.YOLOv5.batch_predict">
+<span class="sig-name descname"><span class="pre">batch_predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">images</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/detection/contrib/yolov5.html#YOLOv5.batch_predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.detection.YOLOv5.batch_predict" title="Permalink to this definition">#</a></dt>
+<dd><p>Classify a batch of input image</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>im</strong> – (list of numpy.ndarray) The input image list, each element is a 3-D array with layout HWC, BGR format</p>
+</dd>
+</dl>
+<p>:return list of DetectionResult</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fastdeploy.vision.detection.YOLOv5.postprocessor">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">postprocessor</span></span><a class="headerlink" href="#fastdeploy.vision.detection.YOLOv5.postprocessor" title="Permalink to this definition">#</a></dt>
+<dd><p>Get YOLOv5Postprocessor object of the loaded model</p>
+<p>:return YOLOv5Postprocessor</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="fastdeploy.vision.detection.YOLOv5.predict">
 <span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conf_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.25</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nms_iou_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/detection/contrib/yolov5.html#YOLOv5.predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.detection.YOLOv5.predict" title="Permalink to this definition">#</a></dt>
 <dd><p>Detect an input image</p>
@@ -616,8 +805,8 @@
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>input_image</strong> – (numpy.ndarray)The input image data, 3-D array with layout HWC, BGR format</p></li>
-<li><p><strong>conf_threshold</strong> – confidence threashold for postprocessing, default is 0.25</p></li>
-<li><p><strong>nms_iou_threshold</strong> – iou threashold for NMS, default is 0.5</p></li>
+<li><p><strong>conf_threshold</strong> – confidence threshold for postprocessing, default is 0.25</p></li>
+<li><p><strong>nms_iou_threshold</strong> – iou threshold for NMS, default is 0.5</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -627,16 +816,17 @@
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="fastdeploy.vision.detection.YOLOv5.size">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#fastdeploy.vision.detection.YOLOv5.size" title="Permalink to this definition">#</a></dt>
-<dd><p>Argument for image preprocessing step, the preprocess image size, tuple of (width, height)</p>
+<dt class="sig sig-object py" id="fastdeploy.vision.detection.YOLOv5.preprocessor">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">preprocessor</span></span><a class="headerlink" href="#fastdeploy.vision.detection.YOLOv5.preprocessor" title="Permalink to this definition">#</a></dt>
+<dd><p>Get YOLOv5Preprocessor object of the loaded model</p>
+<p>:return YOLOv5Preprocessor</p>
 </dd></dl>
 
 </dd></dl>
 
 </section>
 <section id="fastdeploy-vision-detection-yolov5lite">
-<h2>fastdeploy.vision.detection.YOLOv5Lite<a class="headerlink" href="#fastdeploy-vision-detection-yolov5lite" title="Permalink to this headline">#</a></h2>
+<h2>fastdeploy.vision.detection.YOLOv5Lite<a class="headerlink" href="#fastdeploy-vision-detection-yolov5lite" title="Permalink to this heading">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="fastdeploy.vision.detection.YOLOv5Lite">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.detection.</span></span><span class="sig-name descname"><span class="pre">YOLOv5Lite</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.ONNX:</span> <span class="pre">2&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/detection/contrib/yolov5lite.html#YOLOv5Lite"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.detection.YOLOv5Lite" title="Permalink to this definition">#</a></dt>
@@ -663,7 +853,8 @@
 <dd><p>whether the model_file was exported with decode module.
 The official YOLOv5Lite/export.py script will export ONNX file without decode module.
 Please set it ‘true’ manually if the model file was exported with decode module.
-false : ONNX files without decode module. true : ONNX file with decode module.</p>
+False : ONNX files without decode module. True : ONNX file with decode module.
+default False</p>
 </dd></dl>
 
 <dl class="py method">
@@ -687,14 +878,14 @@ false : ONNX files without decode module. true : ONNX file with decode module.</
 <dl class="py property">
 <dt class="sig sig-object py" id="fastdeploy.vision.detection.YOLOv5Lite.size">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#fastdeploy.vision.detection.YOLOv5Lite.size" title="Permalink to this definition">#</a></dt>
-<dd><p>Argument for image preprocessing step, the preprocess image size, tuple of (width, height)</p>
+<dd><p>Argument for image preprocessing step, the preprocess image size, tuple of (width, height), default size = [640, 640]</p>
 </dd></dl>
 
 </dd></dl>
 
 </section>
 <section id="fastdeploy-vision-detection-yolov6">
-<h2>fastdeploy.vision.detection.YOLOv6<a class="headerlink" href="#fastdeploy-vision-detection-yolov6" title="Permalink to this headline">#</a></h2>
+<h2>fastdeploy.vision.detection.YOLOv6<a class="headerlink" href="#fastdeploy-vision-detection-yolov6" title="Permalink to this heading">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="fastdeploy.vision.detection.YOLOv6">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.detection.</span></span><span class="sig-name descname"><span class="pre">YOLOv6</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.ONNX:</span> <span class="pre">2&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/detection/contrib/yolov6.html#YOLOv6"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.detection.YOLOv6" title="Permalink to this definition">#</a></dt>
@@ -730,14 +921,14 @@ false : ONNX files without decode module. true : ONNX file with decode module.</
 <dl class="py property">
 <dt class="sig sig-object py" id="fastdeploy.vision.detection.YOLOv6.size">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#fastdeploy.vision.detection.YOLOv6.size" title="Permalink to this definition">#</a></dt>
-<dd><p>Argument for image preprocessing step, the preprocess image size, tuple of (width, height)</p>
+<dd><p>Argument for image preprocessing step, the preprocess image size, tuple of (width, height), default size = [640, 640]</p>
 </dd></dl>
 
 </dd></dl>
 
 </section>
 <section id="fastdeploy-vision-detection-yolov7">
-<h2>fastdeploy.vision.detection.YOLOv7<a class="headerlink" href="#fastdeploy-vision-detection-yolov7" title="Permalink to this headline">#</a></h2>
+<h2>fastdeploy.vision.detection.YOLOv7<a class="headerlink" href="#fastdeploy-vision-detection-yolov7" title="Permalink to this heading">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="fastdeploy.vision.detection.YOLOv7">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.detection.</span></span><span class="sig-name descname"><span class="pre">YOLOv7</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.ONNX:</span> <span class="pre">2&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/detection/contrib/yolov7.html#YOLOv7"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.detection.YOLOv7" title="Permalink to this definition">#</a></dt>
@@ -773,14 +964,14 @@ false : ONNX files without decode module. true : ONNX file with decode module.</
 <dl class="py property">
 <dt class="sig sig-object py" id="fastdeploy.vision.detection.YOLOv7.size">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#fastdeploy.vision.detection.YOLOv7.size" title="Permalink to this definition">#</a></dt>
-<dd><p>Argument for image preprocessing step, the preprocess image size, tuple of (width, height)</p>
+<dd><p>Argument for image preprocessing step, the preprocess image size, tuple of (width, height), default size = [640, 640]</p>
 </dd></dl>
 
 </dd></dl>
 
 </section>
 <section id="id1">
-<h2>fastdeploy.vision.detection.YOLOR<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<h2>fastdeploy.vision.detection.YOLOR<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="fastdeploy.vision.detection.YOLOR">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.detection.</span></span><span class="sig-name descname"><span class="pre">YOLOR</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.ONNX:</span> <span class="pre">2&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/detection/contrib/yolor.html#YOLOR"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.detection.YOLOR" title="Permalink to this definition">#</a></dt>
@@ -816,14 +1007,14 @@ false : ONNX files without decode module. true : ONNX file with decode module.</
 <dl class="py property">
 <dt class="sig sig-object py" id="fastdeploy.vision.detection.YOLOR.size">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#fastdeploy.vision.detection.YOLOR.size" title="Permalink to this definition">#</a></dt>
-<dd><p>Argument for image preprocessing step, the preprocess image size, tuple of (width, height)</p>
+<dd><p>Argument for image preprocessing step, the preprocess image size, tuple of (width, height), default size = [640, 640]</p>
 </dd></dl>
 
 </dd></dl>
 
 </section>
 <section id="fastdeploy-vision-detection-yolov7end2endort">
-<h2>fastdeploy.vision.detection.YOLOv7End2EndORT<a class="headerlink" href="#fastdeploy-vision-detection-yolov7end2endort" title="Permalink to this headline">#</a></h2>
+<h2>fastdeploy.vision.detection.YOLOv7End2EndORT<a class="headerlink" href="#fastdeploy-vision-detection-yolov7end2endort" title="Permalink to this heading">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="fastdeploy.vision.detection.YOLOv7End2EndORT">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.detection.</span></span><span class="sig-name descname"><span class="pre">YOLOv7End2EndORT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.ONNX:</span> <span class="pre">2&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/detection/contrib/yolov7end2end_ort.html#YOLOv7End2EndORT"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.detection.YOLOv7End2EndORT" title="Permalink to this definition">#</a></dt>
@@ -858,14 +1049,14 @@ false : ONNX files without decode module. true : ONNX file with decode module.</
 <dl class="py property">
 <dt class="sig sig-object py" id="fastdeploy.vision.detection.YOLOv7End2EndORT.size">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#fastdeploy.vision.detection.YOLOv7End2EndORT.size" title="Permalink to this definition">#</a></dt>
-<dd><p>Argument for image preprocessing step, the preprocess image size, tuple of (width, height)</p>
+<dd><p>Argument for image preprocessing step, the preprocess image size, tuple of (width, height), default size = [640, 640]</p>
 </dd></dl>
 
 </dd></dl>
 
 </section>
 <section id="fastdeploy-vision-detection-yolov7end2endtrt">
-<h2>fastdeploy.vision.detection.YOLOv7End2EndTRT<a class="headerlink" href="#fastdeploy-vision-detection-yolov7end2endtrt" title="Permalink to this headline">#</a></h2>
+<h2>fastdeploy.vision.detection.YOLOv7End2EndTRT<a class="headerlink" href="#fastdeploy-vision-detection-yolov7end2endtrt" title="Permalink to this heading">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="fastdeploy.vision.detection.YOLOv7End2EndTRT">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.detection.</span></span><span class="sig-name descname"><span class="pre">YOLOv7End2EndTRT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.ONNX:</span> <span class="pre">2&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/detection/contrib/yolov7end2end_trt.html#YOLOv7End2EndTRT"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.detection.YOLOv7End2EndTRT" title="Permalink to this definition">#</a></dt>
@@ -900,14 +1091,14 @@ false : ONNX files without decode module. true : ONNX file with decode module.</
 <dl class="py property">
 <dt class="sig sig-object py" id="fastdeploy.vision.detection.YOLOv7End2EndTRT.size">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#fastdeploy.vision.detection.YOLOv7End2EndTRT.size" title="Permalink to this definition">#</a></dt>
-<dd><p>Argument for image preprocessing step, the preprocess image size, tuple of (width, height)</p>
+<dd><p>Argument for image preprocessing step, the preprocess image size, tuple of (width, height), default size = [640, 640]</p>
 </dd></dl>
 
 </dd></dl>
 
 </section>
 <section id="fastdeploy-vision-detection-yolox">
-<h2>fastdeploy.vision.detection.YOLOX<a class="headerlink" href="#fastdeploy-vision-detection-yolox" title="Permalink to this headline">#</a></h2>
+<h2>fastdeploy.vision.detection.YOLOX<a class="headerlink" href="#fastdeploy-vision-detection-yolox" title="Permalink to this heading">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="fastdeploy.vision.detection.YOLOX">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.detection.</span></span><span class="sig-name descname"><span class="pre">YOLOX</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.ONNX:</span> <span class="pre">2&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/detection/contrib/yolox.html#YOLOX"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.detection.YOLOX" title="Permalink to this definition">#</a></dt>
@@ -933,7 +1124,8 @@ false : ONNX files without decode module. true : ONNX file with decode module.</
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_decode_exported</span></span><a class="headerlink" href="#fastdeploy.vision.detection.YOLOX.is_decode_exported" title="Permalink to this definition">#</a></dt>
 <dd><p>whether the model_file was exported with decode module.
 The official YOLOX/tools/export_onnx.py script will export ONNX file without decode module.
-Please set it ‘true’ manually if the model file was exported with decode module.</p>
+Please set it ‘true’ manually if the model file was exported with decode module.
+Defalut False.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -957,7 +1149,7 @@ Please set it ‘true’ manually if the model file was exported with decode mod
 <dl class="py property">
 <dt class="sig sig-object py" id="fastdeploy.vision.detection.YOLOX.size">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#fastdeploy.vision.detection.YOLOX.size" title="Permalink to this definition">#</a></dt>
-<dd><p>Argument for image preprocessing step, the preprocess image size, tuple of (width, height)</p>
+<dd><p>Argument for image preprocessing step, the preprocess image size, tuple of (width, height), default size = [640, 640]</p>
 </dd></dl>
 
 </dd></dl>
@@ -1023,25 +1215,172 @@ Please set it ‘true’ manually if the model file was exported with decode mod
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">Object Detection API</a><ul>
-<li><a class="reference internal" href="#fastdeploy-vision-detection-ppyoloe">fastdeploy.vision.detection.PPYOLOE</a></li>
-<li><a class="reference internal" href="#fastdeploy-vision-detection-ppyolo">fastdeploy.vision.detection.PPYOLO</a></li>
+<li><a class="reference internal" href="#fastdeploy-vision-detection-ppyoloe">fastdeploy.vision.detection.PPYOLOE</a><ul>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.PPYOLOE"><code class="docutils literal notranslate"><span class="pre">PPYOLOE</span></code></a><ul>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.PPYOLOE.batch_predict"><code class="docutils literal notranslate"><span class="pre">PPYOLOE.batch_predict()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.PPYOLOE.postprocessor"><code class="docutils literal notranslate"><span class="pre">PPYOLOE.postprocessor</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.PPYOLOE.predict"><code class="docutils literal notranslate"><span class="pre">PPYOLOE.predict()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.PPYOLOE.preprocessor"><code class="docutils literal notranslate"><span class="pre">PPYOLOE.preprocessor</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#fastdeploy-vision-detection-ppyolo">fastdeploy.vision.detection.PPYOLO</a><ul>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.PPYOLO"><code class="docutils literal notranslate"><span class="pre">PPYOLO</span></code></a><ul>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.PPYOLO.batch_predict"><code class="docutils literal notranslate"><span class="pre">PPYOLO.batch_predict()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.PPYOLO.postprocessor"><code class="docutils literal notranslate"><span class="pre">PPYOLO.postprocessor</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.PPYOLO.predict"><code class="docutils literal notranslate"><span class="pre">PPYOLO.predict()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.PPYOLO.preprocessor"><code class="docutils literal notranslate"><span class="pre">PPYOLO.preprocessor</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><a class="reference internal" href="#fastdeploy-vision-detection-ppyolov2">fastdeploy.vision.detection.PPYOLOv2</a></li>
-<li><a class="reference internal" href="#fastdeploy-vision-detection-picodet">fastdeploy.vision.detection.PicoDet</a></li>
-<li><a class="reference internal" href="#fastdeploy-vision-detection-paddleyolox">fastdeploy.vision.detection.PaddleYOLOX</a></li>
-<li><a class="reference internal" href="#fastdeploy-vision-detection-yolov3">fastdeploy.vision.detection.YOLOv3</a></li>
-<li><a class="reference internal" href="#fastdeploy-vision-detection-fasterrcnn">fastdeploy.vision.detection.FasterRCNN</a></li>
-<li><a class="reference internal" href="#fastdeploy-vision-detection-maskrcnn">fastdeploy.vision.detection.MaskRCNN</a></li>
-<li><a class="reference internal" href="#fastdeploy-vision-detection-nanodetplus">fastdeploy.vision.detection.NanoDetPlus</a></li>
-<li><a class="reference internal" href="#fastdeploy-vision-detection-scaledyolov4">fastdeploy.vision.detection.ScaledYOLOv4</a></li>
-<li><a class="reference internal" href="#fastdeploy-vision-detection-yolor">fastdeploy.vision.detection.YOLOR</a></li>
-<li><a class="reference internal" href="#fastdeploy-vision-detection-yolov5">fastdeploy.vision.detection.YOLOv5</a></li>
-<li><a class="reference internal" href="#fastdeploy-vision-detection-yolov5lite">fastdeploy.vision.detection.YOLOv5Lite</a></li>
-<li><a class="reference internal" href="#fastdeploy-vision-detection-yolov6">fastdeploy.vision.detection.YOLOv6</a></li>
-<li><a class="reference internal" href="#fastdeploy-vision-detection-yolov7">fastdeploy.vision.detection.YOLOv7</a></li>
-<li><a class="reference internal" href="#id1">fastdeploy.vision.detection.YOLOR</a></li>
-<li><a class="reference internal" href="#fastdeploy-vision-detection-yolov7end2endort">fastdeploy.vision.detection.YOLOv7End2EndORT</a></li>
-<li><a class="reference internal" href="#fastdeploy-vision-detection-yolov7end2endtrt">fastdeploy.vision.detection.YOLOv7End2EndTRT</a></li>
-<li><a class="reference internal" href="#fastdeploy-vision-detection-yolox">fastdeploy.vision.detection.YOLOX</a></li>
+<li><a class="reference internal" href="#fastdeploy-vision-detection-picodet">fastdeploy.vision.detection.PicoDet</a><ul>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.PicoDet"><code class="docutils literal notranslate"><span class="pre">PicoDet</span></code></a><ul>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.PicoDet.batch_predict"><code class="docutils literal notranslate"><span class="pre">PicoDet.batch_predict()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.PicoDet.postprocessor"><code class="docutils literal notranslate"><span class="pre">PicoDet.postprocessor</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.PicoDet.predict"><code class="docutils literal notranslate"><span class="pre">PicoDet.predict()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.PicoDet.preprocessor"><code class="docutils literal notranslate"><span class="pre">PicoDet.preprocessor</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#fastdeploy-vision-detection-paddleyolox">fastdeploy.vision.detection.PaddleYOLOX</a><ul>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.PaddleYOLOX"><code class="docutils literal notranslate"><span class="pre">PaddleYOLOX</span></code></a><ul>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.PaddleYOLOX.batch_predict"><code class="docutils literal notranslate"><span class="pre">PaddleYOLOX.batch_predict()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.PaddleYOLOX.postprocessor"><code class="docutils literal notranslate"><span class="pre">PaddleYOLOX.postprocessor</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.PaddleYOLOX.predict"><code class="docutils literal notranslate"><span class="pre">PaddleYOLOX.predict()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.PaddleYOLOX.preprocessor"><code class="docutils literal notranslate"><span class="pre">PaddleYOLOX.preprocessor</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#fastdeploy-vision-detection-yolov3">fastdeploy.vision.detection.YOLOv3</a><ul>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.PaddleYOLOX"><code class="docutils literal notranslate"><span class="pre">PaddleYOLOX</span></code></a><ul>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.PaddleYOLOX.batch_predict"><code class="docutils literal notranslate"><span class="pre">PaddleYOLOX.batch_predict()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.PaddleYOLOX.postprocessor"><code class="docutils literal notranslate"><span class="pre">PaddleYOLOX.postprocessor</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.PaddleYOLOX.predict"><code class="docutils literal notranslate"><span class="pre">PaddleYOLOX.predict()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.PaddleYOLOX.preprocessor"><code class="docutils literal notranslate"><span class="pre">PaddleYOLOX.preprocessor</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#fastdeploy-vision-detection-fasterrcnn">fastdeploy.vision.detection.FasterRCNN</a><ul>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.FasterRCNN"><code class="docutils literal notranslate"><span class="pre">FasterRCNN</span></code></a><ul>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.FasterRCNN.batch_predict"><code class="docutils literal notranslate"><span class="pre">FasterRCNN.batch_predict()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.FasterRCNN.postprocessor"><code class="docutils literal notranslate"><span class="pre">FasterRCNN.postprocessor</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.FasterRCNN.predict"><code class="docutils literal notranslate"><span class="pre">FasterRCNN.predict()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.FasterRCNN.preprocessor"><code class="docutils literal notranslate"><span class="pre">FasterRCNN.preprocessor</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#fastdeploy-vision-detection-maskrcnn">fastdeploy.vision.detection.MaskRCNN</a><ul>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.MaskRCNN"><code class="docutils literal notranslate"><span class="pre">MaskRCNN</span></code></a><ul>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.MaskRCNN.batch_predict"><code class="docutils literal notranslate"><span class="pre">MaskRCNN.batch_predict()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.MaskRCNN.postprocessor"><code class="docutils literal notranslate"><span class="pre">MaskRCNN.postprocessor</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.MaskRCNN.predict"><code class="docutils literal notranslate"><span class="pre">MaskRCNN.predict()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.MaskRCNN.preprocessor"><code class="docutils literal notranslate"><span class="pre">MaskRCNN.preprocessor</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#fastdeploy-vision-detection-nanodetplus">fastdeploy.vision.detection.NanoDetPlus</a><ul>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.NanoDetPlus"><code class="docutils literal notranslate"><span class="pre">NanoDetPlus</span></code></a><ul>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.NanoDetPlus.predict"><code class="docutils literal notranslate"><span class="pre">NanoDetPlus.predict()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.NanoDetPlus.reg_max"><code class="docutils literal notranslate"><span class="pre">NanoDetPlus.reg_max</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.NanoDetPlus.size"><code class="docutils literal notranslate"><span class="pre">NanoDetPlus.size</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#fastdeploy-vision-detection-scaledyolov4">fastdeploy.vision.detection.ScaledYOLOv4</a><ul>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.ScaledYOLOv4"><code class="docutils literal notranslate"><span class="pre">ScaledYOLOv4</span></code></a><ul>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.ScaledYOLOv4.predict"><code class="docutils literal notranslate"><span class="pre">ScaledYOLOv4.predict()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.ScaledYOLOv4.size"><code class="docutils literal notranslate"><span class="pre">ScaledYOLOv4.size</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#fastdeploy-vision-detection-yolor">fastdeploy.vision.detection.YOLOR</a><ul>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.YOLOR"><code class="docutils literal notranslate"><span class="pre">YOLOR</span></code></a><ul>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.YOLOR.predict"><code class="docutils literal notranslate"><span class="pre">YOLOR.predict()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.YOLOR.size"><code class="docutils literal notranslate"><span class="pre">YOLOR.size</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#fastdeploy-vision-detection-yolov5">fastdeploy.vision.detection.YOLOv5</a><ul>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.YOLOv5"><code class="docutils literal notranslate"><span class="pre">YOLOv5</span></code></a><ul>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.YOLOv5.batch_predict"><code class="docutils literal notranslate"><span class="pre">YOLOv5.batch_predict()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.YOLOv5.postprocessor"><code class="docutils literal notranslate"><span class="pre">YOLOv5.postprocessor</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.YOLOv5.predict"><code class="docutils literal notranslate"><span class="pre">YOLOv5.predict()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.YOLOv5.preprocessor"><code class="docutils literal notranslate"><span class="pre">YOLOv5.preprocessor</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#fastdeploy-vision-detection-yolov5lite">fastdeploy.vision.detection.YOLOv5Lite</a><ul>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.YOLOv5Lite"><code class="docutils literal notranslate"><span class="pre">YOLOv5Lite</span></code></a><ul>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.YOLOv5Lite.downsample_strides"><code class="docutils literal notranslate"><span class="pre">YOLOv5Lite.downsample_strides</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.YOLOv5Lite.is_decode_exported"><code class="docutils literal notranslate"><span class="pre">YOLOv5Lite.is_decode_exported</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.YOLOv5Lite.predict"><code class="docutils literal notranslate"><span class="pre">YOLOv5Lite.predict()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.YOLOv5Lite.size"><code class="docutils literal notranslate"><span class="pre">YOLOv5Lite.size</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#fastdeploy-vision-detection-yolov6">fastdeploy.vision.detection.YOLOv6</a><ul>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.YOLOv6"><code class="docutils literal notranslate"><span class="pre">YOLOv6</span></code></a><ul>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.YOLOv6.predict"><code class="docutils literal notranslate"><span class="pre">YOLOv6.predict()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.YOLOv6.size"><code class="docutils literal notranslate"><span class="pre">YOLOv6.size</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#fastdeploy-vision-detection-yolov7">fastdeploy.vision.detection.YOLOv7</a><ul>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.YOLOv7"><code class="docutils literal notranslate"><span class="pre">YOLOv7</span></code></a><ul>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.YOLOv7.predict"><code class="docutils literal notranslate"><span class="pre">YOLOv7.predict()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.YOLOv7.size"><code class="docutils literal notranslate"><span class="pre">YOLOv7.size</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id1">fastdeploy.vision.detection.YOLOR</a><ul>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.YOLOR"><code class="docutils literal notranslate"><span class="pre">YOLOR</span></code></a><ul>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.YOLOR.predict"><code class="docutils literal notranslate"><span class="pre">YOLOR.predict()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.YOLOR.size"><code class="docutils literal notranslate"><span class="pre">YOLOR.size</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#fastdeploy-vision-detection-yolov7end2endort">fastdeploy.vision.detection.YOLOv7End2EndORT</a><ul>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.YOLOv7End2EndORT"><code class="docutils literal notranslate"><span class="pre">YOLOv7End2EndORT</span></code></a><ul>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.YOLOv7End2EndORT.predict"><code class="docutils literal notranslate"><span class="pre">YOLOv7End2EndORT.predict()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.YOLOv7End2EndORT.size"><code class="docutils literal notranslate"><span class="pre">YOLOv7End2EndORT.size</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#fastdeploy-vision-detection-yolov7end2endtrt">fastdeploy.vision.detection.YOLOv7End2EndTRT</a><ul>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.YOLOv7End2EndTRT"><code class="docutils literal notranslate"><span class="pre">YOLOv7End2EndTRT</span></code></a><ul>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.YOLOv7End2EndTRT.predict"><code class="docutils literal notranslate"><span class="pre">YOLOv7End2EndTRT.predict()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.YOLOv7End2EndTRT.size"><code class="docutils literal notranslate"><span class="pre">YOLOv7End2EndTRT.size</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#fastdeploy-vision-detection-yolox">fastdeploy.vision.detection.YOLOX</a><ul>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.YOLOX"><code class="docutils literal notranslate"><span class="pre">YOLOX</span></code></a><ul>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.YOLOX.downsample_strides"><code class="docutils literal notranslate"><span class="pre">YOLOX.downsample_strides</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.YOLOX.is_decode_exported"><code class="docutils literal notranslate"><span class="pre">YOLOX.is_decode_exported</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.YOLOX.predict"><code class="docutils literal notranslate"><span class="pre">YOLOX.predict()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.detection.YOLOX.size"><code class="docutils literal notranslate"><span class="pre">YOLOX.size</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -1056,7 +1395,9 @@ Please set it ‘true’ manually if the model file was exported with decode mod
 </div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/scripts/furo.js"></script>
     </body>
 </html>

@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.09.15"/>
+    <meta name="generator" content="sphinx-5.3.0, furo 2022.09.29"/>
         <title>视觉模型预测结果说明 - FastDeploy Python API latest documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=9ec31e2665bf879c1d47d93a8ec4893870ee1e45" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=d81277517bee4d6b0349d71bb2661d4890b5617c" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -164,7 +164,11 @@
 <li class="toctree-l1"><a class="reference internal" href="matting.html">Matting API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="face_recognition.html">Face Recognition API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="face_detection.html">Face Detection API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="face_alignment.html">Face Alignment API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="headpose.html">Headpose API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="vision_results_en.html">Description of Vision Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="runtime.html">Runtime API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="runtime_option.html">Runtime Option API</a></li>
 </ul>
 
 </div>
@@ -184,7 +188,8 @@
           <span>Back to top</span>
         </a>
         <div class="content-icon-container">
-          <div class="theme-toggle-container theme-toggle-content">
+          
+<div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -199,9 +204,9 @@
         </div>
         <article role="main">
           <section id="id1">
-<h1>视觉模型预测结果说明<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h1>
+<h1>视觉模型预测结果说明<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
 <section id="classifyresult">
-<h2>ClassifyResult<a class="headerlink" href="#classifyresult" title="Permalink to this headline">#</a></h2>
+<h2>ClassifyResult<a class="headerlink" href="#classifyresult" title="Permalink to this heading">#</a></h2>
 <p>ClassifyResult代码定义在<code class="docutils literal notranslate"><span class="pre">fastdeploy/vision/common/result.h</span></code>中，用于表明图像的分类结果和置信度.</p>
 <p>API:<code class="docutils literal notranslate"><span class="pre">fastdeploy.vision.ClassifyResult</span></code>, 该结果返回:</p>
 <ul class="simple">
@@ -210,7 +215,7 @@
 </ul>
 </section>
 <section id="segmentationresult">
-<h2>SegmentationResult<a class="headerlink" href="#segmentationresult" title="Permalink to this headline">#</a></h2>
+<h2>SegmentationResult<a class="headerlink" href="#segmentationresult" title="Permalink to this heading">#</a></h2>
 <p>SegmentationResult代码定义在<code class="docutils literal notranslate"><span class="pre">fastdeploy/vision/ttommon/result.h</span></code>中，用于表明图像中每个像素预测出来的分割类别和分割类别的概率值.</p>
 <p>API:<code class="docutils literal notranslate"><span class="pre">fastdeploy.vision.SegmentationResult</span></code>, 该结果返回:</p>
 <ul class="simple">
@@ -220,7 +225,7 @@
 </ul>
 </section>
 <section id="detectionresult">
-<h2>DetectionResult<a class="headerlink" href="#detectionresult" title="Permalink to this headline">#</a></h2>
+<h2>DetectionResult<a class="headerlink" href="#detectionresult" title="Permalink to this heading">#</a></h2>
 <p>DetectionResult代码定义在<code class="docutils literal notranslate"><span class="pre">fastdeploy/vision/common/result.h</span></code>中，用于表明图像检测出来的目标框、目标类别和目标置信度.</p>
 <p>API:<code class="docutils literal notranslate"><span class="pre">fastdeploy.vision.DetectionResult</span></code> , 该结果返回:</p>
 <ul class="simple">
@@ -237,7 +242,7 @@
 </ul>
 </section>
 <section id="facedetectionresult">
-<h2>FaceDetectionResult<a class="headerlink" href="#facedetectionresult" title="Permalink to this headline">#</a></h2>
+<h2>FaceDetectionResult<a class="headerlink" href="#facedetectionresult" title="Permalink to this heading">#</a></h2>
 <p>FaceDetectionResult 代码定义在<code class="docutils literal notranslate"><span class="pre">fastdeploy/vision/common/result.h</span></code>中，用于表明人脸检测出来的目标框、人脸landmarks，目标置信度和每张人脸的landmark数量.</p>
 <p>API:<code class="docutils literal notranslate"><span class="pre">fastdeploy.vision.FaceDetectionResult</span></code> , 该结果返回:</p>
 <ul class="simple">
@@ -248,7 +253,7 @@
 </ul>
 </section>
 <section id="keypointdetectionresult">
-<h2>KeyPointDetectionResult<a class="headerlink" href="#keypointdetectionresult" title="Permalink to this headline">#</a></h2>
+<h2>KeyPointDetectionResult<a class="headerlink" href="#keypointdetectionresult" title="Permalink to this heading">#</a></h2>
 <p>KeyPointDetectionResult 代码定义在<code class="docutils literal notranslate"><span class="pre">fastdeploy/vision/common/result.h</span></code>中，用于表明图像中目标行为的各个关键点坐标和置信度。</p>
 <p>API:<code class="docutils literal notranslate"><span class="pre">fastdeploy.vision.KeyPointDetectionResult</span></code> , 该结果返回:</p>
 <ul class="simple">
@@ -269,7 +274,7 @@
 </ul>
 </section>
 <section id="facerecognitionresult">
-<h2>FaceRecognitionResult<a class="headerlink" href="#facerecognitionresult" title="Permalink to this headline">#</a></h2>
+<h2>FaceRecognitionResult<a class="headerlink" href="#facerecognitionresult" title="Permalink to this heading">#</a></h2>
 <p>FaceRecognitionResult 代码定义在<code class="docutils literal notranslate"><span class="pre">fastdeploy/vision/common/result.h</span></code>中，用于表明人脸识别模型对图像特征的embedding.</p>
 <p>API:<code class="docutils literal notranslate"><span class="pre">fastdeploy.vision.FaceRecognitionResult</span></code>, 该结果返回:</p>
 <ul class="simple">
@@ -277,7 +282,7 @@
 </ul>
 </section>
 <section id="mattingresult">
-<h2>MattingResult<a class="headerlink" href="#mattingresult" title="Permalink to this headline">#</a></h2>
+<h2>MattingResult<a class="headerlink" href="#mattingresult" title="Permalink to this heading">#</a></h2>
 <p>MattingResult 代码定义在<code class="docutils literal notranslate"><span class="pre">fastdeploy/vision/common/result.h</span></code>中，用于表明模型预测的alpha透明度的值，预测的前景等.</p>
 <p>API:<code class="docutils literal notranslate"><span class="pre">fastdeploy.vision.MattingResult</span></code>, 该结果返回:</p>
 <ul class="simple">
@@ -288,7 +293,7 @@
 </ul>
 </section>
 <section id="ocrresult">
-<h2>OCRResult<a class="headerlink" href="#ocrresult" title="Permalink to this headline">#</a></h2>
+<h2>OCRResult<a class="headerlink" href="#ocrresult" title="Permalink to this heading">#</a></h2>
 <p>OCRResult代码定义在<code class="docutils literal notranslate"><span class="pre">fastdeploy/vision/common/result.h</span></code>中，用于表明图像检测和识别出来的文本框，文本框方向分类，以及文本框内的文本内容.</p>
 <p>API:<code class="docutils literal notranslate"><span class="pre">fastdeploy.vision.OCRResult</span></code>, 该结果返回:</p>
 <ul class="simple">
@@ -297,6 +302,22 @@
 <li><p><strong>rec_scores</strong>(list of float): 成员变量，表示文本框内识别出来的文本的置信度，其元素个数与<code class="docutils literal notranslate"><span class="pre">boxes.size()</span></code>一致.</p></li>
 <li><p><strong>cls_scores</strong>(list of float): 成员变量，表示文本框的分类结果的置信度，其元素个数与<code class="docutils literal notranslate"><span class="pre">boxes.size()</span></code>一致.</p></li>
 <li><p><strong>cls_labels</strong>(list of int): 成员变量，表示文本框的方向分类类别，其元素个数与<code class="docutils literal notranslate"><span class="pre">boxes.size()</span></code>一致.</p></li>
+</ul>
+</section>
+<section id="facealignmentresult">
+<h2>FaceAlignmentResult<a class="headerlink" href="#facealignmentresult" title="Permalink to this heading">#</a></h2>
+<p>FaceAlignmentResult 代码定义在<code class="docutils literal notranslate"><span class="pre">fastdeploy/vision/common/result.h</span></code>中，用于表明人脸landmarks。</p>
+<p>API:<code class="docutils literal notranslate"><span class="pre">fastdeploy.vision.FaceAlignmentResult</span></code>, 该结果返回:</p>
+<ul class="simple">
+<li><p><strong>landmarks</strong>(list of list(float)): 成员变量，表示单张人脸图片检测出来的所有关键点</p></li>
+</ul>
+</section>
+<section id="headposeresult">
+<h2>HeadPoseResult<a class="headerlink" href="#headposeresult" title="Permalink to this heading">#</a></h2>
+<p>HeadPoseResult 代码定义在<code class="docutils literal notranslate"><span class="pre">fastdeploy/vision/common/result.h</span></code>中，用于表明头部姿态结果。</p>
+<p>API:<code class="docutils literal notranslate"><span class="pre">fastdeploy.vision.HeadPoseResult</span></code>, 该结果返回:</p>
+<ul class="simple">
+<li><p><strong>euler_angles</strong>(list of float): 成员变量，表示单张人脸图片预测的欧拉角，存放的顺序是(yaw, pitch, roll)， yaw 代表水平转角，pitch 代表垂直角，roll 代表翻滚角，值域都为 [-90, +90]度</p></li>
 </ul>
 </section>
 </section>
@@ -349,6 +370,8 @@
 <li><a class="reference internal" href="#facerecognitionresult">FaceRecognitionResult</a></li>
 <li><a class="reference internal" href="#mattingresult">MattingResult</a></li>
 <li><a class="reference internal" href="#ocrresult">OCRResult</a></li>
+<li><a class="reference internal" href="#facealignmentresult">FaceAlignmentResult</a></li>
+<li><a class="reference internal" href="#headposeresult">HeadPoseResult</a></li>
 </ul>
 </li>
 </ul>
@@ -363,7 +386,9 @@
 </div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/scripts/furo.js"></script>
     </body>
 </html>

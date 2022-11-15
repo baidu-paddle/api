@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['torchscript',['TORCHSCRIPT',['../namespacefastdeploy.html#a3493c6d2ca1a50ca5506a0e195d0d723afb02538a126c74eef66a7f6c8a9173b3',1,'fastdeploy']]],
-  ['trt',['TRT',['../namespacefastdeploy.html#addd441db144b083efc919b63cef2bebca02884fdac1db2c6e739861ab0b4daf2a',1,'fastdeploy']]]
+  ['rknn',['RKNN',['../namespacefastdeploy.html#a3493c6d2ca1a50ca5506a0e195d0d723a530c3d46f7149abe7dfb53963e01d908',1,'fastdeploy']]],
+  ['rknpu2',['RKNPU2',['../namespacefastdeploy.html#addd441db144b083efc919b63cef2bebca186d157f4b6811a8fc8604bae989944d',1,'fastdeploy']]]
 ];

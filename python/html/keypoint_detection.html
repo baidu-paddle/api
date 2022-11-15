@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Matting API" href="matting.html" /><link rel="prev" title="Image Classification API" href="image_classification.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.09.15"/>
+    <meta name="generator" content="sphinx-5.3.0, furo 2022.09.29"/>
         <title>Keypoint Detection API - FastDeploy Python API latest documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=9ec31e2665bf879c1d47d93a8ec4893870ee1e45" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=d81277517bee4d6b0349d71bb2661d4890b5617c" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -164,7 +164,11 @@
 <li class="toctree-l1"><a class="reference internal" href="matting.html">Matting API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="face_recognition.html">Face Recognition API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="face_detection.html">Face Detection API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="face_alignment.html">Face Alignment API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="headpose.html">Headpose API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="vision_results_en.html">Description of Vision Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="runtime.html">Runtime API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="runtime_option.html">Runtime Option API</a></li>
 </ul>
 
 </div>
@@ -184,7 +188,8 @@
           <span>Back to top</span>
         </a>
         <div class="content-icon-container">
-          <div class="theme-toggle-container theme-toggle-content">
+          
+<div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -199,9 +204,9 @@
         </div>
         <article role="main">
           <section id="keypoint-detection-api">
-<h1>Keypoint Detection API<a class="headerlink" href="#keypoint-detection-api" title="Permalink to this headline">#</a></h1>
+<h1>Keypoint Detection API<a class="headerlink" href="#keypoint-detection-api" title="Permalink to this heading">#</a></h1>
 <section id="fastdeploy-vision-keypointdetection-pptinypose">
-<h2>fastdeploy.vision.keypointdetection.PPTinyPose<a class="headerlink" href="#fastdeploy-vision-keypointdetection-pptinypose" title="Permalink to this headline">#</a></h2>
+<h2>fastdeploy.vision.keypointdetection.PPTinyPose<a class="headerlink" href="#fastdeploy-vision-keypointdetection-pptinypose" title="Permalink to this heading">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="fastdeploy.vision.keypointdetection.PPTinyPose">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.keypointdetection.</span></span><span class="sig-name descname"><span class="pre">PPTinyPose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.PADDLE:</span> <span class="pre">1&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/keypointdetection/pptinypose.html#PPTinyPose"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.keypointdetection.PPTinyPose" title="Permalink to this definition">#</a></dt>
@@ -305,7 +310,14 @@
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">Keypoint Detection API</a><ul>
-<li><a class="reference internal" href="#fastdeploy-vision-keypointdetection-pptinypose">fastdeploy.vision.keypointdetection.PPTinyPose</a></li>
+<li><a class="reference internal" href="#fastdeploy-vision-keypointdetection-pptinypose">fastdeploy.vision.keypointdetection.PPTinyPose</a><ul>
+<li><a class="reference internal" href="#fastdeploy.vision.keypointdetection.PPTinyPose"><code class="docutils literal notranslate"><span class="pre">PPTinyPose</span></code></a><ul>
+<li><a class="reference internal" href="#fastdeploy.vision.keypointdetection.PPTinyPose.predict"><code class="docutils literal notranslate"><span class="pre">PPTinyPose.predict()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.keypointdetection.PPTinyPose.use_dark"><code class="docutils literal notranslate"><span class="pre">PPTinyPose.use_dark</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -320,7 +332,9 @@
 </div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/scripts/furo.js"></script>
     </body>
 </html>

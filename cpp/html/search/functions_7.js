@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['nanodetplus',['NanoDetPlus',['../classfastdeploy_1_1vision_1_1detection_1_1NanoDetPlus.html#a3f3b822a9f28bb3c9647275a5374cb2c',1,'fastdeploy::vision::detection::NanoDetPlus']]],
-  ['numinputs',['NumInputs',['../structfastdeploy_1_1Runtime.html#a4312c23b5107c39ef991084155570f8b',1,'fastdeploy::Runtime']]],
-  ['numinputsofruntime',['NumInputsOfRuntime',['../classfastdeploy_1_1FastDeployModel.html#a4968d33869bef58c87980d5e282288eb',1,'fastdeploy::FastDeployModel']]],
-  ['numoutputs',['NumOutputs',['../structfastdeploy_1_1Runtime.html#a5b43fc8a2bc5d4c61522147030ec346a',1,'fastdeploy::Runtime']]],
-  ['numoutputsofruntime',['NumOutputsOfRuntime',['../classfastdeploy_1_1FastDeployModel.html#a7e5b596aa07b671bdc48428a22ed1060',1,'fastdeploy::FastDeployModel']]]
+  ['infer',['Infer',['../classfastdeploy_1_1FastDeployModel.html#abfe20a31493c5cb9a540c65e721e96cf',1,'fastdeploy::FastDeployModel::Infer(std::vector&lt; FDTensor &gt; &amp;input_tensors, std::vector&lt; FDTensor &gt; *output_tensors)'],['../classfastdeploy_1_1FastDeployModel.html#a4e98bd8ade2db8f55bcd69285a7ad54d',1,'fastdeploy::FastDeployModel::Infer()'],['../structfastdeploy_1_1Runtime.html#a69f60b76a745bd4cc53c9c9f04487313',1,'fastdeploy::Runtime::Infer()']]],
+  ['init',['Init',['../structfastdeploy_1_1Runtime.html#a98b851d166bb19124ee9dd08bbb8a947',1,'fastdeploy::Runtime']]],
+  ['initialized',['Initialized',['../classfastdeploy_1_1FastDeployModel.html#a0e24ccd23bc807080f1c43d24e8cc254',1,'fastdeploy::FastDeployModel::Initialized()'],['../classfastdeploy_1_1pipeline_1_1PPOCRv2.html#a0c3908092f9e900fe5210135816ef9a9',1,'fastdeploy::pipeline::PPOCRv2::Initialized()']]],
+  ['inputinfoofruntime',['InputInfoOfRuntime',['../classfastdeploy_1_1FastDeployModel.html#a94143c8aae113fa89a835aa35cf67be7',1,'fastdeploy::FastDeployModel']]],
+  ['insightfacerecognitionmodel',['InsightFaceRecognitionModel',['../classfastdeploy_1_1vision_1_1faceid_1_1InsightFaceRecognitionModel.html#a0b584640f822b157d129e456a2b4b326',1,'fastdeploy::vision::faceid::InsightFaceRecognitionModel']]],
+  ['isbackendavailable',['IsBackendAvailable',['../namespacefastdeploy.html#a2b9546db2f09b69775f7280bff403476',1,'fastdeploy']]]
 ];

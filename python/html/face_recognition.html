@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Face Detection API" href="face_detection.html" /><link rel="prev" title="Matting API" href="matting.html" />
 
-    <meta name="generator" content="sphinx-4.5.0, furo 2022.09.15"/>
+    <meta name="generator" content="sphinx-5.3.0, furo 2022.09.29"/>
         <title>Face Recognition API - FastDeploy Python API latest documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=9ec31e2665bf879c1d47d93a8ec4893870ee1e45" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=d81277517bee4d6b0349d71bb2661d4890b5617c" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -164,7 +164,11 @@
 <li class="toctree-l1"><a class="reference internal" href="matting.html">Matting API</a></li>
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Face Recognition API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="face_detection.html">Face Detection API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="face_alignment.html">Face Alignment API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="headpose.html">Headpose API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="vision_results_en.html">Description of Vision Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="runtime.html">Runtime API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="runtime_option.html">Runtime Option API</a></li>
 </ul>
 
 </div>
@@ -184,7 +188,8 @@
           <span>Back to top</span>
         </a>
         <div class="content-icon-container">
-          <div class="theme-toggle-container theme-toggle-content">
+          
+<div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -199,9 +204,9 @@
         </div>
         <article role="main">
           <section id="face-recognition-api">
-<h1>Face Recognition API<a class="headerlink" href="#face-recognition-api" title="Permalink to this headline">#</a></h1>
+<h1>Face Recognition API<a class="headerlink" href="#face-recognition-api" title="Permalink to this heading">#</a></h1>
 <section id="fastdeploy-vision-faceid-adaface">
-<h2>fastdeploy.vision.faceid.AdaFace<a class="headerlink" href="#fastdeploy-vision-faceid-adaface" title="Permalink to this headline">#</a></h2>
+<h2>fastdeploy.vision.faceid.AdaFace<a class="headerlink" href="#fastdeploy-vision-faceid-adaface" title="Permalink to this heading">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="fastdeploy.vision.faceid.AdaFace">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.faceid.</span></span><span class="sig-name descname"><span class="pre">AdaFace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.PADDLE:</span> <span class="pre">1&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/faceid/contrib/adaface.html#AdaFace"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.faceid.AdaFace" title="Permalink to this definition">#</a></dt>
@@ -219,19 +224,19 @@
 <dl class="py property">
 <dt class="sig sig-object py" id="fastdeploy.vision.faceid.AdaFace.alpha">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">alpha</span></span><a class="headerlink" href="#fastdeploy.vision.faceid.AdaFace.alpha" title="Permalink to this definition">#</a></dt>
-<dd><p>Argument for image preprocessing step, alpha value for normalization</p>
+<dd><p>Argument for image preprocessing step, alpha value for normalization, default alpha = [1.f / 127.5f, 1.f / 127.5f, 1.f / 127.5f]</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="fastdeploy.vision.faceid.AdaFace.beta">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">beta</span></span><a class="headerlink" href="#fastdeploy.vision.faceid.AdaFace.beta" title="Permalink to this definition">#</a></dt>
-<dd><p>Argument for image preprocessing step, beta value for normalization</p>
+<dd><p>Argument for image preprocessing step, beta values for normalization, default beta = {-1.f, -1.f, -1.f}</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="fastdeploy.vision.faceid.AdaFace.l2_normalize">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">l2_normalize</span></span><a class="headerlink" href="#fastdeploy.vision.faceid.AdaFace.l2_normalize" title="Permalink to this definition">#</a></dt>
-<dd><p>Argument for image preprocessing step, whether to apply l2 normalize to embedding values, default;</p>
+<dd><p>Argument for image preprocessing step, whether to apply l2 normalize to embedding values, default False;</p>
 </dd></dl>
 
 <dl class="py method">
@@ -251,20 +256,20 @@
 <dl class="py property">
 <dt class="sig sig-object py" id="fastdeploy.vision.faceid.AdaFace.size">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#fastdeploy.vision.faceid.AdaFace.size" title="Permalink to this definition">#</a></dt>
-<dd><p>Argument for image preprocessing step, the preprocess image size, tuple of (width, height)</p>
+<dd><p>Argument for image preprocessing step, the preprocess image size, tuple of (width, height), default (112, 112)</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="fastdeploy.vision.faceid.AdaFace.swap_rb">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">swap_rb</span></span><a class="headerlink" href="#fastdeploy.vision.faceid.AdaFace.swap_rb" title="Permalink to this definition">#</a></dt>
-<dd><p>Argument for image preprocessing step, whether to swap the B and R channel, such as BGR-&gt;RGB, default true.</p>
+<dd><p>Argument for image preprocessing step, whether to swap the B and R channel, such as BGR-&gt;RGB, default True.</p>
 </dd></dl>
 
 </dd></dl>
 
 </section>
 <section id="fastdeploy-vision-faceid-cosface">
-<h2>fastdeploy.vision.faceid.CosFace<a class="headerlink" href="#fastdeploy-vision-faceid-cosface" title="Permalink to this headline">#</a></h2>
+<h2>fastdeploy.vision.faceid.CosFace<a class="headerlink" href="#fastdeploy-vision-faceid-cosface" title="Permalink to this heading">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="fastdeploy.vision.faceid.CosFace">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.faceid.</span></span><span class="sig-name descname"><span class="pre">CosFace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.ONNX:</span> <span class="pre">2&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/faceid/contrib/cosface.html#CosFace"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.faceid.CosFace" title="Permalink to this definition">#</a></dt>
@@ -282,13 +287,13 @@
 <dl class="py property">
 <dt class="sig sig-object py" id="fastdeploy.vision.faceid.CosFace.alpha">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">alpha</span></span><a class="headerlink" href="#fastdeploy.vision.faceid.CosFace.alpha" title="Permalink to this definition">#</a></dt>
-<dd><p>Argument for image preprocessing step, alpha value for normalization</p>
+<dd><p>Argument for image preprocessing step, alpha value for normalization, default alpha = [1.f / 127.5f, 1.f / 127.5f, 1.f / 127.5f]</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="fastdeploy.vision.faceid.CosFace.beta">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">beta</span></span><a class="headerlink" href="#fastdeploy.vision.faceid.CosFace.beta" title="Permalink to this definition">#</a></dt>
-<dd><p>Argument for image preprocessing step, beta value for normalization</p>
+<dd><p>Argument for image preprocessing step, beta values for normalization, default beta = {-1.f, -1.f, -1.f}</p>
 </dd></dl>
 
 <dl class="py property">
@@ -314,20 +319,20 @@
 <dl class="py property">
 <dt class="sig sig-object py" id="fastdeploy.vision.faceid.CosFace.size">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#fastdeploy.vision.faceid.CosFace.size" title="Permalink to this definition">#</a></dt>
-<dd><p>Argument for image preprocessing step, the preprocess image size, tuple of (width, height)</p>
+<dd><p>Argument for image preprocessing step, the preprocess image size, tuple of (width, height), default (112, 112)</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="fastdeploy.vision.faceid.CosFace.swap_rb">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">swap_rb</span></span><a class="headerlink" href="#fastdeploy.vision.faceid.CosFace.swap_rb" title="Permalink to this definition">#</a></dt>
-<dd><p>Argument for image preprocessing step, whether to swap the B and R channel, such as BGR-&gt;RGB, default true.</p>
+<dd><p>Argument for image preprocessing step, whether to swap the B and R channel, such as BGR-&gt;RGB, default True.</p>
 </dd></dl>
 
 </dd></dl>
 
 </section>
 <section id="fastdeploy-vision-faceid-arcface">
-<h2>fastdeploy.vision.faceid.ArcFace<a class="headerlink" href="#fastdeploy-vision-faceid-arcface" title="Permalink to this headline">#</a></h2>
+<h2>fastdeploy.vision.faceid.ArcFace<a class="headerlink" href="#fastdeploy-vision-faceid-arcface" title="Permalink to this heading">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="fastdeploy.vision.faceid.ArcFace">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.faceid.</span></span><span class="sig-name descname"><span class="pre">ArcFace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.ONNX:</span> <span class="pre">2&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/faceid/contrib/arcface.html#ArcFace"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.faceid.ArcFace" title="Permalink to this definition">#</a></dt>
@@ -345,19 +350,19 @@
 <dl class="py property">
 <dt class="sig sig-object py" id="fastdeploy.vision.faceid.ArcFace.alpha">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">alpha</span></span><a class="headerlink" href="#fastdeploy.vision.faceid.ArcFace.alpha" title="Permalink to this definition">#</a></dt>
-<dd><p>Argument for image preprocessing step, alpha value for normalization</p>
+<dd><p>Argument for image preprocessing step, alpha value for normalization, default alpha = [1.f / 127.5f, 1.f / 127.5f, 1.f / 127.5f]</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="fastdeploy.vision.faceid.ArcFace.beta">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">beta</span></span><a class="headerlink" href="#fastdeploy.vision.faceid.ArcFace.beta" title="Permalink to this definition">#</a></dt>
-<dd><p>Argument for image preprocessing step, beta value for normalization</p>
+<dd><p>Argument for image preprocessing step, beta values for normalization, default beta = {-1.f, -1.f, -1.f}</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="fastdeploy.vision.faceid.ArcFace.l2_normalize">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">l2_normalize</span></span><a class="headerlink" href="#fastdeploy.vision.faceid.ArcFace.l2_normalize" title="Permalink to this definition">#</a></dt>
-<dd><p>Argument for image preprocessing step, whether to apply l2 normalize to embedding values, default;</p>
+<dd><p>Argument for image preprocessing step, whether to apply l2 normalize to embedding values, default False;</p>
 </dd></dl>
 
 <dl class="py method">
@@ -377,20 +382,20 @@
 <dl class="py property">
 <dt class="sig sig-object py" id="fastdeploy.vision.faceid.ArcFace.size">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#fastdeploy.vision.faceid.ArcFace.size" title="Permalink to this definition">#</a></dt>
-<dd><p>Argument for image preprocessing step, the preprocess image size, tuple of (width, height)</p>
+<dd><p>Argument for image preprocessing step, the preprocess image size, tuple of (width, height), default (112, 112)</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="fastdeploy.vision.faceid.ArcFace.swap_rb">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">swap_rb</span></span><a class="headerlink" href="#fastdeploy.vision.faceid.ArcFace.swap_rb" title="Permalink to this definition">#</a></dt>
-<dd><p>Argument for image preprocessing step, whether to swap the B and R channel, such as BGR-&gt;RGB, default true.</p>
+<dd><p>Argument for image preprocessing step, whether to swap the B and R channel, such as BGR-&gt;RGB, default True.</p>
 </dd></dl>
 
 </dd></dl>
 
 </section>
 <section id="fastdeploy-vision-faceid-partialfc">
-<h2>fastdeploy.vision.faceid.PartialFC<a class="headerlink" href="#fastdeploy-vision-faceid-partialfc" title="Permalink to this headline">#</a></h2>
+<h2>fastdeploy.vision.faceid.PartialFC<a class="headerlink" href="#fastdeploy-vision-faceid-partialfc" title="Permalink to this heading">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="fastdeploy.vision.faceid.PartialFC">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.faceid.</span></span><span class="sig-name descname"><span class="pre">PartialFC</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.ONNX:</span> <span class="pre">2&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/faceid/contrib/partial_fc.html#PartialFC"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.faceid.PartialFC" title="Permalink to this definition">#</a></dt>
@@ -408,13 +413,13 @@
 <dl class="py property">
 <dt class="sig sig-object py" id="fastdeploy.vision.faceid.PartialFC.alpha">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">alpha</span></span><a class="headerlink" href="#fastdeploy.vision.faceid.PartialFC.alpha" title="Permalink to this definition">#</a></dt>
-<dd><p>Argument for image preprocessing step, alpha value for normalization</p>
+<dd><p>Argument for image preprocessing step, alpha value for normalization, default alpha = [1.f / 127.5f, 1.f / 127.5f, 1.f / 127.5f]</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="fastdeploy.vision.faceid.PartialFC.beta">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">beta</span></span><a class="headerlink" href="#fastdeploy.vision.faceid.PartialFC.beta" title="Permalink to this definition">#</a></dt>
-<dd><p>Argument for image preprocessing step, beta value for normalization</p>
+<dd><p>Argument for image preprocessing step, beta values for normalization, default beta = {-1.f, -1.f, -1.f}</p>
 </dd></dl>
 
 <dl class="py property">
@@ -440,20 +445,20 @@
 <dl class="py property">
 <dt class="sig sig-object py" id="fastdeploy.vision.faceid.PartialFC.size">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#fastdeploy.vision.faceid.PartialFC.size" title="Permalink to this definition">#</a></dt>
-<dd><p>Argument for image preprocessing step, the preprocess image size, tuple of (width, height)</p>
+<dd><p>Argument for image preprocessing step, the preprocess image size, tuple of (width, height), default (112, 112)</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="fastdeploy.vision.faceid.PartialFC.swap_rb">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">swap_rb</span></span><a class="headerlink" href="#fastdeploy.vision.faceid.PartialFC.swap_rb" title="Permalink to this definition">#</a></dt>
-<dd><p>Argument for image preprocessing step, whether to swap the B and R channel, such as BGR-&gt;RGB, default true.</p>
+<dd><p>Argument for image preprocessing step, whether to swap the B and R channel, such as BGR-&gt;RGB, default True.</p>
 </dd></dl>
 
 </dd></dl>
 
 </section>
 <section id="fastdeploy-vision-faceid-vpl">
-<h2>fastdeploy.vision.faceid.VPL<a class="headerlink" href="#fastdeploy-vision-faceid-vpl" title="Permalink to this headline">#</a></h2>
+<h2>fastdeploy.vision.faceid.VPL<a class="headerlink" href="#fastdeploy-vision-faceid-vpl" title="Permalink to this heading">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="fastdeploy.vision.faceid.VPL">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.faceid.</span></span><span class="sig-name descname"><span class="pre">VPL</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.ONNX:</span> <span class="pre">2&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/faceid/contrib/vpl.html#VPL"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.faceid.VPL" title="Permalink to this definition">#</a></dt>
@@ -471,13 +476,13 @@
 <dl class="py property">
 <dt class="sig sig-object py" id="fastdeploy.vision.faceid.VPL.alpha">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">alpha</span></span><a class="headerlink" href="#fastdeploy.vision.faceid.VPL.alpha" title="Permalink to this definition">#</a></dt>
-<dd><p>Argument for image preprocessing step, alpha value for normalization</p>
+<dd><p>Argument for image preprocessing step, alpha value for normalization, default alpha = [1.f / 127.5f, 1.f / 127.5f, 1.f / 127.5f]</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="fastdeploy.vision.faceid.VPL.beta">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">beta</span></span><a class="headerlink" href="#fastdeploy.vision.faceid.VPL.beta" title="Permalink to this definition">#</a></dt>
-<dd><p>Argument for image preprocessing step, beta value for normalization</p>
+<dd><p>Argument for image preprocessing step, beta values for normalization, default beta = {-1.f, -1.f, -1.f}</p>
 </dd></dl>
 
 <dl class="py property">
@@ -503,13 +508,13 @@
 <dl class="py property">
 <dt class="sig sig-object py" id="fastdeploy.vision.faceid.VPL.size">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#fastdeploy.vision.faceid.VPL.size" title="Permalink to this definition">#</a></dt>
-<dd><p>Argument for image preprocessing step, the preprocess image size, tuple of (width, height)</p>
+<dd><p>Argument for image preprocessing step, the preprocess image size, tuple of (width, height), default (112, 112)</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="fastdeploy.vision.faceid.VPL.swap_rb">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">swap_rb</span></span><a class="headerlink" href="#fastdeploy.vision.faceid.VPL.swap_rb" title="Permalink to this definition">#</a></dt>
-<dd><p>Argument for image preprocessing step, whether to swap the B and R channel, such as BGR-&gt;RGB, default true.</p>
+<dd><p>Argument for image preprocessing step, whether to swap the B and R channel, such as BGR-&gt;RGB, default True.</p>
 </dd></dl>
 
 </dd></dl>
@@ -575,11 +580,66 @@
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">Face Recognition API</a><ul>
-<li><a class="reference internal" href="#fastdeploy-vision-faceid-adaface">fastdeploy.vision.faceid.AdaFace</a></li>
-<li><a class="reference internal" href="#fastdeploy-vision-faceid-cosface">fastdeploy.vision.faceid.CosFace</a></li>
-<li><a class="reference internal" href="#fastdeploy-vision-faceid-arcface">fastdeploy.vision.faceid.ArcFace</a></li>
-<li><a class="reference internal" href="#fastdeploy-vision-faceid-partialfc">fastdeploy.vision.faceid.PartialFC</a></li>
-<li><a class="reference internal" href="#fastdeploy-vision-faceid-vpl">fastdeploy.vision.faceid.VPL</a></li>
+<li><a class="reference internal" href="#fastdeploy-vision-faceid-adaface">fastdeploy.vision.faceid.AdaFace</a><ul>
+<li><a class="reference internal" href="#fastdeploy.vision.faceid.AdaFace"><code class="docutils literal notranslate"><span class="pre">AdaFace</span></code></a><ul>
+<li><a class="reference internal" href="#fastdeploy.vision.faceid.AdaFace.alpha"><code class="docutils literal notranslate"><span class="pre">AdaFace.alpha</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.faceid.AdaFace.beta"><code class="docutils literal notranslate"><span class="pre">AdaFace.beta</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.faceid.AdaFace.l2_normalize"><code class="docutils literal notranslate"><span class="pre">AdaFace.l2_normalize</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.faceid.AdaFace.predict"><code class="docutils literal notranslate"><span class="pre">AdaFace.predict()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.faceid.AdaFace.size"><code class="docutils literal notranslate"><span class="pre">AdaFace.size</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.faceid.AdaFace.swap_rb"><code class="docutils literal notranslate"><span class="pre">AdaFace.swap_rb</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#fastdeploy-vision-faceid-cosface">fastdeploy.vision.faceid.CosFace</a><ul>
+<li><a class="reference internal" href="#fastdeploy.vision.faceid.CosFace"><code class="docutils literal notranslate"><span class="pre">CosFace</span></code></a><ul>
+<li><a class="reference internal" href="#fastdeploy.vision.faceid.CosFace.alpha"><code class="docutils literal notranslate"><span class="pre">CosFace.alpha</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.faceid.CosFace.beta"><code class="docutils literal notranslate"><span class="pre">CosFace.beta</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.faceid.CosFace.l2_normalize"><code class="docutils literal notranslate"><span class="pre">CosFace.l2_normalize</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.faceid.CosFace.predict"><code class="docutils literal notranslate"><span class="pre">CosFace.predict()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.faceid.CosFace.size"><code class="docutils literal notranslate"><span class="pre">CosFace.size</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.faceid.CosFace.swap_rb"><code class="docutils literal notranslate"><span class="pre">CosFace.swap_rb</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#fastdeploy-vision-faceid-arcface">fastdeploy.vision.faceid.ArcFace</a><ul>
+<li><a class="reference internal" href="#fastdeploy.vision.faceid.ArcFace"><code class="docutils literal notranslate"><span class="pre">ArcFace</span></code></a><ul>
+<li><a class="reference internal" href="#fastdeploy.vision.faceid.ArcFace.alpha"><code class="docutils literal notranslate"><span class="pre">ArcFace.alpha</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.faceid.ArcFace.beta"><code class="docutils literal notranslate"><span class="pre">ArcFace.beta</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.faceid.ArcFace.l2_normalize"><code class="docutils literal notranslate"><span class="pre">ArcFace.l2_normalize</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.faceid.ArcFace.predict"><code class="docutils literal notranslate"><span class="pre">ArcFace.predict()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.faceid.ArcFace.size"><code class="docutils literal notranslate"><span class="pre">ArcFace.size</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.faceid.ArcFace.swap_rb"><code class="docutils literal notranslate"><span class="pre">ArcFace.swap_rb</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#fastdeploy-vision-faceid-partialfc">fastdeploy.vision.faceid.PartialFC</a><ul>
+<li><a class="reference internal" href="#fastdeploy.vision.faceid.PartialFC"><code class="docutils literal notranslate"><span class="pre">PartialFC</span></code></a><ul>
+<li><a class="reference internal" href="#fastdeploy.vision.faceid.PartialFC.alpha"><code class="docutils literal notranslate"><span class="pre">PartialFC.alpha</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.faceid.PartialFC.beta"><code class="docutils literal notranslate"><span class="pre">PartialFC.beta</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.faceid.PartialFC.l2_normalize"><code class="docutils literal notranslate"><span class="pre">PartialFC.l2_normalize</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.faceid.PartialFC.predict"><code class="docutils literal notranslate"><span class="pre">PartialFC.predict()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.faceid.PartialFC.size"><code class="docutils literal notranslate"><span class="pre">PartialFC.size</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.faceid.PartialFC.swap_rb"><code class="docutils literal notranslate"><span class="pre">PartialFC.swap_rb</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#fastdeploy-vision-faceid-vpl">fastdeploy.vision.faceid.VPL</a><ul>
+<li><a class="reference internal" href="#fastdeploy.vision.faceid.VPL"><code class="docutils literal notranslate"><span class="pre">VPL</span></code></a><ul>
+<li><a class="reference internal" href="#fastdeploy.vision.faceid.VPL.alpha"><code class="docutils literal notranslate"><span class="pre">VPL.alpha</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.faceid.VPL.beta"><code class="docutils literal notranslate"><span class="pre">VPL.beta</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.faceid.VPL.l2_normalize"><code class="docutils literal notranslate"><span class="pre">VPL.l2_normalize</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.faceid.VPL.predict"><code class="docutils literal notranslate"><span class="pre">VPL.predict()</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.faceid.VPL.size"><code class="docutils literal notranslate"><span class="pre">VPL.size</span></code></a></li>
+<li><a class="reference internal" href="#fastdeploy.vision.faceid.VPL.swap_rb"><code class="docutils literal notranslate"><span class="pre">VPL.swap_rb</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -594,7 +654,9 @@
 </div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/scripts/furo.js"></script>
     </body>
 </html>
