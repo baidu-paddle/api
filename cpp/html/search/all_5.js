@@ -6,6 +6,7 @@ var searchData=
   ['facedet',['facedet',['../namespacefastdeploy_1_1vision_1_1facedet.html',1,'fastdeploy::vision']]],
   ['facedetectionresult',['FaceDetectionResult',['../structfastdeploy_1_1vision_1_1FaceDetectionResult.html',1,'fastdeploy::vision']]],
   ['faceid',['faceid',['../namespacefastdeploy_1_1vision_1_1faceid.html',1,'fastdeploy::vision']]],
+  ['facelandmark1000',['FaceLandmark1000',['../classfastdeploy_1_1vision_1_1facealign_1_1FaceLandmark1000.html',1,'fastdeploy::vision::facealign::FaceLandmark1000'],['../classfastdeploy_1_1vision_1_1facealign_1_1FaceLandmark1000.html#ac17e484706cd2ce8e39ef5ae0823c469',1,'fastdeploy::vision::facealign::FaceLandmark1000::FaceLandmark1000()']]],
   ['facerecognitionresult',['FaceRecognitionResult',['../structfastdeploy_1_1vision_1_1FaceRecognitionResult.html',1,'fastdeploy::vision']]],
   ['fastdeploy',['fastdeploy',['../namespacefastdeploy.html',1,'']]],
   ['fastdeploymodel',['FastDeployModel',['../classfastdeploy_1_1FastDeployModel.html',1,'fastdeploy']]],

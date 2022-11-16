@@ -94,10 +94,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stru
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1RuntimeOption.html#a3b132f7a7c01f7b96573494510090b39">UseTimVX</a> ()</td></tr>
 <tr class="memdesc:a3b132f7a7c01f7b96573494510090b39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use TimVX to inference. <br /></td></tr>
 <tr class="separator:a3b132f7a7c01f7b96573494510090b39"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a4037f9768db7bf3f6bdda6673d3524"><td class="memItemLeft" align="right" valign="top"><a id="a4a4037f9768db7bf3f6bdda6673d3524"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1RuntimeOption.html#a4a4037f9768db7bf3f6bdda6673d3524">SetCpuThreadNum</a> (int thread_num)</td></tr>
-<tr class="memdesc:a4a4037f9768db7bf3f6bdda6673d3524"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set number of cpu threads while inference on CPU, by default it will decided by the different backends. <br /></td></tr>
-<tr class="separator:a4a4037f9768db7bf3f6bdda6673d3524"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a986f2fba4fb9176c4283ca6ba77ac112"><td class="memItemLeft" align="right" valign="top"><a id="a986f2fba4fb9176c4283ca6ba77ac112"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1RuntimeOption.html#a986f2fba4fb9176c4283ca6ba77ac112">SetOrtGraphOptLevel</a> (int level=-1)</td></tr>
 <tr class="memdesc:a986f2fba4fb9176c4283ca6ba77ac112"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set ORT graph opt level, default is decide by ONNX <a class="el" href="structfastdeploy_1_1Runtime.html" title="Runtime object used to inference the loaded model on different devices. ">Runtime</a> itself. <br /></td></tr>
@@ -138,10 +134,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stru
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1RuntimeOption.html#a5f7dc3caa5a0f5d003b4ceb96c6446cc">SetPaddleMKLDNN</a> (bool pd_mkldnn=true)</td></tr>
 <tr class="memdesc:a5f7dc3caa5a0f5d003b4ceb96c6446cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set mkldnn switch while using Paddle Inference as inference backend. <br /></td></tr>
 <tr class="separator:a5f7dc3caa5a0f5d003b4ceb96c6446cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade3c1633cdcd7d63c2499afa0410b330"><td class="memItemLeft" align="right" valign="top"><a id="ade3c1633cdcd7d63c2499afa0410b330"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1RuntimeOption.html#ade3c1633cdcd7d63c2499afa0410b330">EnablePaddleToTrt</a> ()</td></tr>
-<tr class="memdesc:ade3c1633cdcd7d63c2499afa0410b330"><td class="mdescLeft">&#160;</td><td class="mdescRight">If TensorRT backend is used, EnablePaddleToTrt will change to use Paddle Inference backend, and use its integrated TensorRT instead. <br /></td></tr>
-<tr class="separator:ade3c1633cdcd7d63c2499afa0410b330"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18e659f82dc902f4f4fade0ce8492ae3"><td class="memItemLeft" align="right" valign="top"><a id="a18e659f82dc902f4f4fade0ce8492ae3"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1RuntimeOption.html#a18e659f82dc902f4f4fade0ce8492ae3">DeletePaddleBackendPass</a> (const std::string &amp;delete_pass_name)</td></tr>
 <tr class="memdesc:a18e659f82dc902f4f4fade0ce8492ae3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete pass by name while using Paddle Inference as inference backend, this can be called multiple times to delete a set of passes. <br /></td></tr>
@@ -225,10 +217,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stru
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1RuntimeOption.html#a91232808106866c55453f31a2dcfeccf">DisablePaddleTrtCollectShape</a> ()</td></tr>
 <tr class="memdesc:a91232808106866c55453f31a2dcfeccf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable to collect shape in paddle trt backend. <br /></td></tr>
 <tr class="separator:a91232808106866c55453f31a2dcfeccf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a40e0401e3278fa16c1ef5a08834f72c5"><td class="memItemLeft" align="right" valign="top"><a id="a40e0401e3278fa16c1ef5a08834f72c5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1RuntimeOption.html#a40e0401e3278fa16c1ef5a08834f72c5">SetOpenVINOStreams</a> (int num_streams)</td></tr>
-<tr class="memdesc:a40e0401e3278fa16c1ef5a08834f72c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set number of streams by the OpenVINO backends. <br /></td></tr>
-<tr class="separator:a40e0401e3278fa16c1ef5a08834f72c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80b7a4e789ff431b79c97e6857a55e60"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1RuntimeOption.html#a80b7a4e789ff431b79c97e6857a55e60">UseIpu</a> (int device_num=1, int micro_batch_size=1, bool enable_pipelining=false, int batches_per_step=1)</td></tr>
 <tr class="separator:a80b7a4e789ff431b79c97e6857a55e60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a76146cf87a23b620ef3f88bbfe6fb40c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1RuntimeOption.html#a76146cf87a23b620ef3f88bbfe6fb40c">SetIpuConfig</a> (bool enable_fp16=false, int replica_num=1, float available_memory_proportion=1.0, bool enable_half_partial=false)</td></tr>

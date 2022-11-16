@@ -1,212 +1,516 @@
-<!doctype html>
-<html class="no-js" lang="en">
-  <head><meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="OCR API" href="ocr.html" /><link rel="prev" title="FastDeploy" href="index.html" />
 
-    <meta name="generator" content="sphinx-5.3.0, furo 2022.09.29"/>
-        <title>Object Detection API - FastDeploy Python API latest documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=d81277517bee4d6b0349d71bb2661d4890b5617c" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
-    
-    
+<!DOCTYPE html>
 
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-<style>
-  body {
-    --color-code-background: #f8f8f8;
-  --color-code-foreground: black;
-  
-  }
-  @media not print {
-    body[data-theme="dark"] {
-      --color-code-background: #202020;
-  --color-code-foreground: #d0d0d0;
-  
-    }
-    @media (prefers-color-scheme: dark) {
-      body:not([data-theme="light"]) {
-        --color-code-background: #202020;
-  --color-code-foreground: #d0d0d0;
-  
-      }
-    }
-  }
-</style></head>
-  <body>
+    <title>Object Detection(目标检测) &#8212; FastDeploy Python API latest documentation</title>
     
-    <script>
-      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
-    </script>
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="OCR(文字识别)" href="ocr.html" />
+    <link rel="prev" title="FastDeploy" href="index.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en">
     
 
-<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-  <symbol id="svg-toc" viewBox="0 0 24 24">
-    <title>Contents</title>
-    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
-      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
-    </svg>
-  </symbol>
-  <symbol id="svg-menu" viewBox="0 0 24 24">
-    <title>Menu</title>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
-      <line x1="3" y1="12" x2="21" y2="12"></line>
-      <line x1="3" y1="6" x2="21" y2="6"></line>
-      <line x1="3" y1="18" x2="21" y2="18"></line>
-    </svg>
-  </symbol>
-  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
-    <title>Expand</title>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
-      <polyline points="9 18 15 12 9 6"></polyline>
-    </svg>
-  </symbol>
-  <symbol id="svg-sun" viewBox="0 0 24 24">
-    <title>Light mode</title>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
-      <circle cx="12" cy="12" r="5"></circle>
-      <line x1="12" y1="1" x2="12" y2="3"></line>
-      <line x1="12" y1="21" x2="12" y2="23"></line>
-      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-      <line x1="1" y1="12" x2="3" y2="12"></line>
-      <line x1="21" y1="12" x2="23" y2="12"></line>
-      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-    </svg>
-  </symbol>
-  <symbol id="svg-moon" viewBox="0 0 24 24">
-    <title>Dark mode</title>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
-      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
-    </svg>
-  </symbol>
-  <symbol id="svg-sun-half" viewBox="0 0 24 24">
-    <title>Auto light/dark mode</title>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
-      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-      <circle cx="12" cy="12" r="9" />
-      <path d="M13 12h5" />
-      <path d="M13 15h4" />
-      <path d="M13 18h1" />
-      <path d="M13 9h4" />
-      <path d="M13 6h1" />
-    </svg>
-  </symbol>
-</svg>
-
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
-<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
-<label class="overlay sidebar-overlay" for="__navigation">
-  <div class="visually-hidden">Hide navigation sidebar</div>
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
 </label>
-<label class="overlay toc-overlay" for="__toc">
-  <div class="visually-hidden">Hide table of contents sidebar</div>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
 </label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
 
+    
+    <div class="container-fluid" id="banner"></div>
 
+    
 
-<div class="page">
-  <header class="mobile-header">
-    <div class="header-left">
-      <label class="nav-overlay-icon" for="__navigation">
-        <div class="visually-hidden">Toggle site navigation sidebar</div>
-        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
-      </label>
-    </div>
-    <div class="header-center">
-      <a href="index.html"><div class="brand">FastDeploy Python API latest documentation</div></a>
-    </div>
-    <div class="header-right">
-      <div class="theme-toggle-container theme-toggle-header">
-        <button class="theme-toggle">
-          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
-          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
-          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
-          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
-        </button>
-      </div>
-      <label class="toc-overlay-icon toc-header-icon" for="__toc">
-        <div class="visually-hidden">Toggle table of contents sidebar</div>
-        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
-      </label>
-    </div>
-  </header>
-  <aside class="sidebar-drawer">
-    <div class="sidebar-container">
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
       
-      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
-  
-  
-  <span class="sidebar-brand-text">FastDeploy Python API latest documentation</span>
-  
-</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
-  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
-  <input type="hidden" name="check_keywords" value="yes">
-  <input type="hidden" name="area" value="default">
-</form>
-<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
-  <p class="caption" role="heading"><span class="caption-text">文档目录</span></p>
-<ul class="current">
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Object Detection API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ocr.html">OCR API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="semantic_segmentation.html">Semantic Segmentation API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="image_classification.html">Image Classification API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="keypoint_detection.html">Keypoint Detection API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="matting.html">Matting API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="face_recognition.html">Face Recognition API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="face_detection.html">Face Detection API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="face_alignment.html">Face Alignment API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="headpose.html">Headpose API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="vision_results_en.html">Description of Vision Results</a></li>
-<li class="toctree-l1"><a class="reference internal" href="runtime.html">Runtime API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="runtime_option.html">Runtime Option API</a></li>
+      
+      
+      <h1 class="site-logo" id="site-title">FastDeploy Python API latest documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Vision Task Model API (视觉任务模型API)
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Object Detection(目标检测)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ocr.html">
+   OCR(文字识别)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="semantic_segmentation.html">
+   Semantic Segmentation(语义分割)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="image_classification.html">
+   Image Classification(图像分类)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="keypoint_detection.html">
+   Keypoint Detection(关键点检测)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="matting.html">
+   Matting(图像抠图)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="face_recognition.html">
+   Face Recognition(人脸识别)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="face_detection.html">
+   Face Detection(人脸检测)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="face_alignment.html">
+   Face Alignment(人脸对齐)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="headpose.html">
+   Headpose(头部姿态)
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Predict Result Struct (预测结果结构体)
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="vision_results_en.html">
+   Description of Vision Results
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  FastDeploy Runtime API (多后端推理引擎API)
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="runtime.html">
+   Runtime(模型推理Runtime)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="runtime_option.html">
+   Runtime Option(Runtime配置)
+  </a>
+ </li>
 </ul>
 
-</div>
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
 </div>
 
-      </div>
-      
-    </div>
-  </aside>
-  <div class="main">
-    <div class="content">
-      <div class="article-container">
-        <a href="#" class="back-to-top muted-link">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
-          </svg>
-          <span>Back to top</span>
-        </a>
-        <div class="content-icon-container">
+
           
-<div class="theme-toggle-container theme-toggle-content">
-            <button class="theme-toggle">
-              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
-              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
-              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
-              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
-            </button>
-          </div>
-          <label class="toc-overlay-icon toc-content-icon" for="__toc">
-            <div class="visually-hidden">Toggle table of contents sidebar</div>
-            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
-          </label>
-        </div>
-        <article role="main">
-          <section id="object-detection-api">
-<h1>Object Detection API<a class="headerlink" href="#object-detection-api" title="Permalink to this heading">#</a></h1>
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/object_detection.md.txt"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fastdeploy-vision-detection-ppyoloe">
+   fastdeploy.vision.detection.PPYOLOE
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fastdeploy-vision-detection-ppyolo">
+   fastdeploy.vision.detection.PPYOLO
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fastdeploy-vision-detection-picodet">
+   fastdeploy.vision.detection.PicoDet
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fastdeploy-vision-detection-paddleyolox">
+   fastdeploy.vision.detection.PaddleYOLOX
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fastdeploy-vision-detection-yolov3">
+   fastdeploy.vision.detection.YOLOv3
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fastdeploy-vision-detection-fasterrcnn">
+   fastdeploy.vision.detection.FasterRCNN
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fastdeploy-vision-detection-maskrcnn">
+   fastdeploy.vision.detection.MaskRCNN
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fastdeploy-vision-detection-nanodetplus">
+   fastdeploy.vision.detection.NanoDetPlus
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fastdeploy-vision-detection-scaledyolov4">
+   fastdeploy.vision.detection.ScaledYOLOv4
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fastdeploy-vision-detection-yolor">
+   fastdeploy.vision.detection.YOLOR
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fastdeploy-vision-detection-yolov5">
+   fastdeploy.vision.detection.YOLOv5
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fastdeploy-vision-detection-yolov5lite">
+   fastdeploy.vision.detection.YOLOv5Lite
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fastdeploy-vision-detection-yolov6">
+   fastdeploy.vision.detection.YOLOv6
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fastdeploy-vision-detection-yolov7">
+   fastdeploy.vision.detection.YOLOv7
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   fastdeploy.vision.detection.YOLOR
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fastdeploy-vision-detection-yolov7end2endort">
+   fastdeploy.vision.detection.YOLOv7End2EndORT
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fastdeploy-vision-detection-yolov7end2endtrt">
+   fastdeploy.vision.detection.YOLOv7End2EndTRT
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fastdeploy-vision-detection-yolox">
+   fastdeploy.vision.detection.YOLOX
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Object Detection(目标检测)</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fastdeploy-vision-detection-ppyoloe">
+   fastdeploy.vision.detection.PPYOLOE
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fastdeploy-vision-detection-ppyolo">
+   fastdeploy.vision.detection.PPYOLO
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fastdeploy-vision-detection-picodet">
+   fastdeploy.vision.detection.PicoDet
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fastdeploy-vision-detection-paddleyolox">
+   fastdeploy.vision.detection.PaddleYOLOX
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fastdeploy-vision-detection-yolov3">
+   fastdeploy.vision.detection.YOLOv3
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fastdeploy-vision-detection-fasterrcnn">
+   fastdeploy.vision.detection.FasterRCNN
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fastdeploy-vision-detection-maskrcnn">
+   fastdeploy.vision.detection.MaskRCNN
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fastdeploy-vision-detection-nanodetplus">
+   fastdeploy.vision.detection.NanoDetPlus
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fastdeploy-vision-detection-scaledyolov4">
+   fastdeploy.vision.detection.ScaledYOLOv4
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fastdeploy-vision-detection-yolor">
+   fastdeploy.vision.detection.YOLOR
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fastdeploy-vision-detection-yolov5">
+   fastdeploy.vision.detection.YOLOv5
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fastdeploy-vision-detection-yolov5lite">
+   fastdeploy.vision.detection.YOLOv5Lite
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fastdeploy-vision-detection-yolov6">
+   fastdeploy.vision.detection.YOLOv6
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fastdeploy-vision-detection-yolov7">
+   fastdeploy.vision.detection.YOLOv7
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   fastdeploy.vision.detection.YOLOR
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fastdeploy-vision-detection-yolov7end2endort">
+   fastdeploy.vision.detection.YOLOv7End2EndORT
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fastdeploy-vision-detection-yolov7end2endtrt">
+   fastdeploy.vision.detection.YOLOv7End2EndTRT
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fastdeploy-vision-detection-yolox">
+   fastdeploy.vision.detection.YOLOX
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="object-detection">
+<h1>Object Detection(目标检测)<a class="headerlink" href="#object-detection" title="Permalink to this headline">#</a></h1>
 <section id="fastdeploy-vision-detection-ppyoloe">
-<h2>fastdeploy.vision.detection.PPYOLOE<a class="headerlink" href="#fastdeploy-vision-detection-ppyoloe" title="Permalink to this heading">#</a></h2>
+<h2>fastdeploy.vision.detection.PPYOLOE<a class="headerlink" href="#fastdeploy-vision-detection-ppyoloe" title="Permalink to this headline">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="fastdeploy.vision.detection.PPYOLOE">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.detection.</span></span><span class="sig-name descname"><span class="pre">PPYOLOE</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.PADDLE:</span> <span class="pre">1&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/detection/ppdet.html#PPYOLOE"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.detection.PPYOLOE" title="Permalink to this definition">#</a></dt>
@@ -266,7 +570,7 @@
 
 </section>
 <section id="fastdeploy-vision-detection-ppyolo">
-<h2>fastdeploy.vision.detection.PPYOLO<a class="headerlink" href="#fastdeploy-vision-detection-ppyolo" title="Permalink to this heading">#</a></h2>
+<h2>fastdeploy.vision.detection.PPYOLO<a class="headerlink" href="#fastdeploy-vision-detection-ppyolo" title="Permalink to this headline">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="fastdeploy.vision.detection.PPYOLO">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.detection.</span></span><span class="sig-name descname"><span class="pre">PPYOLO</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.PADDLE:</span> <span class="pre">1&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/detection/ppdet.html#PPYOLO"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.detection.PPYOLO" title="Permalink to this definition">#</a></dt>
@@ -324,11 +628,8 @@
 </dd></dl>
 
 </section>
-<section id="fastdeploy-vision-detection-ppyolov2">
-<h2>fastdeploy.vision.detection.PPYOLOv2<a class="headerlink" href="#fastdeploy-vision-detection-ppyolov2" title="Permalink to this heading">#</a></h2>
-</section>
 <section id="fastdeploy-vision-detection-picodet">
-<h2>fastdeploy.vision.detection.PicoDet<a class="headerlink" href="#fastdeploy-vision-detection-picodet" title="Permalink to this heading">#</a></h2>
+<h2>fastdeploy.vision.detection.PicoDet<a class="headerlink" href="#fastdeploy-vision-detection-picodet" title="Permalink to this headline">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="fastdeploy.vision.detection.PicoDet">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.detection.</span></span><span class="sig-name descname"><span class="pre">PicoDet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.PADDLE:</span> <span class="pre">1&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/detection/ppdet.html#PicoDet"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.detection.PicoDet" title="Permalink to this definition">#</a></dt>
@@ -388,7 +689,7 @@
 
 </section>
 <section id="fastdeploy-vision-detection-paddleyolox">
-<h2>fastdeploy.vision.detection.PaddleYOLOX<a class="headerlink" href="#fastdeploy-vision-detection-paddleyolox" title="Permalink to this heading">#</a></h2>
+<h2>fastdeploy.vision.detection.PaddleYOLOX<a class="headerlink" href="#fastdeploy-vision-detection-paddleyolox" title="Permalink to this headline">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="fastdeploy.vision.detection.PaddleYOLOX">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.detection.</span></span><span class="sig-name descname"><span class="pre">PaddleYOLOX</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.PADDLE:</span> <span class="pre">1&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/detection/ppdet.html#PaddleYOLOX"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.detection.PaddleYOLOX" title="Permalink to this definition">#</a></dt>
@@ -448,7 +749,7 @@
 
 </section>
 <section id="fastdeploy-vision-detection-yolov3">
-<h2>fastdeploy.vision.detection.YOLOv3<a class="headerlink" href="#fastdeploy-vision-detection-yolov3" title="Permalink to this heading">#</a></h2>
+<h2>fastdeploy.vision.detection.YOLOv3<a class="headerlink" href="#fastdeploy-vision-detection-yolov3" title="Permalink to this headline">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="fastdeploy.vision.detection.PaddleYOLOX">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.detection.</span></span><span class="sig-name descname"><span class="pre">PaddleYOLOX</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.PADDLE:</span> <span class="pre">1&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/detection/ppdet.html#PaddleYOLOX"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.detection.PaddleYOLOX" title="Permalink to this definition">#</a></dt>
@@ -508,7 +809,7 @@
 
 </section>
 <section id="fastdeploy-vision-detection-fasterrcnn">
-<h2>fastdeploy.vision.detection.FasterRCNN<a class="headerlink" href="#fastdeploy-vision-detection-fasterrcnn" title="Permalink to this heading">#</a></h2>
+<h2>fastdeploy.vision.detection.FasterRCNN<a class="headerlink" href="#fastdeploy-vision-detection-fasterrcnn" title="Permalink to this headline">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="fastdeploy.vision.detection.FasterRCNN">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.detection.</span></span><span class="sig-name descname"><span class="pre">FasterRCNN</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.PADDLE:</span> <span class="pre">1&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/detection/ppdet.html#FasterRCNN"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.detection.FasterRCNN" title="Permalink to this definition">#</a></dt>
@@ -568,7 +869,7 @@
 
 </section>
 <section id="fastdeploy-vision-detection-maskrcnn">
-<h2>fastdeploy.vision.detection.MaskRCNN<a class="headerlink" href="#fastdeploy-vision-detection-maskrcnn" title="Permalink to this heading">#</a></h2>
+<h2>fastdeploy.vision.detection.MaskRCNN<a class="headerlink" href="#fastdeploy-vision-detection-maskrcnn" title="Permalink to this headline">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="fastdeploy.vision.detection.MaskRCNN">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.detection.</span></span><span class="sig-name descname"><span class="pre">MaskRCNN</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.PADDLE:</span> <span class="pre">1&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/detection/ppdet.html#MaskRCNN"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.detection.MaskRCNN" title="Permalink to this definition">#</a></dt>
@@ -628,7 +929,7 @@
 
 </section>
 <section id="fastdeploy-vision-detection-nanodetplus">
-<h2>fastdeploy.vision.detection.NanoDetPlus<a class="headerlink" href="#fastdeploy-vision-detection-nanodetplus" title="Permalink to this heading">#</a></h2>
+<h2>fastdeploy.vision.detection.NanoDetPlus<a class="headerlink" href="#fastdeploy-vision-detection-nanodetplus" title="Permalink to this headline">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="fastdeploy.vision.detection.NanoDetPlus">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.detection.</span></span><span class="sig-name descname"><span class="pre">NanoDetPlus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.ONNX:</span> <span class="pre">2&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/detection/contrib/nanodet_plus.html#NanoDetPlus"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.detection.NanoDetPlus" title="Permalink to this definition">#</a></dt>
@@ -677,7 +978,7 @@
 
 </section>
 <section id="fastdeploy-vision-detection-scaledyolov4">
-<h2>fastdeploy.vision.detection.ScaledYOLOv4<a class="headerlink" href="#fastdeploy-vision-detection-scaledyolov4" title="Permalink to this heading">#</a></h2>
+<h2>fastdeploy.vision.detection.ScaledYOLOv4<a class="headerlink" href="#fastdeploy-vision-detection-scaledyolov4" title="Permalink to this headline">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="fastdeploy.vision.detection.ScaledYOLOv4">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.detection.</span></span><span class="sig-name descname"><span class="pre">ScaledYOLOv4</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.ONNX:</span> <span class="pre">2&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/detection/contrib/scaled_yolov4.html#ScaledYOLOv4"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.detection.ScaledYOLOv4" title="Permalink to this definition">#</a></dt>
@@ -720,7 +1021,7 @@
 
 </section>
 <section id="fastdeploy-vision-detection-yolor">
-<h2>fastdeploy.vision.detection.YOLOR<a class="headerlink" href="#fastdeploy-vision-detection-yolor" title="Permalink to this heading">#</a></h2>
+<h2>fastdeploy.vision.detection.YOLOR<a class="headerlink" href="#fastdeploy-vision-detection-yolor" title="Permalink to this headline">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="fastdeploy.vision.detection.YOLOR">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.detection.</span></span><span class="sig-name descname"><span class="pre">YOLOR</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.ONNX:</span> <span class="pre">2&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/detection/contrib/yolor.html#YOLOR"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.detection.YOLOR" title="Permalink to this definition">#</a></dt>
@@ -763,7 +1064,7 @@
 
 </section>
 <section id="fastdeploy-vision-detection-yolov5">
-<h2>fastdeploy.vision.detection.YOLOv5<a class="headerlink" href="#fastdeploy-vision-detection-yolov5" title="Permalink to this heading">#</a></h2>
+<h2>fastdeploy.vision.detection.YOLOv5<a class="headerlink" href="#fastdeploy-vision-detection-yolov5" title="Permalink to this headline">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="fastdeploy.vision.detection.YOLOv5">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.detection.</span></span><span class="sig-name descname"><span class="pre">YOLOv5</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.ONNX:</span> <span class="pre">2&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/detection/contrib/yolov5.html#YOLOv5"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.detection.YOLOv5" title="Permalink to this definition">#</a></dt>
@@ -826,7 +1127,7 @@
 
 </section>
 <section id="fastdeploy-vision-detection-yolov5lite">
-<h2>fastdeploy.vision.detection.YOLOv5Lite<a class="headerlink" href="#fastdeploy-vision-detection-yolov5lite" title="Permalink to this heading">#</a></h2>
+<h2>fastdeploy.vision.detection.YOLOv5Lite<a class="headerlink" href="#fastdeploy-vision-detection-yolov5lite" title="Permalink to this headline">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="fastdeploy.vision.detection.YOLOv5Lite">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.detection.</span></span><span class="sig-name descname"><span class="pre">YOLOv5Lite</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.ONNX:</span> <span class="pre">2&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/detection/contrib/yolov5lite.html#YOLOv5Lite"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.detection.YOLOv5Lite" title="Permalink to this definition">#</a></dt>
@@ -885,7 +1186,7 @@ default False</p>
 
 </section>
 <section id="fastdeploy-vision-detection-yolov6">
-<h2>fastdeploy.vision.detection.YOLOv6<a class="headerlink" href="#fastdeploy-vision-detection-yolov6" title="Permalink to this heading">#</a></h2>
+<h2>fastdeploy.vision.detection.YOLOv6<a class="headerlink" href="#fastdeploy-vision-detection-yolov6" title="Permalink to this headline">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="fastdeploy.vision.detection.YOLOv6">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.detection.</span></span><span class="sig-name descname"><span class="pre">YOLOv6</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.ONNX:</span> <span class="pre">2&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/detection/contrib/yolov6.html#YOLOv6"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.detection.YOLOv6" title="Permalink to this definition">#</a></dt>
@@ -928,7 +1229,7 @@ default False</p>
 
 </section>
 <section id="fastdeploy-vision-detection-yolov7">
-<h2>fastdeploy.vision.detection.YOLOv7<a class="headerlink" href="#fastdeploy-vision-detection-yolov7" title="Permalink to this heading">#</a></h2>
+<h2>fastdeploy.vision.detection.YOLOv7<a class="headerlink" href="#fastdeploy-vision-detection-yolov7" title="Permalink to this headline">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="fastdeploy.vision.detection.YOLOv7">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.detection.</span></span><span class="sig-name descname"><span class="pre">YOLOv7</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.ONNX:</span> <span class="pre">2&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/detection/contrib/yolov7.html#YOLOv7"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.detection.YOLOv7" title="Permalink to this definition">#</a></dt>
@@ -971,7 +1272,7 @@ default False</p>
 
 </section>
 <section id="id1">
-<h2>fastdeploy.vision.detection.YOLOR<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<h2>fastdeploy.vision.detection.YOLOR<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="fastdeploy.vision.detection.YOLOR">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.detection.</span></span><span class="sig-name descname"><span class="pre">YOLOR</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.ONNX:</span> <span class="pre">2&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/detection/contrib/yolor.html#YOLOR"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.detection.YOLOR" title="Permalink to this definition">#</a></dt>
@@ -1014,7 +1315,7 @@ default False</p>
 
 </section>
 <section id="fastdeploy-vision-detection-yolov7end2endort">
-<h2>fastdeploy.vision.detection.YOLOv7End2EndORT<a class="headerlink" href="#fastdeploy-vision-detection-yolov7end2endort" title="Permalink to this heading">#</a></h2>
+<h2>fastdeploy.vision.detection.YOLOv7End2EndORT<a class="headerlink" href="#fastdeploy-vision-detection-yolov7end2endort" title="Permalink to this headline">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="fastdeploy.vision.detection.YOLOv7End2EndORT">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.detection.</span></span><span class="sig-name descname"><span class="pre">YOLOv7End2EndORT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.ONNX:</span> <span class="pre">2&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/detection/contrib/yolov7end2end_ort.html#YOLOv7End2EndORT"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.detection.YOLOv7End2EndORT" title="Permalink to this definition">#</a></dt>
@@ -1056,7 +1357,7 @@ default False</p>
 
 </section>
 <section id="fastdeploy-vision-detection-yolov7end2endtrt">
-<h2>fastdeploy.vision.detection.YOLOv7End2EndTRT<a class="headerlink" href="#fastdeploy-vision-detection-yolov7end2endtrt" title="Permalink to this heading">#</a></h2>
+<h2>fastdeploy.vision.detection.YOLOv7End2EndTRT<a class="headerlink" href="#fastdeploy-vision-detection-yolov7end2endtrt" title="Permalink to this headline">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="fastdeploy.vision.detection.YOLOv7End2EndTRT">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.detection.</span></span><span class="sig-name descname"><span class="pre">YOLOv7End2EndTRT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.ONNX:</span> <span class="pre">2&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/detection/contrib/yolov7end2end_trt.html#YOLOv7End2EndTRT"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.detection.YOLOv7End2EndTRT" title="Permalink to this definition">#</a></dt>
@@ -1098,7 +1399,7 @@ default False</p>
 
 </section>
 <section id="fastdeploy-vision-detection-yolox">
-<h2>fastdeploy.vision.detection.YOLOX<a class="headerlink" href="#fastdeploy-vision-detection-yolox" title="Permalink to this heading">#</a></h2>
+<h2>fastdeploy.vision.detection.YOLOX<a class="headerlink" href="#fastdeploy-vision-detection-yolox" title="Permalink to this headline">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="fastdeploy.vision.detection.YOLOX">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.detection.</span></span><span class="sig-name descname"><span class="pre">YOLOX</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.ONNX:</span> <span class="pre">2&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/detection/contrib/yolox.html#YOLOX"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.detection.YOLOX" title="Permalink to this definition">#</a></dt>
@@ -1157,247 +1458,51 @@ Defalut False.</p>
 </section>
 </section>
 
-        </article>
-      </div>
-      <footer>
-        
-        <div class="related-pages">
-          <a class="next-page" href="ocr.html">
-              <div class="page-info">
-                <div class="context">
-                  <span>Next</span>
-                </div>
-                <div class="title">OCR API</div>
-              </div>
-              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
-            </a>
-          <a class="prev-page" href="index.html">
-              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
-              <div class="page-info">
-                <div class="context">
-                  <span>Previous</span>
-                </div>
-                
-                <div class="title">Home</div>
-                
-              </div>
-            </a>
-        </div>
-        <div class="bottom-of-page">
-          <div class="left-details">
-            <div class="copyright">
-                Copyright &#169; 2022, PaddlePaddle
-            </div>
-            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
-            
-            <a href="https://github.com/pradyunsg/furo">Furo</a>
-            
-          </div>
-          <div class="right-details">
-            <div class="icons">
-              
-            </div>
-          </div>
-        </div>
-        
-      </footer>
-    </div>
-    <aside class="toc-drawer">
-      
-      
-      <div class="toc-sticky toc-scroll">
-        <div class="toc-title-container">
-          <span class="toc-title">
-            On this page
-          </span>
-        </div>
-        <div class="toc-tree-container">
-          <div class="toc-tree">
-            <ul>
-<li><a class="reference internal" href="#">Object Detection API</a><ul>
-<li><a class="reference internal" href="#fastdeploy-vision-detection-ppyoloe">fastdeploy.vision.detection.PPYOLOE</a><ul>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.PPYOLOE"><code class="docutils literal notranslate"><span class="pre">PPYOLOE</span></code></a><ul>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.PPYOLOE.batch_predict"><code class="docutils literal notranslate"><span class="pre">PPYOLOE.batch_predict()</span></code></a></li>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.PPYOLOE.postprocessor"><code class="docutils literal notranslate"><span class="pre">PPYOLOE.postprocessor</span></code></a></li>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.PPYOLOE.predict"><code class="docutils literal notranslate"><span class="pre">PPYOLOE.predict()</span></code></a></li>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.PPYOLOE.preprocessor"><code class="docutils literal notranslate"><span class="pre">PPYOLOE.preprocessor</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#fastdeploy-vision-detection-ppyolo">fastdeploy.vision.detection.PPYOLO</a><ul>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.PPYOLO"><code class="docutils literal notranslate"><span class="pre">PPYOLO</span></code></a><ul>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.PPYOLO.batch_predict"><code class="docutils literal notranslate"><span class="pre">PPYOLO.batch_predict()</span></code></a></li>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.PPYOLO.postprocessor"><code class="docutils literal notranslate"><span class="pre">PPYOLO.postprocessor</span></code></a></li>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.PPYOLO.predict"><code class="docutils literal notranslate"><span class="pre">PPYOLO.predict()</span></code></a></li>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.PPYOLO.preprocessor"><code class="docutils literal notranslate"><span class="pre">PPYOLO.preprocessor</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#fastdeploy-vision-detection-ppyolov2">fastdeploy.vision.detection.PPYOLOv2</a></li>
-<li><a class="reference internal" href="#fastdeploy-vision-detection-picodet">fastdeploy.vision.detection.PicoDet</a><ul>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.PicoDet"><code class="docutils literal notranslate"><span class="pre">PicoDet</span></code></a><ul>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.PicoDet.batch_predict"><code class="docutils literal notranslate"><span class="pre">PicoDet.batch_predict()</span></code></a></li>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.PicoDet.postprocessor"><code class="docutils literal notranslate"><span class="pre">PicoDet.postprocessor</span></code></a></li>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.PicoDet.predict"><code class="docutils literal notranslate"><span class="pre">PicoDet.predict()</span></code></a></li>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.PicoDet.preprocessor"><code class="docutils literal notranslate"><span class="pre">PicoDet.preprocessor</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#fastdeploy-vision-detection-paddleyolox">fastdeploy.vision.detection.PaddleYOLOX</a><ul>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.PaddleYOLOX"><code class="docutils literal notranslate"><span class="pre">PaddleYOLOX</span></code></a><ul>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.PaddleYOLOX.batch_predict"><code class="docutils literal notranslate"><span class="pre">PaddleYOLOX.batch_predict()</span></code></a></li>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.PaddleYOLOX.postprocessor"><code class="docutils literal notranslate"><span class="pre">PaddleYOLOX.postprocessor</span></code></a></li>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.PaddleYOLOX.predict"><code class="docutils literal notranslate"><span class="pre">PaddleYOLOX.predict()</span></code></a></li>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.PaddleYOLOX.preprocessor"><code class="docutils literal notranslate"><span class="pre">PaddleYOLOX.preprocessor</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#fastdeploy-vision-detection-yolov3">fastdeploy.vision.detection.YOLOv3</a><ul>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.PaddleYOLOX"><code class="docutils literal notranslate"><span class="pre">PaddleYOLOX</span></code></a><ul>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.PaddleYOLOX.batch_predict"><code class="docutils literal notranslate"><span class="pre">PaddleYOLOX.batch_predict()</span></code></a></li>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.PaddleYOLOX.postprocessor"><code class="docutils literal notranslate"><span class="pre">PaddleYOLOX.postprocessor</span></code></a></li>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.PaddleYOLOX.predict"><code class="docutils literal notranslate"><span class="pre">PaddleYOLOX.predict()</span></code></a></li>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.PaddleYOLOX.preprocessor"><code class="docutils literal notranslate"><span class="pre">PaddleYOLOX.preprocessor</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#fastdeploy-vision-detection-fasterrcnn">fastdeploy.vision.detection.FasterRCNN</a><ul>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.FasterRCNN"><code class="docutils literal notranslate"><span class="pre">FasterRCNN</span></code></a><ul>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.FasterRCNN.batch_predict"><code class="docutils literal notranslate"><span class="pre">FasterRCNN.batch_predict()</span></code></a></li>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.FasterRCNN.postprocessor"><code class="docutils literal notranslate"><span class="pre">FasterRCNN.postprocessor</span></code></a></li>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.FasterRCNN.predict"><code class="docutils literal notranslate"><span class="pre">FasterRCNN.predict()</span></code></a></li>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.FasterRCNN.preprocessor"><code class="docutils literal notranslate"><span class="pre">FasterRCNN.preprocessor</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#fastdeploy-vision-detection-maskrcnn">fastdeploy.vision.detection.MaskRCNN</a><ul>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.MaskRCNN"><code class="docutils literal notranslate"><span class="pre">MaskRCNN</span></code></a><ul>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.MaskRCNN.batch_predict"><code class="docutils literal notranslate"><span class="pre">MaskRCNN.batch_predict()</span></code></a></li>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.MaskRCNN.postprocessor"><code class="docutils literal notranslate"><span class="pre">MaskRCNN.postprocessor</span></code></a></li>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.MaskRCNN.predict"><code class="docutils literal notranslate"><span class="pre">MaskRCNN.predict()</span></code></a></li>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.MaskRCNN.preprocessor"><code class="docutils literal notranslate"><span class="pre">MaskRCNN.preprocessor</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#fastdeploy-vision-detection-nanodetplus">fastdeploy.vision.detection.NanoDetPlus</a><ul>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.NanoDetPlus"><code class="docutils literal notranslate"><span class="pre">NanoDetPlus</span></code></a><ul>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.NanoDetPlus.predict"><code class="docutils literal notranslate"><span class="pre">NanoDetPlus.predict()</span></code></a></li>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.NanoDetPlus.reg_max"><code class="docutils literal notranslate"><span class="pre">NanoDetPlus.reg_max</span></code></a></li>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.NanoDetPlus.size"><code class="docutils literal notranslate"><span class="pre">NanoDetPlus.size</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#fastdeploy-vision-detection-scaledyolov4">fastdeploy.vision.detection.ScaledYOLOv4</a><ul>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.ScaledYOLOv4"><code class="docutils literal notranslate"><span class="pre">ScaledYOLOv4</span></code></a><ul>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.ScaledYOLOv4.predict"><code class="docutils literal notranslate"><span class="pre">ScaledYOLOv4.predict()</span></code></a></li>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.ScaledYOLOv4.size"><code class="docutils literal notranslate"><span class="pre">ScaledYOLOv4.size</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#fastdeploy-vision-detection-yolor">fastdeploy.vision.detection.YOLOR</a><ul>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.YOLOR"><code class="docutils literal notranslate"><span class="pre">YOLOR</span></code></a><ul>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.YOLOR.predict"><code class="docutils literal notranslate"><span class="pre">YOLOR.predict()</span></code></a></li>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.YOLOR.size"><code class="docutils literal notranslate"><span class="pre">YOLOR.size</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#fastdeploy-vision-detection-yolov5">fastdeploy.vision.detection.YOLOv5</a><ul>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.YOLOv5"><code class="docutils literal notranslate"><span class="pre">YOLOv5</span></code></a><ul>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.YOLOv5.batch_predict"><code class="docutils literal notranslate"><span class="pre">YOLOv5.batch_predict()</span></code></a></li>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.YOLOv5.postprocessor"><code class="docutils literal notranslate"><span class="pre">YOLOv5.postprocessor</span></code></a></li>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.YOLOv5.predict"><code class="docutils literal notranslate"><span class="pre">YOLOv5.predict()</span></code></a></li>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.YOLOv5.preprocessor"><code class="docutils literal notranslate"><span class="pre">YOLOv5.preprocessor</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#fastdeploy-vision-detection-yolov5lite">fastdeploy.vision.detection.YOLOv5Lite</a><ul>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.YOLOv5Lite"><code class="docutils literal notranslate"><span class="pre">YOLOv5Lite</span></code></a><ul>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.YOLOv5Lite.downsample_strides"><code class="docutils literal notranslate"><span class="pre">YOLOv5Lite.downsample_strides</span></code></a></li>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.YOLOv5Lite.is_decode_exported"><code class="docutils literal notranslate"><span class="pre">YOLOv5Lite.is_decode_exported</span></code></a></li>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.YOLOv5Lite.predict"><code class="docutils literal notranslate"><span class="pre">YOLOv5Lite.predict()</span></code></a></li>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.YOLOv5Lite.size"><code class="docutils literal notranslate"><span class="pre">YOLOv5Lite.size</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#fastdeploy-vision-detection-yolov6">fastdeploy.vision.detection.YOLOv6</a><ul>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.YOLOv6"><code class="docutils literal notranslate"><span class="pre">YOLOv6</span></code></a><ul>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.YOLOv6.predict"><code class="docutils literal notranslate"><span class="pre">YOLOv6.predict()</span></code></a></li>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.YOLOv6.size"><code class="docutils literal notranslate"><span class="pre">YOLOv6.size</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#fastdeploy-vision-detection-yolov7">fastdeploy.vision.detection.YOLOv7</a><ul>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.YOLOv7"><code class="docutils literal notranslate"><span class="pre">YOLOv7</span></code></a><ul>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.YOLOv7.predict"><code class="docutils literal notranslate"><span class="pre">YOLOv7.predict()</span></code></a></li>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.YOLOv7.size"><code class="docutils literal notranslate"><span class="pre">YOLOv7.size</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#id1">fastdeploy.vision.detection.YOLOR</a><ul>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.YOLOR"><code class="docutils literal notranslate"><span class="pre">YOLOR</span></code></a><ul>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.YOLOR.predict"><code class="docutils literal notranslate"><span class="pre">YOLOR.predict()</span></code></a></li>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.YOLOR.size"><code class="docutils literal notranslate"><span class="pre">YOLOR.size</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#fastdeploy-vision-detection-yolov7end2endort">fastdeploy.vision.detection.YOLOv7End2EndORT</a><ul>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.YOLOv7End2EndORT"><code class="docutils literal notranslate"><span class="pre">YOLOv7End2EndORT</span></code></a><ul>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.YOLOv7End2EndORT.predict"><code class="docutils literal notranslate"><span class="pre">YOLOv7End2EndORT.predict()</span></code></a></li>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.YOLOv7End2EndORT.size"><code class="docutils literal notranslate"><span class="pre">YOLOv7End2EndORT.size</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#fastdeploy-vision-detection-yolov7end2endtrt">fastdeploy.vision.detection.YOLOv7End2EndTRT</a><ul>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.YOLOv7End2EndTRT"><code class="docutils literal notranslate"><span class="pre">YOLOv7End2EndTRT</span></code></a><ul>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.YOLOv7End2EndTRT.predict"><code class="docutils literal notranslate"><span class="pre">YOLOv7End2EndTRT.predict()</span></code></a></li>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.YOLOv7End2EndTRT.size"><code class="docutils literal notranslate"><span class="pre">YOLOv7End2EndTRT.size</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#fastdeploy-vision-detection-yolox">fastdeploy.vision.detection.YOLOX</a><ul>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.YOLOX"><code class="docutils literal notranslate"><span class="pre">YOLOX</span></code></a><ul>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.YOLOX.downsample_strides"><code class="docutils literal notranslate"><span class="pre">YOLOX.downsample_strides</span></code></a></li>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.YOLOX.is_decode_exported"><code class="docutils literal notranslate"><span class="pre">YOLOX.is_decode_exported</span></code></a></li>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.YOLOX.predict"><code class="docutils literal notranslate"><span class="pre">YOLOX.predict()</span></code></a></li>
-<li><a class="reference internal" href="#fastdeploy.vision.detection.YOLOX.size"><code class="docutils literal notranslate"><span class="pre">YOLOX.size</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
 
-          </div>
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="index.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">FastDeploy</p>
         </div>
+    </a>
+    <a class='right-next' id="next-link" href="ocr.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">OCR(文字识别)</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By PaddlePaddle<br/>
+  
+      &copy; Copyright 2022, PaddlePaddle.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
       </div>
-      
-      
-    </aside>
-  </div>
-</div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/sphinx_highlight.js"></script>
-    <script src="_static/scripts/furo.js"></script>
-    </body>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
 </html>
