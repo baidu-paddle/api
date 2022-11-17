@@ -1,6 +1,7 @@
 var searchData=
 [
   ['yolor',['YOLOR',['../classfastdeploy_1_1vision_1_1detection_1_1YOLOR.html',1,'fastdeploy::vision::detection']]],
+  ['yolov3',['YOLOv3',['../classfastdeploy_1_1vision_1_1detection_1_1YOLOv3.html',1,'fastdeploy::vision::detection']]],
   ['yolov5',['YOLOv5',['../classfastdeploy_1_1vision_1_1detection_1_1YOLOv5.html',1,'fastdeploy::vision::detection']]],
   ['yolov5cls',['YOLOv5Cls',['../classfastdeploy_1_1vision_1_1classification_1_1YOLOv5Cls.html',1,'fastdeploy::vision::classification']]],
   ['yolov5face',['YOLOv5Face',['../classfastdeploy_1_1vision_1_1facedet_1_1YOLOv5Face.html',1,'fastdeploy::vision::facedet']]],

@@ -10,6 +10,7 @@ var searchData=
   ['facerecognitionresult',['FaceRecognitionResult',['../structfastdeploy_1_1vision_1_1FaceRecognitionResult.html',1,'fastdeploy::vision']]],
   ['fastdeploy',['fastdeploy',['../namespacefastdeploy.html',1,'']]],
   ['fastdeploymodel',['FastDeployModel',['../classfastdeploy_1_1FastDeployModel.html',1,'fastdeploy']]],
+  ['fasterrcnn',['FasterRCNN',['../classfastdeploy_1_1vision_1_1detection_1_1FasterRCNN.html',1,'fastdeploy::vision::detection::FasterRCNN'],['../classfastdeploy_1_1vision_1_1detection_1_1FasterRCNN.html#a6bb2b4773ab6574397206b78c824324d',1,'fastdeploy::vision::detection::FasterRCNN::FasterRCNN()']]],
   ['foreground',['foreground',['../structfastdeploy_1_1vision_1_1MattingResult.html#a17abedb3ff837f7c25603a94c9eb7e00',1,'fastdeploy::vision::MattingResult']]],
   ['fsanet',['FSANet',['../classfastdeploy_1_1vision_1_1headpose_1_1FSANet.html',1,'fastdeploy::vision::headpose::FSANet'],['../classfastdeploy_1_1vision_1_1headpose_1_1FSANet.html#afb2920733f1b2b54c3f80c66dca23573',1,'fastdeploy::vision::headpose::FSANet::FSANet()']]],
   ['fastdeploy_20c_2b_2b_20api_20summary',['FastDeploy C++ API Summary',['../index.html',1,'']]],

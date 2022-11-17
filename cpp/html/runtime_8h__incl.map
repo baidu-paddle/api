@@ -1,4 +1,4 @@
-<map id="/fastdeploy/new/FastDeploy/fastdeploy/runtime.h" name="/fastdeploy/new/FastDeploy/fastdeploy/runtime.h">
+<map id="/fastdeploy/FastDeploy/fastdeploy/runtime.h" name="/fastdeploy/FastDeploy/fastdeploy/runtime.h">
 <area shape="rect" id="node5" href="$backend_8h_source.html" title="fastdeploy/backends\l/backend.h" alt="" coords="641,95,799,136"/>
 <area shape="rect" id="node22" href="$perf_8h_source.html" title="fastdeploy/utils/perf.h" alt="" coords="946,102,1110,129"/>
 <area shape="rect" id="node24" href="$rknpu2__config_8h_source.html" title="backends/rknpu/rknpu2\l/rknpu2_config.h" alt="" coords="1134,95,1309,136"/>
