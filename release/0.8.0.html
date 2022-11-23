@@ -1,0 +1,190 @@
+<h2 id="080--release-note">0.8.0  Release Note</h2>
+<ul>
+	<li>新增PIPNet、FaceLandmark1000人脸对齐模型的部署支持 
+		<a href="https://github.com/PaddlePaddle/FastDeploy/tree/develop/examples/vision/facealign">详情</a>
+	</li>
+	<li>新增视频超分系列模型 PP-MSVSR、EDVR、BasicVSR 
+		<a href="https://github.com/PaddlePaddle/FastDeploy/tree/develop/examples/vision/sr">详情</a>
+	</li>
+	<li>升级YOLOv5/YOLOv7部署代码，增加批量预测部署支持 
+		<a href="https://github.com/PaddlePaddle/FastDeploy/pull/611">https://github.com/PaddlePaddle/FastDeploy/pull/611</a>
+	</li>
+	<li>新增UIE服务化部署案例 
+		<a href="https://github.com/PaddlePaddle/FastDeploy/tree/develop/examples/text/uie">详情</a>
+	</li>
+	<li>修复ArcFace示例代码中Cosine Similarity计算问题 
+		<a href="https://github.com/PaddlePaddle/FastDeploy/pull/648">https://github.com/PaddlePaddle/FastDeploy/pull/648</a>
+	</li>
+	<li>[
+		<strong>测试功能</strong>] 新增OpenVINO后端Device设置，支持集显/独立显卡的调用 
+		<a href="https://github.com/PaddlePaddle/FastDeploy/pull/472">https://github.com/PaddlePaddle/FastDeploy/pull/472</a>
+	</li>
+	<li>新增Android图像分类、目标检测、语义分割、OCR、人脸检测 APK工程及示例</li>
+</ul>
+<table>
+	<thead>
+		<tr>
+			<th align="center">图像分类</th>
+			<th align="center">目标检测</th>
+			<th align="center">语义分割</th>
+			<th align="center">文字识别</th>
+			<th align="center">人脸检测</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td align="center">
+				<a href="https://github.com/PaddlePaddle/FastDeploy/tree/develop/java/android/app/src/main/java/com/baidu/paddle/fastdeploy/app/examples/classification">工程代码</a>
+			</td>
+			<td align="center">
+				<a href="https://github.com/PaddlePaddle/FastDeploy/tree/develop/java/android/app/src/main/java/com/baidu/paddle/fastdeploy/app/examples/detection">工程代码</a>
+			</td>
+			<td align="center">
+				<a href="https://github.com/PaddlePaddle/FastDeploy/tree/develop/java/android/app/src/main/java/com/baidu/paddle/fastdeploy/app/examples/segmentation">工程代码</a>
+			</td>
+			<td align="center">
+				<a href="https://github.com/PaddlePaddle/FastDeploy/tree/develop/java/android/app/src/main/java/com/baidu/paddle/fastdeploy/app/examples/ocr">工程代码</a>
+			</td>
+			<td align="center">
+				<a href="https://github.com/PaddlePaddle/FastDeploy/tree/develop/java/android/app/src/main/java/com/baidu/paddle/fastdeploy/app/examples/facedet">工程代码</a>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">
+				<a href="https://bj.bcebos.com/fastdeploy/release/android/FastDeploy-MobileNetV1.apk">扫码或点击链接安装试用</a>
+			</td>
+			<td align="center">
+				<a href="https://bj.bcebos.com/fastdeploy/release/android/FastDeploy-PicoDet.apk">扫码或点击链接安装试用</a>
+			</td>
+			<td align="center">
+				<a href="https://bj.bcebos.com/fastdeploy/release/android/FastDeploy-Portrait-HumanSegV2-Lite.apk">扫码或点击链接安装试用</a>
+			</td>
+			<td align="center">
+				<a href="https://bj.bcebos.com/fastdeploy/release/android/FastDeploy-PP-OCRv2.apk">扫码或点击链接安装试用</a>
+			</td>
+			<td align="center">
+				<a href="https://bj.bcebos.com/fastdeploy/release/android/FastDeploy-SCRFD.apk">扫码或点击链接安装试用</a>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">
+				<img src=https://user-images.githubusercontent.com/31974251/203298463-84eca044-18a9-420c-83cf-0c9523df1a76.png height="190px" width="200px">
+				</td>
+				<td align="center">
+					<img src=https://user-images.githubusercontent.com/31974251/203298552-95cacaa5-2494-4cfe-ac7f-d35cb3bb53ba.png height="190px" width="200px">
+					</td>
+					<td align="center">
+						<img src=https://user-images.githubusercontent.com/31974251/203298621-261441ab-a7bd-455f-b9a0-d67634db00eb.png height="180px" width="190px">
+						</td>
+						<td align="center">
+							<img src=https://user-images.githubusercontent.com/31974251/203298670-55723014-659d-448f-93c2-8f942bdfd229.png height="190px" width="200px">
+							</td>
+							<td align="center">
+								<img src=https://user-images.githubusercontent.com/31974251/203298768-dc0d7123-f1ee-4a17-a2b3-deba199cf1f0.png height="190px" width="200px">
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<h2 id="080--release-note-1">0.8.0  Release Note</h2>
+					<ul>
+						<li>Support PIPNet, FaceLandmark1000 face alignment models deployment 
+							<a href="https://github.com/PaddlePaddle/FastDeploy/tree/develop/examples/vision/facealign">Details</a>
+						</li>
+						<li>Support Video Super-Resolution series model PP-MSVSR、EDVR、BasicVSR 
+							<a href="https://github.com/PaddlePaddle/FastDeploy/tree/develop/examples/vision/sr">Details</a>
+						</li>
+						<li>Upgrade YOLOv5、YOLOv7 deployment code to add batch predictive deployment 
+							<a href="https://github.com/PaddlePaddle/FastDeploy/pull/611">https://github.com/PaddlePaddle/FastDeploy/pull/611</a>
+						</li>
+						<li>Support UIE service-oriented deployment 
+							<a href="https://github.com/PaddlePaddle/FastDeploy/tree/develop/examples/text/uie">Details</a>
+						</li>
+						<li>Fix a bug with the Cosine Similarity calculation in the ArcFace sample code 
+							<a href="https://github.com/PaddlePaddle/FastDeploy/pull/648">https://github.com/PaddlePaddle/FastDeploy/pull/648</a>
+						</li>
+						<li>[
+							<strong>Test functions</strong>] Support OpenVINO backend Device settings, support for integrated/discrete graphics card 
+							<a href="https://github.com/PaddlePaddle/FastDeploy/pull/472">https://github.com/PaddlePaddle/FastDeploy/pull/472</a>
+						</li>
+						<li>support Android image classification, target detection, semantic segmentation, OCR, face detection APK projects and examples</li>
+					</ul>
+					<table>
+						<thead>
+							<tr>
+								<th align="center">Image Classification</th>
+								<th align="center">Object Detection</th>
+								<th align="center">Semantic Segmentation</th>
+								<th align="center">OCR</th>
+								<th align="center">Face Detection</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td align="center">
+									<a href="https://github.com/PaddlePaddle/FastDeploy/tree/develop/java/android/app/src/main/java/com/baidu/paddle/fastdeploy/app/examples/classification">Project Code</a>
+								</td>
+								<td align="center">
+									<a href="https://github.com/PaddlePaddle/FastDeploy/tree/develop/java/android/app/src/main/java/com/baidu/paddle/fastdeploy/app/examples/detection">Project Code</a>
+								</td>
+								<td align="center">
+									<a href="https://github.com/PaddlePaddle/FastDeploy/tree/develop/java/android/app/src/main/java/com/baidu/paddle/fastdeploy/app/examples/segmentation">Project Code</a>
+								</td>
+								<td align="center">
+									<a href="https://github.com/PaddlePaddle/FastDeploy/tree/develop/java/android/app/src/main/java/com/baidu/paddle/fastdeploy/app/examples/ocr">Project Code</a>
+								</td>
+								<td align="center">
+									<a href="https://github.com/PaddlePaddle/FastDeploy/tree/develop/java/android/app/src/main/java/com/baidu/paddle/fastdeploy/app/examples/facedet">Project Code</a>
+								</td>
+							</tr>
+							<tr>
+								<td align="center">
+									<a href="https://bj.bcebos.com/fastdeploy/release/android/FastDeploy-MobileNetV1.apk">Scan or click to install</a>
+								</td>
+								<td align="center">
+									<a href="https://bj.bcebos.com/fastdeploy/release/android/FastDeploy-PicoDet.apk">Scan the code or click on the link to install try out</a>
+								</td>
+								<td align="center">
+									<a href="https://bj.bcebos.com/fastdeploy/release/android/FastDeploy-Portrait-HumanSegV2-Lite.apk">Scan or click to install</a>
+								</td>
+								<td align="center">
+									<a href="https://bj.bcebos.com/fastdeploy/release/android/FastDeploy-PP-OCRv2.apk">Scan or click to install</a>
+								</td>
+								<td align="center">
+									<a href="https://bj.bcebos.com/fastdeploy/release/android/FastDeploy-SCRFD.apk">Scan or click to install</a>
+								</td>
+							</tr>
+							<tr>
+								<td align="center">
+									<img src=https://user-images.githubusercontent.com/31974251/203298463-84eca044-18a9-420c-83cf-0c9523df1a76.png height="190px" width="200px">
+									</td>
+									<td align="center">
+										<img src=https://user-images.githubusercontent.com/31974251/203298552-95cacaa5-2494-4cfe-ac7f-d35cb3bb53ba.png height="190px" width="200px">
+										</td>
+										<td align="center">
+											<img src=https://user-images.githubusercontent.com/31974251/203298621-261441ab-a7bd-455f-b9a0-d67634db00eb.png height="180px" width="190px">
+											</td>
+											<td align="center">
+												<img src=https://user-images.githubusercontent.com/31974251/203298670-55723014-659d-448f-93c2-8f942bdfd229.png height="190px" width="200px">
+												</td>
+												<td align="center">
+													<img src=https://user-images.githubusercontent.com/31974251/203298768-dc0d7123-f1ee-4a17-a2b3-deba199cf1f0.png height="190px" width="200px">
+													</td>
+												</tr>
+											</tbody>
+										</table>
+										<h2 id="new-contributors">New Contributors</h2>
+										<ul>
+											<li>@jm12138 made their first contribution in 
+												<a href="https://github.com/PaddlePaddle/FastDeploy/pull/613">https://github.com/PaddlePaddle/FastDeploy/pull/613</a>
+											</li>
+											<li>@Xiue233 made their first contribution in 
+												<a href="https://github.com/PaddlePaddle/FastDeploy/pull/633">https://github.com/PaddlePaddle/FastDeploy/pull/633</a>
+											</li>
+											<li>@ChrisKong93 made their first contribution in 
+												<a href="https://github.com/PaddlePaddle/FastDeploy/pull/648">https://github.com/PaddlePaddle/FastDeploy/pull/648</a>
+											</li>
+										</ul>
+										<p>
+											<strong>Full Changelog</strong>: 
+											<a href="https://github.com/PaddlePaddle/FastDeploy/compare/release/0.7.0...release/0.8.0">https://github.com/PaddlePaddle/FastDeploy/compare/release/0.7.0...release/0.8.0</a>
+										</p>
