@@ -94,6 +94,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stru
 <tr class="memitem:a69f60b76a745bd4cc53c9c9f04487313"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1Runtime.html#a69f60b76a745bd4cc53c9c9f04487313">Infer</a> (std::vector&lt; FDTensor &gt; &amp;input_tensors, std::vector&lt; FDTensor &gt; *output_tensors)</td></tr>
 <tr class="memdesc:a69f60b76a745bd4cc53c9c9f04487313"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inference the model by the input data, and write to the output.  <a href="#a69f60b76a745bd4cc53c9c9f04487313">More...</a><br /></td></tr>
 <tr class="separator:a69f60b76a745bd4cc53c9c9f04487313"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a765d421c2a5ce2adcaf60078e217e8d1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1Runtime.html#a765d421c2a5ce2adcaf60078e217e8d1">Infer</a> ()</td></tr>
+<tr class="memdesc:a765d421c2a5ce2adcaf60078e217e8d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">No params inference the model.  <a href="#a765d421c2a5ce2adcaf60078e217e8d1">More...</a><br /></td></tr>
+<tr class="separator:a765d421c2a5ce2adcaf60078e217e8d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9987998af18e9f0d9912d5e90b10eae3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1Runtime.html#a9987998af18e9f0d9912d5e90b10eae3">Compile</a> (std::vector&lt; std::vector&lt; FDTensor &gt;&gt; &amp;prewarm_tensors, const <a class="el" href="structfastdeploy_1_1RuntimeOption.html">RuntimeOption</a> &amp;_option)</td></tr>
 <tr class="memdesc:a9987998af18e9f0d9912d5e90b10eae3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compile TorchScript Module, only for Poros backend.  <a href="#a9987998af18e9f0d9912d5e90b10eae3">More...</a><br /></td></tr>
 <tr class="separator:a9987998af18e9f0d9912d5e90b10eae3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -121,6 +124,14 @@ std::vector&lt; <a class="el" href="structfastdeploy_1_1TensorInfo.html">TensorI
 std::vector&lt; <a class="el" href="structfastdeploy_1_1TensorInfo.html">TensorInfo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1Runtime.html#ae2d8e291f91fb9cdc5d32c6d928eaa19">GetOutputInfos</a> ()</td></tr>
 <tr class="memdesc:ae2d8e291f91fb9cdc5d32c6d928eaa19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get all the output information. <br /></td></tr>
 <tr class="separator:ae2d8e291f91fb9cdc5d32c6d928eaa19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af967fc4d4ff74f2df31e37813ca76ac8"><td class="memItemLeft" align="right" valign="top"><a id="af967fc4d4ff74f2df31e37813ca76ac8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1Runtime.html#af967fc4d4ff74f2df31e37813ca76ac8">BindInputTensor</a> (const std::string &amp;name, FDTensor &amp;input)</td></tr>
+<tr class="memdesc:af967fc4d4ff74f2df31e37813ca76ac8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bind FDTensor by name, no copy and share input memory. <br /></td></tr>
+<tr class="separator:af967fc4d4ff74f2df31e37813ca76ac8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49d253bdd8af3e667f8dcee606024b40"><td class="memItemLeft" align="right" valign="top"><a id="a49d253bdd8af3e667f8dcee606024b40"></a>
+FDTensor *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1Runtime.html#a49d253bdd8af3e667f8dcee606024b40">GetOutputTensor</a> (const std::string &amp;name)</td></tr>
+<tr class="memdesc:a49d253bdd8af3e667f8dcee606024b40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get output FDTensor by name, no copy and share backend output memory. <br /></td></tr>
+<tr class="separator:a49d253bdd8af3e667f8dcee606024b40"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a140a10e61f214a75fefb2825997a22"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structfastdeploy_1_1Runtime.html">Runtime</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1Runtime.html#a6a140a10e61f214a75fefb2825997a22">Clone</a> (void *stream=nullptr, int device_id=-1)</td></tr>
 <tr class="memdesc:a6a140a10e61f214a75fefb2825997a22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clone new <a class="el" href="structfastdeploy_1_1Runtime.html" title="Runtime object used to inference the loaded model on different devices. ">Runtime</a> when multiple instances of the same model are created.  <a href="#a6a140a10e61f214a75fefb2825997a22">More...</a><br /></td></tr>
 <tr class="separator:a6a140a10e61f214a75fefb2825997a22"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -204,7 +215,7 @@ std::vector&lt; <a class="el" href="structfastdeploy_1_1TensorInfo.html">TensorI
 </div>
 </div>
 <a id="a69f60b76a745bd4cc53c9c9f04487313"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a69f60b76a745bd4cc53c9c9f04487313">&#9670;&nbsp;</a></span>Infer()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a69f60b76a745bd4cc53c9c9f04487313">&#9670;&nbsp;</a></span>Infer() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -241,9 +252,29 @@ std::vector&lt; <a class="el" href="structfastdeploy_1_1TensorInfo.html">TensorI
 
 </div>
 </div>
+<a id="a765d421c2a5ce2adcaf60078e217e8d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a765d421c2a5ce2adcaf60078e217e8d1">&#9670;&nbsp;</a></span>Infer() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool fastdeploy::Runtime::Infer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>No params inference the model. </p>
+<p>the input and output data need to pass through the BindInputTensor and GetOutputTensor interfaces. </p>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following files:<ul>
-<li>/fastdeploy/FastDeploy/fastdeploy/<a class="el" href="runtime_8h_source.html">runtime.h</a></li>
-<li>/fastdeploy/FastDeploy/fastdeploy/runtime.cc</li>
+<li>/fastdeploy/1130/FastDeploy/fastdeploy/<a class="el" href="runtime_8h_source.html">runtime.h</a></li>
+<li>/fastdeploy/1130/FastDeploy/fastdeploy/runtime.cc</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

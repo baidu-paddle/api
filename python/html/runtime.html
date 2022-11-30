@@ -352,9 +352,23 @@ title="Print to PDF"
 </dd>
 </dl>
 <dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.Runtime.bind_input_tensor">
+<span class="sig-name descname"><span class="pre">bind_input_tensor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fdtensor</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#Runtime.bind_input_tensor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.Runtime.bind_input_tensor" title="Permalink to this definition">#</a></dt>
+<dd><p>Bind FDTensor by name, no copy and share input memory</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – (str)The name of input data.</p></li>
+<li><p><strong>fdtensor</strong> – (fastdeploy.FDTensor)The input FDTensor.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="fastdeploy.Runtime.compile">
 <span class="sig-name descname"><span class="pre">compile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">warm_datas</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#Runtime.compile"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.Runtime.compile" title="Permalink to this definition">#</a></dt>
-<dd><p>compile with prewarm data for poros</p>
+<dd><p>[Only for Poros backend] compile with prewarm data for poros</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>data</strong> – (list[str : numpy.ndarray])The prewarm data list</p>
@@ -366,7 +380,7 @@ title="Print to PDF"
 <dl class="py method">
 <dt class="sig sig-object py" id="fastdeploy.Runtime.forward">
 <span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">inputs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#Runtime.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.Runtime.forward" title="Permalink to this definition">#</a></dt>
-<dd><p>Inference with input data for poros</p>
+<dd><p>[Only for Poros backend] Inference with input data for poros</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>data</strong> – (list[str : numpy.ndarray])The input data list</p>
@@ -400,6 +414,18 @@ title="Print to PDF"
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.Runtime.get_output_tensor">
+<span class="sig-name descname"><span class="pre">get_output_tensor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#Runtime.get_output_tensor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.Runtime.get_output_tensor" title="Permalink to this definition">#</a></dt>
+<dd><p>Get output FDTensor by name, no copy and share backend output memory</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> – (str)The name of output data.</p>
+</dd>
+</dl>
+<p>:return fastdeploy.FDTensor</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="fastdeploy.Runtime.infer">
 <span class="sig-name descname"><span class="pre">infer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#Runtime.infer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.Runtime.infer" title="Permalink to this definition">#</a></dt>
 <dd><p>Inference with input data.</p>
@@ -421,6 +447,13 @@ title="Print to PDF"
 <dt class="sig sig-object py" id="fastdeploy.Runtime.num_outputs">
 <span class="sig-name descname"><span class="pre">num_outputs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#Runtime.num_outputs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.Runtime.num_outputs" title="Permalink to this definition">#</a></dt>
 <dd><p>Get number of outputs of the loaded model.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.Runtime.zero_copy_infer">
+<span class="sig-name descname"><span class="pre">zero_copy_infer</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#Runtime.zero_copy_infer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.Runtime.zero_copy_infer" title="Permalink to this definition">#</a></dt>
+<dd><p>No params inference the model.</p>
+<p>the input and output data need to pass through the bind_input_tensor and get_output_tensor interfaces.</p>
 </dd></dl>
 
 </dd></dl>

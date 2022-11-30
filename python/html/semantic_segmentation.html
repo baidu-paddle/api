@@ -356,31 +356,24 @@ title="Print to PDF"
 </ul>
 </dd>
 </dl>
-<dl class="py property">
-<dt class="sig sig-object py" id="fastdeploy.vision.segmentation.PaddleSegModel.apply_softmax">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">apply_softmax</span></span><a class="headerlink" href="#fastdeploy.vision.segmentation.PaddleSegModel.apply_softmax" title="Permalink to this definition">#</a></dt>
-<dd><p>Atrribute of PaddleSeg model. Stating Whether applying softmax operator in the postprocess, default value is False</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>value of apply_softmax(bool)</p>
-</dd>
-</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.vision.segmentation.PaddleSegModel.batch_predict">
+<span class="sig-name descname"><span class="pre">batch_predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_list</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/segmentation/ppseg.html#PaddleSegModel.batch_predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.segmentation.PaddleSegModel.batch_predict" title="Permalink to this definition">#</a></dt>
+<dd><p>Predict the segmentation results for a batch of input image
+:param image_list: (list of numpy.ndarray) The input image list, each element is a 3-D array with layout HWC, BGR format
+:return list of SegmentationResult</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="fastdeploy.vision.segmentation.PaddleSegModel.is_vertical_screen">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_vertical_screen</span></span><a class="headerlink" href="#fastdeploy.vision.segmentation.PaddleSegModel.is_vertical_screen" title="Permalink to this definition">#</a></dt>
-<dd><p>Atrribute of PP-HumanSeg model. Stating Whether the input image is vertical image(height &gt; width), default value is False</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>value of is_vertical_screen(bool)</p>
-</dd>
-</dl>
+<dt class="sig sig-object py" id="fastdeploy.vision.segmentation.PaddleSegModel.postprocessor">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">postprocessor</span></span><a class="headerlink" href="#fastdeploy.vision.segmentation.PaddleSegModel.postprocessor" title="Permalink to this definition">#</a></dt>
+<dd><p>Get PaddleSegPostprocessor object of the loaded model
+:return PaddleSegPostprocessor</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="fastdeploy.vision.segmentation.PaddleSegModel.predict">
-<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_image</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/segmentation/ppseg.html#PaddleSegModel.predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.segmentation.PaddleSegModel.predict" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/segmentation/ppseg.html#PaddleSegModel.predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.segmentation.PaddleSegModel.predict" title="Permalink to this definition">#</a></dt>
 <dd><p>Predict the segmentation result for an input image</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -390,6 +383,13 @@ title="Print to PDF"
 <dd class="field-even"><p>SegmentationResult</p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fastdeploy.vision.segmentation.PaddleSegModel.preprocessor">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">preprocessor</span></span><a class="headerlink" href="#fastdeploy.vision.segmentation.PaddleSegModel.preprocessor" title="Permalink to this definition">#</a></dt>
+<dd><p>Get PaddleSegPreprocessor object of the loaded model
+:return PaddleSegPreprocessor</p>
 </dd></dl>
 
 </dd></dl>

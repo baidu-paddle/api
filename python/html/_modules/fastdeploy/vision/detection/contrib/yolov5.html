@@ -272,19 +272,19 @@ title="Fullscreen mode"
 <span class="kn">from</span> <span class="nn">....</span> <span class="kn">import</span> <span class="n">c_lib_wrap</span> <span class="k">as</span> <span class="n">C</span>
 
 
-<span class="k">class</span> <span class="nc">YOLOv5Preprocessor</span><span class="p">:</span>
+<div class="viewcode-block" id="YOLOv5Preprocessor"><a class="viewcode-back" href="../../../../../object_detection.html#fastdeploy.vision.detection.YOLOv5Preprocessor">[docs]</a><span class="k">class</span> <span class="nc">YOLOv5Preprocessor</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Create a preprocessor for YOLOv5</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_preprocessor</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">vision</span><span class="o">.</span><span class="n">detection</span><span class="o">.</span><span class="n">YOLOv5Preprocessor</span><span class="p">()</span>
 
-    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_ims</span><span class="p">):</span>
+<div class="viewcode-block" id="YOLOv5Preprocessor.run"><a class="viewcode-back" href="../../../../../object_detection.html#fastdeploy.vision.detection.YOLOv5Preprocessor.run">[docs]</a>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_ims</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Preprocess input images for YOLOv5</span>
 
 <span class="sd">        :param: input_ims: (list of numpy.ndarray)The input image</span>
 <span class="sd">        :return: list of FDTensor</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_preprocessor</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">input_ims</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_preprocessor</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">input_ims</span><span class="p">)</span></div>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">size</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -295,8 +295,18 @@ title="Fullscreen mode"
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">padding_value</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        padding value for preprocessing, default [114.0, 114.0, 114.0]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="c1">#  padding value, size should be the same as channels</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_preprocessor</span><span class="o">.</span><span class="n">padding_value</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">is_scale_up</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        is_scale_up for preprocessing, the input image only can be zoom out, the maximum resize scale cannot exceed 1.0, default true</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_preprocessor</span><span class="o">.</span><span class="n">is_scale_up</span>
 
     <span class="nd">@size</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">size</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">wh</span><span class="p">):</span>
@@ -314,21 +324,28 @@ title="Fullscreen mode"
             <span class="nb">list</span><span class="p">),</span> <span class="s2">&quot;The value to set `padding_value` must be type of list.&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_preprocessor</span><span class="o">.</span><span class="n">padding_value</span> <span class="o">=</span> <span class="n">value</span>
 
+    <span class="nd">@is_scale_up</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">is_scale_up</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span>
+            <span class="n">value</span><span class="p">,</span>
+            <span class="nb">bool</span><span class="p">),</span> <span class="s2">&quot;The value to set `is_scale_up` must be type of bool.&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_preprocessor</span><span class="o">.</span><span class="n">is_scale_up</span> <span class="o">=</span> <span class="n">value</span></div>
 
-<span class="k">class</span> <span class="nc">YOLOv5Postprocessor</span><span class="p">:</span>
+
+<div class="viewcode-block" id="YOLOv5Postprocessor"><a class="viewcode-back" href="../../../../../object_detection.html#fastdeploy.vision.detection.YOLOv5Postprocessor">[docs]</a><span class="k">class</span> <span class="nc">YOLOv5Postprocessor</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Create a postprocessor for YOLOv5</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_postprocessor</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">vision</span><span class="o">.</span><span class="n">detection</span><span class="o">.</span><span class="n">YOLOv5Postprocessor</span><span class="p">()</span>
 
-    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">runtime_results</span><span class="p">,</span> <span class="n">ims_info</span><span class="p">):</span>
+<div class="viewcode-block" id="YOLOv5Postprocessor.run"><a class="viewcode-back" href="../../../../../object_detection.html#fastdeploy.vision.detection.YOLOv5Postprocessor.run">[docs]</a>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">runtime_results</span><span class="p">,</span> <span class="n">ims_info</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Postprocess the runtime results for YOLOv5</span>
 
 <span class="sd">        :param: runtime_results: (list of FDTensor)The output FDTensor results from runtime</span>
 <span class="sd">        :param: ims_info: (list of dict)Record input_shape and output_shape</span>
 <span class="sd">        :return: list of DetectionResult(If the runtime_results is predict by batched samples, the length of this list equals to the batch size)</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_postprocessor</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">runtime_results</span><span class="p">,</span> <span class="n">ims_info</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_postprocessor</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">runtime_results</span><span class="p">,</span> <span class="n">ims_info</span><span class="p">)</span></div>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">conf_threshold</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -347,7 +364,7 @@ title="Fullscreen mode"
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">multi_label</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        multi_label for postprocessing, default is true</span>
+<span class="sd">        multi_label for postprocessing, set true for eval, default is True</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_postprocessor</span><span class="o">.</span><span class="n">multi_label</span>
 
@@ -368,7 +385,7 @@ title="Fullscreen mode"
         <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span>
             <span class="n">value</span><span class="p">,</span>
             <span class="nb">bool</span><span class="p">),</span> <span class="s2">&quot;The value to set `multi_label` must be type of bool.&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_postprocessor</span><span class="o">.</span><span class="n">multi_label</span> <span class="o">=</span> <span class="n">value</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_postprocessor</span><span class="o">.</span><span class="n">multi_label</span> <span class="o">=</span> <span class="n">value</span></div>
 
 
 <div class="viewcode-block" id="YOLOv5"><a class="viewcode-back" href="../../../../../object_detection.html#fastdeploy.vision.detection.YOLOv5">[docs]</a><span class="k">class</span> <span class="nc">YOLOv5</span><span class="p">(</span><span class="n">FastDeployModel</span><span class="p">):</span>
@@ -388,7 +405,6 @@ title="Fullscreen mode"
         <span class="c1"># 初始化后的option保存在self._runtime_option</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">YOLOv5</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">runtime_option</span><span class="p">)</span>
 
-        <span class="k">assert</span> <span class="n">model_format</span> <span class="o">==</span> <span class="n">ModelFormat</span><span class="o">.</span><span class="n">ONNX</span><span class="p">,</span> <span class="s2">&quot;YOLOv5 only support model format of ModelFormat.ONNX now.&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_model</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">vision</span><span class="o">.</span><span class="n">detection</span><span class="o">.</span><span class="n">YOLOv5</span><span class="p">(</span>
             <span class="n">model_file</span><span class="p">,</span> <span class="n">params_file</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_runtime_option</span><span class="p">,</span> <span class="n">model_format</span><span class="p">)</span>
         <span class="c1"># 通过self.initialized判断整个模型的初始化是否成功</span>

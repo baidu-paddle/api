@@ -299,6 +299,16 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fastdeploy-vision-classification-paddleclaspreprocessor">
+   fastdeploy.vision.classification.PaddleClasPreprocessor
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fastdeploy-vision-classification-paddleclaspostprocessor">
+   fastdeploy.vision.classification.PaddleClasPostprocessor
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#fastdeploy-vision-classification-paddleclasmodel">
    fastdeploy.vision.classification.PaddleClasModel
   </a>
@@ -333,6 +343,16 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fastdeploy-vision-classification-paddleclaspreprocessor">
+   fastdeploy.vision.classification.PaddleClasPreprocessor
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fastdeploy-vision-classification-paddleclaspostprocessor">
+   fastdeploy.vision.classification.PaddleClasPostprocessor
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#fastdeploy-vision-classification-paddleclasmodel">
    fastdeploy.vision.classification.PaddleClasModel
   </a>
@@ -359,6 +379,73 @@ title="Print to PDF"
                 
   <section id="image-classification">
 <h1>Image Classification(图像分类)<a class="headerlink" href="#image-classification" title="Permalink to this headline">#</a></h1>
+<section id="fastdeploy-vision-classification-paddleclaspreprocessor">
+<h2>fastdeploy.vision.classification.PaddleClasPreprocessor<a class="headerlink" href="#fastdeploy-vision-classification-paddleclaspreprocessor" title="Permalink to this headline">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="fastdeploy.vision.classification.PaddleClasPreprocessor">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.classification.</span></span><span class="sig-name descname"><span class="pre">PaddleClasPreprocessor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config_file</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/classification/ppcls.html#PaddleClasPreprocessor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.classification.PaddleClasPreprocessor" title="Permalink to this definition">#</a></dt>
+<dd><p>Create a preprocessor for PaddleClasModel from configuration file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>config_file</strong> – (str)Path of configuration file, e.g resnet50/inference_cls.yaml</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.vision.classification.PaddleClasPreprocessor.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_ims</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/classification/ppcls.html#PaddleClasPreprocessor.run"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.classification.PaddleClasPreprocessor.run" title="Permalink to this definition">#</a></dt>
+<dd><p>Preprocess input images for PaddleClasModel</p>
+<dl class="field-list simple">
+<dt class="field-odd">Param</dt>
+<dd class="field-odd"><p>input_ims: (list of numpy.ndarray)The input image</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list of FDTensor</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.vision.classification.PaddleClasPreprocessor.use_gpu">
+<span class="sig-name descname"><span class="pre">use_gpu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gpu_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/classification/ppcls.html#PaddleClasPreprocessor.use_gpu"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.classification.PaddleClasPreprocessor.use_gpu" title="Permalink to this definition">#</a></dt>
+<dd><p>Use CUDA preprocessors</p>
+<dl class="field-list simple">
+<dt class="field-odd">Param</dt>
+<dd class="field-odd"><p>gpu_id: GPU device id</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="fastdeploy-vision-classification-paddleclaspostprocessor">
+<h2>fastdeploy.vision.classification.PaddleClasPostprocessor<a class="headerlink" href="#fastdeploy-vision-classification-paddleclaspostprocessor" title="Permalink to this headline">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="fastdeploy.vision.classification.PaddleClasPostprocessor">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.classification.</span></span><span class="sig-name descname"><span class="pre">PaddleClasPostprocessor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">topk</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/classification/ppcls.html#PaddleClasPostprocessor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.classification.PaddleClasPostprocessor" title="Permalink to this definition">#</a></dt>
+<dd><p>Create a postprocessor for PaddleClasModel</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>topk</strong> – (int)Filter the top k classify label</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.vision.classification.PaddleClasPostprocessor.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">runtime_results</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/classification/ppcls.html#PaddleClasPostprocessor.run"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.classification.PaddleClasPostprocessor.run" title="Permalink to this definition">#</a></dt>
+<dd><p>Postprocess the runtime results for PaddleClasModel</p>
+<dl class="field-list simple">
+<dt class="field-odd">Param</dt>
+<dd class="field-odd"><p>runtime_results: (list of FDTensor)The output FDTensor results from runtime</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list of ClassifyResult(If the runtime_results is predict by batched samples, the length of this list equals to the batch size)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
 <section id="fastdeploy-vision-classification-paddleclasmodel">
 <h2>fastdeploy.vision.classification.PaddleClasModel<a class="headerlink" href="#fastdeploy-vision-classification-paddleclasmodel" title="Permalink to this headline">#</a></h2>
 <dl class="py class">
@@ -469,7 +556,7 @@ title="Print to PDF"
 <dl class="py class">
 <dt class="sig sig-object py" id="fastdeploy.vision.classification.ResNet">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.classification.</span></span><span class="sig-name descname"><span class="pre">ResNet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.ONNX:</span> <span class="pre">2&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/classification/contrib/resnet.html#ResNet"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.classification.ResNet" title="Permalink to this definition">#</a></dt>
-<dd><p>Load a image classification model exported by ResNet.</p>
+<dd><p>Load a image classification model exported by torchvision.ResNet.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

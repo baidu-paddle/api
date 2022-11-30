@@ -150,6 +150,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stru
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1RuntimeOption.html#a71fd19a74de5577e7e99278b235f5cdc">SetPaddleMKLDNNCacheSize</a> (int size)</td></tr>
 <tr class="memdesc:a71fd19a74de5577e7e99278b235f5cdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set shape cache size while using Paddle Inference with mkldnn, by default it will cache all the difference shape. <br /></td></tr>
 <tr class="separator:a71fd19a74de5577e7e99278b235f5cdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0f900f37a758a22094650ae272d7e8d"><td class="memItemLeft" align="right" valign="top"><a id="aa0f900f37a758a22094650ae272d7e8d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1RuntimeOption.html#aa0f900f37a758a22094650ae272d7e8d">SetOpenVINODevice</a> (const std::string &amp;name=&quot;CPU&quot;)</td></tr>
+<tr class="memdesc:aa0f900f37a758a22094650ae272d7e8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set device name for OpenVINO, default 'CPU', can also be 'AUTO', 'GPU', 'GPU.1'.... <br /></td></tr>
+<tr class="separator:aa0f900f37a758a22094650ae272d7e8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a801c5ff61604f1f94c6238f9f5c94b"><td class="memItemLeft" align="right" valign="top"><a id="a4a801c5ff61604f1f94c6238f9f5c94b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1RuntimeOption.html#a4a801c5ff61604f1f94c6238f9f5c94b">SetOpenVINOShapeInfo</a> (const std::map&lt; std::string, std::vector&lt; int64_t &gt;&gt; &amp;shape_info)</td></tr>
+<tr class="memdesc:a4a801c5ff61604f1f94c6238f9f5c94b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set shape info for OpenVINO. <br /></td></tr>
+<tr class="separator:a4a801c5ff61604f1f94c6238f9f5c94b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d205b9a2417e90695ff1efa85c5223d"><td class="memItemLeft" align="right" valign="top"><a id="a3d205b9a2417e90695ff1efa85c5223d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1RuntimeOption.html#a3d205b9a2417e90695ff1efa85c5223d">SetOpenVINOCpuOperators</a> (const std::vector&lt; std::string &gt; &amp;operators)</td></tr>
+<tr class="memdesc:a3d205b9a2417e90695ff1efa85c5223d"><td class="mdescLeft">&#160;</td><td class="mdescRight">While use OpenVINO backend with intel GPU, use this interface to specify operators run on CPU. <br /></td></tr>
+<tr class="separator:a3d205b9a2417e90695ff1efa85c5223d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3cafb8f411faaac71268f42c0ae28363"><td class="memItemLeft" align="right" valign="top"><a id="a3cafb8f411faaac71268f42c0ae28363"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1RuntimeOption.html#a3cafb8f411faaac71268f42c0ae28363">SetLiteOptimizedModelDir</a> (const std::string &amp;optimized_model_dir)</td></tr>
 <tr class="memdesc:a3cafb8f411faaac71268f42c0ae28363"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set optimzed model dir for Paddle Lite backend. <br /></td></tr>
@@ -423,8 +435,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stru
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following files:<ul>
-<li>/fastdeploy/FastDeploy/fastdeploy/<a class="el" href="runtime_8h_source.html">runtime.h</a></li>
-<li>/fastdeploy/FastDeploy/fastdeploy/runtime.cc</li>
+<li>/fastdeploy/1130/FastDeploy/fastdeploy/<a class="el" href="runtime_8h_source.html">runtime.h</a></li>
+<li>/fastdeploy/1130/FastDeploy/fastdeploy/runtime.cc</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -303,6 +303,16 @@ title="Print to PDF"
    fastdeploy.vision.facealign.PFLD
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fastdeploy-vision-facealign-facelandmark1000">
+   fastdeploy.vision.facealign.FaceLandmark1000
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fastdeploy-vision-facealign-pipnet">
+   fastdeploy.vision.facealign.PIPNet
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -325,6 +335,16 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#fastdeploy-vision-facealign-pfld">
    fastdeploy.vision.facealign.PFLD
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fastdeploy-vision-facealign-facelandmark1000">
+   fastdeploy.vision.facealign.FaceLandmark1000
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fastdeploy-vision-facealign-pipnet">
+   fastdeploy.vision.facealign.PIPNet
   </a>
  </li>
 </ul>
@@ -373,6 +393,102 @@ title="Print to PDF"
 <dt class="sig sig-object py" id="fastdeploy.vision.facealign.PFLD.size">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#fastdeploy.vision.facealign.PFLD.size" title="Permalink to this definition">#</a></dt>
 <dd><p>Returns the preprocess image size, default (112, 112)</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="fastdeploy-vision-facealign-facelandmark1000">
+<h2>fastdeploy.vision.facealign.FaceLandmark1000<a class="headerlink" href="#fastdeploy-vision-facealign-facelandmark1000" title="Permalink to this headline">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="fastdeploy.vision.facealign.FaceLandmark1000">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.facealign.</span></span><span class="sig-name descname"><span class="pre">FaceLandmark1000</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.ONNX:</span> <span class="pre">2&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/facealign/contrib/face_landmark_1000.html#FaceLandmark1000"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.facealign.FaceLandmark1000" title="Permalink to this definition">#</a></dt>
+<dd><p>Load a face alignment model exported by FaceLandmark1000.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model_file</strong> – (str)Path of model file, e.g ./FaceLandmark1000.onnx</p></li>
+<li><p><strong>params_file</strong> – (str)Path of parameters file, if the model_fomat is ModelFormat.ONNX, this param will be ignored, can be set as empty string</p></li>
+<li><p><strong>runtime_option</strong> – (fastdeploy.RuntimeOption)RuntimeOption for inference this model, if it’s None, will use the default backend on CPU</p></li>
+<li><p><strong>model_format</strong> – (fastdeploy.ModelForamt)Model format of the loaded model, default is ONNX</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.vision.facealign.FaceLandmark1000.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_image</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/facealign/contrib/face_landmark_1000.html#FaceLandmark1000.predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.facealign.FaceLandmark1000.predict" title="Permalink to this definition">#</a></dt>
+<dd><p>Detect an input image landmarks</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>im</strong> – (numpy.ndarray)The input image data, 3-D array with layout HWC, BGR format</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>FaceAlignmentResult</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fastdeploy.vision.facealign.FaceLandmark1000.size">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#fastdeploy.vision.facealign.FaceLandmark1000.size" title="Permalink to this definition">#</a></dt>
+<dd><p>Returns the preprocess image size, default (128, 128)</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="fastdeploy-vision-facealign-pipnet">
+<h2>fastdeploy.vision.facealign.PIPNet<a class="headerlink" href="#fastdeploy-vision-facealign-pipnet" title="Permalink to this headline">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="fastdeploy.vision.facealign.PIPNet">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.facealign.</span></span><span class="sig-name descname"><span class="pre">PIPNet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.ONNX:</span> <span class="pre">2&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/facealign/contrib/pipnet.html#PIPNet"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.facealign.PIPNet" title="Permalink to this definition">#</a></dt>
+<dd><p>Load a face alignment model exported by PIPNet.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model_file</strong> – (str)Path of model file, e.g ./PIPNet.onnx</p></li>
+<li><p><strong>params_file</strong> – (str)Path of parameters file, if the model_fomat is ModelFormat.ONNX, this param will be ignored, can be set as empty string</p></li>
+<li><p><strong>runtime_option</strong> – (fastdeploy.RuntimeOption)RuntimeOption for inference this model, if it’s None, will use the default backend on CPU</p></li>
+<li><p><strong>model_format</strong> – (fastdeploy.ModelForamt)Model format of the loaded model, default is ONNX</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="fastdeploy.vision.facealign.PIPNet.mean_vals">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mean_vals</span></span><a class="headerlink" href="#fastdeploy.vision.facealign.PIPNet.mean_vals" title="Permalink to this definition">#</a></dt>
+<dd><p>Returns the mean value of normlization, default mean_vals = [0.485f, 0.456f, 0.406f];</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fastdeploy.vision.facealign.PIPNet.num_landmarks">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">num_landmarks</span></span><a class="headerlink" href="#fastdeploy.vision.facealign.PIPNet.num_landmarks" title="Permalink to this definition">#</a></dt>
+<dd><p>Returns the number of landmarks</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.vision.facealign.PIPNet.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_image</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/facealign/contrib/pipnet.html#PIPNet.predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.facealign.PIPNet.predict" title="Permalink to this definition">#</a></dt>
+<dd><p>Detect an input image landmarks</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>im</strong> – (numpy.ndarray)The input image data, 3-D array with layout HWC, BGR format</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>FaceAlignmentResult</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fastdeploy.vision.facealign.PIPNet.size">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#fastdeploy.vision.facealign.PIPNet.size" title="Permalink to this definition">#</a></dt>
+<dd><p>Returns the preprocess image size, default (256, 256)</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fastdeploy.vision.facealign.PIPNet.std_vals">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">std_vals</span></span><a class="headerlink" href="#fastdeploy.vision.facealign.PIPNet.std_vals" title="Permalink to this definition">#</a></dt>
+<dd><p>Returns the std value of normlization, default std_vals = [0.229f, 0.224f, 0.225f];</p>
 </dd></dl>
 
 </dd></dl>

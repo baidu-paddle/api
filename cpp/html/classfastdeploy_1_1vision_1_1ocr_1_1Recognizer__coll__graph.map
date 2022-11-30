@@ -1,4 +1,6 @@
 <map id="fastdeploy::vision::ocr::Recognizer" name="fastdeploy::vision::ocr::Recognizer">
-<area shape="rect" id="node2" href="$classfastdeploy_1_1FastDeployModel.html" title="Base model object for all the vision models. " alt="" coords="5,95,215,121"/>
-<area shape="rect" id="node3" href="$structfastdeploy_1_1RuntimeOption.html" title="Option object used when create a new Runtime object. " alt="" coords="13,5,207,32"/>
+<area shape="rect" id="node2" href="$classfastdeploy_1_1FastDeployModel.html" title="Base model object for all the vision models. " alt="" coords="357,7,567,33"/>
+<area shape="rect" id="node3" href="$structfastdeploy_1_1RuntimeOption.html" title="Option object used when create a new Runtime object. " alt="" coords="5,7,200,33"/>
+<area shape="rect" id="node4" href="$classfastdeploy_1_1vision_1_1ocr_1_1RecognizerPostprocessor.html" title="Postprocessor object for Recognizer serials model. " alt="" coords="352,58,572,99"/>
+<area shape="rect" id="node5" href="$classfastdeploy_1_1vision_1_1ocr_1_1RecognizerPreprocessor.html" title="Preprocessor object for PaddleClas serials model. " alt="" coords="355,123,569,165"/>
 </map>

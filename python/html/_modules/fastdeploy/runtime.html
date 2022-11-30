@@ -289,7 +289,7 @@ title="Fullscreen mode"
             <span class="bp">self</span><span class="o">.</span><span class="n">runtime_option</span><span class="o">.</span><span class="n">_option</span><span class="p">),</span> <span class="s2">&quot;Initialize Runtime Failed!&quot;</span>
 
 <div class="viewcode-block" id="Runtime.forward"><a class="viewcode-back" href="../../runtime.html#fastdeploy.Runtime.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">inputs</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Inference with input data for poros</span>
+        <span class="sd">&quot;&quot;&quot;[Only for Poros backend] Inference with input data for poros</span>
 
 <span class="sd">        :param data: (list[str : numpy.ndarray])The input data list</span>
 <span class="sd">        :return list of numpy.ndarray</span>
@@ -311,10 +311,38 @@ title="Fullscreen mode"
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="nb">dict</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">isinstance</span><span class="p">(</span>
             <span class="n">data</span><span class="p">,</span> <span class="nb">list</span><span class="p">),</span> <span class="s2">&quot;The input data should be type of dict or list.&quot;</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">v</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">contiguous</span><span class="p">:</span>
+                    <span class="n">data</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ascontiguousarray</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">k</span><span class="p">])</span>
+
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_runtime</span><span class="o">.</span><span class="n">infer</span><span class="p">(</span><span class="n">data</span><span class="p">)</span></div>
 
+<div class="viewcode-block" id="Runtime.bind_input_tensor"><a class="viewcode-back" href="../../runtime.html#fastdeploy.Runtime.bind_input_tensor">[docs]</a>    <span class="k">def</span> <span class="nf">bind_input_tensor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">fdtensor</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Bind FDTensor by name, no copy and share input memory</span>
+
+<span class="sd">        :param name: (str)The name of input data.</span>
+<span class="sd">        :param fdtensor: (fastdeploy.FDTensor)The input FDTensor.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_runtime</span><span class="o">.</span><span class="n">bind_input_tensor</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">fdtensor</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Runtime.zero_copy_infer"><a class="viewcode-back" href="../../runtime.html#fastdeploy.Runtime.zero_copy_infer">[docs]</a>    <span class="k">def</span> <span class="nf">zero_copy_infer</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;No params inference the model.</span>
+
+<span class="sd">        the input and output data need to pass through the bind_input_tensor and get_output_tensor interfaces.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_runtime</span><span class="o">.</span><span class="n">infer</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="Runtime.get_output_tensor"><a class="viewcode-back" href="../../runtime.html#fastdeploy.Runtime.get_output_tensor">[docs]</a>    <span class="k">def</span> <span class="nf">get_output_tensor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get output FDTensor by name, no copy and share backend output memory</span>
+
+<span class="sd">        :param name: (str)The name of output data.</span>
+<span class="sd">        :return fastdeploy.FDTensor</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_runtime</span><span class="o">.</span><span class="n">get_output_tensor</span><span class="p">(</span><span class="n">name</span><span class="p">)</span></div>
+
 <div class="viewcode-block" id="Runtime.compile"><a class="viewcode-back" href="../../runtime.html#fastdeploy.Runtime.compile">[docs]</a>    <span class="k">def</span> <span class="nf">compile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">warm_datas</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;compile with prewarm data for poros</span>
+        <span class="sd">&quot;&quot;&quot;[Only for Poros backend] compile with prewarm data for poros</span>
 
 <span class="sd">        :param data: (list[str : numpy.ndarray])The prewarm data list</span>
 <span class="sd">        :return TorchScript Model</span>
@@ -376,6 +404,9 @@ title="Fullscreen mode"
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Initialize a FastDeploy RuntimeOption object.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
         <span class="bp">self</span><span class="o">.</span><span class="n">_option</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">RuntimeOption</span><span class="p">()</span>
 
     <span class="nd">@property</span>
@@ -426,7 +457,8 @@ title="Fullscreen mode"
     <span class="nd">@long_to_int</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">long_to_int</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
         <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span>
-            <span class="n">value</span><span class="p">,</span> <span class="nb">bool</span><span class="p">),</span> <span class="s2">&quot;The value to set `long_to_int` must be type of bool.&quot;</span>
+            <span class="n">value</span><span class="p">,</span>
+            <span class="nb">bool</span><span class="p">),</span> <span class="s2">&quot;The value to set `long_to_int` must be type of bool.&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_option</span><span class="o">.</span><span class="n">long_to_int</span> <span class="o">=</span> <span class="n">value</span>
 
     <span class="nd">@use_nvidia_tf32</span><span class="o">.</span><span class="n">setter</span>
@@ -454,6 +486,17 @@ title="Fullscreen mode"
 
 <span class="sd">        :param device_id: (int)The index of GPU will be used for inference, default 0</span>
 <span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">C</span><span class="o">.</span><span class="n">is_built_with_gpu</span><span class="p">():</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span>
+                <span class="s2">&quot;The installed fastdeploy-python package is not built with GPU, will force to use CPU. To use GPU, following the commands to install fastdeploy-gpu-python.&quot;</span>
+            <span class="p">)</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span>
+                <span class="s2">&quot;    ================= Install GPU FastDeploy===============&quot;</span><span class="p">)</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;    python -m pip uninstall fastdeploy-python&quot;</span><span class="p">)</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span>
+                <span class="s2">&quot;    python -m pip install fastdeploy-gpu-python -f https://www.paddlepaddle.org.cn/whl/fastdeploy.html&quot;</span>
+            <span class="p">)</span>
+            <span class="k">return</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_option</span><span class="o">.</span><span class="n">use_gpu</span><span class="p">(</span><span class="n">device_id</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="RuntimeOption.use_cpu"><a class="viewcode-back" href="../../runtime_option.html#fastdeploy.RuntimeOption.use_cpu">[docs]</a>    <span class="k">def</span> <span class="nf">use_cpu</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -461,12 +504,10 @@ title="Fullscreen mode"
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_option</span><span class="o">.</span><span class="n">use_cpu</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="RuntimeOption.use_rknpu2"><a class="viewcode-back" href="../../runtime_option.html#fastdeploy.RuntimeOption.use_rknpu2">[docs]</a>    <span class="k">def</span> <span class="nf">use_rknpu2</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+    <span class="k">def</span> <span class="nf">use_rknpu2</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
                    <span class="n">rknpu2_name</span><span class="o">=</span><span class="n">rknpu2</span><span class="o">.</span><span class="n">CpuName</span><span class="o">.</span><span class="n">RK3588</span><span class="p">,</span>
                    <span class="n">rknpu2_core</span><span class="o">=</span><span class="n">rknpu2</span><span class="o">.</span><span class="n">CoreMask</span><span class="o">.</span><span class="n">RKNN_NPU_CORE_0</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Inference with CPU</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_option</span><span class="o">.</span><span class="n">use_rknpu2</span><span class="p">(</span><span class="n">rknpu2_name</span><span class="p">,</span> <span class="n">rknpu2_core</span><span class="p">)</span></div>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_option</span><span class="o">.</span><span class="n">use_rknpu2</span><span class="p">(</span><span class="n">rknpu2_name</span><span class="p">,</span> <span class="n">rknpu2_core</span><span class="p">)</span>
 
 <div class="viewcode-block" id="RuntimeOption.set_cpu_thread_num"><a class="viewcode-back" href="../../runtime_option.html#fastdeploy.RuntimeOption.set_cpu_thread_num">[docs]</a>    <span class="k">def</span> <span class="nf">set_cpu_thread_num</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">thread_num</span><span class="o">=-</span><span class="mi">1</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Set number of threads if inference with CPU</span>
@@ -475,8 +516,12 @@ title="Fullscreen mode"
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_option</span><span class="o">.</span><span class="n">set_cpu_thread_num</span><span class="p">(</span><span class="n">thread_num</span><span class="p">)</span></div>
 
-    <span class="k">def</span> <span class="nf">set_ort_graph_opt_level</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">level</span><span class="o">=-</span><span class="mi">1</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_option</span><span class="o">.</span><span class="n">set_ort_graph_opt_level</span><span class="p">(</span><span class="n">level</span><span class="p">)</span>
+<div class="viewcode-block" id="RuntimeOption.set_ort_graph_opt_level"><a class="viewcode-back" href="../../runtime_option.html#fastdeploy.RuntimeOption.set_ort_graph_opt_level">[docs]</a>    <span class="k">def</span> <span class="nf">set_ort_graph_opt_level</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">level</span><span class="o">=-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Set graph optimization level for ONNX Runtime backend</span>
+
+<span class="sd">        :param level: (int)Optimization level, -1 means the default setting</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_option</span><span class="o">.</span><span class="n">set_ort_graph_opt_level</span><span class="p">(</span><span class="n">level</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="RuntimeOption.use_paddle_backend"><a class="viewcode-back" href="../../runtime_option.html#fastdeploy.RuntimeOption.use_paddle_backend">[docs]</a>    <span class="k">def</span> <span class="nf">use_paddle_backend</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Use Paddle Inference backend, support inference Paddle model on CPU/Nvidia GPU.</span>
@@ -522,6 +567,25 @@ title="Fullscreen mode"
         <span class="sd">&quot;&quot;&quot;Enable/Disable MKLDNN while using Paddle Inference backend, mkldnn is enabled by default.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_option</span><span class="o">.</span><span class="n">set_paddle_mkldnn</span><span class="p">(</span><span class="n">use_mkldnn</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="RuntimeOption.set_openvino_device"><a class="viewcode-back" href="../../runtime_option.html#fastdeploy.RuntimeOption.set_openvino_device">[docs]</a>    <span class="k">def</span> <span class="nf">set_openvino_device</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;CPU&quot;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Set device name for OpenVINO, default &#39;CPU&#39;, can also be &#39;AUTO&#39;, &#39;GPU&#39;, &#39;GPU.1&#39;....</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_option</span><span class="o">.</span><span class="n">set_openvino_device</span><span class="p">(</span><span class="n">name</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="RuntimeOption.set_openvino_shape_info"><a class="viewcode-back" href="../../runtime_option.html#fastdeploy.RuntimeOption.set_openvino_shape_info">[docs]</a>    <span class="k">def</span> <span class="nf">set_openvino_shape_info</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">shape_info</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Set shape information of the models&#39; inputs, used for GPU to fix the shape</span>
+
+<span class="sd">        :param shape_info: (dict{str, list of int})Shape information of model&#39;s inputs, e.g {&quot;image&quot;: [1, 3, 640, 640], &quot;scale_factor&quot;: [1, 2]}</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_option</span><span class="o">.</span><span class="n">set_openvino_shape_info</span><span class="p">(</span><span class="n">shape_info</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="RuntimeOption.set_openvino_cpu_operators"><a class="viewcode-back" href="../../runtime_option.html#fastdeploy.RuntimeOption.set_openvino_cpu_operators">[docs]</a>    <span class="k">def</span> <span class="nf">set_openvino_cpu_operators</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">operators</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;While using OpenVINO backend and intel GPU, this interface specifies unsupported operators to run on CPU</span>
+
+<span class="sd">        :param operators: (list of string)list of operators&#39; name, e.g [&quot;MulticlasNms&quot;]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_option</span><span class="o">.</span><span class="n">set_openvino_cpu_operators</span><span class="p">(</span><span class="n">operators</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="RuntimeOption.enable_paddle_log_info"><a class="viewcode-back" href="../../runtime_option.html#fastdeploy.RuntimeOption.enable_paddle_log_info">[docs]</a>    <span class="k">def</span> <span class="nf">enable_paddle_log_info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Enable print out the debug log information while using Paddle Inference backend, the log information is disabled by default.</span>
@@ -615,11 +679,15 @@ title="Fullscreen mode"
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_option</span><span class="o">.</span><span class="n">set_trt_max_batch_size</span><span class="p">(</span><span class="n">trt_max_batch_size</span><span class="p">)</span></div>
 
-    <span class="k">def</span> <span class="nf">enable_paddle_trt_collect_shape</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_option</span><span class="o">.</span><span class="n">enable_paddle_trt_collect_shape</span><span class="p">()</span>
+<div class="viewcode-block" id="RuntimeOption.enable_paddle_trt_collect_shape"><a class="viewcode-back" href="../../runtime_option.html#fastdeploy.RuntimeOption.enable_paddle_trt_collect_shape">[docs]</a>    <span class="k">def</span> <span class="nf">enable_paddle_trt_collect_shape</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Enable collect subgraph shape information while using Paddle Inference with TensorRT</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_option</span><span class="o">.</span><span class="n">enable_paddle_trt_collect_shape</span><span class="p">()</span></div>
 
-    <span class="k">def</span> <span class="nf">disable_paddle_trt_collect_shape</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_option</span><span class="o">.</span><span class="n">disable_paddle_trt_collect_shape</span><span class="p">()</span>
+<div class="viewcode-block" id="RuntimeOption.disable_paddle_trt_collect_shape"><a class="viewcode-back" href="../../runtime_option.html#fastdeploy.RuntimeOption.disable_paddle_trt_collect_shape">[docs]</a>    <span class="k">def</span> <span class="nf">disable_paddle_trt_collect_shape</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Disable collect subgraph shape information while using Paddle Inference with TensorRT</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_option</span><span class="o">.</span><span class="n">disable_paddle_trt_collect_shape</span><span class="p">()</span></div>
 
     <span class="k">def</span> <span class="nf">use_ipu</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
                 <span class="n">device_num</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
@@ -646,7 +714,8 @@ title="Fullscreen mode"
                 <span class="k">continue</span>
             <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_option</span><span class="p">,</span> <span class="n">attr</span><span class="p">),</span> <span class="s2">&quot;__call__&quot;</span><span class="p">):</span>
                 <span class="k">continue</span>
-            <span class="n">message</span> <span class="o">+=</span> <span class="s2">&quot;  </span><span class="si">{}</span><span class="s2"> : </span><span class="si">{}</span><span class="se">\t\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">attr</span><span class="p">,</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_option</span><span class="p">,</span> <span class="n">attr</span><span class="p">))</span>
+            <span class="n">message</span> <span class="o">+=</span> <span class="s2">&quot;  </span><span class="si">{}</span><span class="s2"> : </span><span class="si">{}</span><span class="se">\t\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">attr</span><span class="p">,</span>
+                                              <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_option</span><span class="p">,</span> <span class="n">attr</span><span class="p">))</span>
         <span class="n">message</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
         <span class="n">message</span> <span class="o">+=</span> <span class="s2">&quot;)&quot;</span>
         <span class="k">return</span> <span class="n">message</span></div>

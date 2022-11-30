@@ -82,10 +82,22 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a04db0737b01ddebab3709e0f2de3ad37"><td class="memItemLeft" align="right" valign="top"><a id="a04db0737b01ddebab3709e0f2de3ad37"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1vision_1_1SegmentationResult.html#a04db0737b01ddebab3709e0f2de3ad37">SegmentationResult</a> (const <a class="el" href="structfastdeploy_1_1vision_1_1SegmentationResult.html">SegmentationResult</a> &amp;other)=default</td></tr>
+<tr class="memdesc:a04db0737b01ddebab3709e0f2de3ad37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor. <br /></td></tr>
+<tr class="separator:a04db0737b01ddebab3709e0f2de3ad37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab907481abed7d5db248d46bd22b13773"><td class="memItemLeft" align="right" valign="top"><a id="ab907481abed7d5db248d46bd22b13773"></a>
+<a class="el" href="structfastdeploy_1_1vision_1_1SegmentationResult.html">SegmentationResult</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1vision_1_1SegmentationResult.html#ab907481abed7d5db248d46bd22b13773">operator=</a> (<a class="el" href="structfastdeploy_1_1vision_1_1SegmentationResult.html">SegmentationResult</a> &amp;&amp;other)</td></tr>
+<tr class="memdesc:ab907481abed7d5db248d46bd22b13773"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move assignment. <br /></td></tr>
+<tr class="separator:ab907481abed7d5db248d46bd22b13773"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2aec4c58e77e39948f283bedd8a0b242"><td class="memItemLeft" align="right" valign="top"><a id="a2aec4c58e77e39948f283bedd8a0b242"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1vision_1_1SegmentationResult.html#a2aec4c58e77e39948f283bedd8a0b242">Clear</a> ()</td></tr>
-<tr class="memdesc:a2aec4c58e77e39948f283bedd8a0b242"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear detection result. <br /></td></tr>
+<tr class="memdesc:a2aec4c58e77e39948f283bedd8a0b242"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear Segmentation result. <br /></td></tr>
 <tr class="separator:a2aec4c58e77e39948f283bedd8a0b242"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72bd0402e0f3f9f32fe1654448d1b236"><td class="memItemLeft" align="right" valign="top"><a id="a72bd0402e0f3f9f32fe1654448d1b236"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1vision_1_1SegmentationResult.html#a72bd0402e0f3f9f32fe1654448d1b236">Free</a> ()</td></tr>
+<tr class="memdesc:a72bd0402e0f3f9f32fe1654448d1b236"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear Segmentation result and free the memory. <br /></td></tr>
+<tr class="separator:a72bd0402e0f3f9f32fe1654448d1b236"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7efc6b260819702d8b4475a1ecdd9a37"><td class="memItemLeft" align="right" valign="top"><a id="a7efc6b260819702d8b4475a1ecdd9a37"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1vision_1_1SegmentationResult.html#a7efc6b260819702d8b4475a1ecdd9a37">Str</a> ()</td></tr>
 <tr class="memdesc:a7efc6b260819702d8b4475a1ecdd9a37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Debug function, convert the result to string to print. <br /></td></tr>
@@ -105,12 +117,16 @@ std::vector&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a
 std::vector&lt; int64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1vision_1_1SegmentationResult.html#a916c4ca26b2e72ca2d896b9591705477">shape</a></td></tr>
 <tr class="memdesc:a916c4ca26b2e72ca2d896b9591705477"><td class="mdescLeft">&#160;</td><td class="mdescRight">The output shape, means [H, W]. <br /></td></tr>
 <tr class="separator:a916c4ca26b2e72ca2d896b9591705477"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6daa6f041162c016b7f4f003cf8c603a"><td class="memItemLeft" align="right" valign="top"><a id="a6daa6f041162c016b7f4f003cf8c603a"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1vision_1_1SegmentationResult.html#a6daa6f041162c016b7f4f003cf8c603a">contain_score_map</a> = false</td></tr>
+<tr class="memdesc:a6daa6f041162c016b7f4f003cf8c603a"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structfastdeploy_1_1vision_1_1SegmentationResult.html" title="Segmentation result structure for all the segmentation models. ">SegmentationResult</a> whether containing score_map. <br /></td></tr>
+<tr class="separator:a6daa6f041162c016b7f4f003cf8c603a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Segmentation result structure for all the segmentation models. </p>
 </div><hr/>The documentation for this struct was generated from the following files:<ul>
-<li>/fastdeploy/FastDeploy/fastdeploy/vision/common/<a class="el" href="vision_2common_2result_8h_source.html">result.h</a></li>
-<li>/fastdeploy/FastDeploy/fastdeploy/vision/common/result.cc</li>
+<li>/fastdeploy/1130/FastDeploy/fastdeploy/vision/common/<a class="el" href="vision_2common_2result_8h_source.html">result.h</a></li>
+<li>/fastdeploy/1130/FastDeploy/fastdeploy/vision/common/result.cc</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

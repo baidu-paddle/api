@@ -106,6 +106,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab5ec15148e75a8d6044db7e106aea1bd"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1pipeline_1_1PPOCRv2.html#ab5ec15148e75a8d6044db7e106aea1bd">Predict</a> (cv::Mat *img, fastdeploy::vision::OCRResult *result)</td></tr>
 <tr class="memdesc:ab5ec15148e75a8d6044db7e106aea1bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Predict the input image and get OCR result.  <a href="#ab5ec15148e75a8d6044db7e106aea1bd">More...</a><br /></td></tr>
 <tr class="separator:ab5ec15148e75a8d6044db7e106aea1bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac34443d6b912d60ba1335390f2db194c"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1pipeline_1_1PPOCRv2.html#ac34443d6b912d60ba1335390f2db194c">BatchPredict</a> (const std::vector&lt; cv::Mat &gt; &amp;images, std::vector&lt; fastdeploy::vision::OCRResult &gt; *batch_result)</td></tr>
+<tr class="memdesc:ac34443d6b912d60ba1335390f2db194c"><td class="mdescLeft">&#160;</td><td class="mdescRight">BatchPredict the input image and get OCR result.  <a href="#ac34443d6b912d60ba1335390f2db194c">More...</a><br /></td></tr>
+<tr class="separator:ac34443d6b912d60ba1335390f2db194c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c3908092f9e900fe5210135816ef9a9"><td class="memItemLeft" align="right" valign="top"><a id="a0c3908092f9e900fe5210135816ef9a9"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1pipeline_1_1PPOCRv2.html#a0c3908092f9e900fe5210135816ef9a9">Initialized</a> () const override</td></tr>
 <tr class="memdesc:a0c3908092f9e900fe5210135816ef9a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the model is initialized successfully. <br /></td></tr>
@@ -260,6 +263,52 @@ std::vector&lt; <a class="el" href="namespacefastdeploy.html#addd441db144b083efc
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="ac34443d6b912d60ba1335390f2db194c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac34443d6b912d60ba1335390f2db194c">&#9670;&nbsp;</a></span>BatchPredict()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool fastdeploy::pipeline::PPOCRv2::BatchPredict </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; cv::Mat &gt; &amp;&#160;</td>
+          <td class="paramname"><em>images</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; fastdeploy::vision::OCRResult &gt; *&#160;</td>
+          <td class="paramname"><em>batch_result</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>BatchPredict the input image and get OCR result. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">images</td><td>The list of input image data, comes from cv::imread(), is a 3-D array with layout HWC, BGR format. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">batch_result</td><td>The output list of OCR result will be writen to this structure. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the prediction successed, otherwise false. </dd></dl>
+
+</div>
+</div>
 <a id="ab5ec15148e75a8d6044db7e106aea1bd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab5ec15148e75a8d6044db7e106aea1bd">&#9670;&nbsp;</a></span>Predict()</h2>
 
@@ -307,8 +356,8 @@ std::vector&lt; <a class="el" href="namespacefastdeploy.html#addd441db144b083efc
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/fastdeploy/FastDeploy/fastdeploy/vision/ocr/ppocr/<a class="el" href="ppocr__v2_8h_source.html">ppocr_v2.h</a></li>
-<li>/fastdeploy/FastDeploy/fastdeploy/vision/ocr/ppocr/ppocr_v2.cc</li>
+<li>/fastdeploy/1130/FastDeploy/fastdeploy/vision/ocr/ppocr/<a class="el" href="ppocr__v2_8h_source.html">ppocr_v2.h</a></li>
+<li>/fastdeploy/1130/FastDeploy/fastdeploy/vision/ocr/ppocr/ppocr_v2.cc</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

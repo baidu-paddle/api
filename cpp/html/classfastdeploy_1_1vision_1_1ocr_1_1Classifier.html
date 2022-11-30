@@ -89,8 +89,10 @@ Collaboration diagram for fastdeploy::vision::ocr::Classifier:</div>
 <div class="dyncontent">
 <div class="center"><img src="classfastdeploy_1_1vision_1_1ocr_1_1Classifier__coll__graph.png" border="0" usemap="#fastdeploy_1_1vision_1_1ocr_1_1Classifier_coll__map" alt="Collaboration graph"/></div>
 <map name="fastdeploy_1_1vision_1_1ocr_1_1Classifier_coll__map" id="fastdeploy_1_1vision_1_1ocr_1_1Classifier_coll__map">
-<area shape="rect" id="node2" href="classfastdeploy_1_1FastDeployModel.html" title="Base model object for all the vision models. " alt="" coords="5,95,215,121"/>
-<area shape="rect" id="node3" href="structfastdeploy_1_1RuntimeOption.html" title="Option object used when create a new Runtime object. " alt="" coords="13,5,207,32"/>
+<area shape="rect" id="node2" href="classfastdeploy_1_1FastDeployModel.html" title="Base model object for all the vision models. " alt="" coords="352,7,561,33"/>
+<area shape="rect" id="node3" href="structfastdeploy_1_1RuntimeOption.html" title="Option object used when create a new Runtime object. " alt="" coords="5,7,200,33"/>
+<area shape="rect" id="node4" href="classfastdeploy_1_1vision_1_1ocr_1_1ClassifierPreprocessor.html" title="Preprocessor object for Classifier serials model. " alt="" coords="355,58,558,99"/>
+<area shape="rect" id="node5" href="classfastdeploy_1_1vision_1_1ocr_1_1ClassifierPostprocessor.html" title="Postprocessor object for Classifier serials model. " alt="" coords="352,123,561,165"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -103,9 +105,9 @@ Public Member Functions</h2></td></tr>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1Classifier.html#ad9c4f0c74961e251998012bc26e0bd72">ModelName</a> () const</td></tr>
 <tr class="memdesc:ad9c4f0c74961e251998012bc26e0bd72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get model's name. <br /></td></tr>
 <tr class="separator:ad9c4f0c74961e251998012bc26e0bd72"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac5a4d39bba90488e694fd14ee8de7bc"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1Classifier.html#aac5a4d39bba90488e694fd14ee8de7bc">Predict</a> (cv::Mat *img, std::tuple&lt; int, float &gt; *result)</td></tr>
-<tr class="memdesc:aac5a4d39bba90488e694fd14ee8de7bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Predict the input image and get OCR classification model result.  <a href="#aac5a4d39bba90488e694fd14ee8de7bc">More...</a><br /></td></tr>
-<tr class="separator:aac5a4d39bba90488e694fd14ee8de7bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5eef88e71b09be4f2172fd6e945c0df1"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1Classifier.html#a5eef88e71b09be4f2172fd6e945c0df1">BatchPredict</a> (const std::vector&lt; cv::Mat &gt; &amp;images, std::vector&lt; int32_t &gt; *cls_labels, std::vector&lt; float &gt; *cls_scores)</td></tr>
+<tr class="memdesc:a5eef88e71b09be4f2172fd6e945c0df1"><td class="mdescLeft">&#160;</td><td class="mdescRight">BatchPredict the input image and get OCR classification model cls_result.  <a href="#a5eef88e71b09be4f2172fd6e945c0df1">More...</a><br /></td></tr>
+<tr class="separator:a5eef88e71b09be4f2172fd6e945c0df1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classfastdeploy_1_1FastDeployModel"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classfastdeploy_1_1FastDeployModel')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classfastdeploy_1_1FastDeployModel.html">fastdeploy::FastDeployModel</a></td></tr>
 <tr class="memitem:abfe20a31493c5cb9a540c65e721e96cf inherit pub_methods_classfastdeploy_1_1FastDeployModel"><td class="memItemLeft" align="right" valign="top"><a id="abfe20a31493c5cb9a540c65e721e96cf"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1FastDeployModel.html#abfe20a31493c5cb9a540c65e721e96cf">Infer</a> (std::vector&lt; FDTensor &gt; &amp;input_tensors, std::vector&lt; FDTensor &gt; *output_tensors)</td></tr>
@@ -226,8 +228,8 @@ std::vector&lt; <a class="el" href="namespacefastdeploy.html#addd441db144b083efc
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="aac5a4d39bba90488e694fd14ee8de7bc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aac5a4d39bba90488e694fd14ee8de7bc">&#9670;&nbsp;</a></span>Predict()</h2>
+<a id="a5eef88e71b09be4f2172fd6e945c0df1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5eef88e71b09be4f2172fd6e945c0df1">&#9670;&nbsp;</a></span>BatchPredict()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -236,16 +238,22 @@ std::vector&lt; <a class="el" href="namespacefastdeploy.html#addd441db144b083efc
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool fastdeploy::vision::ocr::Classifier::Predict </td>
+          <td class="memname">bool fastdeploy::vision::ocr::Classifier::BatchPredict </td>
           <td>(</td>
-          <td class="paramtype">cv::Mat *&#160;</td>
-          <td class="paramname"><em>img</em>, </td>
+          <td class="paramtype">const std::vector&lt; cv::Mat &gt; &amp;&#160;</td>
+          <td class="paramname"><em>images</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::tuple&lt; int, float &gt; *&#160;</td>
-          <td class="paramname"><em>result</em>&#160;</td>
+          <td class="paramtype">std::vector&lt; int32_t &gt; *&#160;</td>
+          <td class="paramname"><em>cls_labels</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; float &gt; *&#160;</td>
+          <td class="paramname"><em>cls_scores</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -260,11 +268,11 @@ std::vector&lt; <a class="el" href="namespacefastdeploy.html#addd441db144b083efc
 </table>
 </div><div class="memdoc">
 
-<p>Predict the input image and get OCR classification model result. </p>
+<p>BatchPredict the input image and get OCR classification model cls_result. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">im</td><td>The input image data, comes from cv::imread(), is a 3-D array with layout HWC, BGR format. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">result</td><td>The output of OCR classification model result will be writen to this structure. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">images</td><td>The list of input image data, comes from cv::imread(), is a 3-D array with layout HWC, BGR format. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cls_results</td><td>The output of OCR classification model cls_result will be writen to this structure. </td></tr>
   </table>
   </dd>
 </dl>
@@ -273,8 +281,8 @@ std::vector&lt; <a class="el" href="namespacefastdeploy.html#addd441db144b083efc
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/fastdeploy/FastDeploy/fastdeploy/vision/ocr/ppocr/<a class="el" href="classifier_8h_source.html">classifier.h</a></li>
-<li>/fastdeploy/FastDeploy/fastdeploy/vision/ocr/ppocr/classifier.cc</li>
+<li>/fastdeploy/1130/FastDeploy/fastdeploy/vision/ocr/ppocr/<a class="el" href="classifier_8h_source.html">classifier.h</a></li>
+<li>/fastdeploy/1130/FastDeploy/fastdeploy/vision/ocr/ppocr/classifier.cc</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

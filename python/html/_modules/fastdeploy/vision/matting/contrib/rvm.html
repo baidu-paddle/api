@@ -313,6 +313,13 @@ title="Fullscreen mode"
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">video_mode</span>
 
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">swap_rb</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Whether convert to RGB, Set to false if you have converted YUV format images to RGB outside the model, dafault true</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">swap_rb</span>
+
     <span class="nd">@size</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">size</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">wh</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
@@ -332,7 +339,16 @@ title="Fullscreen mode"
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span>
             <span class="n">value</span><span class="p">,</span> <span class="nb">bool</span><span class="p">),</span> <span class="s2">&quot;The value to set `video_mode` must be type of bool.&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">video_mode</span> <span class="o">=</span> <span class="n">value</span></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">video_mode</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="nd">@swap_rb</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">swap_rb</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Set swap_rb property, the default is true</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span>
+            <span class="n">value</span><span class="p">,</span> <span class="nb">bool</span><span class="p">),</span> <span class="s2">&quot;The value to set `swap_rb` must be type of bool.&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">swap_rb</span> <span class="o">=</span> <span class="n">value</span></div>
 </pre></div>
 
               </div>

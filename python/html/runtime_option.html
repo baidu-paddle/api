@@ -344,6 +344,7 @@ title="Print to PDF"
 <dt class="sig sig-object py" id="fastdeploy.RuntimeOption">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.</span></span><span class="sig-name descname"><span class="pre">RuntimeOption</span></span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption" title="Permalink to this definition">#</a></dt>
 <dd><p>Options for FastDeploy Runtime.</p>
+<p>Initialize a FastDeploy RuntimeOption object.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="fastdeploy.RuntimeOption.disable_lite_fp16">
 <span class="sig-name descname"><span class="pre">disable_lite_fp16</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.disable_lite_fp16"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.disable_lite_fp16" title="Permalink to this definition">#</a></dt>
@@ -354,6 +355,12 @@ title="Print to PDF"
 <dt class="sig sig-object py" id="fastdeploy.RuntimeOption.disable_paddle_log_info">
 <span class="sig-name descname"><span class="pre">disable_paddle_log_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.disable_paddle_log_info"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.disable_paddle_log_info" title="Permalink to this definition">#</a></dt>
 <dd><p>Disable print out the debug log information while using Paddle Inference backend, the log information is disabled by default.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.RuntimeOption.disable_paddle_trt_collect_shape">
+<span class="sig-name descname"><span class="pre">disable_paddle_trt_collect_shape</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.disable_paddle_trt_collect_shape"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.disable_paddle_trt_collect_shape" title="Permalink to this definition">#</a></dt>
+<dd><p>Disable collect subgraph shape information while using Paddle Inference with TensorRT</p>
 </dd></dl>
 
 <dl class="py method">
@@ -384,6 +391,12 @@ title="Print to PDF"
 <dt class="sig sig-object py" id="fastdeploy.RuntimeOption.enable_paddle_to_trt">
 <span class="sig-name descname"><span class="pre">enable_paddle_to_trt</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.enable_paddle_to_trt"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.enable_paddle_to_trt" title="Permalink to this definition">#</a></dt>
 <dd><p>While using TensorRT backend, enable_paddle_to_trt() will change to use Paddle Inference backend, and use its integrated TensorRT instead.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.RuntimeOption.enable_paddle_trt_collect_shape">
+<span class="sig-name descname"><span class="pre">enable_paddle_trt_collect_shape</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.enable_paddle_trt_collect_shape"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.enable_paddle_trt_collect_shape" title="Permalink to this definition">#</a></dt>
+<dd><p>Enable collect subgraph shape information while using Paddle Inference with TensorRT</p>
 </dd></dl>
 
 <dl class="py method">
@@ -448,6 +461,45 @@ title="Print to PDF"
 <li><p><strong>params_path</strong> – (str)Path of parameters file</p></li>
 <li><p><strong>model_format</strong> – (ModelFormat)Format of model, support ModelFormat.PADDLE/ModelFormat.ONNX</p></li>
 </ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.RuntimeOption.set_openvino_cpu_operators">
+<span class="sig-name descname"><span class="pre">set_openvino_cpu_operators</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">operators</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.set_openvino_cpu_operators"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.set_openvino_cpu_operators" title="Permalink to this definition">#</a></dt>
+<dd><p>While using OpenVINO backend and intel GPU, this interface specifies unsupported operators to run on CPU</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>operators</strong> – (list of string)list of operators’ name, e.g [“MulticlasNms”]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.RuntimeOption.set_openvino_device">
+<span class="sig-name descname"><span class="pre">set_openvino_device</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'CPU'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.set_openvino_device"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.set_openvino_device" title="Permalink to this definition">#</a></dt>
+<dd><p>Set device name for OpenVINO, default ‘CPU’, can also be ‘AUTO’, ‘GPU’, ‘GPU.1’….</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.RuntimeOption.set_openvino_shape_info">
+<span class="sig-name descname"><span class="pre">set_openvino_shape_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shape_info</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.set_openvino_shape_info"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.set_openvino_shape_info" title="Permalink to this definition">#</a></dt>
+<dd><p>Set shape information of the models’ inputs, used for GPU to fix the shape</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>shape_info</strong> – (dict{str, list of int})Shape information of model’s inputs, e.g {“image”: [1, 3, 640, 640], “scale_factor”: [1, 2]}</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.RuntimeOption.set_ort_graph_opt_level">
+<span class="sig-name descname"><span class="pre">set_ort_graph_opt_level</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.set_ort_graph_opt_level"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.set_ort_graph_opt_level" title="Permalink to this definition">#</a></dt>
+<dd><p>Set graph optimization level for ONNX Runtime backend</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>level</strong> – (int)Optimization level, -1 means the default setting</p>
 </dd>
 </dl>
 </dd></dl>
@@ -582,12 +634,6 @@ title="Print to PDF"
 <dt class="sig sig-object py" id="fastdeploy.RuntimeOption.use_poros_backend">
 <span class="sig-name descname"><span class="pre">use_poros_backend</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.use_poros_backend"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.use_poros_backend" title="Permalink to this definition">#</a></dt>
 <dd><p>Use Poros backend, support inference TorchScript model on CPU/Nvidia GPU.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="fastdeploy.RuntimeOption.use_rknpu2">
-<span class="sig-name descname"><span class="pre">use_rknpu2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rknpu2_name=&lt;CpuName.RK3588:</span> <span class="pre">1&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rknpu2_core=&lt;CoreMask.RKNN_NPU_CORE_0:</span> <span class="pre">1&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.use_rknpu2"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.use_rknpu2" title="Permalink to this definition">#</a></dt>
-<dd><p>Inference with CPU</p>
 </dd></dl>
 
 <dl class="py method">

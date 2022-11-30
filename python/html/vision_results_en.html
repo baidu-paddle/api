@@ -455,7 +455,7 @@ title="Print to PDF"
 <p>API: <code class="docutils literal notranslate"><span class="pre">fastdeploy.vision.DetectionResult</span></code>, The DetectionResult will return:</p>
 <ul class="simple">
 <li><p><strong>boxes</strong>(list of list(float)):Member variable, represents the coordinates of all target boxes detected by a single image. boxes is a list, each element of which is a list of length 4, representing a box with 4 float values in order of xmin, ymin, xmax, ymax, i.e. the coordinates of the top left and bottom right corners.</p></li>
-<li><p><strong>socres</strong>(list of float):Member variable indicating the confidence of all targets detected by a single image.</p></li>
+<li><p><strong>scores</strong>(list of float):Member variable indicating the confidence of all targets detected by a single image.</p></li>
 <li><p><strong>label_ids</strong>(list of int):Member variable indicating all target categories detected for a single image.</p></li>
 <li><p><strong>masks</strong>:Member variable that represents all instances of mask detected from a single image, with the same number of elements and shape size as boxes.</p></li>
 <li><p><strong>contain_masks</strong>:Member variable indicating whether the detection result contains the instance mask, the result of the instance segmentation model is generally set to <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p></li>
@@ -482,11 +482,10 @@ title="Print to PDF"
 <p>The KeyPointDetectionResult code is defined in <code class="docutils literal notranslate"><span class="pre">fastdeploy/vision/common/result.h</span></code> and is used to indicate the coordinates and confidence of each keypoint of the target behavior in the image.</p>
 <p>API:<code class="docutils literal notranslate"><span class="pre">fastdeploy.vision.KeyPointDetectionResult</span></code>, The KeyPointDetectionResult will return:</p>
 <ul class="simple">
-<li><p><strong>keypoints</strong>(list of list(float)): Member variable, representing the key point coordinates of the identified target behavior. <code class="docutils literal notranslate"><span class="pre">keypoints.size()=</span> <span class="pre">N</span> <span class="pre">*</span> <span class="pre">J</span> <span class="pre">*</span> <span class="pre">2</span></code>，</p>
+<li><p><strong>keypoints</strong>(list of list(float)): Member variable, representing the key point coordinates of the identified target behavior. <code class="docutils literal notranslate"><span class="pre">keypoints.size()=</span> <span class="pre">N</span> <span class="pre">*</span> <span class="pre">J</span></code>，</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">N</span></code>: number of objects in the picture</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">J</span></code>: num_joints（number of keypoints for a target）</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">3</span></code>: 坐标信息[x, y]</p></li>
 </ul>
 </li>
 <li><p><strong>scores</strong>(list of float): Member variable, representing the confidence of the keypoint coordinates of the recognized target behavior. <code class="docutils literal notranslate"><span class="pre">scores.size()=</span> <span class="pre">N</span> <span class="pre">*</span> <span class="pre">J</span></code></p>

@@ -1,4 +1,0 @@
-<map id="fastdeploy::vision::detection::FasterRCNN" name="fastdeploy::vision::detection::FasterRCNN">
-<area shape="rect" id="node2" href="$classfastdeploy_1_1vision_1_1detection_1_1PPDetBase.html" title="Base model object used when to load a model exported by PaddleDetection. " alt="" coords="25,80,195,121"/>
-<area shape="rect" id="node3" href="$classfastdeploy_1_1FastDeployModel.html" title="Base model object for all the vision models. " alt="" coords="5,5,215,32"/>
-</map>

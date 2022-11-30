@@ -82,10 +82,32 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aadbb34d548ddb7179aad3a3c4bc906f1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1detection_1_1PaddleDetPostprocessor.html#aadbb34d548ddb7179aad3a3c4bc906f1">Run</a> (const std::vector&lt; FDTensor &gt; &amp;tensors, std::vector&lt; <a class="el" href="structfastdeploy_1_1vision_1_1DetectionResult.html">DetectionResult</a> &gt; *result)</td></tr>
 <tr class="memdesc:aadbb34d548ddb7179aad3a3c4bc906f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process the result of runtime and fill to <a class="el" href="structfastdeploy_1_1vision_1_1ClassifyResult.html" title="Classify result structure for all the image classify models. ">ClassifyResult</a> structure.  <a href="#aadbb34d548ddb7179aad3a3c4bc906f1">More...</a><br /></td></tr>
 <tr class="separator:aadbb34d548ddb7179aad3a3c4bc906f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b74451d5c5018dc744f9a77f244e250"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1detection_1_1PaddleDetPostprocessor.html#a9b74451d5c5018dc744f9a77f244e250">ApplyDecodeAndNMS</a> ()</td></tr>
+<tr class="separator:a9b74451d5c5018dc744f9a77f244e250"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7afa1d328ffd6095e6e9242cbe588bf4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1detection_1_1PaddleDetPostprocessor.html#a7afa1d328ffd6095e6e9242cbe588bf4">SetScaleFactor</a> (float *scale_factor_value)</td></tr>
+<tr class="separator:a7afa1d328ffd6095e6e9242cbe588bf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Postprocessor object for PaddleDet serials model. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a9b74451d5c5018dc744f9a77f244e250"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b74451d5c5018dc744f9a77f244e250">&#9670;&nbsp;</a></span>ApplyDecodeAndNMS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fastdeploy::vision::detection::PaddleDetPostprocessor::ApplyDecodeAndNMS </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Apply box decoding and nms step for the outputs for the model.This is only available for those model exported without box decoding and nms. </p>
+
+</div>
+</div>
 <a id="aadbb34d548ddb7179aad3a3c4bc906f1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aadbb34d548ddb7179aad3a3c4bc906f1">&#9670;&nbsp;</a></span>Run()</h2>
 
@@ -124,9 +146,28 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a7afa1d328ffd6095e6e9242cbe588bf4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7afa1d328ffd6095e6e9242cbe588bf4">&#9670;&nbsp;</a></span>SetScaleFactor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fastdeploy::vision::detection::PaddleDetPostprocessor::SetScaleFactor </td>
+          <td>(</td>
+          <td class="paramtype">float *&#160;</td>
+          <td class="paramname"><em>scale_factor_value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set scale_factor_ value.This is only available for those model exported without box decoding and nms. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/fastdeploy/FastDeploy/fastdeploy/vision/detection/ppdet/<a class="el" href="vision_2detection_2ppdet_2postprocessor_8h_source.html">postprocessor.h</a></li>
-<li>/fastdeploy/FastDeploy/fastdeploy/vision/detection/ppdet/postprocessor.cc</li>
+<li>/fastdeploy/1130/FastDeploy/fastdeploy/vision/detection/ppdet/<a class="el" href="vision_2detection_2ppdet_2postprocessor_8h_source.html">postprocessor.h</a></li>
+<li>/fastdeploy/1130/FastDeploy/fastdeploy/vision/detection/ppdet/postprocessor.cc</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

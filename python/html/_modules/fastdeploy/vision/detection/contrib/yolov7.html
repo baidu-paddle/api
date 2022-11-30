@@ -272,6 +272,108 @@ title="Fullscreen mode"
 <span class="kn">from</span> <span class="nn">....</span> <span class="kn">import</span> <span class="n">c_lib_wrap</span> <span class="k">as</span> <span class="n">C</span>
 
 
+<div class="viewcode-block" id="YOLOv7Preprocessor"><a class="viewcode-back" href="../../../../../object_detection.html#fastdeploy.vision.detection.YOLOv7Preprocessor">[docs]</a><span class="k">class</span> <span class="nc">YOLOv7Preprocessor</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Create a preprocessor for YOLOv7</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_preprocessor</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">vision</span><span class="o">.</span><span class="n">detection</span><span class="o">.</span><span class="n">YOLOv7Preprocessor</span><span class="p">()</span>
+
+<div class="viewcode-block" id="YOLOv7Preprocessor.run"><a class="viewcode-back" href="../../../../../object_detection.html#fastdeploy.vision.detection.YOLOv7Preprocessor.run">[docs]</a>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_ims</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Preprocess input images for YOLOv7</span>
+
+<span class="sd">        :param: input_ims: (list of numpy.ndarray)The input image</span>
+<span class="sd">        :return: list of FDTensor</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_preprocessor</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">input_ims</span><span class="p">)</span></div>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">size</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Argument for image preprocessing step, the preprocess image size, tuple of (width, height), default size = [640, 640]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_preprocessor</span><span class="o">.</span><span class="n">size</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">padding_value</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        padding value for preprocessing, default [114.0, 114.0, 114.0]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1">#  padding value, size should be the same as channels</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_preprocessor</span><span class="o">.</span><span class="n">padding_value</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">is_scale_up</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        is_scale_up for preprocessing, the input image only can be zoom out, the maximum resize scale cannot exceed 1.0, default true</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_preprocessor</span><span class="o">.</span><span class="n">is_scale_up</span>
+
+    <span class="nd">@size</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">size</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">wh</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">wh</span><span class="p">,</span> <span class="p">(</span><span class="nb">list</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">)),</span>\
+            <span class="s2">&quot;The value to set `size` must be type of tuple or list.&quot;</span>
+        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">wh</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">,</span>\
+            <span class="s2">&quot;The value to set `size` must contatins 2 elements means [width, height], but now it contains </span><span class="si">{}</span><span class="s2"> elements.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="nb">len</span><span class="p">(</span><span class="n">wh</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_preprocessor</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="n">wh</span>
+
+    <span class="nd">@padding_value</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">padding_value</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span>
+            <span class="n">value</span><span class="p">,</span>
+            <span class="nb">list</span><span class="p">),</span> <span class="s2">&quot;The value to set `padding_value` must be type of list.&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_preprocessor</span><span class="o">.</span><span class="n">padding_value</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="nd">@is_scale_up</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">is_scale_up</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span>
+            <span class="n">value</span><span class="p">,</span>
+            <span class="nb">bool</span><span class="p">),</span> <span class="s2">&quot;The value to set `is_scale_up` must be type of bool.&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_preprocessor</span><span class="o">.</span><span class="n">is_scale_up</span> <span class="o">=</span> <span class="n">value</span></div>
+
+
+<div class="viewcode-block" id="YOLOv7Postprocessor"><a class="viewcode-back" href="../../../../../object_detection.html#fastdeploy.vision.detection.YOLOv7Postprocessor">[docs]</a><span class="k">class</span> <span class="nc">YOLOv7Postprocessor</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Create a postprocessor for YOLOv7</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_postprocessor</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">vision</span><span class="o">.</span><span class="n">detection</span><span class="o">.</span><span class="n">YOLOv7Postprocessor</span><span class="p">()</span>
+
+<div class="viewcode-block" id="YOLOv7Postprocessor.run"><a class="viewcode-back" href="../../../../../object_detection.html#fastdeploy.vision.detection.YOLOv7Postprocessor.run">[docs]</a>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">runtime_results</span><span class="p">,</span> <span class="n">ims_info</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Postprocess the runtime results for YOLOv7</span>
+
+<span class="sd">        :param: runtime_results: (list of FDTensor)The output FDTensor results from runtime</span>
+<span class="sd">        :param: ims_info: (list of dict)Record input_shape and output_shape</span>
+<span class="sd">        :return: list of DetectionResult(If the runtime_results is predict by batched samples, the length of this list equals to the batch size)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_postprocessor</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">runtime_results</span><span class="p">,</span> <span class="n">ims_info</span><span class="p">)</span></div>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">conf_threshold</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        confidence threshold for postprocessing, default is 0.25</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_postprocessor</span><span class="o">.</span><span class="n">conf_threshold</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">nms_threshold</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        nms threshold for postprocessing, default is 0.5</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_postprocessor</span><span class="o">.</span><span class="n">nms_threshold</span>
+
+    <span class="nd">@conf_threshold</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">conf_threshold</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">conf_threshold</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">conf_threshold</span><span class="p">,</span> <span class="nb">float</span><span class="p">),</span>\
+            <span class="s2">&quot;The value to set `conf_threshold` must be type of float.&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_postprocessor</span><span class="o">.</span><span class="n">conf_threshold</span> <span class="o">=</span> <span class="n">conf_threshold</span>
+
+    <span class="nd">@nms_threshold</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">nms_threshold</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nms_threshold</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">nms_threshold</span><span class="p">,</span> <span class="nb">float</span><span class="p">),</span>\
+            <span class="s2">&quot;The value to set `nms_threshold` must be type of float.&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_postprocessor</span><span class="o">.</span><span class="n">nms_threshold</span> <span class="o">=</span> <span class="n">nms_threshold</span></div>
+
+
 <div class="viewcode-block" id="YOLOv7"><a class="viewcode-back" href="../../../../../object_detection.html#fastdeploy.vision.detection.YOLOv7">[docs]</a><span class="k">class</span> <span class="nc">YOLOv7</span><span class="p">(</span><span class="n">FastDeployModel</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
                  <span class="n">model_file</span><span class="p">,</span>
@@ -298,99 +400,39 @@ title="Fullscreen mode"
         <span class="sd">&quot;&quot;&quot;Detect an input image</span>
 
 <span class="sd">        :param input_image: (numpy.ndarray)The input image data, 3-D array with layout HWC, BGR format</span>
-<span class="sd">        :param conf_threshold: confidence threashold for postprocessing, default is 0.25</span>
-<span class="sd">        :param nms_iou_threshold: iou threashold for NMS, default is 0.5</span>
+<span class="sd">        :param conf_threshold: confidence threshold for postprocessing, default is 0.25</span>
+<span class="sd">        :param nms_iou_threshold: iou threshold for NMS, default is 0.5</span>
 <span class="sd">        :return: DetectionResult</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">input_image</span><span class="p">,</span> <span class="n">conf_threshold</span><span class="p">,</span>
-                                   <span class="n">nms_iou_threshold</span><span class="p">)</span></div>
 
-    <span class="c1"># 一些跟YOLOv7模型有关的属性封装</span>
-    <span class="c1"># 多数是预处理相关，可通过修改如model.size = [1280, 1280]改变预处理时resize的大小（前提是模型支持）</span>
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">size</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Argument for image preprocessing step, the preprocess image size, tuple of (width, height), default size = [640, 640]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">postprocessor</span><span class="o">.</span><span class="n">conf_threshold</span> <span class="o">=</span> <span class="n">conf_threshold</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">postprocessor</span><span class="o">.</span><span class="n">nms_threshold</span> <span class="o">=</span> <span class="n">nms_iou_threshold</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">input_image</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="YOLOv7.batch_predict"><a class="viewcode-back" href="../../../../../object_detection.html#fastdeploy.vision.detection.YOLOv7.batch_predict">[docs]</a>    <span class="k">def</span> <span class="nf">batch_predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">images</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Classify a batch of input image</span>
+
+<span class="sd">        :param im: (list of numpy.ndarray) The input image list, each element is a 3-D array with layout HWC, BGR format</span>
+<span class="sd">        :return list of DetectionResult</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">size</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">batch_predict</span><span class="p">(</span><span class="n">images</span><span class="p">)</span></div>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">padding_value</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="c1">#  padding value, size should be the same as channels</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">padding_value</span>
+    <span class="k">def</span> <span class="nf">preprocessor</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get YOLOv7Preprocessor object of the loaded model</span>
+
+<span class="sd">        :return YOLOv7Preprocessor</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">preprocessor</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">is_no_pad</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="c1"># while is_mini_pad = false and is_no_pad = true, will resize the image to the set size</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">is_no_pad</span>
+    <span class="k">def</span> <span class="nf">postprocessor</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get YOLOv7Postprocessor object of the loaded model</span>
 
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">is_mini_pad</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="c1"># only pad to the minimum rectange which height and width is times of stride</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">is_mini_pad</span>
-
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">is_scale_up</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="c1"># if is_scale_up is false, the input image only can be zoom out, the maximum resize scale cannot exceed 1.0</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">is_scale_up</span>
-
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">stride</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="c1"># padding stride, for is_mini_pad</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">stride</span>
-
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">max_wh</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="c1"># for offseting the boxes by classes when using NMS</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">max_wh</span>
-
-    <span class="nd">@size</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">size</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">wh</span><span class="p">):</span>
-        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">wh</span><span class="p">,</span> <span class="p">(</span><span class="nb">list</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">)),</span>\
-            <span class="s2">&quot;The value to set `size` must be type of tuple or list.&quot;</span>
-        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">wh</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">,</span>\
-            <span class="s2">&quot;The value to set `size` must contatins 2 elements means [width, height], but now it contains </span><span class="si">{}</span><span class="s2"> elements.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
-            <span class="nb">len</span><span class="p">(</span><span class="n">wh</span><span class="p">))</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="n">wh</span>
-
-    <span class="nd">@padding_value</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">padding_value</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
-        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span>
-            <span class="n">value</span><span class="p">,</span>
-            <span class="nb">list</span><span class="p">),</span> <span class="s2">&quot;The value to set `padding_value` must be type of list.&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">padding_value</span> <span class="o">=</span> <span class="n">value</span>
-
-    <span class="nd">@is_no_pad</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">is_no_pad</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
-        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span>
-            <span class="n">value</span><span class="p">,</span> <span class="nb">bool</span><span class="p">),</span> <span class="s2">&quot;The value to set `is_no_pad` must be type of bool.&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">is_no_pad</span> <span class="o">=</span> <span class="n">value</span>
-
-    <span class="nd">@is_mini_pad</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">is_mini_pad</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
-        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span>
-            <span class="n">value</span><span class="p">,</span>
-            <span class="nb">bool</span><span class="p">),</span> <span class="s2">&quot;The value to set `is_mini_pad` must be type of bool.&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">is_mini_pad</span> <span class="o">=</span> <span class="n">value</span>
-
-    <span class="nd">@is_scale_up</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">is_scale_up</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
-        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span>
-            <span class="n">value</span><span class="p">,</span>
-            <span class="nb">bool</span><span class="p">),</span> <span class="s2">&quot;The value to set `is_scale_up` must be type of bool.&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">is_scale_up</span> <span class="o">=</span> <span class="n">value</span>
-
-    <span class="nd">@stride</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">stride</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
-        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span>
-            <span class="n">value</span><span class="p">,</span> <span class="nb">int</span><span class="p">),</span> <span class="s2">&quot;The value to set `stride` must be type of int.&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">stride</span> <span class="o">=</span> <span class="n">value</span>
-
-    <span class="nd">@max_wh</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">max_wh</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
-        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span>
-            <span class="n">value</span><span class="p">,</span> <span class="nb">float</span><span class="p">),</span> <span class="s2">&quot;The value to set `max_wh` must be type of float.&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">max_wh</span> <span class="o">=</span> <span class="n">value</span></div>
+<span class="sd">        :return YOLOv7Postprocessor</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">postprocessor</span></div>
 </pre></div>
 
               </div>

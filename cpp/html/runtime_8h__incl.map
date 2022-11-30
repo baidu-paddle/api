@@ -1,11 +1,13 @@
-<map id="/fastdeploy/FastDeploy/fastdeploy/runtime.h" name="/fastdeploy/FastDeploy/fastdeploy/runtime.h">
-<area shape="rect" id="node5" href="$backend_8h_source.html" title="fastdeploy/backends\l/backend.h" alt="" coords="641,95,799,136"/>
-<area shape="rect" id="node22" href="$perf_8h_source.html" title="fastdeploy/utils/perf.h" alt="" coords="946,102,1110,129"/>
-<area shape="rect" id="node24" href="$rknpu2__config_8h_source.html" title="backends/rknpu/rknpu2\l/rknpu2_config.h" alt="" coords="1134,95,1309,136"/>
-<area shape="rect" id="node9" href="$common_2multiclass__nms_8h_source.html" title="fastdeploy/backends\l/common/multiclass_nms.h" alt="" coords="298,184,499,225"/>
-<area shape="rect" id="node10" href="$fd__tensor_8h_source.html" title="fastdeploy/core/fd\l_tensor.h" alt="" coords="705,184,845,225"/>
-<area shape="rect" id="node19" href="$fd__type_8h_source.html" title="fastdeploy/core/fd\l_type.h" alt="" coords="921,273,1061,315"/>
-<area shape="rect" id="node12" href="$allocate_8h_source.html" title="fastdeploy/core/allocate.h" alt="" coords="521,281,711,307"/>
-<area shape="rect" id="node14" href="$utils_2utils_8h_source.html" title="fastdeploy/utils/utils.h" alt="" coords="971,363,1138,389"/>
-<area shape="rect" id="node21" href="$config_8h_source.html" title="fastdeploy/core/config.h" alt="" coords="1315,363,1493,389"/>
+<map id="/fastdeploy/1130/FastDeploy/fastdeploy/runtime.h" name="/fastdeploy/1130/FastDeploy/fastdeploy/runtime.h">
+<area shape="rect" id="node5" href="$backend_8h_source.html" title="fastdeploy/backends\l/backend.h" alt="" coords="515,95,672,136"/>
+<area shape="rect" id="node29" href="$perf_8h_source.html" title="fastdeploy/utils/perf.h" alt="" coords="1257,102,1421,129"/>
+<area shape="rect" id="node31" href="$rknpu2__config_8h_source.html" title="backends/rknpu/rknpu2\l/rknpu2_config.h" alt="" coords="1445,95,1619,136"/>
+<area shape="rect" id="node9" href="$common_2multiclass__nms_8h_source.html" title="fastdeploy/backends\l/common/multiclass_nms.h" alt="" coords="267,184,469,225"/>
+<area shape="rect" id="node10" href="$fd__tensor_8h_source.html" title="fastdeploy/core/fd\l_tensor.h" alt="" coords="610,184,750,225"/>
+<area shape="rect" id="node23" href="$fd__type_8h_source.html" title="fastdeploy/core/fd\l_type.h" alt="" coords="1302,363,1442,404"/>
+<area shape="rect" id="node12" href="$allocate_8h_source.html" title="fastdeploy/core/allocate.h" alt="" coords="651,370,842,397"/>
+<area shape="rect" id="node20" href="$fd__scalar_8h_source.html" title="fastdeploy/core/fd\l_scalar.h" alt="" coords="793,273,933,315"/>
+<area shape="rect" id="node14" href="$utils_2utils_8h_source.html" title="fastdeploy/utils/utils.h" alt="" coords="1202,452,1369,479"/>
+<area shape="rect" id="node26" href="$float16_8h_source.html" title="fastdeploy/core/float16.h" alt="" coords="1059,370,1243,397"/>
+<area shape="rect" id="node25" href="$config_8h_source.html" title="fastdeploy/core/config.h" alt="" coords="1596,452,1775,479"/>
 </map>

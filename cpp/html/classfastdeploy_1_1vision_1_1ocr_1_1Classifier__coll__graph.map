@@ -1,4 +1,6 @@
 <map id="fastdeploy::vision::ocr::Classifier" name="fastdeploy::vision::ocr::Classifier">
-<area shape="rect" id="node2" href="$classfastdeploy_1_1FastDeployModel.html" title="Base model object for all the vision models. " alt="" coords="5,95,215,121"/>
-<area shape="rect" id="node3" href="$structfastdeploy_1_1RuntimeOption.html" title="Option object used when create a new Runtime object. " alt="" coords="13,5,207,32"/>
+<area shape="rect" id="node2" href="$classfastdeploy_1_1FastDeployModel.html" title="Base model object for all the vision models. " alt="" coords="352,7,561,33"/>
+<area shape="rect" id="node3" href="$structfastdeploy_1_1RuntimeOption.html" title="Option object used when create a new Runtime object. " alt="" coords="5,7,200,33"/>
+<area shape="rect" id="node4" href="$classfastdeploy_1_1vision_1_1ocr_1_1ClassifierPreprocessor.html" title="Preprocessor object for Classifier serials model. " alt="" coords="355,58,558,99"/>
+<area shape="rect" id="node5" href="$classfastdeploy_1_1vision_1_1ocr_1_1ClassifierPostprocessor.html" title="Postprocessor object for Classifier serials model. " alt="" coords="352,123,561,165"/>
 </map>
