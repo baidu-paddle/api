@@ -298,6 +298,8 @@ title="Fullscreen mode"
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="object_detection.html#fastdeploy.vision.detection.PaddleDetPostprocessor.apply_decode_and_nms">apply_decode_and_nms() (fastdeploy.vision.detection.PaddleDetPostprocessor method)</a>
 </li>
+      <li><a href="semantic_segmentation.html#fastdeploy.vision.segmentation.PaddleSegPostprocessor.apply_softmax">apply_softmax (fastdeploy.vision.segmentation.PaddleSegPostprocessor property)</a>
+</li>
       <li><a href="face_recognition.html#fastdeploy.vision.faceid.ArcFace">ArcFace (class in fastdeploy.vision.faceid)</a>
 </li>
   </ul></td>
@@ -325,9 +327,15 @@ title="Fullscreen mode"
 </li>
         <li><a href="object_detection.html#fastdeploy.vision.detection.YOLOv7.batch_predict">(fastdeploy.vision.detection.YOLOv7 method)</a>
 </li>
+        <li><a href="ocr.html#fastdeploy.vision.ocr.Classifier.batch_predict">(fastdeploy.vision.ocr.Classifier method)</a>
+</li>
+        <li><a href="ocr.html#fastdeploy.vision.ocr.DBDetector.batch_predict">(fastdeploy.vision.ocr.DBDetector method)</a>
+</li>
         <li><a href="ocr.html#fastdeploy.vision.ocr.PPOCRv2.batch_predict">(fastdeploy.vision.ocr.PPOCRv2 method)</a>
 </li>
         <li><a href="ocr.html#fastdeploy.vision.ocr.PPOCRv3.batch_predict">(fastdeploy.vision.ocr.PPOCRv3 method)</a>
+</li>
+        <li><a href="ocr.html#fastdeploy.vision.ocr.Recognizer.batch_predict">(fastdeploy.vision.ocr.Recognizer method)</a>
 </li>
         <li><a href="semantic_segmentation.html#fastdeploy.vision.segmentation.PaddleSegModel.batch_predict">(fastdeploy.vision.segmentation.PaddleSegModel method)</a>
 </li>
@@ -358,10 +366,28 @@ title="Fullscreen mode"
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="ocr.html#fastdeploy.vision.ocr.Classifier">Classifier (class in fastdeploy.vision.ocr)</a>
 </li>
-      <li><a href="runtime.html#fastdeploy.Runtime.compile">compile() (fastdeploy.Runtime method)</a>
+      <li><a href="image_classification.html#fastdeploy.vision.classification.PaddleClasModel.clone">clone() (fastdeploy.vision.classification.PaddleClasModel method)</a>
+
+      <ul>
+        <li><a href="object_detection.html#fastdeploy.vision.detection.FasterRCNN.clone">(fastdeploy.vision.detection.FasterRCNN method)</a>
 </li>
+        <li><a href="object_detection.html#fastdeploy.vision.detection.MaskRCNN.clone">(fastdeploy.vision.detection.MaskRCNN method)</a>
+</li>
+        <li><a href="object_detection.html#fastdeploy.vision.detection.PaddleYOLOX.clone">(fastdeploy.vision.detection.PaddleYOLOX method)</a>, <a href="object_detection.html#fastdeploy.vision.detection.PaddleYOLOX.clone">[1]</a>
+</li>
+        <li><a href="object_detection.html#fastdeploy.vision.detection.PicoDet.clone">(fastdeploy.vision.detection.PicoDet method)</a>
+</li>
+        <li><a href="object_detection.html#fastdeploy.vision.detection.PPYOLO.clone">(fastdeploy.vision.detection.PPYOLO method)</a>
+</li>
+        <li><a href="object_detection.html#fastdeploy.vision.detection.PPYOLOE.clone">(fastdeploy.vision.detection.PPYOLOE method)</a>
+</li>
+        <li><a href="semantic_segmentation.html#fastdeploy.vision.segmentation.PaddleSegModel.clone">(fastdeploy.vision.segmentation.PaddleSegModel method)</a>
+</li>
+      </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="runtime.html#fastdeploy.Runtime.compile">compile() (fastdeploy.Runtime method)</a>
+</li>
       <li><a href="object_detection.html#fastdeploy.vision.detection.YOLOv5Postprocessor.conf_threshold">conf_threshold (fastdeploy.vision.detection.YOLOv5Postprocessor property)</a>
 
       <ul>
@@ -378,16 +404,24 @@ title="Fullscreen mode"
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="ocr.html#fastdeploy.vision.ocr.DBDetector">DBDetector (class in fastdeploy.vision.ocr)</a>
 </li>
+      <li><a href="runtime_option.html#fastdeploy.RuntimeOption.delete_paddle_backend_pass">delete_paddle_backend_pass() (fastdeploy.RuntimeOption method)</a>
+</li>
       <li><a href="runtime_option.html#fastdeploy.RuntimeOption.disable_lite_fp16">disable_lite_fp16() (fastdeploy.RuntimeOption method)</a>
 </li>
       <li><a href="face_detection.html#fastdeploy.vision.facedet.SCRFD.disable_normalize_and_permute">disable_normalize_and_permute() (fastdeploy.vision.facedet.SCRFD method)</a>
+
+      <ul>
+        <li><a href="semantic_segmentation.html#fastdeploy.vision.segmentation.PaddleSegPreprocessor.disable_normalize_and_permute">(fastdeploy.vision.segmentation.PaddleSegPreprocessor method)</a>
 </li>
+      </ul></li>
       <li><a href="runtime_option.html#fastdeploy.RuntimeOption.disable_paddle_log_info">disable_paddle_log_info() (fastdeploy.RuntimeOption method)</a>
 </li>
       <li><a href="runtime_option.html#fastdeploy.RuntimeOption.disable_paddle_trt_collect_shape">disable_paddle_trt_collect_shape() (fastdeploy.RuntimeOption method)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="runtime_option.html#fastdeploy.RuntimeOption.disable_paddle_trt_ops">disable_paddle_trt_ops() (fastdeploy.RuntimeOption method)</a>
+</li>
       <li><a href="runtime_option.html#fastdeploy.RuntimeOption.disable_pinned_memory">disable_pinned_memory() (fastdeploy.RuntimeOption method)</a>
 </li>
       <li><a href="runtime_option.html#fastdeploy.RuntimeOption.disable_trt_fp16">disable_trt_fp16() (fastdeploy.RuntimeOption method)</a>
@@ -476,6 +510,8 @@ title="Fullscreen mode"
         <li><a href="object_detection.html#fastdeploy.vision.detection.YOLOv7Preprocessor.is_scale_up">(fastdeploy.vision.detection.YOLOv7Preprocessor property)</a>
 </li>
       </ul></li>
+      <li><a href="semantic_segmentation.html#fastdeploy.vision.segmentation.PaddleSegPreprocessor.is_vertical_screen">is_vertical_screen (fastdeploy.vision.segmentation.PaddleSegPreprocessor property)</a>
+</li>
   </ul></td>
 </tr></table>
 
@@ -577,6 +613,10 @@ title="Fullscreen mode"
       <li><a href="object_detection.html#fastdeploy.vision.detection.PaddleDetPreprocessor">PaddleDetPreprocessor (class in fastdeploy.vision.detection)</a>
 </li>
       <li><a href="semantic_segmentation.html#fastdeploy.vision.segmentation.PaddleSegModel">PaddleSegModel (class in fastdeploy.vision.segmentation)</a>
+</li>
+      <li><a href="semantic_segmentation.html#fastdeploy.vision.segmentation.PaddleSegPostprocessor">PaddleSegPostprocessor (class in fastdeploy.vision.segmentation)</a>
+</li>
+      <li><a href="semantic_segmentation.html#fastdeploy.vision.segmentation.PaddleSegPreprocessor">PaddleSegPreprocessor (class in fastdeploy.vision.segmentation)</a>
 </li>
       <li><a href="object_detection.html#fastdeploy.vision.detection.PaddleYOLOX">PaddleYOLOX (class in fastdeploy.vision.detection)</a>, <a href="object_detection.html#fastdeploy.vision.detection.PaddleYOLOX">[1]</a>
 </li>
@@ -695,9 +735,15 @@ title="Fullscreen mode"
 </li>
         <li><a href="matting.html#fastdeploy.vision.matting.RobustVideoMatting.predict">(fastdeploy.vision.matting.RobustVideoMatting method)</a>
 </li>
+        <li><a href="ocr.html#fastdeploy.vision.ocr.Classifier.predict">(fastdeploy.vision.ocr.Classifier method)</a>
+</li>
+        <li><a href="ocr.html#fastdeploy.vision.ocr.DBDetector.predict">(fastdeploy.vision.ocr.DBDetector method)</a>
+</li>
         <li><a href="ocr.html#fastdeploy.vision.ocr.PPOCRv2.predict">(fastdeploy.vision.ocr.PPOCRv2 method)</a>
 </li>
         <li><a href="ocr.html#fastdeploy.vision.ocr.PPOCRv3.predict">(fastdeploy.vision.ocr.PPOCRv3 method)</a>
+</li>
+        <li><a href="ocr.html#fastdeploy.vision.ocr.Recognizer.predict">(fastdeploy.vision.ocr.Recognizer method)</a>
 </li>
         <li><a href="semantic_segmentation.html#fastdeploy.vision.segmentation.PaddleSegModel.predict">(fastdeploy.vision.segmentation.PaddleSegModel method)</a>
 </li>
@@ -758,6 +804,10 @@ title="Fullscreen mode"
         <li><a href="object_detection.html#fastdeploy.vision.detection.YOLOv7Postprocessor.run">(fastdeploy.vision.detection.YOLOv7Postprocessor method)</a>
 </li>
         <li><a href="object_detection.html#fastdeploy.vision.detection.YOLOv7Preprocessor.run">(fastdeploy.vision.detection.YOLOv7Preprocessor method)</a>
+</li>
+        <li><a href="semantic_segmentation.html#fastdeploy.vision.segmentation.PaddleSegPostprocessor.run">(fastdeploy.vision.segmentation.PaddleSegPostprocessor method)</a>
+</li>
+        <li><a href="semantic_segmentation.html#fastdeploy.vision.segmentation.PaddleSegPreprocessor.run">(fastdeploy.vision.segmentation.PaddleSegPreprocessor method)</a>
 </li>
       </ul></li>
   </ul></td>
@@ -866,6 +916,8 @@ title="Fullscreen mode"
         <li><a href="face_alignment.html#fastdeploy.vision.facealign.PIPNet.std_vals">(fastdeploy.vision.facealign.PIPNet property)</a>
 </li>
       </ul></li>
+      <li><a href="semantic_segmentation.html#fastdeploy.vision.segmentation.PaddleSegPostprocessor.store_score_map">store_score_map (fastdeploy.vision.segmentation.PaddleSegPostprocessor property)</a>
+</li>
       <li><a href="face_recognition.html#fastdeploy.vision.faceid.AdaFace.swap_rb">swap_rb (fastdeploy.vision.faceid.AdaFace property)</a>
 
       <ul>
@@ -932,9 +984,23 @@ title="Fullscreen mode"
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="face_detection.html#fastdeploy.vision.facedet.RetinaFace.variance">variance (fastdeploy.vision.facedet.RetinaFace property)</a>
 </li>
+      <li><a href="matting.html#fastdeploy.vision.matting.RobustVideoMatting.video_mode">video_mode (fastdeploy.vision.matting.RobustVideoMatting property)</a>
+</li>
+      <li><a href="visualize.html#fastdeploy.vision.vis_detection">vis_detection (class in fastdeploy.vision)</a>
+</li>
+      <li><a href="visualize.html#fastdeploy.vision.vis_face_alignment">vis_face_alignment (class in fastdeploy.vision)</a>
+</li>
+      <li><a href="visualize.html#fastdeploy.vision.vis_face_detection">vis_face_detection (class in fastdeploy.vision)</a>
+</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="matting.html#fastdeploy.vision.matting.RobustVideoMatting.video_mode">video_mode (fastdeploy.vision.matting.RobustVideoMatting property)</a>
+      <li><a href="visualize.html#fastdeploy.vision.vis_keypoint_detection">vis_keypoint_detection (class in fastdeploy.vision)</a>
+</li>
+      <li><a href="visualize.html#fastdeploy.vision.vis_matting">vis_matting (class in fastdeploy.vision)</a>
+</li>
+      <li><a href="visualize.html#fastdeploy.vision.vis_ppocr">vis_ppocr (class in fastdeploy.vision)</a>
+</li>
+      <li><a href="visualize.html#fastdeploy.vision.vis_segmentation">vis_segmentation (class in fastdeploy.vision)</a>
 </li>
       <li><a href="face_recognition.html#fastdeploy.vision.faceid.VPL">VPL (class in fastdeploy.vision.faceid)</a>
 </li>

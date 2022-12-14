@@ -83,7 +83,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ae3c70590af97d480fc310c5258f671ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a postprocessor instance for <a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1Recognizer.html" title="Recognizer object is used to load the recognition model provided by PaddleOCR. ">Recognizer</a> serials model.  <a href="#ae3c70590af97d480fc310c5258f671ab">More...</a><br /></td></tr>
 <tr class="separator:ae3c70590af97d480fc310c5258f671ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42303afb6300989347f4dd730af515ef"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1RecognizerPostprocessor.html#a42303afb6300989347f4dd730af515ef">Run</a> (const std::vector&lt; FDTensor &gt; &amp;tensors, std::vector&lt; std::string &gt; *texts, std::vector&lt; float &gt; *rec_scores)</td></tr>
-<tr class="memdesc:a42303afb6300989347f4dd730af515ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process the result of runtime and fill to <a class="el" href="structfastdeploy_1_1vision_1_1ClassifyResult.html" title="Classify result structure for all the image classify models. ">ClassifyResult</a> structure.  <a href="#a42303afb6300989347f4dd730af515ef">More...</a><br /></td></tr>
+<tr class="memdesc:a42303afb6300989347f4dd730af515ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process the result of runtime and fill to RecognizerResult.  <a href="#a42303afb6300989347f4dd730af515ef">More...</a><br /></td></tr>
 <tr class="separator:a42303afb6300989347f4dd730af515ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -156,12 +156,12 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Process the result of runtime and fill to <a class="el" href="structfastdeploy_1_1vision_1_1ClassifyResult.html" title="Classify result structure for all the image classify models. ">ClassifyResult</a> structure. </p>
+<p>Process the result of runtime and fill to RecognizerResult. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">tensors</td><td>The inference result from runtime </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">texts</td><td>The output result of recognizer </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">rec_scores</td><td>The output result of recognizer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">texts</td><td>The output text results of recognizer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rec_scores</td><td>The output score results of recognizer </td></tr>
   </table>
   </dd>
 </dl>
@@ -170,8 +170,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/fastdeploy/1130/FastDeploy/fastdeploy/vision/ocr/ppocr/<a class="el" href="rec__postprocessor_8h_source.html">rec_postprocessor.h</a></li>
-<li>/fastdeploy/1130/FastDeploy/fastdeploy/vision/ocr/ppocr/rec_postprocessor.cc</li>
+<li>/fastdeploy/1212/FastDeploy/fastdeploy/vision/ocr/ppocr/<a class="el" href="rec__postprocessor_8h_source.html">rec_postprocessor.h</a></li>
+<li>/fastdeploy/1212/FastDeploy/fastdeploy/vision/ocr/ppocr/rec_postprocessor.cc</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

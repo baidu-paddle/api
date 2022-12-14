@@ -299,8 +299,18 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fastdeploy-vision-segmentation-paddlesegpreprocessor">
+   fastdeploy.vision.segmentation.PaddleSegPreprocessor
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#fastdeploy-vision-segmentation-paddlesegmodel">
    fastdeploy.vision.segmentation.PaddleSegModel
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fastdeploy-vision-segmentation-paddlesegpostprocessor">
+   fastdeploy.vision.segmentation.PaddleSegPostprocessor
   </a>
  </li>
 </ul>
@@ -323,8 +333,18 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fastdeploy-vision-segmentation-paddlesegpreprocessor">
+   fastdeploy.vision.segmentation.PaddleSegPreprocessor
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#fastdeploy-vision-segmentation-paddlesegmodel">
    fastdeploy.vision.segmentation.PaddleSegModel
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fastdeploy-vision-segmentation-paddlesegpostprocessor">
+   fastdeploy.vision.segmentation.PaddleSegPostprocessor
   </a>
  </li>
 </ul>
@@ -339,6 +359,51 @@ title="Print to PDF"
                 
   <section id="semantic-segmentation">
 <h1>Semantic Segmentation(语义分割)<a class="headerlink" href="#semantic-segmentation" title="Permalink to this headline">#</a></h1>
+<section id="fastdeploy-vision-segmentation-paddlesegpreprocessor">
+<h2>fastdeploy.vision.segmentation.PaddleSegPreprocessor<a class="headerlink" href="#fastdeploy-vision-segmentation-paddlesegpreprocessor" title="Permalink to this headline">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="fastdeploy.vision.segmentation.PaddleSegPreprocessor">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.segmentation.</span></span><span class="sig-name descname"><span class="pre">PaddleSegPreprocessor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config_file</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/segmentation/ppseg.html#PaddleSegPreprocessor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.segmentation.PaddleSegPreprocessor" title="Permalink to this definition">#</a></dt>
+<dd><p>Create a preprocessor for PaddleSegModel from configuration file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>config_file</strong> – (str)Path of configuration file, e.g ppliteseg/deploy.yaml</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.vision.segmentation.PaddleSegPreprocessor.disable_normalize_and_permute">
+<span class="sig-name descname"><span class="pre">disable_normalize_and_permute</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/segmentation/ppseg.html#PaddleSegPreprocessor.disable_normalize_and_permute"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.segmentation.PaddleSegPreprocessor.disable_normalize_and_permute" title="Permalink to this definition">#</a></dt>
+<dd><p>To disable normalize and hwc2chw in preprocessing step.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fastdeploy.vision.segmentation.PaddleSegPreprocessor.is_vertical_screen">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_vertical_screen</span></span><a class="headerlink" href="#fastdeploy.vision.segmentation.PaddleSegPreprocessor.is_vertical_screen" title="Permalink to this definition">#</a></dt>
+<dd><p>Atrribute of PP-HumanSeg model. Stating Whether the input image is vertical image(height &gt; width), default value is False</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>value of is_vertical_screen(bool)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.vision.segmentation.PaddleSegPreprocessor.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_ims</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/segmentation/ppseg.html#PaddleSegPreprocessor.run"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.segmentation.PaddleSegPreprocessor.run" title="Permalink to this definition">#</a></dt>
+<dd><p>Preprocess input images for PaddleSegModel</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>input_ims</strong> – (list of numpy.ndarray)The input image</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list of FDTensor</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
 <section id="fastdeploy-vision-segmentation-paddlesegmodel">
 <h2>fastdeploy.vision.segmentation.PaddleSegModel<a class="headerlink" href="#fastdeploy-vision-segmentation-paddlesegmodel" title="Permalink to this headline">#</a></h2>
 <dl class="py class">
@@ -359,16 +424,37 @@ title="Print to PDF"
 <dl class="py method">
 <dt class="sig sig-object py" id="fastdeploy.vision.segmentation.PaddleSegModel.batch_predict">
 <span class="sig-name descname"><span class="pre">batch_predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_list</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/segmentation/ppseg.html#PaddleSegModel.batch_predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.segmentation.PaddleSegModel.batch_predict" title="Permalink to this definition">#</a></dt>
-<dd><p>Predict the segmentation results for a batch of input image
-:param image_list: (list of numpy.ndarray) The input image list, each element is a 3-D array with layout HWC, BGR format
-:return list of SegmentationResult</p>
+<dd><p>Predict the segmentation results for a batch of input images</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>image_list</strong> – (list of numpy.ndarray) The input image list, each element is a 3-D array with layout HWC, BGR format</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list of SegmentationResult</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.vision.segmentation.PaddleSegModel.clone">
+<span class="sig-name descname"><span class="pre">clone</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/segmentation/ppseg.html#PaddleSegModel.clone"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.segmentation.PaddleSegModel.clone" title="Permalink to this definition">#</a></dt>
+<dd><p>Clone PaddleSegModel object</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>a new PaddleSegModel object</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="fastdeploy.vision.segmentation.PaddleSegModel.postprocessor">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">postprocessor</span></span><a class="headerlink" href="#fastdeploy.vision.segmentation.PaddleSegModel.postprocessor" title="Permalink to this definition">#</a></dt>
-<dd><p>Get PaddleSegPostprocessor object of the loaded model
-:return PaddleSegPostprocessor</p>
+<dd><p>Get PaddleSegPostprocessor object of the loaded model</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>PaddleSegPostprocessor</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -388,8 +474,65 @@ title="Print to PDF"
 <dl class="py property">
 <dt class="sig sig-object py" id="fastdeploy.vision.segmentation.PaddleSegModel.preprocessor">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">preprocessor</span></span><a class="headerlink" href="#fastdeploy.vision.segmentation.PaddleSegModel.preprocessor" title="Permalink to this definition">#</a></dt>
-<dd><p>Get PaddleSegPreprocessor object of the loaded model
-:return PaddleSegPreprocessor</p>
+<dd><p>Get PaddleSegPreprocessor object of the loaded model</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>PaddleSegPreprocessor</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="fastdeploy-vision-segmentation-paddlesegpostprocessor">
+<h2>fastdeploy.vision.segmentation.PaddleSegPostprocessor<a class="headerlink" href="#fastdeploy-vision-segmentation-paddlesegpostprocessor" title="Permalink to this headline">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="fastdeploy.vision.segmentation.PaddleSegPostprocessor">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.segmentation.</span></span><span class="sig-name descname"><span class="pre">PaddleSegPostprocessor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config_file</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/segmentation/ppseg.html#PaddleSegPostprocessor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.segmentation.PaddleSegPostprocessor" title="Permalink to this definition">#</a></dt>
+<dd><p>Create a postprocessor for PaddleSegModel from configuration file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>config_file</strong> – (str)Path of configuration file, e.g ppliteseg/deploy.yaml</p>
+</dd>
+</dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="fastdeploy.vision.segmentation.PaddleSegPostprocessor.apply_softmax">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">apply_softmax</span></span><a class="headerlink" href="#fastdeploy.vision.segmentation.PaddleSegPostprocessor.apply_softmax" title="Permalink to this definition">#</a></dt>
+<dd><p>Atrribute of PaddleSeg model. Stating Whether applying softmax operator in the postprocess, default value is False</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>value of apply_softmax(bool)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.vision.segmentation.PaddleSegPostprocessor.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">runtime_results</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">imgs_info</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/segmentation/ppseg.html#PaddleSegPostprocessor.run"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.segmentation.PaddleSegPostprocessor.run" title="Permalink to this definition">#</a></dt>
+<dd><p>Postprocess the runtime results for PaddleSegModel</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>runtime_results</strong> – (list of FDTensor)The output FDTensor results from runtime</p></li>
+<li><p><strong>imgs_info</strong> – The original input images shape info map, key is “shape_info”, value is [[image_height, image_width]]</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list of SegmentationResult(If the runtime_results is predict by batched samples, the length of this list equals to the batch size)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fastdeploy.vision.segmentation.PaddleSegPostprocessor.store_score_map">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">store_score_map</span></span><a class="headerlink" href="#fastdeploy.vision.segmentation.PaddleSegPostprocessor.store_score_map" title="Permalink to this definition">#</a></dt>
+<dd><p>Atrribute of PaddleSeg model. Stating Whether storing score map in the SegmentationResult, default value is False</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>value of store_score_map(bool)</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>

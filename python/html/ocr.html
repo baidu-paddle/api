@@ -395,6 +395,22 @@ title="Print to PDF"
 </ul>
 </dd>
 </dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.vision.ocr.DBDetector.batch_predict">
+<span class="sig-name descname"><span class="pre">batch_predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">images</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/ocr/ppocr.html#DBDetector.batch_predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.ocr.DBDetector.batch_predict" title="Permalink to this definition">#</a></dt>
+<dd><p>Predict a batch of input image
+:param images: (list of numpy.ndarray) The input image list, each element is a 3-D array with layout HWC, BGR format
+:return: batch_boxes</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.vision.ocr.DBDetector.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_image</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/ocr/ppocr.html#DBDetector.predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.ocr.DBDetector.predict" title="Permalink to this definition">#</a></dt>
+<dd><p>Predict an input image
+:param input_image: (numpy.ndarray)The input image data, 3-D array with layout HWC, BGR format
+:return: boxes</p>
+</dd></dl>
+
 </dd></dl>
 
 </section>
@@ -414,6 +430,22 @@ title="Print to PDF"
 </ul>
 </dd>
 </dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.vision.ocr.Classifier.batch_predict">
+<span class="sig-name descname"><span class="pre">batch_predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">images</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/ocr/ppocr.html#Classifier.batch_predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.ocr.Classifier.batch_predict" title="Permalink to this definition">#</a></dt>
+<dd><p>Predict a batch of input image
+:param images: (list of numpy.ndarray) The input image list, each element is a 3-D array with layout HWC, BGR format
+:return: list of cls_label, list of cls_score</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.vision.ocr.Classifier.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_image</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/ocr/ppocr.html#Classifier.predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.ocr.Classifier.predict" title="Permalink to this definition">#</a></dt>
+<dd><p>Predict an input image
+:param input_image: (numpy.ndarray)The input image data, 3-D array with layout HWC, BGR format
+:return: cls_label, cls_score</p>
+</dd></dl>
+
 </dd></dl>
 
 </section>
@@ -434,6 +466,22 @@ title="Print to PDF"
 </ul>
 </dd>
 </dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.vision.ocr.Recognizer.batch_predict">
+<span class="sig-name descname"><span class="pre">batch_predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">images</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/ocr/ppocr.html#Recognizer.batch_predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.ocr.Recognizer.batch_predict" title="Permalink to this definition">#</a></dt>
+<dd><p>Predict a batch of input image
+:param images: (list of numpy.ndarray) The input image list, each element is a 3-D array with layout HWC, BGR format
+:return: list of rec_text, list of rec_score</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.vision.ocr.Recognizer.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_image</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/ocr/ppocr.html#Recognizer.predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.ocr.Recognizer.predict" title="Permalink to this definition">#</a></dt>
+<dd><p>Predict an input image
+:param input_image: (numpy.ndarray)The input image data, 3-D array with layout HWC, BGR format
+:return: rec_text, rec_score</p>
+</dd></dl>
+
 </dd></dl>
 
 </section>
@@ -503,15 +551,9 @@ title="Print to PDF"
 <dl class="py method">
 <dt class="sig sig-object py" id="fastdeploy.vision.ocr.PPOCRv3.predict">
 <span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_image</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/ocr/ppocr.html#PPOCRv3.predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.ocr.PPOCRv3.predict" title="Permalink to this definition">#</a></dt>
-<dd><p>Predict an input image</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>input_image</strong> – (numpy.ndarray)The input image data, 3-D array with layout HWC, BGR format</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>OCRResult</p>
-</dd>
-</dl>
+<dd><p>Predict an input image
+:param input_image: (numpy.ndarray)The input image data, 3-D array with layout HWC, BGR format
+:return: OCRResult</p>
 </dd></dl>
 
 </dd></dl>

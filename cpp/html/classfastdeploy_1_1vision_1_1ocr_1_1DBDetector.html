@@ -105,9 +105,6 @@ Public Member Functions</h2></td></tr>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1DBDetector.html#a8eefa6e74658517a8e7670ffe670c47c">ModelName</a> () const</td></tr>
 <tr class="memdesc:a8eefa6e74658517a8e7670ffe670c47c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get model's name. <br /></td></tr>
 <tr class="separator:a8eefa6e74658517a8e7670ffe670c47c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a358dc5edfafa427e3082b2b54fd7ccfe"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1DBDetector.html#a358dc5edfafa427e3082b2b54fd7ccfe">Predict</a> (cv::Mat *img, std::vector&lt; std::array&lt; int, 8 &gt;&gt; *boxes_result)</td></tr>
-<tr class="memdesc:a358dc5edfafa427e3082b2b54fd7ccfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Predict the input image and get OCR detection model result.  <a href="#a358dc5edfafa427e3082b2b54fd7ccfe">More...</a><br /></td></tr>
-<tr class="separator:a358dc5edfafa427e3082b2b54fd7ccfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e2fc3aa4c9ec587dca7f97d367b2160"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1DBDetector.html#a7e2fc3aa4c9ec587dca7f97d367b2160">Predict</a> (const cv::Mat &amp;img, std::vector&lt; std::array&lt; int, 8 &gt;&gt; *boxes_result)</td></tr>
 <tr class="memdesc:a7e2fc3aa4c9ec587dca7f97d367b2160"><td class="mdescLeft">&#160;</td><td class="mdescRight">Predict the input image and get OCR detection model result.  <a href="#a7e2fc3aa4c9ec587dca7f97d367b2160">More...</a><br /></td></tr>
 <tr class="separator:a7e2fc3aa4c9ec587dca7f97d367b2160"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -280,54 +277,8 @@ std::vector&lt; <a class="el" href="namespacefastdeploy.html#addd441db144b083efc
 
 </div>
 </div>
-<a id="a358dc5edfafa427e3082b2b54fd7ccfe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a358dc5edfafa427e3082b2b54fd7ccfe">&#9670;&nbsp;</a></span>Predict() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool fastdeploy::vision::ocr::DBDetector::Predict </td>
-          <td>(</td>
-          <td class="paramtype">cv::Mat *&#160;</td>
-          <td class="paramname"><em>img</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::vector&lt; std::array&lt; int, 8 &gt;&gt; *&#160;</td>
-          <td class="paramname"><em>boxes_result</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Predict the input image and get OCR detection model result. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">img</td><td>The input image data, comes from cv::imread(), is a 3-D array with layout HWC, BGR format. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">boxes_result</td><td>The output of OCR detection model result will be writen to this structure. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>true if the prediction is successed, otherwise false. </dd></dl>
-
-</div>
-</div>
 <a id="a7e2fc3aa4c9ec587dca7f97d367b2160"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7e2fc3aa4c9ec587dca7f97d367b2160">&#9670;&nbsp;</a></span>Predict() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e2fc3aa4c9ec587dca7f97d367b2160">&#9670;&nbsp;</a></span>Predict()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -373,8 +324,8 @@ std::vector&lt; <a class="el" href="namespacefastdeploy.html#addd441db144b083efc
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/fastdeploy/1130/FastDeploy/fastdeploy/vision/ocr/ppocr/<a class="el" href="dbdetector_8h_source.html">dbdetector.h</a></li>
-<li>/fastdeploy/1130/FastDeploy/fastdeploy/vision/ocr/ppocr/dbdetector.cc</li>
+<li>/fastdeploy/1212/FastDeploy/fastdeploy/vision/ocr/ppocr/<a class="el" href="dbdetector_8h_source.html">dbdetector.h</a></li>
+<li>/fastdeploy/1212/FastDeploy/fastdeploy/vision/ocr/ppocr/dbdetector.cc</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

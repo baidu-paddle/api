@@ -353,6 +353,19 @@ title="Fullscreen mode"
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">batch_predict</span><span class="p">(</span><span class="n">images</span><span class="p">)</span></div>
 
+<div class="viewcode-block" id="PPYOLOE.clone"><a class="viewcode-back" href="../../../../object_detection.html#fastdeploy.vision.detection.PPYOLOE.clone">[docs]</a>    <span class="k">def</span> <span class="nf">clone</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Clone PPYOLOE object</span>
+
+<span class="sd">        :return: a new PPYOLOE object</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">class</span> <span class="nc">PPYOLOEClone</span><span class="p">(</span><span class="n">PPYOLOE</span><span class="p">):</span>
+            <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_model</span> <span class="o">=</span> <span class="n">model</span>
+
+        <span class="n">clone_model</span> <span class="o">=</span> <span class="n">PPYOLOEClone</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">clone</span><span class="p">())</span>
+        <span class="k">return</span> <span class="n">clone_model</span></div>
+
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">preprocessor</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Get PaddleDetPreprocessor object of the loaded model</span>
@@ -391,7 +404,20 @@ title="Fullscreen mode"
         <span class="bp">self</span><span class="o">.</span><span class="n">_model</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">vision</span><span class="o">.</span><span class="n">detection</span><span class="o">.</span><span class="n">PPYOLO</span><span class="p">(</span>
             <span class="n">model_file</span><span class="p">,</span> <span class="n">params_file</span><span class="p">,</span> <span class="n">config_file</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_runtime_option</span><span class="p">,</span>
             <span class="n">model_format</span><span class="p">)</span>
-        <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">initialized</span><span class="p">,</span> <span class="s2">&quot;PPYOLO model initialize failed.&quot;</span></div>
+        <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">initialized</span><span class="p">,</span> <span class="s2">&quot;PPYOLO model initialize failed.&quot;</span>
+
+<div class="viewcode-block" id="PPYOLO.clone"><a class="viewcode-back" href="../../../../object_detection.html#fastdeploy.vision.detection.PPYOLO.clone">[docs]</a>    <span class="k">def</span> <span class="nf">clone</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Clone PPYOLO object</span>
+
+<span class="sd">        :return: a new PPYOLO object</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">class</span> <span class="nc">PPYOLOClone</span><span class="p">(</span><span class="n">PPYOLO</span><span class="p">):</span>
+            <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_model</span> <span class="o">=</span> <span class="n">model</span>
+
+        <span class="n">clone_model</span> <span class="o">=</span> <span class="n">PPYOLOClone</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">clone</span><span class="p">())</span>
+        <span class="k">return</span> <span class="n">clone_model</span></div></div>
 
 
 <div class="viewcode-block" id="PaddleYOLOX"><a class="viewcode-back" href="../../../../object_detection.html#fastdeploy.vision.detection.PaddleYOLOX">[docs]</a><span class="k">class</span> <span class="nc">PaddleYOLOX</span><span class="p">(</span><span class="n">PPYOLOE</span><span class="p">):</span>
@@ -416,7 +442,20 @@ title="Fullscreen mode"
         <span class="bp">self</span><span class="o">.</span><span class="n">_model</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">vision</span><span class="o">.</span><span class="n">detection</span><span class="o">.</span><span class="n">PaddleYOLOX</span><span class="p">(</span>
             <span class="n">model_file</span><span class="p">,</span> <span class="n">params_file</span><span class="p">,</span> <span class="n">config_file</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_runtime_option</span><span class="p">,</span>
             <span class="n">model_format</span><span class="p">)</span>
-        <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">initialized</span><span class="p">,</span> <span class="s2">&quot;PaddleYOLOX model initialize failed.&quot;</span></div>
+        <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">initialized</span><span class="p">,</span> <span class="s2">&quot;PaddleYOLOX model initialize failed.&quot;</span>
+
+<div class="viewcode-block" id="PaddleYOLOX.clone"><a class="viewcode-back" href="../../../../object_detection.html#fastdeploy.vision.detection.PaddleYOLOX.clone">[docs]</a>    <span class="k">def</span> <span class="nf">clone</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Clone PaddleYOLOX object</span>
+
+<span class="sd">        :return: a new PaddleYOLOX object</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">class</span> <span class="nc">PaddleYOLOXClone</span><span class="p">(</span><span class="n">PaddleYOLOX</span><span class="p">):</span>
+            <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_model</span> <span class="o">=</span> <span class="n">model</span>
+
+        <span class="n">clone_model</span> <span class="o">=</span> <span class="n">PaddleYOLOXClone</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">clone</span><span class="p">())</span>
+        <span class="k">return</span> <span class="n">clone_model</span></div></div>
 
 
 <div class="viewcode-block" id="PicoDet"><a class="viewcode-back" href="../../../../object_detection.html#fastdeploy.vision.detection.PicoDet">[docs]</a><span class="k">class</span> <span class="nc">PicoDet</span><span class="p">(</span><span class="n">PPYOLOE</span><span class="p">):</span>
@@ -440,7 +479,20 @@ title="Fullscreen mode"
         <span class="bp">self</span><span class="o">.</span><span class="n">_model</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">vision</span><span class="o">.</span><span class="n">detection</span><span class="o">.</span><span class="n">PicoDet</span><span class="p">(</span>
             <span class="n">model_file</span><span class="p">,</span> <span class="n">params_file</span><span class="p">,</span> <span class="n">config_file</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_runtime_option</span><span class="p">,</span>
             <span class="n">model_format</span><span class="p">)</span>
-        <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">initialized</span><span class="p">,</span> <span class="s2">&quot;PicoDet model initialize failed.&quot;</span></div>
+        <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">initialized</span><span class="p">,</span> <span class="s2">&quot;PicoDet model initialize failed.&quot;</span>
+
+<div class="viewcode-block" id="PicoDet.clone"><a class="viewcode-back" href="../../../../object_detection.html#fastdeploy.vision.detection.PicoDet.clone">[docs]</a>    <span class="k">def</span> <span class="nf">clone</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Clone PicoDet object</span>
+
+<span class="sd">        :return: a new PicoDet object</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">class</span> <span class="nc">PicoDetClone</span><span class="p">(</span><span class="n">PicoDet</span><span class="p">):</span>
+            <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_model</span> <span class="o">=</span> <span class="n">model</span>
+
+        <span class="n">clone_model</span> <span class="o">=</span> <span class="n">PicoDetClone</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">clone</span><span class="p">())</span>
+        <span class="k">return</span> <span class="n">clone_model</span></div></div>
 
 
 <div class="viewcode-block" id="FasterRCNN"><a class="viewcode-back" href="../../../../object_detection.html#fastdeploy.vision.detection.FasterRCNN">[docs]</a><span class="k">class</span> <span class="nc">FasterRCNN</span><span class="p">(</span><span class="n">PPYOLOE</span><span class="p">):</span>
@@ -465,7 +517,20 @@ title="Fullscreen mode"
         <span class="bp">self</span><span class="o">.</span><span class="n">_model</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">vision</span><span class="o">.</span><span class="n">detection</span><span class="o">.</span><span class="n">FasterRCNN</span><span class="p">(</span>
             <span class="n">model_file</span><span class="p">,</span> <span class="n">params_file</span><span class="p">,</span> <span class="n">config_file</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_runtime_option</span><span class="p">,</span>
             <span class="n">model_format</span><span class="p">)</span>
-        <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">initialized</span><span class="p">,</span> <span class="s2">&quot;FasterRCNN model initialize failed.&quot;</span></div>
+        <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">initialized</span><span class="p">,</span> <span class="s2">&quot;FasterRCNN model initialize failed.&quot;</span>
+
+<div class="viewcode-block" id="FasterRCNN.clone"><a class="viewcode-back" href="../../../../object_detection.html#fastdeploy.vision.detection.FasterRCNN.clone">[docs]</a>    <span class="k">def</span> <span class="nf">clone</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Clone FasterRCNN object</span>
+
+<span class="sd">        :return: a new FasterRCNN object</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">class</span> <span class="nc">FasterRCNNClone</span><span class="p">(</span><span class="n">FasterRCNN</span><span class="p">):</span>
+            <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_model</span> <span class="o">=</span> <span class="n">model</span>
+
+        <span class="n">clone_model</span> <span class="o">=</span> <span class="n">FasterRCNNClone</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">clone</span><span class="p">())</span>
+        <span class="k">return</span> <span class="n">clone_model</span></div></div>
 
 
 <span class="k">class</span> <span class="nc">YOLOv3</span><span class="p">(</span><span class="n">PPYOLOE</span><span class="p">):</span>
@@ -491,6 +556,19 @@ title="Fullscreen mode"
             <span class="n">model_file</span><span class="p">,</span> <span class="n">params_file</span><span class="p">,</span> <span class="n">config_file</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_runtime_option</span><span class="p">,</span>
             <span class="n">model_format</span><span class="p">)</span>
         <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">initialized</span><span class="p">,</span> <span class="s2">&quot;YOLOv3 model initialize failed.&quot;</span>
+
+    <span class="k">def</span> <span class="nf">clone</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Clone YOLOv3 object</span>
+
+<span class="sd">        :return: a new YOLOv3 object</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">class</span> <span class="nc">YOLOv3Clone</span><span class="p">(</span><span class="n">YOLOv3</span><span class="p">):</span>
+            <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_model</span> <span class="o">=</span> <span class="n">model</span>
+
+        <span class="n">clone_model</span> <span class="o">=</span> <span class="n">YOLOv3Clone</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">clone</span><span class="p">())</span>
+        <span class="k">return</span> <span class="n">clone_model</span>
 
 
 <div class="viewcode-block" id="MaskRCNN"><a class="viewcode-back" href="../../../../object_detection.html#fastdeploy.vision.detection.MaskRCNN">[docs]</a><span class="k">class</span> <span class="nc">MaskRCNN</span><span class="p">(</span><span class="n">PPYOLOE</span><span class="p">):</span>
@@ -525,7 +603,20 @@ title="Fullscreen mode"
 <span class="sd">        &quot;&quot;&quot;</span>
 
         <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span>
-            <span class="s2">&quot;batch_predict is not supported for MaskRCNN model now.&quot;</span><span class="p">)</span></div></div>
+            <span class="s2">&quot;batch_predict is not supported for MaskRCNN model now.&quot;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="MaskRCNN.clone"><a class="viewcode-back" href="../../../../object_detection.html#fastdeploy.vision.detection.MaskRCNN.clone">[docs]</a>    <span class="k">def</span> <span class="nf">clone</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Clone MaskRCNN object</span>
+
+<span class="sd">        :return: a new MaskRCNN object</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">class</span> <span class="nc">MaskRCNNClone</span><span class="p">(</span><span class="n">MaskRCNN</span><span class="p">):</span>
+            <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_model</span> <span class="o">=</span> <span class="n">model</span>
+
+        <span class="n">clone_model</span> <span class="o">=</span> <span class="n">MaskRCNNClone</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">clone</span><span class="p">())</span>
+        <span class="k">return</span> <span class="n">clone_model</span></div></div>
 
 
 <span class="k">class</span> <span class="nc">SSD</span><span class="p">(</span><span class="n">PPYOLOE</span><span class="p">):</span>
@@ -547,10 +638,23 @@ title="Fullscreen mode"
         <span class="nb">super</span><span class="p">(</span><span class="n">PPYOLOE</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">runtime_option</span><span class="p">)</span>
 
         <span class="k">assert</span> <span class="n">model_format</span> <span class="o">==</span> <span class="n">ModelFormat</span><span class="o">.</span><span class="n">PADDLE</span><span class="p">,</span> <span class="s2">&quot;SSD model only support model format of ModelFormat.Paddle now.&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_model</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">vision</span><span class="o">.</span><span class="n">detection</span><span class="o">.</span><span class="n">SSD</span><span class="p">(</span>
-            <span class="n">model_file</span><span class="p">,</span> <span class="n">params_file</span><span class="p">,</span> <span class="n">config_file</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_runtime_option</span><span class="p">,</span>
-            <span class="n">model_format</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_model</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">vision</span><span class="o">.</span><span class="n">detection</span><span class="o">.</span><span class="n">SSD</span><span class="p">(</span><span class="n">model_file</span><span class="p">,</span> <span class="n">params_file</span><span class="p">,</span>
+                                             <span class="n">config_file</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_runtime_option</span><span class="p">,</span>
+                                             <span class="n">model_format</span><span class="p">)</span>
         <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">initialized</span><span class="p">,</span> <span class="s2">&quot;SSD model initialize failed.&quot;</span>
+
+    <span class="k">def</span> <span class="nf">clone</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Clone SSD object</span>
+
+<span class="sd">        :return: a new SSD object</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">class</span> <span class="nc">SSDClone</span><span class="p">(</span><span class="n">SSD</span><span class="p">):</span>
+            <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_model</span> <span class="o">=</span> <span class="n">model</span>
+
+        <span class="n">clone_model</span> <span class="o">=</span> <span class="n">SSDClone</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">clone</span><span class="p">())</span>
+        <span class="k">return</span> <span class="n">clone_model</span>
 </pre></div>
 
               </div>

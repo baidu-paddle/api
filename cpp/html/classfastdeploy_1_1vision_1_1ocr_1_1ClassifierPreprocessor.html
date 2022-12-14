@@ -79,36 +79,13 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aff38c07663e51332f52b68f1680ff318"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1ClassifierPreprocessor.html#aff38c07663e51332f52b68f1680ff318">ClassifierPreprocessor</a> ()</td></tr>
-<tr class="memdesc:aff38c07663e51332f52b68f1680ff318"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a preprocessor instance for <a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1Classifier.html" title="Classifier object is used to load the classification model provided by PaddleOCR. ...">Classifier</a> serials model.  <a href="#aff38c07663e51332f52b68f1680ff318">More...</a><br /></td></tr>
-<tr class="separator:aff38c07663e51332f52b68f1680ff318"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50ee8735a469f6ea69506665a782a8a7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1ClassifierPreprocessor.html#a50ee8735a469f6ea69506665a782a8a7">Run</a> (std::vector&lt; FDMat &gt; *images, std::vector&lt; FDTensor &gt; *outputs)</td></tr>
 <tr class="memdesc:a50ee8735a469f6ea69506665a782a8a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process the input image and prepare input tensors for runtime.  <a href="#a50ee8735a469f6ea69506665a782a8a7">More...</a><br /></td></tr>
 <tr class="separator:a50ee8735a469f6ea69506665a782a8a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Preprocessor object for <a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1Classifier.html" title="Classifier object is used to load the classification model provided by PaddleOCR. ...">Classifier</a> serials model. </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="aff38c07663e51332f52b68f1680ff318"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aff38c07663e51332f52b68f1680ff318">&#9670;&nbsp;</a></span>ClassifierPreprocessor()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">fastdeploy::vision::ocr::ClassifierPreprocessor::ClassifierPreprocessor </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Create a preprocessor instance for <a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1Classifier.html" title="Classifier object is used to load the classification model provided by PaddleOCR. ...">Classifier</a> serials model. </p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a50ee8735a469f6ea69506665a782a8a7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a50ee8735a469f6ea69506665a782a8a7">&#9670;&nbsp;</a></span>Run()</h2>
 
@@ -138,8 +115,8 @@ Public Member Functions</h2></td></tr>
 <p>Process the input image and prepare input tensors for runtime. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">images</td><td>The input image data list, all the elements are returned by cv::imread() </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">outputs</td><td>The output tensors which will feed in runtime </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">images</td><td>The input data list, all the elements are FDMat </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">outputs</td><td>The output tensors which will be fed into runtime </td></tr>
   </table>
   </dd>
 </dl>
@@ -148,8 +125,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/fastdeploy/1130/FastDeploy/fastdeploy/vision/ocr/ppocr/<a class="el" href="cls__preprocessor_8h_source.html">cls_preprocessor.h</a></li>
-<li>/fastdeploy/1130/FastDeploy/fastdeploy/vision/ocr/ppocr/cls_preprocessor.cc</li>
+<li>/fastdeploy/1212/FastDeploy/fastdeploy/vision/ocr/ppocr/<a class="el" href="cls__preprocessor_8h_source.html">cls_preprocessor.h</a></li>
+<li>/fastdeploy/1212/FastDeploy/fastdeploy/vision/ocr/ppocr/cls_preprocessor.cc</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -99,6 +99,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a04b58fbeab36d4a54923bc726d219712"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1segmentation_1_1PaddleSegModel.html#a04b58fbeab36d4a54923bc726d219712">PaddleSegModel</a> (const std::string &amp;model_file, const std::string &amp;params_file, const std::string &amp;config_file, const <a class="el" href="structfastdeploy_1_1RuntimeOption.html">RuntimeOption</a> &amp;custom_option=<a class="el" href="structfastdeploy_1_1RuntimeOption.html">RuntimeOption</a>(), const <a class="el" href="namespacefastdeploy.html#a3493c6d2ca1a50ca5506a0e195d0d723">ModelFormat</a> &amp;model_format=ModelFormat::PADDLE)</td></tr>
 <tr class="memdesc:a04b58fbeab36d4a54923bc726d219712"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set path of model file and configuration file, and the configuration of runtime.  <a href="#a04b58fbeab36d4a54923bc726d219712">More...</a><br /></td></tr>
 <tr class="separator:a04b58fbeab36d4a54923bc726d219712"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66f90301ce813a411002fd2303d5937f"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classfastdeploy_1_1vision_1_1segmentation_1_1PaddleSegModel.html">PaddleSegModel</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1segmentation_1_1PaddleSegModel.html#a66f90301ce813a411002fd2303d5937f">Clone</a> () const</td></tr>
+<tr class="memdesc:a66f90301ce813a411002fd2303d5937f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clone a new <a class="el" href="classfastdeploy_1_1vision_1_1segmentation_1_1PaddleSegModel.html" title="PaddleSeg serials model object used when to load a PaddleSeg model exported by PaddleSeg repository...">PaddleSegModel</a> with less memory usage when multiple instances of the same model are created.  <a href="#a66f90301ce813a411002fd2303d5937f">More...</a><br /></td></tr>
+<tr class="separator:a66f90301ce813a411002fd2303d5937f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a481f7862c39fe15eee5c98b66751ccd5"><td class="memItemLeft" align="right" valign="top"><a id="a481f7862c39fe15eee5c98b66751ccd5"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1segmentation_1_1PaddleSegModel.html#a481f7862c39fe15eee5c98b66751ccd5">ModelName</a> () const</td></tr>
 <tr class="memdesc:a481f7862c39fe15eee5c98b66751ccd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get model's name. <br /></td></tr>
@@ -113,11 +116,11 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <tr class="memdesc:a2af5504201471a8ffbac10d0b7997608"><td class="mdescLeft">&#160;</td><td class="mdescRight">Predict the segmentation results for a batch of input images.  <a href="#a2af5504201471a8ffbac10d0b7997608">More...</a><br /></td></tr>
 <tr class="separator:a2af5504201471a8ffbac10d0b7997608"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48afea581eb8267ba41e49d24f7dce03"><td class="memItemLeft" align="right" valign="top"><a id="a48afea581eb8267ba41e49d24f7dce03"></a>
-virtual PaddleSegPreprocessor &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1segmentation_1_1PaddleSegModel.html#a48afea581eb8267ba41e49d24f7dce03">GetPreprocessor</a> ()</td></tr>
+virtual <a class="el" href="classfastdeploy_1_1vision_1_1segmentation_1_1PaddleSegPreprocessor.html">PaddleSegPreprocessor</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1segmentation_1_1PaddleSegModel.html#a48afea581eb8267ba41e49d24f7dce03">GetPreprocessor</a> ()</td></tr>
 <tr class="memdesc:a48afea581eb8267ba41e49d24f7dce03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get preprocessor reference of <a class="el" href="classfastdeploy_1_1vision_1_1segmentation_1_1PaddleSegModel.html" title="PaddleSeg serials model object used when to load a PaddleSeg model exported by PaddleSeg repository...">PaddleSegModel</a>. <br /></td></tr>
 <tr class="separator:a48afea581eb8267ba41e49d24f7dce03"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4f53808d8738aa2d32c850dc1e31d649"><td class="memItemLeft" align="right" valign="top"><a id="a4f53808d8738aa2d32c850dc1e31d649"></a>
-virtual PaddleSegPostprocessor &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1segmentation_1_1PaddleSegModel.html#a4f53808d8738aa2d32c850dc1e31d649">GetPostprocessor</a> ()</td></tr>
+virtual <a class="el" href="classfastdeploy_1_1vision_1_1segmentation_1_1PaddleSegPostprocessor.html">PaddleSegPostprocessor</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1segmentation_1_1PaddleSegModel.html#a4f53808d8738aa2d32c850dc1e31d649">GetPostprocessor</a> ()</td></tr>
 <tr class="memdesc:a4f53808d8738aa2d32c850dc1e31d649"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get postprocessor reference of <a class="el" href="classfastdeploy_1_1vision_1_1segmentation_1_1PaddleSegModel.html" title="PaddleSeg serials model object used when to load a PaddleSeg model exported by PaddleSeg repository...">PaddleSegModel</a>. <br /></td></tr>
 <tr class="separator:a4f53808d8738aa2d32c850dc1e31d649"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classfastdeploy_1_1FastDeployModel"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classfastdeploy_1_1FastDeployModel')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classfastdeploy_1_1FastDeployModel.html">fastdeploy::FastDeployModel</a></td></tr>
@@ -293,6 +296,34 @@ std::vector&lt; <a class="el" href="namespacefastdeploy.html#addd441db144b083efc
 
 </div>
 </div>
+<a id="a66f90301ce813a411002fd2303d5937f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66f90301ce813a411002fd2303d5937f">&#9670;&nbsp;</a></span>Clone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt; <a class="el" href="classfastdeploy_1_1vision_1_1segmentation_1_1PaddleSegModel.html">PaddleSegModel</a> &gt; fastdeploy::vision::segmentation::PaddleSegModel::Clone </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Clone a new <a class="el" href="classfastdeploy_1_1vision_1_1segmentation_1_1PaddleSegModel.html" title="PaddleSeg serials model object used when to load a PaddleSeg model exported by PaddleSeg repository...">PaddleSegModel</a> with less memory usage when multiple instances of the same model are created. </p>
+<dl class="section return"><dt>Returns</dt><dd>new PaddleDetModel* type unique pointer </dd></dl>
+
+</div>
+</div>
 <a id="a53a29ee00e20575a136ee59ce6427cbd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a53a29ee00e20575a136ee59ce6427cbd">&#9670;&nbsp;</a></span>Predict() <span class="overload">[1/2]</span></h2>
 
@@ -386,8 +417,8 @@ std::vector&lt; <a class="el" href="namespacefastdeploy.html#addd441db144b083efc
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/fastdeploy/1130/FastDeploy/fastdeploy/vision/segmentation/ppseg/<a class="el" href="vision_2segmentation_2ppseg_2model_8h_source.html">model.h</a></li>
-<li>/fastdeploy/1130/FastDeploy/fastdeploy/vision/segmentation/ppseg/model.cc</li>
+<li>/fastdeploy/1212/FastDeploy/fastdeploy/vision/segmentation/ppseg/<a class="el" href="vision_2segmentation_2ppseg_2model_8h_source.html">model.h</a></li>
+<li>/fastdeploy/1212/FastDeploy/fastdeploy/vision/segmentation/ppseg/model.cc</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -152,10 +152,561 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="name
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefastdeploy_1_1vision.html#a5158e9acb95a14434777eeae901e85c0">SetProcLibCpuNumThreads</a> (int threads)</td></tr>
 <tr class="memdesc:a5158e9acb95a14434777eeae901e85c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the cpu num threads of ProcLib. <br /></td></tr>
 <tr class="separator:a5158e9acb95a14434777eeae901e85c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4da25a5c565e131cb63459bd37ce94b5"><td class="memItemLeft" align="right" valign="top">cv::Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefastdeploy_1_1vision.html#a4da25a5c565e131cb63459bd37ce94b5">VisClassification</a> (const cv::Mat &amp;im, const <a class="el" href="structfastdeploy_1_1vision_1_1ClassifyResult.html">ClassifyResult</a> &amp;result, int top_k=5, float score_threshold=0.0f, float font_size=0.5f)</td></tr>
+<tr class="memdesc:a4da25a5c565e131cb63459bd37ce94b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show the visualized results for classification models.  <a href="#a4da25a5c565e131cb63459bd37ce94b5">More...</a><br /></td></tr>
+<tr class="separator:a4da25a5c565e131cb63459bd37ce94b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af180def1c242f271a99bc710d9287237"><td class="memItemLeft" align="right" valign="top">cv::Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefastdeploy_1_1vision.html#af180def1c242f271a99bc710d9287237">VisClassification</a> (const cv::Mat &amp;im, const <a class="el" href="structfastdeploy_1_1vision_1_1ClassifyResult.html">ClassifyResult</a> &amp;result, const std::vector&lt; std::string &gt; &amp;labels, int top_k=5, float score_threshold=0.0f, float font_size=0.5f)</td></tr>
+<tr class="memdesc:af180def1c242f271a99bc710d9287237"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show the visualized results with custom labels for classification models.  <a href="#af180def1c242f271a99bc710d9287237">More...</a><br /></td></tr>
+<tr class="separator:af180def1c242f271a99bc710d9287237"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4333a8c801c163a822c52b4cf4d39a92"><td class="memItemLeft" align="right" valign="top">cv::Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefastdeploy_1_1vision.html#a4333a8c801c163a822c52b4cf4d39a92">VisDetection</a> (const cv::Mat &amp;im, const <a class="el" href="structfastdeploy_1_1vision_1_1DetectionResult.html">DetectionResult</a> &amp;result, float score_threshold=0.0, int line_size=1, float font_size=0.5f)</td></tr>
+<tr class="memdesc:a4333a8c801c163a822c52b4cf4d39a92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show the visualized results for detection models.  <a href="#a4333a8c801c163a822c52b4cf4d39a92">More...</a><br /></td></tr>
+<tr class="separator:a4333a8c801c163a822c52b4cf4d39a92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4f2c3a357ae0061b2b008a2b2ee18a0"><td class="memItemLeft" align="right" valign="top">cv::Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefastdeploy_1_1vision.html#ad4f2c3a357ae0061b2b008a2b2ee18a0">VisDetection</a> (const cv::Mat &amp;im, const <a class="el" href="structfastdeploy_1_1vision_1_1DetectionResult.html">DetectionResult</a> &amp;result, const std::vector&lt; std::string &gt; &amp;labels, float score_threshold=0.0, int line_size=1, float font_size=0.5f)</td></tr>
+<tr class="memdesc:ad4f2c3a357ae0061b2b008a2b2ee18a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show the visualized results with custom labels for detection models.  <a href="#ad4f2c3a357ae0061b2b008a2b2ee18a0">More...</a><br /></td></tr>
+<tr class="separator:ad4f2c3a357ae0061b2b008a2b2ee18a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae68134843862af38d9a7f10b97d84f9b"><td class="memItemLeft" align="right" valign="top">cv::Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefastdeploy_1_1vision.html#ae68134843862af38d9a7f10b97d84f9b">VisFaceAlignment</a> (const cv::Mat &amp;im, const <a class="el" href="structfastdeploy_1_1vision_1_1FaceAlignmentResult.html">FaceAlignmentResult</a> &amp;result, int line_size=1)</td></tr>
+<tr class="memdesc:ae68134843862af38d9a7f10b97d84f9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show the visualized results for face alignment models.  <a href="#ae68134843862af38d9a7f10b97d84f9b">More...</a><br /></td></tr>
+<tr class="separator:ae68134843862af38d9a7f10b97d84f9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68652379e02d97dc309c42fc778e31bc"><td class="memItemLeft" align="right" valign="top">cv::Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefastdeploy_1_1vision.html#a68652379e02d97dc309c42fc778e31bc">VisFaceDetection</a> (const cv::Mat &amp;im, const <a class="el" href="structfastdeploy_1_1vision_1_1FaceDetectionResult.html">FaceDetectionResult</a> &amp;result, int line_size=1, float font_size=0.5f)</td></tr>
+<tr class="memdesc:a68652379e02d97dc309c42fc778e31bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show the visualized results for face detection models.  <a href="#a68652379e02d97dc309c42fc778e31bc">More...</a><br /></td></tr>
+<tr class="separator:a68652379e02d97dc309c42fc778e31bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c2afb58d26dd6e736ba303423d09838"><td class="memItemLeft" align="right" valign="top">cv::Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefastdeploy_1_1vision.html#a4c2afb58d26dd6e736ba303423d09838">VisKeypointDetection</a> (const cv::Mat &amp;im, const <a class="el" href="structfastdeploy_1_1vision_1_1KeyPointDetectionResult.html">KeyPointDetectionResult</a> &amp;results, float conf_threshold=0.5f)</td></tr>
+<tr class="memdesc:a4c2afb58d26dd6e736ba303423d09838"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show the visualized results for key point detection models.  <a href="#a4c2afb58d26dd6e736ba303423d09838">More...</a><br /></td></tr>
+<tr class="separator:a4c2afb58d26dd6e736ba303423d09838"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a792cd39dcb320be5b687e173bbe735e6"><td class="memItemLeft" align="right" valign="top">cv::Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefastdeploy_1_1vision.html#a792cd39dcb320be5b687e173bbe735e6">VisMatting</a> (const cv::Mat &amp;im, const <a class="el" href="structfastdeploy_1_1vision_1_1MattingResult.html">MattingResult</a> &amp;result, bool remove_small_connected_area=false)</td></tr>
+<tr class="memdesc:a792cd39dcb320be5b687e173bbe735e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show the visualized results for matting models.  <a href="#a792cd39dcb320be5b687e173bbe735e6">More...</a><br /></td></tr>
+<tr class="separator:a792cd39dcb320be5b687e173bbe735e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad403bf59c5603767498acf434f2a59b8"><td class="memItemLeft" align="right" valign="top">cv::Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefastdeploy_1_1vision.html#ad403bf59c5603767498acf434f2a59b8">VisOcr</a> (const cv::Mat &amp;im, const OCRResult &amp;ocr_result)</td></tr>
+<tr class="memdesc:ad403bf59c5603767498acf434f2a59b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show the visualized results for Ocr models.  <a href="#ad403bf59c5603767498acf434f2a59b8">More...</a><br /></td></tr>
+<tr class="separator:ad403bf59c5603767498acf434f2a59b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9a0bd9dfe78e2a1f2463c7b45cd092a"><td class="memItemLeft" align="right" valign="top">cv::Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefastdeploy_1_1vision.html#af9a0bd9dfe78e2a1f2463c7b45cd092a">VisSegmentation</a> (const cv::Mat &amp;im, const <a class="el" href="structfastdeploy_1_1vision_1_1SegmentationResult.html">SegmentationResult</a> &amp;result, float weight=0.5)</td></tr>
+<tr class="memdesc:af9a0bd9dfe78e2a1f2463c7b45cd092a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show the visualized results for segmentation models.  <a href="#af9a0bd9dfe78e2a1f2463c7b45cd092a">More...</a><br /></td></tr>
+<tr class="separator:af9a0bd9dfe78e2a1f2463c7b45cd092a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>All C++ FastDeploy Vision Models APIs are defined inside this namespace. </p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Function Documentation</h2>
+<a id="a4da25a5c565e131cb63459bd37ce94b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4da25a5c565e131cb63459bd37ce94b5">&#9670;&nbsp;</a></span>VisClassification() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FASTDEPLOY_DECL cv::Mat fastdeploy::vision::VisClassification </td>
+          <td>(</td>
+          <td class="paramtype">const cv::Mat &amp;&#160;</td>
+          <td class="paramname"><em>im</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structfastdeploy_1_1vision_1_1ClassifyResult.html">ClassifyResult</a> &amp;&#160;</td>
+          <td class="paramname"><em>result</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>top_k</em> = <code>5</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>score_threshold</em> = <code>0.0f</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>font_size</em> = <code>0.5f</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Show the visualized results for classification models. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">im</td><td>the input image data, comes from cv::imread(), is a 3-D array with layout HWC, BGR format </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">result</td><td>the result produced by model </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">top_k</td><td>the length of return values, e.g., if topk==2, the result will include the 2 most possible class label for input image. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">score_threshold</td><td>threshold for top_k scores, the class will not be shown if the score is less than score_threshold </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">font_size</td><td>font size </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>cv::Mat type stores the visualized results </dd></dl>
+
+</div>
+</div>
+<a id="af180def1c242f271a99bc710d9287237"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af180def1c242f271a99bc710d9287237">&#9670;&nbsp;</a></span>VisClassification() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FASTDEPLOY_DECL cv::Mat fastdeploy::vision::VisClassification </td>
+          <td>(</td>
+          <td class="paramtype">const cv::Mat &amp;&#160;</td>
+          <td class="paramname"><em>im</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structfastdeploy_1_1vision_1_1ClassifyResult.html">ClassifyResult</a> &amp;&#160;</td>
+          <td class="paramname"><em>result</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>labels</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>top_k</em> = <code>5</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>score_threshold</em> = <code>0.0f</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>font_size</em> = <code>0.5f</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Show the visualized results with custom labels for classification models. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">im</td><td>the input image data, comes from cv::imread(), is a 3-D array with layout HWC, BGR format </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">result</td><td>the result produced by model </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">labels</td><td>custom labels for user, the visualized result will show the corresponding custom labels </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">top_k</td><td>the length of return values, e.g., if topk==2, the result will include the 2 most possible class label for input image. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">score_threshold</td><td>threshold for top_k scores, the class will not be shown if the score is less than score_threshold </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">font_size</td><td>font size </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>cv::Mat type stores the visualized results </dd></dl>
+
+</div>
+</div>
+<a id="a4333a8c801c163a822c52b4cf4d39a92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4333a8c801c163a822c52b4cf4d39a92">&#9670;&nbsp;</a></span>VisDetection() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FASTDEPLOY_DECL cv::Mat fastdeploy::vision::VisDetection </td>
+          <td>(</td>
+          <td class="paramtype">const cv::Mat &amp;&#160;</td>
+          <td class="paramname"><em>im</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structfastdeploy_1_1vision_1_1DetectionResult.html">DetectionResult</a> &amp;&#160;</td>
+          <td class="paramname"><em>result</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>score_threshold</em> = <code>0.0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>line_size</em> = <code>1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>font_size</em> = <code>0.5f</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Show the visualized results for detection models. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">im</td><td>the input image data, comes from cv::imread(), is a 3-D array with layout HWC, BGR format </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">result</td><td>the result produced by model </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">score_threshold</td><td>threshold for result scores, the bounding box will not be shown if the score is less than score_threshold </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">line_size</td><td>line size for bounding boxes </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">font_size</td><td>font size for text </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>cv::Mat type stores the visualized results </dd></dl>
+
+</div>
+</div>
+<a id="ad4f2c3a357ae0061b2b008a2b2ee18a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4f2c3a357ae0061b2b008a2b2ee18a0">&#9670;&nbsp;</a></span>VisDetection() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FASTDEPLOY_DECL cv::Mat fastdeploy::vision::VisDetection </td>
+          <td>(</td>
+          <td class="paramtype">const cv::Mat &amp;&#160;</td>
+          <td class="paramname"><em>im</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structfastdeploy_1_1vision_1_1DetectionResult.html">DetectionResult</a> &amp;&#160;</td>
+          <td class="paramname"><em>result</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>labels</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>score_threshold</em> = <code>0.0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>line_size</em> = <code>1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>font_size</em> = <code>0.5f</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Show the visualized results with custom labels for detection models. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">im</td><td>the input image data, comes from cv::imread(), is a 3-D array with layout HWC, BGR format </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">result</td><td>the result produced by model </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">labels</td><td>the visualized result will show the bounding box contain class label </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">score_threshold</td><td>threshold for result scores, the bounding box will not be shown if the score is less than score_threshold </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">line_size</td><td>line size for bounding boxes </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">font_size</td><td>font size for text </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>cv::Mat type stores the visualized results </dd></dl>
+
+</div>
+</div>
+<a id="ae68134843862af38d9a7f10b97d84f9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae68134843862af38d9a7f10b97d84f9b">&#9670;&nbsp;</a></span>VisFaceAlignment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FASTDEPLOY_DECL cv::Mat fastdeploy::vision::VisFaceAlignment </td>
+          <td>(</td>
+          <td class="paramtype">const cv::Mat &amp;&#160;</td>
+          <td class="paramname"><em>im</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structfastdeploy_1_1vision_1_1FaceAlignmentResult.html">FaceAlignmentResult</a> &amp;&#160;</td>
+          <td class="paramname"><em>result</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>line_size</em> = <code>1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Show the visualized results for face alignment models. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">im</td><td>the input image data, comes from cv::imread(), is a 3-D array with layout HWC, BGR format </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">result</td><td>the result produced by model </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">line_size</td><td>line size for circle point </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>cv::Mat type stores the visualized results </dd></dl>
+
+</div>
+</div>
+<a id="a68652379e02d97dc309c42fc778e31bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68652379e02d97dc309c42fc778e31bc">&#9670;&nbsp;</a></span>VisFaceDetection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FASTDEPLOY_DECL cv::Mat fastdeploy::vision::VisFaceDetection </td>
+          <td>(</td>
+          <td class="paramtype">const cv::Mat &amp;&#160;</td>
+          <td class="paramname"><em>im</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structfastdeploy_1_1vision_1_1FaceDetectionResult.html">FaceDetectionResult</a> &amp;&#160;</td>
+          <td class="paramname"><em>result</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>line_size</em> = <code>1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>font_size</em> = <code>0.5f</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Show the visualized results for face detection models. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">im</td><td>the input image data, comes from cv::imread(), is a 3-D array with layout HWC, BGR format </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">result</td><td>the result produced by model </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">line_size</td><td>line size for bounding boxes </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">font_size</td><td>font size for text </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>cv::Mat type stores the visualized results </dd></dl>
+
+</div>
+</div>
+<a id="a4c2afb58d26dd6e736ba303423d09838"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c2afb58d26dd6e736ba303423d09838">&#9670;&nbsp;</a></span>VisKeypointDetection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FASTDEPLOY_DECL cv::Mat fastdeploy::vision::VisKeypointDetection </td>
+          <td>(</td>
+          <td class="paramtype">const cv::Mat &amp;&#160;</td>
+          <td class="paramname"><em>im</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structfastdeploy_1_1vision_1_1KeyPointDetectionResult.html">KeyPointDetectionResult</a> &amp;&#160;</td>
+          <td class="paramname"><em>results</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>conf_threshold</em> = <code>0.5f</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Show the visualized results for key point detection models. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">im</td><td>the input image data, comes from cv::imread(), is a 3-D array with layout HWC, BGR format </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">results</td><td>the result produced by model </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">conf_threshold</td><td>threshold for result scores, the result will not be shown if the score is less than conf_threshold </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>cv::Mat type stores the visualized results </dd></dl>
+
+</div>
+</div>
+<a id="a792cd39dcb320be5b687e173bbe735e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a792cd39dcb320be5b687e173bbe735e6">&#9670;&nbsp;</a></span>VisMatting()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FASTDEPLOY_DECL cv::Mat fastdeploy::vision::VisMatting </td>
+          <td>(</td>
+          <td class="paramtype">const cv::Mat &amp;&#160;</td>
+          <td class="paramname"><em>im</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structfastdeploy_1_1vision_1_1MattingResult.html">MattingResult</a> &amp;&#160;</td>
+          <td class="paramname"><em>result</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>remove_small_connected_area</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Show the visualized results for matting models. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">im</td><td>the input image data, comes from cv::imread(), is a 3-D array with layout HWC, BGR format </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">result</td><td>the result produced by model </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">remove_small_connected_area</td><td>if remove_small_connected_area==true, the visualized result will not include the small connected areas </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>cv::Mat type stores the visualized results </dd></dl>
+
+</div>
+</div>
+<a id="ad403bf59c5603767498acf434f2a59b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad403bf59c5603767498acf434f2a59b8">&#9670;&nbsp;</a></span>VisOcr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FASTDEPLOY_DECL cv::Mat fastdeploy::vision::VisOcr </td>
+          <td>(</td>
+          <td class="paramtype">const cv::Mat &amp;&#160;</td>
+          <td class="paramname"><em>im</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const OCRResult &amp;&#160;</td>
+          <td class="paramname"><em>ocr_result</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Show the visualized results for Ocr models. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">im</td><td>the input image data, comes from cv::imread(), is a 3-D array with layout HWC, BGR format </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">result</td><td>the result produced by model </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>cv::Mat type stores the visualized results </dd></dl>
+
+</div>
+</div>
+<a id="af9a0bd9dfe78e2a1f2463c7b45cd092a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9a0bd9dfe78e2a1f2463c7b45cd092a">&#9670;&nbsp;</a></span>VisSegmentation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FASTDEPLOY_DECL cv::Mat fastdeploy::vision::VisSegmentation </td>
+          <td>(</td>
+          <td class="paramtype">const cv::Mat &amp;&#160;</td>
+          <td class="paramname"><em>im</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structfastdeploy_1_1vision_1_1SegmentationResult.html">SegmentationResult</a> &amp;&#160;</td>
+          <td class="paramname"><em>result</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>weight</em> = <code>0.5</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Show the visualized results for segmentation models. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">im</td><td>the input image data, comes from cv::imread(), is a 3-D array with layout HWC, BGR format </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">result</td><td>the result produced by model </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">weight</td><td>transparent weight of visualized result image </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>cv::Mat type stores the visualized results </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

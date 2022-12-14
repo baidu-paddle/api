@@ -689,6 +689,16 @@ title="Fullscreen mode"
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_option</span><span class="o">.</span><span class="n">disable_paddle_trt_collect_shape</span><span class="p">()</span></div>
 
+<div class="viewcode-block" id="RuntimeOption.delete_paddle_backend_pass"><a class="viewcode-back" href="../../runtime_option.html#fastdeploy.RuntimeOption.delete_paddle_backend_pass">[docs]</a>    <span class="k">def</span> <span class="nf">delete_paddle_backend_pass</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pass_name</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Delete pass by name in paddle backend</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_option</span><span class="o">.</span><span class="n">delete_paddle_backend_pass</span><span class="p">(</span><span class="n">pass_name</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="RuntimeOption.disable_paddle_trt_ops"><a class="viewcode-back" href="../../runtime_option.html#fastdeploy.RuntimeOption.disable_paddle_trt_ops">[docs]</a>    <span class="k">def</span> <span class="nf">disable_paddle_trt_ops</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ops</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Disable some ops in paddle trt backend</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_option</span><span class="o">.</span><span class="n">disable_paddle_trt_ops</span><span class="p">(</span><span class="n">ops</span><span class="p">)</span></div>
+
     <span class="k">def</span> <span class="nf">use_ipu</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
                 <span class="n">device_num</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
                 <span class="n">micro_batch_size</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>

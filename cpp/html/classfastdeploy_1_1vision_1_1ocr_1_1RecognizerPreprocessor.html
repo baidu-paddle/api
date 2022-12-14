@@ -79,42 +79,13 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a8f1a605d775e02551987bb071e087dfc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1RecognizerPreprocessor.html#a8f1a605d775e02551987bb071e087dfc">RecognizerPreprocessor</a> ()</td></tr>
-<tr class="memdesc:a8f1a605d775e02551987bb071e087dfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a preprocessor instance for PaddleClas serials model.  <a href="#a8f1a605d775e02551987bb071e087dfc">More...</a><br /></td></tr>
-<tr class="separator:a8f1a605d775e02551987bb071e087dfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac99d312ec95699b92002f000212edeb1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1RecognizerPreprocessor.html#ac99d312ec95699b92002f000212edeb1">Run</a> (std::vector&lt; FDMat &gt; *images, std::vector&lt; FDTensor &gt; *outputs)</td></tr>
 <tr class="memdesc:ac99d312ec95699b92002f000212edeb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process the input image and prepare input tensors for runtime.  <a href="#ac99d312ec95699b92002f000212edeb1">More...</a><br /></td></tr>
 <tr class="separator:ac99d312ec95699b92002f000212edeb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Preprocessor object for PaddleClas serials model. </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a8f1a605d775e02551987bb071e087dfc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8f1a605d775e02551987bb071e087dfc">&#9670;&nbsp;</a></span>RecognizerPreprocessor()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">fastdeploy::vision::ocr::RecognizerPreprocessor::RecognizerPreprocessor </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Create a preprocessor instance for PaddleClas serials model. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">config_file</td><td>Path of configuration file for deployment, e.g resnet/infer_cfg.yml </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ac99d312ec95699b92002f000212edeb1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac99d312ec95699b92002f000212edeb1">&#9670;&nbsp;</a></span>Run()</h2>
 
@@ -144,8 +115,8 @@ Public Member Functions</h2></td></tr>
 <p>Process the input image and prepare input tensors for runtime. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">images</td><td>The input image data list, all the elements are returned by cv::imread() </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">outputs</td><td>The output tensors which will feed in runtime </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">images</td><td>The input data list, all the elements are FDMat </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">outputs</td><td>The output tensors which will be fed into runtime </td></tr>
   </table>
   </dd>
 </dl>
@@ -154,8 +125,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/fastdeploy/1130/FastDeploy/fastdeploy/vision/ocr/ppocr/<a class="el" href="rec__preprocessor_8h_source.html">rec_preprocessor.h</a></li>
-<li>/fastdeploy/1130/FastDeploy/fastdeploy/vision/ocr/ppocr/rec_preprocessor.cc</li>
+<li>/fastdeploy/1212/FastDeploy/fastdeploy/vision/ocr/ppocr/<a class="el" href="rec__preprocessor_8h_source.html">rec_preprocessor.h</a></li>
+<li>/fastdeploy/1212/FastDeploy/fastdeploy/vision/ocr/ppocr/rec_preprocessor.cc</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

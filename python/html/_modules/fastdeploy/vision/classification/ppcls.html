@@ -339,6 +339,19 @@ title="Fullscreen mode"
             <span class="n">model_format</span><span class="p">)</span>
         <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">initialized</span><span class="p">,</span> <span class="s2">&quot;PaddleClas model initialize failed.&quot;</span>
 
+<div class="viewcode-block" id="PaddleClasModel.clone"><a class="viewcode-back" href="../../../../image_classification.html#fastdeploy.vision.classification.PaddleClasModel.clone">[docs]</a>    <span class="k">def</span> <span class="nf">clone</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Clone PaddleClasModel object</span>
+
+<span class="sd">        :return: a new PaddleClasModel object</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">class</span> <span class="nc">PaddleClasCloneModel</span><span class="p">(</span><span class="n">PaddleClasModel</span><span class="p">):</span>
+            <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_model</span> <span class="o">=</span> <span class="n">model</span>
+
+        <span class="n">clone_model</span> <span class="o">=</span> <span class="n">PaddleClasCloneModel</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">clone</span><span class="p">())</span>
+        <span class="k">return</span> <span class="n">clone_model</span></div>
+
 <div class="viewcode-block" id="PaddleClasModel.predict"><a class="viewcode-back" href="../../../../image_classification.html#fastdeploy.vision.classification.PaddleClasModel.predict">[docs]</a>    <span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">im</span><span class="p">,</span> <span class="n">topk</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Classify an input image</span>
 

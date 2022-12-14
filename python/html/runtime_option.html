@@ -346,6 +346,12 @@ title="Print to PDF"
 <dd><p>Options for FastDeploy Runtime.</p>
 <p>Initialize a FastDeploy RuntimeOption object.</p>
 <dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.RuntimeOption.delete_paddle_backend_pass">
+<span class="sig-name descname"><span class="pre">delete_paddle_backend_pass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pass_name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.delete_paddle_backend_pass"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.delete_paddle_backend_pass" title="Permalink to this definition">#</a></dt>
+<dd><p>Delete pass by name in paddle backend</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="fastdeploy.RuntimeOption.disable_lite_fp16">
 <span class="sig-name descname"><span class="pre">disable_lite_fp16</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.disable_lite_fp16"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.disable_lite_fp16" title="Permalink to this definition">#</a></dt>
 <dd><p>Disable half precision inference while using Paddle Lite backend on ARM CPU, fp16 is disabled by default.</p>
@@ -361,6 +367,12 @@ title="Print to PDF"
 <dt class="sig sig-object py" id="fastdeploy.RuntimeOption.disable_paddle_trt_collect_shape">
 <span class="sig-name descname"><span class="pre">disable_paddle_trt_collect_shape</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.disable_paddle_trt_collect_shape"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.disable_paddle_trt_collect_shape" title="Permalink to this definition">#</a></dt>
 <dd><p>Disable collect subgraph shape information while using Paddle Inference with TensorRT</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.RuntimeOption.disable_paddle_trt_ops">
+<span class="sig-name descname"><span class="pre">disable_paddle_trt_ops</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ops</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.disable_paddle_trt_ops"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.disable_paddle_trt_ops" title="Permalink to this definition">#</a></dt>
+<dd><p>Disable some ops in paddle trt backend</p>
 </dd></dl>
 
 <dl class="py method">

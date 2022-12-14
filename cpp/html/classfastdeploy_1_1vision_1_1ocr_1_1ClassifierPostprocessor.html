@@ -79,36 +79,13 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aeb52c5d1946d8b9abdf7b806a21fbfce"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1ClassifierPostprocessor.html#aeb52c5d1946d8b9abdf7b806a21fbfce">ClassifierPostprocessor</a> ()</td></tr>
-<tr class="memdesc:aeb52c5d1946d8b9abdf7b806a21fbfce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a postprocessor instance for <a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1Classifier.html" title="Classifier object is used to load the classification model provided by PaddleOCR. ...">Classifier</a> serials model.  <a href="#aeb52c5d1946d8b9abdf7b806a21fbfce">More...</a><br /></td></tr>
-<tr class="separator:aeb52c5d1946d8b9abdf7b806a21fbfce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe7758cd4d8e3ffad59bd6278706481e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1ClassifierPostprocessor.html#abe7758cd4d8e3ffad59bd6278706481e">Run</a> (const std::vector&lt; FDTensor &gt; &amp;tensors, std::vector&lt; int32_t &gt; *cls_labels, std::vector&lt; float &gt; *cls_scores)</td></tr>
 <tr class="memdesc:abe7758cd4d8e3ffad59bd6278706481e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process the result of runtime and fill to <a class="el" href="structfastdeploy_1_1vision_1_1ClassifyResult.html" title="Classify result structure for all the image classify models. ">ClassifyResult</a> structure.  <a href="#abe7758cd4d8e3ffad59bd6278706481e">More...</a><br /></td></tr>
 <tr class="separator:abe7758cd4d8e3ffad59bd6278706481e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Postprocessor object for <a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1Classifier.html" title="Classifier object is used to load the classification model provided by PaddleOCR. ...">Classifier</a> serials model. </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="aeb52c5d1946d8b9abdf7b806a21fbfce"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeb52c5d1946d8b9abdf7b806a21fbfce">&#9670;&nbsp;</a></span>ClassifierPostprocessor()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">fastdeploy::vision::ocr::ClassifierPostprocessor::ClassifierPostprocessor </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Create a postprocessor instance for <a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1Classifier.html" title="Classifier object is used to load the classification model provided by PaddleOCR. ...">Classifier</a> serials model. </p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="abe7758cd4d8e3ffad59bd6278706481e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abe7758cd4d8e3ffad59bd6278706481e">&#9670;&nbsp;</a></span>Run()</h2>
 
@@ -145,8 +122,8 @@ Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">tensors</td><td>The inference result from runtime </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">cls_labels</td><td>The output result of classification </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">cls_scores</td><td>The output result of classification </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cls_labels</td><td>The output label results of classification model </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cls_scores</td><td>The output score results of classification model </td></tr>
   </table>
   </dd>
 </dl>
@@ -155,8 +132,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/fastdeploy/1130/FastDeploy/fastdeploy/vision/ocr/ppocr/<a class="el" href="cls__postprocessor_8h_source.html">cls_postprocessor.h</a></li>
-<li>/fastdeploy/1130/FastDeploy/fastdeploy/vision/ocr/ppocr/cls_postprocessor.cc</li>
+<li>/fastdeploy/1212/FastDeploy/fastdeploy/vision/ocr/ppocr/<a class="el" href="cls__postprocessor_8h_source.html">cls_postprocessor.h</a></li>
+<li>/fastdeploy/1212/FastDeploy/fastdeploy/vision/ocr/ppocr/cls_postprocessor.cc</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

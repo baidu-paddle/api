@@ -99,6 +99,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a013b99a781b33c720bbdb7201e0a3e4c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1classification_1_1PaddleClasModel.html#a013b99a781b33c720bbdb7201e0a3e4c">PaddleClasModel</a> (const std::string &amp;model_file, const std::string &amp;params_file, const std::string &amp;config_file, const <a class="el" href="structfastdeploy_1_1RuntimeOption.html">RuntimeOption</a> &amp;custom_option=<a class="el" href="structfastdeploy_1_1RuntimeOption.html">RuntimeOption</a>(), const <a class="el" href="namespacefastdeploy.html#a3493c6d2ca1a50ca5506a0e195d0d723">ModelFormat</a> &amp;model_format=ModelFormat::PADDLE)</td></tr>
 <tr class="memdesc:a013b99a781b33c720bbdb7201e0a3e4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set path of model file and configuration file, and the configuration of runtime.  <a href="#a013b99a781b33c720bbdb7201e0a3e4c">More...</a><br /></td></tr>
 <tr class="separator:a013b99a781b33c720bbdb7201e0a3e4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af787a1256b8170b6e5953e5eaefa6d4a"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classfastdeploy_1_1vision_1_1classification_1_1PaddleClasModel.html">PaddleClasModel</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1classification_1_1PaddleClasModel.html#af787a1256b8170b6e5953e5eaefa6d4a">Clone</a> () const</td></tr>
+<tr class="memdesc:af787a1256b8170b6e5953e5eaefa6d4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clone a new <a class="el" href="classfastdeploy_1_1vision_1_1classification_1_1PaddleClasModel.html" title="PaddleClas serials model object used when to load a PaddleClas model exported by PaddleClas repositor...">PaddleClasModel</a> with less memory usage when multiple instances of the same model are created.  <a href="#af787a1256b8170b6e5953e5eaefa6d4a">More...</a><br /></td></tr>
+<tr class="separator:af787a1256b8170b6e5953e5eaefa6d4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a660b82f14784ddda3b377219c2f56782"><td class="memItemLeft" align="right" valign="top"><a id="a660b82f14784ddda3b377219c2f56782"></a>
 virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1classification_1_1PaddleClasModel.html#a660b82f14784ddda3b377219c2f56782">ModelName</a> () const</td></tr>
 <tr class="memdesc:a660b82f14784ddda3b377219c2f56782"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get model's name. <br /></td></tr>
@@ -293,6 +296,34 @@ std::vector&lt; <a class="el" href="namespacefastdeploy.html#addd441db144b083efc
 
 </div>
 </div>
+<a id="af787a1256b8170b6e5953e5eaefa6d4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af787a1256b8170b6e5953e5eaefa6d4a">&#9670;&nbsp;</a></span>Clone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt; <a class="el" href="classfastdeploy_1_1vision_1_1classification_1_1PaddleClasModel.html">PaddleClasModel</a> &gt; fastdeploy::vision::classification::PaddleClasModel::Clone </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Clone a new <a class="el" href="classfastdeploy_1_1vision_1_1classification_1_1PaddleClasModel.html" title="PaddleClas serials model object used when to load a PaddleClas model exported by PaddleClas repositor...">PaddleClasModel</a> with less memory usage when multiple instances of the same model are created. </p>
+<dl class="section return"><dt>Returns</dt><dd>new PaddleClasModel* type unique pointer </dd></dl>
+
+</div>
+</div>
 <a id="a152d772fb73cf9c5ce63e8dff0afb3ca"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a152d772fb73cf9c5ce63e8dff0afb3ca">&#9670;&nbsp;</a></span>Predict() <span class="overload">[1/2]</span></h2>
 
@@ -392,8 +423,8 @@ std::vector&lt; <a class="el" href="namespacefastdeploy.html#addd441db144b083efc
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/fastdeploy/1130/FastDeploy/fastdeploy/vision/classification/ppcls/<a class="el" href="vision_2classification_2ppcls_2model_8h_source.html">model.h</a></li>
-<li>/fastdeploy/1130/FastDeploy/fastdeploy/vision/classification/ppcls/model.cc</li>
+<li>/fastdeploy/1212/FastDeploy/fastdeploy/vision/classification/ppcls/<a class="el" href="vision_2classification_2ppcls_2model_8h_source.html">model.h</a></li>
+<li>/fastdeploy/1212/FastDeploy/fastdeploy/vision/classification/ppcls/model.cc</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
