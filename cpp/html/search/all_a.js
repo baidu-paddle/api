@@ -4,6 +4,7 @@ var searchData=
   ['label_5fmap',['label_map',['../structfastdeploy_1_1vision_1_1SegmentationResult.html#a5dac98bb82fcaecd9e2617bfd0cfdf23',1,'fastdeploy::vision::SegmentationResult']]],
   ['landmarks',['landmarks',['../structfastdeploy_1_1vision_1_1FaceDetectionResult.html#a3492786ff23a702db20449012c6b1440',1,'fastdeploy::vision::FaceDetectionResult::landmarks()'],['../structfastdeploy_1_1vision_1_1FaceAlignmentResult.html#affd5cb42c2b329c10a92476e283acfea',1,'fastdeploy::vision::FaceAlignmentResult::landmarks()']]],
   ['landmarks_5fper_5fface',['landmarks_per_face',['../structfastdeploy_1_1vision_1_1FaceDetectionResult.html#ae8ea5ea58e6f02377e8781ff1d71fa94',1,'fastdeploy::vision::FaceDetectionResult::landmarks_per_face()'],['../classfastdeploy_1_1vision_1_1facedet_1_1RetinaFace.html#a7076aab9d853bf6e5cd9c36fc81d7912',1,'fastdeploy::vision::facedet::RetinaFace::landmarks_per_face()'],['../classfastdeploy_1_1vision_1_1facedet_1_1SCRFD.html#a03adcfc7b756c8d9b4dc6b7172b00041',1,'fastdeploy::vision::facedet::SCRFD::landmarks_per_face()'],['../classfastdeploy_1_1vision_1_1facedet_1_1YOLOv5Face.html#ae7775a829c593df52d22e628b0905bf9',1,'fastdeploy::vision::facedet::YOLOv5Face::landmarks_per_face()']]],
+  ['linspace',['Linspace',['../namespacefastdeploy_1_1function.html#a559775eb66347a01dc6dddaad007ac30',1,'fastdeploy::function']]],
   ['lite',['LITE',['../namespacefastdeploy.html#addd441db144b083efc919b63cef2bebca3c7aaab4db7728cf0231607246b40dff',1,'fastdeploy']]],
   ['lite_5fpower_5ffull',['LITE_POWER_FULL',['../namespacefastdeploy.html#ae7ba2fd1a203144360532ffde81c8dcfa2ebb1ddba3dce8909fa6d0ee44293f65',1,'fastdeploy']]],
   ['lite_5fpower_5fhigh',['LITE_POWER_HIGH',['../namespacefastdeploy.html#ae7ba2fd1a203144360532ffde81c8dcfab9f816dc617eb29c73492064e34cdfda',1,'fastdeploy']]],
@@ -11,5 +12,6 @@ var searchData=
   ['lite_5fpower_5fno_5fbind',['LITE_POWER_NO_BIND',['../namespacefastdeploy.html#ae7ba2fd1a203144360532ffde81c8dcfa4e9cf93aed26065ab247af3ce6d5409e',1,'fastdeploy']]],
   ['lite_5fpower_5frand_5fhigh',['LITE_POWER_RAND_HIGH',['../namespacefastdeploy.html#ae7ba2fd1a203144360532ffde81c8dcfad36ece036041df3b26f936f8050445b3',1,'fastdeploy']]],
   ['lite_5fpower_5frand_5flow',['LITE_POWER_RAND_LOW',['../namespacefastdeploy.html#ae7ba2fd1a203144360532ffde81c8dcfa1e64eca1b08e5e9d6e0e7e05e961049a',1,'fastdeploy']]],
-  ['litepowermode',['LitePowerMode',['../namespacefastdeploy.html#ae7ba2fd1a203144360532ffde81c8dcf',1,'fastdeploy']]]
+  ['litepowermode',['LitePowerMode',['../namespacefastdeploy.html#ae7ba2fd1a203144360532ffde81c8dcf',1,'fastdeploy']]],
+  ['log',['Log',['../namespacefastdeploy_1_1function.html#a36b4b86672d0ebd93d60d40170f7fcc4',1,'fastdeploy::function']]]
 ];

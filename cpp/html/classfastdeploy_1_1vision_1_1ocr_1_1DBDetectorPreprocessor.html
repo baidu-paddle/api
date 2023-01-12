@@ -82,6 +82,38 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1b0de7d9bfa321465b1da1f91f63cba0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1DBDetectorPreprocessor.html#a1b0de7d9bfa321465b1da1f91f63cba0">Run</a> (std::vector&lt; FDMat &gt; *images, std::vector&lt; FDTensor &gt; *outputs, std::vector&lt; std::array&lt; int, 4 &gt;&gt; *batch_det_img_info_ptr)</td></tr>
 <tr class="memdesc:a1b0de7d9bfa321465b1da1f91f63cba0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process the input image and prepare input tensors for runtime.  <a href="#a1b0de7d9bfa321465b1da1f91f63cba0">More...</a><br /></td></tr>
 <tr class="separator:a1b0de7d9bfa321465b1da1f91f63cba0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0afc68c97fb709e7ed04343e3bc414dc"><td class="memItemLeft" align="right" valign="top"><a id="a0afc68c97fb709e7ed04343e3bc414dc"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1DBDetectorPreprocessor.html#a0afc68c97fb709e7ed04343e3bc414dc">SetMaxSideLen</a> (int max_side_len)</td></tr>
+<tr class="memdesc:a0afc68c97fb709e7ed04343e3bc414dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set max_side_len for the detection preprocess, default is 960. <br /></td></tr>
+<tr class="separator:a0afc68c97fb709e7ed04343e3bc414dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6b337597d38a16b34bea60014d69748"><td class="memItemLeft" align="right" valign="top"><a id="ae6b337597d38a16b34bea60014d69748"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1DBDetectorPreprocessor.html#ae6b337597d38a16b34bea60014d69748">GetMaxSideLen</a> () const</td></tr>
+<tr class="memdesc:ae6b337597d38a16b34bea60014d69748"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get max_side_len of the detection preprocess. <br /></td></tr>
+<tr class="separator:ae6b337597d38a16b34bea60014d69748"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd11cafd37045d5c87a950406e3dac59"><td class="memItemLeft" align="right" valign="top"><a id="afd11cafd37045d5c87a950406e3dac59"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1DBDetectorPreprocessor.html#afd11cafd37045d5c87a950406e3dac59">SetMean</a> (std::vector&lt; float &gt; mean)</td></tr>
+<tr class="memdesc:afd11cafd37045d5c87a950406e3dac59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set mean value for the image normalization in detection preprocess. <br /></td></tr>
+<tr class="separator:afd11cafd37045d5c87a950406e3dac59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40a4bc0f3d10280f41c4ba708f81136f"><td class="memItemLeft" align="right" valign="top"><a id="a40a4bc0f3d10280f41c4ba708f81136f"></a>
+std::vector&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1DBDetectorPreprocessor.html#a40a4bc0f3d10280f41c4ba708f81136f">GetMean</a> () const</td></tr>
+<tr class="memdesc:a40a4bc0f3d10280f41c4ba708f81136f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get mean value of the image normalization in detection preprocess. <br /></td></tr>
+<tr class="separator:a40a4bc0f3d10280f41c4ba708f81136f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af03f7230981bf06a8df6301c915f9135"><td class="memItemLeft" align="right" valign="top"><a id="af03f7230981bf06a8df6301c915f9135"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1DBDetectorPreprocessor.html#af03f7230981bf06a8df6301c915f9135">SetScale</a> (std::vector&lt; float &gt; scale)</td></tr>
+<tr class="memdesc:af03f7230981bf06a8df6301c915f9135"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set scale value for the image normalization in detection preprocess. <br /></td></tr>
+<tr class="separator:af03f7230981bf06a8df6301c915f9135"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a144b967dcc1e042fdb625469491aba57"><td class="memItemLeft" align="right" valign="top"><a id="a144b967dcc1e042fdb625469491aba57"></a>
+std::vector&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1DBDetectorPreprocessor.html#a144b967dcc1e042fdb625469491aba57">GetScale</a> () const</td></tr>
+<tr class="memdesc:a144b967dcc1e042fdb625469491aba57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get scale value of the image normalization in detection preprocess. <br /></td></tr>
+<tr class="separator:a144b967dcc1e042fdb625469491aba57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada1f548f4454bda07e620fb6c2184807"><td class="memItemLeft" align="right" valign="top"><a id="ada1f548f4454bda07e620fb6c2184807"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1DBDetectorPreprocessor.html#ada1f548f4454bda07e620fb6c2184807">SetIsScale</a> (bool is_scale)</td></tr>
+<tr class="memdesc:ada1f548f4454bda07e620fb6c2184807"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set is_scale for the image normalization in detection preprocess. <br /></td></tr>
+<tr class="separator:ada1f548f4454bda07e620fb6c2184807"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa152b4518c16588f8f7466175b537492"><td class="memItemLeft" align="right" valign="top"><a id="aa152b4518c16588f8f7466175b537492"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1DBDetectorPreprocessor.html#aa152b4518c16588f8f7466175b537492">GetIsScale</a> () const</td></tr>
+<tr class="memdesc:aa152b4518c16588f8f7466175b537492"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get is_scale of the image normalization in detection preprocess. <br /></td></tr>
+<tr class="separator:aa152b4518c16588f8f7466175b537492"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Preprocessor object for <a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1DBDetector.html" title="DBDetector object is used to load the detection model provided by PaddleOCR. ">DBDetector</a> serials model. </p>

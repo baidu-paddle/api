@@ -82,6 +82,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abe7758cd4d8e3ffad59bd6278706481e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1ClassifierPostprocessor.html#abe7758cd4d8e3ffad59bd6278706481e">Run</a> (const std::vector&lt; FDTensor &gt; &amp;tensors, std::vector&lt; int32_t &gt; *cls_labels, std::vector&lt; float &gt; *cls_scores)</td></tr>
 <tr class="memdesc:abe7758cd4d8e3ffad59bd6278706481e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process the result of runtime and fill to <a class="el" href="structfastdeploy_1_1vision_1_1ClassifyResult.html" title="Classify result structure for all the image classify models. ">ClassifyResult</a> structure.  <a href="#abe7758cd4d8e3ffad59bd6278706481e">More...</a><br /></td></tr>
 <tr class="separator:abe7758cd4d8e3ffad59bd6278706481e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d37a7498a83308d2e5a0ce925d2bea2"><td class="memItemLeft" align="right" valign="top"><a id="a2d37a7498a83308d2e5a0ce925d2bea2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1ClassifierPostprocessor.html#a2d37a7498a83308d2e5a0ce925d2bea2">SetClsThresh</a> (float cls_thresh)</td></tr>
+<tr class="memdesc:a2d37a7498a83308d2e5a0ce925d2bea2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set threshold for the classification postprocess, default is 0.9. <br /></td></tr>
+<tr class="separator:a2d37a7498a83308d2e5a0ce925d2bea2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdf3e7eaf5e4805f9f9a22091c1506ad"><td class="memItemLeft" align="right" valign="top"><a id="acdf3e7eaf5e4805f9f9a22091c1506ad"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1ClassifierPostprocessor.html#acdf3e7eaf5e4805f9f9a22091c1506ad">GetClsThresh</a> () const</td></tr>
+<tr class="memdesc:acdf3e7eaf5e4805f9f9a22091c1506ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get threshold value of the classification postprocess. <br /></td></tr>
+<tr class="separator:acdf3e7eaf5e4805f9f9a22091c1506ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Postprocessor object for <a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1Classifier.html" title="Classifier object is used to load the classification model provided by PaddleOCR. ...">Classifier</a> serials model. </p>

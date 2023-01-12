@@ -75,6 +75,9 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
+<tr class="memitem:namespacefastdeploy_1_1function"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefastdeploy_1_1function.html">function</a></td></tr>
+<tr class="memdesc:namespacefastdeploy_1_1function"><td class="mdescLeft">&#160;</td><td class="mdescRight">All C++ FDTensor Operation APIs are defined inside this namespace. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespacefastdeploy_1_1pipeline"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefastdeploy_1_1pipeline.html">pipeline</a></td></tr>
 <tr class="memdesc:namespacefastdeploy_1_1pipeline"><td class="mdescLeft">&#160;</td><td class="mdescRight">All pipeline model APIs are defined inside this namespace. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -99,29 +102,6 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:a3493c6d2ca1a50ca5506a0e195d0d723"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefastdeploy.html#a3493c6d2ca1a50ca5506a0e195d0d723">ModelFormat</a> { <br />
-&#160;&#160;<a class="el" href="namespacefastdeploy.html#a3493c6d2ca1a50ca5506a0e195d0d723ab7f7321a62359db08fed419ee8b14ed0">AUTOREC</a>, 
-<a class="el" href="namespacefastdeploy.html#a3493c6d2ca1a50ca5506a0e195d0d723a075d90767b2b23c4f53638c7c6d4f605">PADDLE</a>, 
-<a class="el" href="namespacefastdeploy.html#a3493c6d2ca1a50ca5506a0e195d0d723a966ad1db46a615dc493d376737c2343b">ONNX</a>, 
-<a class="el" href="namespacefastdeploy.html#a3493c6d2ca1a50ca5506a0e195d0d723a530c3d46f7149abe7dfb53963e01d908">RKNN</a>, 
-<br />
-&#160;&#160;<a class="el" href="namespacefastdeploy.html#a3493c6d2ca1a50ca5506a0e195d0d723afb02538a126c74eef66a7f6c8a9173b3">TORCHSCRIPT</a>
-<br />
- }</td></tr>
-<tr class="separator:a3493c6d2ca1a50ca5506a0e195d0d723"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:addd441db144b083efc919b63cef2bebc"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefastdeploy.html#addd441db144b083efc919b63cef2bebc">Backend</a> { <br />
-&#160;&#160;<a class="el" href="namespacefastdeploy.html#addd441db144b083efc919b63cef2bebcac09f1972b8acd94edb7581d1e6c7724c">UNKNOWN</a>, 
-<a class="el" href="namespacefastdeploy.html#addd441db144b083efc919b63cef2bebcaf90a9627891c119b13f93e7537bb126b">ORT</a>, 
-<a class="el" href="namespacefastdeploy.html#addd441db144b083efc919b63cef2bebca02884fdac1db2c6e739861ab0b4daf2a">TRT</a>, 
-<a class="el" href="namespacefastdeploy.html#addd441db144b083efc919b63cef2bebca1427ae94bd35e3b644c34acd93f45a63">PDINFER</a>, 
-<br />
-&#160;&#160;<a class="el" href="namespacefastdeploy.html#addd441db144b083efc919b63cef2bebca352e93278db2ce2db2eef7cab115a8fc">POROS</a>, 
-<a class="el" href="namespacefastdeploy.html#addd441db144b083efc919b63cef2bebcaf0ee0f97b39571419adec34ffd0c142e">OPENVINO</a>, 
-<a class="el" href="namespacefastdeploy.html#addd441db144b083efc919b63cef2bebca3c7aaab4db7728cf0231607246b40dff">LITE</a>, 
-<a class="el" href="namespacefastdeploy.html#addd441db144b083efc919b63cef2bebca186d157f4b6811a8fc8604bae989944d">RKNPU2</a>
-<br />
- }</td></tr>
-<tr class="separator:addd441db144b083efc919b63cef2bebc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae7ba2fd1a203144360532ffde81c8dcf"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefastdeploy.html#ae7ba2fd1a203144360532ffde81c8dcf">LitePowerMode</a> { <br />
 &#160;&#160;<a class="el" href="namespacefastdeploy.html#ae7ba2fd1a203144360532ffde81c8dcfab9f816dc617eb29c73492064e34cdfda">LITE_POWER_HIGH</a> = 0, 
 <a class="el" href="namespacefastdeploy.html#ae7ba2fd1a203144360532ffde81c8dcfa5bc61bc5f2bd4242d17de20df1b80c3b">LITE_POWER_LOW</a> = 1, 
@@ -133,9 +113,53 @@ Enumerations</h2></td></tr>
 <br />
  }</td></tr>
 <tr class="separator:ae7ba2fd1a203144360532ffde81c8dcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addd441db144b083efc919b63cef2bebc"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefastdeploy.html#addd441db144b083efc919b63cef2bebc">Backend</a> { <br />
+&#160;&#160;<a class="el" href="namespacefastdeploy.html#addd441db144b083efc919b63cef2bebcac09f1972b8acd94edb7581d1e6c7724c">UNKNOWN</a>, 
+<a class="el" href="namespacefastdeploy.html#addd441db144b083efc919b63cef2bebcaf90a9627891c119b13f93e7537bb126b">ORT</a>, 
+<a class="el" href="namespacefastdeploy.html#addd441db144b083efc919b63cef2bebca02884fdac1db2c6e739861ab0b4daf2a">TRT</a>, 
+<a class="el" href="namespacefastdeploy.html#addd441db144b083efc919b63cef2bebca1427ae94bd35e3b644c34acd93f45a63">PDINFER</a>, 
+<br />
+&#160;&#160;<a class="el" href="namespacefastdeploy.html#addd441db144b083efc919b63cef2bebca352e93278db2ce2db2eef7cab115a8fc">POROS</a>, 
+<a class="el" href="namespacefastdeploy.html#addd441db144b083efc919b63cef2bebcaf0ee0f97b39571419adec34ffd0c142e">OPENVINO</a>, 
+<a class="el" href="namespacefastdeploy.html#addd441db144b083efc919b63cef2bebca3c7aaab4db7728cf0231607246b40dff">LITE</a>, 
+<a class="el" href="namespacefastdeploy.html#addd441db144b083efc919b63cef2bebca186d157f4b6811a8fc8604bae989944d">RKNPU2</a>, 
+<br />
+&#160;&#160;<a class="el" href="namespacefastdeploy.html#addd441db144b083efc919b63cef2bebca194d013c58d32b3a5b4b1f55c8367da6">SOPHGOTPU</a>
+<br />
+ }</td></tr>
+<tr class="separator:addd441db144b083efc919b63cef2bebc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3493c6d2ca1a50ca5506a0e195d0d723"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefastdeploy.html#a3493c6d2ca1a50ca5506a0e195d0d723">ModelFormat</a> { <br />
+&#160;&#160;<a class="el" href="namespacefastdeploy.html#a3493c6d2ca1a50ca5506a0e195d0d723ab7f7321a62359db08fed419ee8b14ed0">AUTOREC</a>, 
+<a class="el" href="namespacefastdeploy.html#a3493c6d2ca1a50ca5506a0e195d0d723a075d90767b2b23c4f53638c7c6d4f605">PADDLE</a>, 
+<a class="el" href="namespacefastdeploy.html#a3493c6d2ca1a50ca5506a0e195d0d723a966ad1db46a615dc493d376737c2343b">ONNX</a>, 
+<a class="el" href="namespacefastdeploy.html#a3493c6d2ca1a50ca5506a0e195d0d723a530c3d46f7149abe7dfb53963e01d908">RKNN</a>, 
+<br />
+&#160;&#160;<a class="el" href="namespacefastdeploy.html#a3493c6d2ca1a50ca5506a0e195d0d723afb02538a126c74eef66a7f6c8a9173b3">TORCHSCRIPT</a>, 
+<a class="el" href="namespacefastdeploy.html#a3493c6d2ca1a50ca5506a0e195d0d723a2bf6753dd9464a84f34ffd6f6b478605">SOPHGO</a>
+<br />
+ }</td></tr>
+<tr class="separator:a3493c6d2ca1a50ca5506a0e195d0d723"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:ab937480954a759f50933264263ffa5c6"><td class="memItemLeft" align="right" valign="top">FASTDEPLOY_DECL int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefastdeploy.html#ab937480954a759f50933264263ffa5c6">CheckStreamEncrypted</a> (std::istream &amp;cipher_stream)</td></tr>
+<tr class="memdesc:ab937480954a759f50933264263ffa5c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">check stream is encrypted or not  <a href="#ab937480954a759f50933264263ffa5c6">More...</a><br /></td></tr>
+<tr class="separator:ab937480954a759f50933264263ffa5c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af37b945905429ed951189389bdbd3046"><td class="memItemLeft" align="right" valign="top">FASTDEPLOY_DECL int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefastdeploy.html#af37b945905429ed951189389bdbd3046">DecryptStream</a> (std::istream &amp;cipher_stream, std::ostream &amp;plain_stream, const std::string &amp;key_base64)</td></tr>
+<tr class="memdesc:af37b945905429ed951189389bdbd3046"><td class="mdescLeft">&#160;</td><td class="mdescRight">decrypt an encrypted stream  <a href="#af37b945905429ed951189389bdbd3046">More...</a><br /></td></tr>
+<tr class="separator:af37b945905429ed951189389bdbd3046"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc874c3467b01302055a5f409d376381"><td class="memItemLeft" align="right" valign="top">FASTDEPLOY_DECL std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefastdeploy.html#adc874c3467b01302055a5f409d376381">Decrypt</a> (const std::string &amp;cipher, const std::string &amp;key)</td></tr>
+<tr class="memdesc:adc874c3467b01302055a5f409d376381"><td class="mdescLeft">&#160;</td><td class="mdescRight">decrypt an encrypted string  <a href="#adc874c3467b01302055a5f409d376381">More...</a><br /></td></tr>
+<tr class="separator:adc874c3467b01302055a5f409d376381"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a753b3b4bf9f1cd7e5852b4706dfbaa6b"><td class="memItemLeft" align="right" valign="top">FASTDEPLOY_DECL std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefastdeploy.html#a753b3b4bf9f1cd7e5852b4706dfbaa6b">GenerateRandomKey</a> ()</td></tr>
+<tr class="memdesc:a753b3b4bf9f1cd7e5852b4706dfbaa6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">generate a random key(base64-32bytes) for an encrypted model  <a href="#a753b3b4bf9f1cd7e5852b4706dfbaa6b">More...</a><br /></td></tr>
+<tr class="separator:a753b3b4bf9f1cd7e5852b4706dfbaa6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdf965446c50a77c6586fa0c3aa10f35"><td class="memItemLeft" align="right" valign="top">FASTDEPLOY_DECL int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefastdeploy.html#afdf965446c50a77c6586fa0c3aa10f35">EncryptStream</a> (const std::string &amp;keydata, std::istream &amp;in_stream, std::ostream &amp;out_stream)</td></tr>
+<tr class="memdesc:afdf965446c50a77c6586fa0c3aa10f35"><td class="mdescLeft">&#160;</td><td class="mdescRight">encrypt a std::istream with key  <a href="#afdf965446c50a77c6586fa0c3aa10f35">More...</a><br /></td></tr>
+<tr class="separator:afdf965446c50a77c6586fa0c3aa10f35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7ca1b48958fef41d61da4152e6e5c5a"><td class="memItemLeft" align="right" valign="top">FASTDEPLOY_DECL std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefastdeploy.html#ab7ca1b48958fef41d61da4152e6e5c5a">Encrypt</a> (const std::string &amp;input, const std::string &amp;key=<a class="el" href="namespacefastdeploy.html#a753b3b4bf9f1cd7e5852b4706dfbaa6b">GenerateRandomKey</a>())</td></tr>
+<tr class="memdesc:ab7ca1b48958fef41d61da4152e6e5c5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">encrypt a string with key  <a href="#ab7ca1b48958fef41d61da4152e6e5c5a">More...</a><br /></td></tr>
+<tr class="separator:ab7ca1b48958fef41d61da4152e6e5c5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a578f46765b9182524d543155eb650e3b"><td class="memItemLeft" align="right" valign="top"><a id="a578f46765b9182524d543155eb650e3b"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefastdeploy.html#a578f46765b9182524d543155eb650e3b">PaddleTensorToFDTensor</a> (std::unique_ptr&lt; paddle_infer::Tensor &gt; &amp;tensor, FDTensor *fd_tensor, bool copy_to_fd)</td></tr>
 <tr class="memdesc:a578f46765b9182524d543155eb650e3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">else share memory to FDTensor <br /></td></tr>
@@ -180,6 +204,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="name
 <tr><td class="fieldname"><a id="addd441db144b083efc919b63cef2bebca3c7aaab4db7728cf0231607246b40dff"></a>LITE&#160;</td><td class="fielddoc"><p>Paddle Lite, support Paddle format model, ARM CPU only. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="addd441db144b083efc919b63cef2bebca186d157f4b6811a8fc8604bae989944d"></a>RKNPU2&#160;</td><td class="fielddoc"><p>RKNPU2, support RKNN format model, Rockchip NPU only. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="addd441db144b083efc919b63cef2bebca194d013c58d32b3a5b4b1f55c8367da6"></a>SOPHGOTPU&#160;</td><td class="fielddoc"><p>SOPHGOTPU, support SOPHGO format model, Sophgo TPU only. </p>
 </td></tr>
 </table>
 
@@ -237,7 +263,224 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="name
 </td></tr>
 <tr><td class="fieldname"><a id="a3493c6d2ca1a50ca5506a0e195d0d723afb02538a126c74eef66a7f6c8a9173b3"></a>TORCHSCRIPT&#160;</td><td class="fielddoc"><p>Model with TorchScript format. </p>
 </td></tr>
+<tr><td class="fieldname"><a id="a3493c6d2ca1a50ca5506a0e195d0d723a2bf6753dd9464a84f34ffd6f6b478605"></a>SOPHGO&#160;</td><td class="fielddoc"><p>Model with SOPHGO format. </p>
+</td></tr>
 </table>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ab937480954a759f50933264263ffa5c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab937480954a759f50933264263ffa5c6">&#9670;&nbsp;</a></span>CheckStreamEncrypted()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int fastdeploy::CheckStreamEncrypted </td>
+          <td>(</td>
+          <td class="paramtype">std::istream &amp;&#160;</td>
+          <td class="paramname"><em>cipher_stream</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>check stream is encrypted or not </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">cipher_stream</td><td>The encrypted stream </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if stream is encrypted.</dd></dl>
+<p>0 - encrypted 1 - unencrypt </p>
+
+</div>
+</div>
+<a id="adc874c3467b01302055a5f409d376381"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc874c3467b01302055a5f409d376381">&#9670;&nbsp;</a></span>Decrypt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string fastdeploy::Decrypt </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>cipher</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>key</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>decrypt an encrypted string </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">cipher</td><td>The encrypted string </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>The key for decryption </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The decrypted string </dd></dl>
+
+</div>
+</div>
+<a id="af37b945905429ed951189389bdbd3046"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af37b945905429ed951189389bdbd3046">&#9670;&nbsp;</a></span>DecryptStream()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int fastdeploy::DecryptStream </td>
+          <td>(</td>
+          <td class="paramtype">std::istream &amp;&#160;</td>
+          <td class="paramname"><em>cipher_stream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>plain_stream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>key_base64</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>decrypt an encrypted stream </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">cipher_stream</td><td>The encrypted stream </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">plain_stream</td><td>The decrypted stream </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">key_base64</td><td>The key for decryption </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if decrypt success. </dd></dl>
+
+</div>
+</div>
+<a id="ab7ca1b48958fef41d61da4152e6e5c5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7ca1b48958fef41d61da4152e6e5c5a">&#9670;&nbsp;</a></span>Encrypt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::string &gt; fastdeploy::Encrypt </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>key</em> = <code><a class="el" href="namespacefastdeploy.html#a753b3b4bf9f1cd7e5852b4706dfbaa6b">GenerateRandomKey</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>encrypt a string with key </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input</td><td>The input string for encryption </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>If not given by user, generate key automatically. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;std::string&gt; [encrypted string, key] </dd></dl>
+
+</div>
+</div>
+<a id="afdf965446c50a77c6586fa0c3aa10f35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdf965446c50a77c6586fa0c3aa10f35">&#9670;&nbsp;</a></span>EncryptStream()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FASTDEPLOY_DECL int fastdeploy::EncryptStream </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>keydata</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::istream &amp;&#160;</td>
+          <td class="paramname"><em>in_stream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>out_stream</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>encrypt a std::istream with key </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">keydata</td><td>The key(base64-32bytes) for encryption </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">in_stream</td><td>The plain stream </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">out_stream</td><td>The ecrypted stream </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if encrypt successed, otherwise false </dd></dl>
+
+</div>
+</div>
+<a id="a753b3b4bf9f1cd7e5852b4706dfbaa6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a753b3b4bf9f1cd7e5852b4706dfbaa6b">&#9670;&nbsp;</a></span>GenerateRandomKey()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string fastdeploy::GenerateRandomKey </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>generate a random key(base64-32bytes) for an encrypted model </p>
+<dl class="section return"><dt>Returns</dt><dd>std::string key </dd></dl>
 
 </div>
 </div>

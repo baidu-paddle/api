@@ -82,6 +82,44 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac99d312ec95699b92002f000212edeb1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1RecognizerPreprocessor.html#ac99d312ec95699b92002f000212edeb1">Run</a> (std::vector&lt; FDMat &gt; *images, std::vector&lt; FDTensor &gt; *outputs)</td></tr>
 <tr class="memdesc:ac99d312ec95699b92002f000212edeb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process the input image and prepare input tensors for runtime.  <a href="#ac99d312ec95699b92002f000212edeb1">More...</a><br /></td></tr>
 <tr class="separator:ac99d312ec95699b92002f000212edeb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e24bdc6afe21ed961daf3b73407f8f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1RecognizerPreprocessor.html#a4e24bdc6afe21ed961daf3b73407f8f7">SetStaticShapeInfer</a> (bool static_shape_infer)</td></tr>
+<tr class="separator:a4e24bdc6afe21ed961daf3b73407f8f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab950ca94159fc4f6417ea70da36b7a42"><td class="memItemLeft" align="right" valign="top"><a id="ab950ca94159fc4f6417ea70da36b7a42"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1RecognizerPreprocessor.html#ab950ca94159fc4f6417ea70da36b7a42">GetStaticShapeInfer</a> () const</td></tr>
+<tr class="memdesc:ab950ca94159fc4f6417ea70da36b7a42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get static_shape_infer of the recognition preprocess. <br /></td></tr>
+<tr class="separator:ab950ca94159fc4f6417ea70da36b7a42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0328c523df80d7bb0e98e83e93491cbe"><td class="memItemLeft" align="right" valign="top"><a id="a0328c523df80d7bb0e98e83e93491cbe"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1RecognizerPreprocessor.html#a0328c523df80d7bb0e98e83e93491cbe">SetMean</a> (std::vector&lt; float &gt; mean)</td></tr>
+<tr class="memdesc:a0328c523df80d7bb0e98e83e93491cbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set mean value for the image normalization in recognition preprocess. <br /></td></tr>
+<tr class="separator:a0328c523df80d7bb0e98e83e93491cbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ded5073ac1a1ae1eca815d2587acdbc"><td class="memItemLeft" align="right" valign="top"><a id="a9ded5073ac1a1ae1eca815d2587acdbc"></a>
+std::vector&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1RecognizerPreprocessor.html#a9ded5073ac1a1ae1eca815d2587acdbc">GetMean</a> () const</td></tr>
+<tr class="memdesc:a9ded5073ac1a1ae1eca815d2587acdbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get mean value of the image normalization in recognition preprocess. <br /></td></tr>
+<tr class="separator:a9ded5073ac1a1ae1eca815d2587acdbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22b7109a11c1139765c82c0dfaff6ec1"><td class="memItemLeft" align="right" valign="top"><a id="a22b7109a11c1139765c82c0dfaff6ec1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1RecognizerPreprocessor.html#a22b7109a11c1139765c82c0dfaff6ec1">SetScale</a> (std::vector&lt; float &gt; scale)</td></tr>
+<tr class="memdesc:a22b7109a11c1139765c82c0dfaff6ec1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set scale value for the image normalization in recognition preprocess. <br /></td></tr>
+<tr class="separator:a22b7109a11c1139765c82c0dfaff6ec1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9da2d83c2c56d0e823b3356526858ef"><td class="memItemLeft" align="right" valign="top"><a id="af9da2d83c2c56d0e823b3356526858ef"></a>
+std::vector&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1RecognizerPreprocessor.html#af9da2d83c2c56d0e823b3356526858ef">GetScale</a> () const</td></tr>
+<tr class="memdesc:af9da2d83c2c56d0e823b3356526858ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get scale value of the image normalization in recognition preprocess. <br /></td></tr>
+<tr class="separator:af9da2d83c2c56d0e823b3356526858ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd7ab0cbd005b93848cbf66e45815c52"><td class="memItemLeft" align="right" valign="top"><a id="afd7ab0cbd005b93848cbf66e45815c52"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1RecognizerPreprocessor.html#afd7ab0cbd005b93848cbf66e45815c52">SetIsScale</a> (bool is_scale)</td></tr>
+<tr class="memdesc:afd7ab0cbd005b93848cbf66e45815c52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set is_scale for the image normalization in recognition preprocess. <br /></td></tr>
+<tr class="separator:afd7ab0cbd005b93848cbf66e45815c52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0f86b0490cc079031b6b0c3eababd11"><td class="memItemLeft" align="right" valign="top"><a id="ae0f86b0490cc079031b6b0c3eababd11"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1RecognizerPreprocessor.html#ae0f86b0490cc079031b6b0c3eababd11">GetIsScale</a> () const</td></tr>
+<tr class="memdesc:ae0f86b0490cc079031b6b0c3eababd11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get is_scale of the image normalization in recognition preprocess. <br /></td></tr>
+<tr class="separator:ae0f86b0490cc079031b6b0c3eababd11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7289ffbf0d63438e9c0260b1ecf85256"><td class="memItemLeft" align="right" valign="top"><a id="a7289ffbf0d63438e9c0260b1ecf85256"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1RecognizerPreprocessor.html#a7289ffbf0d63438e9c0260b1ecf85256">SetRecImageShape</a> (std::vector&lt; int &gt; rec_image_shape)</td></tr>
+<tr class="memdesc:a7289ffbf0d63438e9c0260b1ecf85256"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set rec_image_shape for the recognition preprocess. <br /></td></tr>
+<tr class="separator:a7289ffbf0d63438e9c0260b1ecf85256"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a149f724b1884fda75e7e481db87a4ebe"><td class="memItemLeft" align="right" valign="top"><a id="a149f724b1884fda75e7e481db87a4ebe"></a>
+std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1RecognizerPreprocessor.html#a149f724b1884fda75e7e481db87a4ebe">GetRecImageShape</a> () const</td></tr>
+<tr class="memdesc:a149f724b1884fda75e7e481db87a4ebe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get rec_image_shape for the recognition preprocess. <br /></td></tr>
+<tr class="separator:a149f724b1884fda75e7e481db87a4ebe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Preprocessor object for PaddleClas serials model. </p>
@@ -121,6 +159,33 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if the preprocess successed, otherwise false </dd></dl>
+
+</div>
+</div>
+<a id="a4e24bdc6afe21ed961daf3b73407f8f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e24bdc6afe21ed961daf3b73407f8f7">&#9670;&nbsp;</a></span>SetStaticShapeInfer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fastdeploy::vision::ocr::RecognizerPreprocessor::SetStaticShapeInfer </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>static_shape_infer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set static_shape_infer is true or not. When deploy PP-OCR on hardware which can not support dynamic input shape very well, like Huawei Ascned, static_shape_infer needs to to be true. </p>
 
 </div>
 </div>

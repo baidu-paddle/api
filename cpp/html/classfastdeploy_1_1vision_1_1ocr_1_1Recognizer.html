@@ -89,10 +89,8 @@ Collaboration diagram for fastdeploy::vision::ocr::Recognizer:</div>
 <div class="dyncontent">
 <div class="center"><img src="classfastdeploy_1_1vision_1_1ocr_1_1Recognizer__coll__graph.png" border="0" usemap="#fastdeploy_1_1vision_1_1ocr_1_1Recognizer_coll__map" alt="Collaboration graph"/></div>
 <map name="fastdeploy_1_1vision_1_1ocr_1_1Recognizer_coll__map" id="fastdeploy_1_1vision_1_1ocr_1_1Recognizer_coll__map">
-<area shape="rect" id="node2" href="classfastdeploy_1_1FastDeployModel.html" title="Base model object for all the vision models. " alt="" coords="357,7,567,33"/>
-<area shape="rect" id="node3" href="structfastdeploy_1_1RuntimeOption.html" title="Option object used when create a new Runtime object. " alt="" coords="5,7,200,33"/>
-<area shape="rect" id="node4" href="classfastdeploy_1_1vision_1_1ocr_1_1RecognizerPostprocessor.html" title="Postprocessor object for Recognizer serials model. " alt="" coords="352,58,572,99"/>
-<area shape="rect" id="node5" href="classfastdeploy_1_1vision_1_1ocr_1_1RecognizerPreprocessor.html" title="Preprocessor object for PaddleClas serials model. " alt="" coords="355,123,569,165"/>
+<area shape="rect" id="node2" href="classfastdeploy_1_1FastDeployModel.html" title="Base model object for all the vision models. " alt="" coords="5,95,215,121"/>
+<area shape="rect" id="node3" href="structfastdeploy_1_1RuntimeOption.html" title="Option object used when create a new Runtime object. " alt="" coords="13,5,207,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -111,6 +109,14 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <tr class="memitem:a6af53e456e761db27251e0def4860a57"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1Recognizer.html#a6af53e456e761db27251e0def4860a57">BatchPredict</a> (const std::vector&lt; cv::Mat &gt; &amp;images, std::vector&lt; std::string &gt; *texts, std::vector&lt; float &gt; *rec_scores)</td></tr>
 <tr class="memdesc:a6af53e456e761db27251e0def4860a57"><td class="mdescLeft">&#160;</td><td class="mdescRight">BatchPredict the input image and get OCR recognition model result.  <a href="#a6af53e456e761db27251e0def4860a57">More...</a><br /></td></tr>
 <tr class="separator:a6af53e456e761db27251e0def4860a57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a636573f53d6a6b35c86ce923aed98c71"><td class="memItemLeft" align="right" valign="top"><a id="a636573f53d6a6b35c86ce923aed98c71"></a>
+virtual <a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1RecognizerPreprocessor.html">RecognizerPreprocessor</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1Recognizer.html#a636573f53d6a6b35c86ce923aed98c71">GetPreprocessor</a> ()</td></tr>
+<tr class="memdesc:a636573f53d6a6b35c86ce923aed98c71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get preprocessor reference of <a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1DBDetectorPreprocessor.html" title="Preprocessor object for DBDetector serials model. ">DBDetectorPreprocessor</a>. <br /></td></tr>
+<tr class="separator:a636573f53d6a6b35c86ce923aed98c71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e649a4041beb8c73508ac7ce30a4eda"><td class="memItemLeft" align="right" valign="top"><a id="a4e649a4041beb8c73508ac7ce30a4eda"></a>
+virtual <a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1RecognizerPostprocessor.html">RecognizerPostprocessor</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1Recognizer.html#a4e649a4041beb8c73508ac7ce30a4eda">GetPostprocessor</a> ()</td></tr>
+<tr class="memdesc:a4e649a4041beb8c73508ac7ce30a4eda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get postprocessor reference of <a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1DBDetectorPostprocessor.html" title="Postprocessor object for DBDetector serials model. ">DBDetectorPostprocessor</a>. <br /></td></tr>
+<tr class="separator:a4e649a4041beb8c73508ac7ce30a4eda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classfastdeploy_1_1FastDeployModel"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classfastdeploy_1_1FastDeployModel')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classfastdeploy_1_1FastDeployModel.html">fastdeploy::FastDeployModel</a></td></tr>
 <tr class="memitem:abfe20a31493c5cb9a540c65e721e96cf inherit pub_methods_classfastdeploy_1_1FastDeployModel"><td class="memItemLeft" align="right" valign="top"><a id="abfe20a31493c5cb9a540c65e721e96cf"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1FastDeployModel.html#abfe20a31493c5cb9a540c65e721e96cf">Infer</a> (std::vector&lt; FDTensor &gt; &amp;input_tensors, std::vector&lt; FDTensor &gt; *output_tensors)</td></tr>
@@ -179,6 +185,8 @@ std::vector&lt; <a class="el" href="namespacefastdeploy.html#addd441db144b083efc
 <tr class="separator:a8331138e8169d7fd975940dd6c9d2ecf inherit pub_attribs_classfastdeploy_1_1FastDeployModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14958071d6240a7f3fe07e594162bab0 inherit pub_attribs_classfastdeploy_1_1FastDeployModel"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespacefastdeploy.html#addd441db144b083efc919b63cef2bebc">Backend</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1FastDeployModel.html#a14958071d6240a7f3fe07e594162bab0">valid_rknpu_backends</a> = {}</td></tr>
 <tr class="separator:a14958071d6240a7f3fe07e594162bab0 inherit pub_attribs_classfastdeploy_1_1FastDeployModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ba1a9c69fef37254279d4c92d167341 inherit pub_attribs_classfastdeploy_1_1FastDeployModel"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespacefastdeploy.html#addd441db144b083efc919b63cef2bebc">Backend</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1FastDeployModel.html#a6ba1a9c69fef37254279d4c92d167341">valid_sophgonpu_backends</a> = {}</td></tr>
+<tr class="separator:a6ba1a9c69fef37254279d4c92d167341 inherit pub_attribs_classfastdeploy_1_1FastDeployModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1Recognizer.html" title="Recognizer object is used to load the recognition model provided by PaddleOCR. ">Recognizer</a> object is used to load the recognition model provided by PaddleOCR. </p>

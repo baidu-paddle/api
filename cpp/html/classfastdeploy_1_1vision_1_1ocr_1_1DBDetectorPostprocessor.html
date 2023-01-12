@@ -82,6 +82,46 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a88c9a7dd271e3f10495acabe6a24b942"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1DBDetectorPostprocessor.html#a88c9a7dd271e3f10495acabe6a24b942">Run</a> (const std::vector&lt; FDTensor &gt; &amp;tensors, std::vector&lt; std::vector&lt; std::array&lt; int, 8 &gt;&gt;&gt; *results, const std::vector&lt; std::array&lt; int, 4 &gt;&gt; &amp;batch_det_img_info)</td></tr>
 <tr class="memdesc:a88c9a7dd271e3f10495acabe6a24b942"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process the result of runtime and fill to results structure.  <a href="#a88c9a7dd271e3f10495acabe6a24b942">More...</a><br /></td></tr>
 <tr class="separator:a88c9a7dd271e3f10495acabe6a24b942"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55b5277b61358dc7e03cf227a35bddcd"><td class="memItemLeft" align="right" valign="top"><a id="a55b5277b61358dc7e03cf227a35bddcd"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1DBDetectorPostprocessor.html#a55b5277b61358dc7e03cf227a35bddcd">SetDetDBThresh</a> (double det_db_thresh)</td></tr>
+<tr class="memdesc:a55b5277b61358dc7e03cf227a35bddcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set det_db_thresh for the detection postprocess, default is 0.3. <br /></td></tr>
+<tr class="separator:a55b5277b61358dc7e03cf227a35bddcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fbe09b1a31350ecb7069c0e064438c3"><td class="memItemLeft" align="right" valign="top"><a id="a3fbe09b1a31350ecb7069c0e064438c3"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1DBDetectorPostprocessor.html#a3fbe09b1a31350ecb7069c0e064438c3">GetDetDBThresh</a> () const</td></tr>
+<tr class="memdesc:a3fbe09b1a31350ecb7069c0e064438c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get det_db_thresh of the detection postprocess. <br /></td></tr>
+<tr class="separator:a3fbe09b1a31350ecb7069c0e064438c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ac6a7adde413e4abf1523805bf5046e"><td class="memItemLeft" align="right" valign="top"><a id="a2ac6a7adde413e4abf1523805bf5046e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1DBDetectorPostprocessor.html#a2ac6a7adde413e4abf1523805bf5046e">SetDetDBBoxThresh</a> (double det_db_box_thresh)</td></tr>
+<tr class="memdesc:a2ac6a7adde413e4abf1523805bf5046e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set det_db_box_thresh for the detection postprocess, default is 0.6. <br /></td></tr>
+<tr class="separator:a2ac6a7adde413e4abf1523805bf5046e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadaccc810d57b986dbb6a05b68574b72"><td class="memItemLeft" align="right" valign="top"><a id="aadaccc810d57b986dbb6a05b68574b72"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1DBDetectorPostprocessor.html#aadaccc810d57b986dbb6a05b68574b72">GetDetDBBoxThresh</a> () const</td></tr>
+<tr class="memdesc:aadaccc810d57b986dbb6a05b68574b72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get det_db_box_thresh of the detection postprocess. <br /></td></tr>
+<tr class="separator:aadaccc810d57b986dbb6a05b68574b72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7a4ff0081b2c40b099c450781bcb21a"><td class="memItemLeft" align="right" valign="top"><a id="aa7a4ff0081b2c40b099c450781bcb21a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1DBDetectorPostprocessor.html#aa7a4ff0081b2c40b099c450781bcb21a">SetDetDBUnclipRatio</a> (double det_db_unclip_ratio)</td></tr>
+<tr class="memdesc:aa7a4ff0081b2c40b099c450781bcb21a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set det_db_unclip_ratio for the detection postprocess, default is 1.5. <br /></td></tr>
+<tr class="separator:aa7a4ff0081b2c40b099c450781bcb21a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e1ccf10287b2dfc3b55ffbae1858adc"><td class="memItemLeft" align="right" valign="top"><a id="a8e1ccf10287b2dfc3b55ffbae1858adc"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1DBDetectorPostprocessor.html#a8e1ccf10287b2dfc3b55ffbae1858adc">GetDetDBUnclipRatio</a> () const</td></tr>
+<tr class="memdesc:a8e1ccf10287b2dfc3b55ffbae1858adc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get det_db_unclip_ratio_ of the detection postprocess. <br /></td></tr>
+<tr class="separator:a8e1ccf10287b2dfc3b55ffbae1858adc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a161c388f1a540e868e49c026768c8ebd"><td class="memItemLeft" align="right" valign="top"><a id="a161c388f1a540e868e49c026768c8ebd"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1DBDetectorPostprocessor.html#a161c388f1a540e868e49c026768c8ebd">SetDetDBScoreMode</a> (std::string det_db_score_mode)</td></tr>
+<tr class="memdesc:a161c388f1a540e868e49c026768c8ebd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set det_db_score_mode for the detection postprocess, default is 'slow'. <br /></td></tr>
+<tr class="separator:a161c388f1a540e868e49c026768c8ebd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9a159fe6e15cfb7f03020b80ff51582"><td class="memItemLeft" align="right" valign="top"><a id="af9a159fe6e15cfb7f03020b80ff51582"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1DBDetectorPostprocessor.html#af9a159fe6e15cfb7f03020b80ff51582">GetDetDBScoreMode</a> () const</td></tr>
+<tr class="memdesc:af9a159fe6e15cfb7f03020b80ff51582"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get det_db_score_mode_ of the detection postprocess. <br /></td></tr>
+<tr class="separator:af9a159fe6e15cfb7f03020b80ff51582"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c4e227b2fbe6f0781e4ca150f48136f"><td class="memItemLeft" align="right" valign="top"><a id="a7c4e227b2fbe6f0781e4ca150f48136f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1DBDetectorPostprocessor.html#a7c4e227b2fbe6f0781e4ca150f48136f">SetUseDilation</a> (int use_dilation)</td></tr>
+<tr class="memdesc:a7c4e227b2fbe6f0781e4ca150f48136f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set use_dilation for the detection postprocess, default is fasle. <br /></td></tr>
+<tr class="separator:a7c4e227b2fbe6f0781e4ca150f48136f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d66bc0aacd158f231a5d818fbc8ae06"><td class="memItemLeft" align="right" valign="top"><a id="a2d66bc0aacd158f231a5d818fbc8ae06"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1DBDetectorPostprocessor.html#a2d66bc0aacd158f231a5d818fbc8ae06">GetUseDilation</a> () const</td></tr>
+<tr class="memdesc:a2d66bc0aacd158f231a5d818fbc8ae06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get use_dilation of the detection postprocess. <br /></td></tr>
+<tr class="separator:a2d66bc0aacd158f231a5d818fbc8ae06"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Postprocessor object for <a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1DBDetector.html" title="DBDetector object is used to load the detection model provided by PaddleOCR. ">DBDetector</a> serials model. </p>

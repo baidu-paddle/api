@@ -9,5 +9,8 @@ var searchData=
   ['insightfacerecognitionpostprocessor',['InsightFaceRecognitionPostprocessor',['../classfastdeploy_1_1vision_1_1faceid_1_1InsightFaceRecognitionPostprocessor.html',1,'fastdeploy::vision::faceid::InsightFaceRecognitionPostprocessor'],['../classfastdeploy_1_1vision_1_1faceid_1_1InsightFaceRecognitionPostprocessor.html#a55c46fc6fb7838f9391b70a4763bd06e',1,'fastdeploy::vision::faceid::InsightFaceRecognitionPostprocessor::InsightFaceRecognitionPostprocessor()']]],
   ['insightfacerecognitionpreprocessor',['InsightFaceRecognitionPreprocessor',['../classfastdeploy_1_1vision_1_1faceid_1_1InsightFaceRecognitionPreprocessor.html',1,'fastdeploy::vision::faceid::InsightFaceRecognitionPreprocessor'],['../classfastdeploy_1_1vision_1_1faceid_1_1InsightFaceRecognitionPreprocessor.html#adeb92e28619539c282b3b74d2ab3484a',1,'fastdeploy::vision::faceid::InsightFaceRecognitionPreprocessor::InsightFaceRecognitionPreprocessor()']]],
   ['is_5fdecode_5fexported',['is_decode_exported',['../classfastdeploy_1_1vision_1_1detection_1_1YOLOv5Lite.html#ae515ae014590f36d35567780ad0a7e37',1,'fastdeploy::vision::detection::YOLOv5Lite::is_decode_exported()'],['../classfastdeploy_1_1vision_1_1detection_1_1YOLOX.html#acdcb0b79b11b25b7d165a902c1a0d484',1,'fastdeploy::vision::detection::YOLOX::is_decode_exported()']]],
-  ['isbackendavailable',['IsBackendAvailable',['../namespacefastdeploy.html#a2b9546db2f09b69775f7280bff403476',1,'fastdeploy']]]
+  ['isbackendavailable',['IsBackendAvailable',['../namespacefastdeploy.html#a2b9546db2f09b69775f7280bff403476',1,'fastdeploy']]],
+  ['isfinite',['IsFinite',['../namespacefastdeploy_1_1function.html#a992cee7441163f9c8611b3e149af3149',1,'fastdeploy::function']]],
+  ['isinf',['IsInf',['../namespacefastdeploy_1_1function.html#a329bdb076cb5e147c24cbbb45918b6f8',1,'fastdeploy::function']]],
+  ['isnan',['IsNan',['../namespacefastdeploy_1_1function.html#a6176629b3a866dbdfc89ceb600176768',1,'fastdeploy::function']]]
 ];

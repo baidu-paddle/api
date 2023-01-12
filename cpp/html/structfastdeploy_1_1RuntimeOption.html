@@ -75,7 +75,7 @@ $(function() {
 <p>Option object used when create a new <a class="el" href="structfastdeploy_1_1Runtime.html" title="Runtime object used to inference the loaded model on different devices. ">Runtime</a> object.  
  <a href="structfastdeploy_1_1RuntimeOption.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="runtime_8h_source.html">runtime.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="runtime__option_8h_source.html">runtime_option.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -104,6 +104,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stru
 <tr class="memitem:a6c93e9144900a46048167c2567c7195b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1RuntimeOption.html#a6c93e9144900a46048167c2567c7195b">UseKunlunXin</a> (int kunlunxin_id=0, int l3_workspace_size=0xfffc00, bool locked=false, bool autotune=true, const std::string &amp;autotune_file=&quot;&quot;, const std::string &amp;precision=&quot;int16&quot;, bool adaptive_seqlen=false, bool enable_multi_stream=false)</td></tr>
 <tr class="memdesc:a6c93e9144900a46048167c2567c7195b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn on KunlunXin XPU.  <a href="#a6c93e9144900a46048167c2567c7195b">More...</a><br /></td></tr>
 <tr class="separator:a6c93e9144900a46048167c2567c7195b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6eddb9892477361c07472087a3602408"><td class="memItemLeft" align="right" valign="top"><a id="a6eddb9892477361c07472087a3602408"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1RuntimeOption.html#a6eddb9892477361c07472087a3602408">UseSophgo</a> ()</td></tr>
+<tr class="memdesc:a6eddb9892477361c07472087a3602408"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use Sophgo to inference. <br /></td></tr>
+<tr class="separator:a6eddb9892477361c07472087a3602408"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a986f2fba4fb9176c4283ca6ba77ac112"><td class="memItemLeft" align="right" valign="top"><a id="a986f2fba4fb9176c4283ca6ba77ac112"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1RuntimeOption.html#a986f2fba4fb9176c4283ca6ba77ac112">SetOrtGraphOptLevel</a> (int level=-1)</td></tr>
 <tr class="memdesc:a986f2fba4fb9176c4283ca6ba77ac112"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set ORT graph opt level, default is decide by ONNX <a class="el" href="structfastdeploy_1_1Runtime.html" title="Runtime object used to inference the loaded model on different devices. ">Runtime</a> itself. <br /></td></tr>
@@ -120,6 +124,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stru
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1RuntimeOption.html#aad64cc21325c28b00a7627be347b8078">UseOrtBackend</a> ()</td></tr>
 <tr class="memdesc:aad64cc21325c28b00a7627be347b8078"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set ONNX <a class="el" href="structfastdeploy_1_1Runtime.html" title="Runtime object used to inference the loaded model on different devices. ">Runtime</a> as inference backend, support CPU/GPU. <br /></td></tr>
 <tr class="separator:aad64cc21325c28b00a7627be347b8078"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affc01452e36e0bd703fa953eb97439f6"><td class="memItemLeft" align="right" valign="top"><a id="affc01452e36e0bd703fa953eb97439f6"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1RuntimeOption.html#affc01452e36e0bd703fa953eb97439f6">UseSophgoBackend</a> ()</td></tr>
+<tr class="memdesc:affc01452e36e0bd703fa953eb97439f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set SOPHGO <a class="el" href="structfastdeploy_1_1Runtime.html" title="Runtime object used to inference the loaded model on different devices. ">Runtime</a> as inference backend, support CPU/GPU. <br /></td></tr>
+<tr class="separator:affc01452e36e0bd703fa953eb97439f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f08901e06aabd15303cf516eb4587cc"><td class="memItemLeft" align="right" valign="top"><a id="a9f08901e06aabd15303cf516eb4587cc"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfastdeploy_1_1RuntimeOption.html#a9f08901e06aabd15303cf516eb4587cc">UseTrtBackend</a> ()</td></tr>
 <tr class="memdesc:a9f08901e06aabd15303cf516eb4587cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set TensorRT as inference backend, only support GPU. <br /></td></tr>
@@ -610,8 +618,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stru
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following files:<ul>
-<li>/fastdeploy/0109/FastDeploy/fastdeploy/<a class="el" href="runtime_8h_source.html">runtime.h</a></li>
-<li>/fastdeploy/0109/FastDeploy/fastdeploy/runtime.cc</li>
+<li>/fastdeploy/0109/FastDeploy/fastdeploy/runtime/<a class="el" href="runtime__option_8h_source.html">runtime_option.h</a></li>
+<li>/fastdeploy/0109/FastDeploy/fastdeploy/runtime/runtime_option.cc</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

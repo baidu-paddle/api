@@ -4,6 +4,7 @@ var searchData=
   ['detection',['detection',['../namespacefastdeploy_1_1vision_1_1detection.html',1,'fastdeploy::vision']]],
   ['facedet',['facedet',['../namespacefastdeploy_1_1vision_1_1facedet.html',1,'fastdeploy::vision']]],
   ['fastdeploy',['fastdeploy',['../namespacefastdeploy.html',1,'']]],
+  ['function',['function',['../namespacefastdeploy_1_1function.html',1,'fastdeploy']]],
   ['keypointdetection',['keypointdetection',['../namespacefastdeploy_1_1vision_1_1keypointdetection.html',1,'fastdeploy::vision']]],
   ['matting',['matting',['../namespacefastdeploy_1_1vision_1_1matting.html',1,'fastdeploy::vision']]],
   ['ocr',['ocr',['../namespacefastdeploy_1_1vision_1_1ocr.html',1,'fastdeploy::vision']]],

@@ -7,5 +7,8 @@ var searchData=
   ['insightfacerecognitionbase',['InsightFaceRecognitionBase',['../classfastdeploy_1_1vision_1_1faceid_1_1InsightFaceRecognitionBase.html#a226278898b1ef6c85b519b43c3b6253b',1,'fastdeploy::vision::faceid::InsightFaceRecognitionBase']]],
   ['insightfacerecognitionpostprocessor',['InsightFaceRecognitionPostprocessor',['../classfastdeploy_1_1vision_1_1faceid_1_1InsightFaceRecognitionPostprocessor.html#a55c46fc6fb7838f9391b70a4763bd06e',1,'fastdeploy::vision::faceid::InsightFaceRecognitionPostprocessor']]],
   ['insightfacerecognitionpreprocessor',['InsightFaceRecognitionPreprocessor',['../classfastdeploy_1_1vision_1_1faceid_1_1InsightFaceRecognitionPreprocessor.html#adeb92e28619539c282b3b74d2ab3484a',1,'fastdeploy::vision::faceid::InsightFaceRecognitionPreprocessor']]],
-  ['isbackendavailable',['IsBackendAvailable',['../namespacefastdeploy.html#a2b9546db2f09b69775f7280bff403476',1,'fastdeploy']]]
+  ['isbackendavailable',['IsBackendAvailable',['../namespacefastdeploy.html#a2b9546db2f09b69775f7280bff403476',1,'fastdeploy']]],
+  ['isfinite',['IsFinite',['../namespacefastdeploy_1_1function.html#a992cee7441163f9c8611b3e149af3149',1,'fastdeploy::function']]],
+  ['isinf',['IsInf',['../namespacefastdeploy_1_1function.html#a329bdb076cb5e147c24cbbb45918b6f8',1,'fastdeploy::function']]],
+  ['isnan',['IsNan',['../namespacefastdeploy_1_1function.html#a6176629b3a866dbdfc89ceb600176768',1,'fastdeploy::function']]]
 ];

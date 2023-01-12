@@ -82,6 +82,38 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a50ee8735a469f6ea69506665a782a8a7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1ClassifierPreprocessor.html#a50ee8735a469f6ea69506665a782a8a7">Run</a> (std::vector&lt; FDMat &gt; *images, std::vector&lt; FDTensor &gt; *outputs)</td></tr>
 <tr class="memdesc:a50ee8735a469f6ea69506665a782a8a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process the input image and prepare input tensors for runtime.  <a href="#a50ee8735a469f6ea69506665a782a8a7">More...</a><br /></td></tr>
 <tr class="separator:a50ee8735a469f6ea69506665a782a8a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a362a65202573d10247db8ce42c0af02a"><td class="memItemLeft" align="right" valign="top"><a id="a362a65202573d10247db8ce42c0af02a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1ClassifierPreprocessor.html#a362a65202573d10247db8ce42c0af02a">SetMean</a> (std::vector&lt; float &gt; mean)</td></tr>
+<tr class="memdesc:a362a65202573d10247db8ce42c0af02a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set mean value for the image normalization in classification preprocess. <br /></td></tr>
+<tr class="separator:a362a65202573d10247db8ce42c0af02a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd9ac2d7129682392228902665537fc8"><td class="memItemLeft" align="right" valign="top"><a id="abd9ac2d7129682392228902665537fc8"></a>
+std::vector&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1ClassifierPreprocessor.html#abd9ac2d7129682392228902665537fc8">GetMean</a> () const</td></tr>
+<tr class="memdesc:abd9ac2d7129682392228902665537fc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get mean value of the image normalization in classification preprocess. <br /></td></tr>
+<tr class="separator:abd9ac2d7129682392228902665537fc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a407dc3144439225656c32e3733074e05"><td class="memItemLeft" align="right" valign="top"><a id="a407dc3144439225656c32e3733074e05"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1ClassifierPreprocessor.html#a407dc3144439225656c32e3733074e05">SetScale</a> (std::vector&lt; float &gt; scale)</td></tr>
+<tr class="memdesc:a407dc3144439225656c32e3733074e05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set scale value for the image normalization in classification preprocess. <br /></td></tr>
+<tr class="separator:a407dc3144439225656c32e3733074e05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab48417942e9b9cf5aff155085dda6e40"><td class="memItemLeft" align="right" valign="top"><a id="ab48417942e9b9cf5aff155085dda6e40"></a>
+std::vector&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1ClassifierPreprocessor.html#ab48417942e9b9cf5aff155085dda6e40">GetScale</a> () const</td></tr>
+<tr class="memdesc:ab48417942e9b9cf5aff155085dda6e40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get scale value of the image normalization in classification preprocess. <br /></td></tr>
+<tr class="separator:ab48417942e9b9cf5aff155085dda6e40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfd215c9be95a7343609aafbfc75d10d"><td class="memItemLeft" align="right" valign="top"><a id="acfd215c9be95a7343609aafbfc75d10d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1ClassifierPreprocessor.html#acfd215c9be95a7343609aafbfc75d10d">SetIsScale</a> (bool is_scale)</td></tr>
+<tr class="memdesc:acfd215c9be95a7343609aafbfc75d10d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set is_scale for the image normalization in classification preprocess. <br /></td></tr>
+<tr class="separator:acfd215c9be95a7343609aafbfc75d10d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf8232b5430b52a110cb98ce0f7365ef"><td class="memItemLeft" align="right" valign="top"><a id="acf8232b5430b52a110cb98ce0f7365ef"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1ClassifierPreprocessor.html#acf8232b5430b52a110cb98ce0f7365ef">GetIsScale</a> () const</td></tr>
+<tr class="memdesc:acf8232b5430b52a110cb98ce0f7365ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get is_scale of the image normalization in classification preprocess. <br /></td></tr>
+<tr class="separator:acf8232b5430b52a110cb98ce0f7365ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ca95930c0cf0f7266031c9472ba06bc"><td class="memItemLeft" align="right" valign="top"><a id="a2ca95930c0cf0f7266031c9472ba06bc"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1ClassifierPreprocessor.html#a2ca95930c0cf0f7266031c9472ba06bc">SetClsImageShape</a> (std::vector&lt; int &gt; cls_image_shape)</td></tr>
+<tr class="memdesc:a2ca95930c0cf0f7266031c9472ba06bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set cls_image_shape for the classification preprocess. <br /></td></tr>
+<tr class="separator:a2ca95930c0cf0f7266031c9472ba06bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a417b5593877356087b549772eab38eb4"><td class="memItemLeft" align="right" valign="top"><a id="a417b5593877356087b549772eab38eb4"></a>
+std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1ClassifierPreprocessor.html#a417b5593877356087b549772eab38eb4">GetClsImageShape</a> () const</td></tr>
+<tr class="memdesc:a417b5593877356087b549772eab38eb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get cls_image_shape for the classification preprocess. <br /></td></tr>
+<tr class="separator:a417b5593877356087b549772eab38eb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Preprocessor object for <a class="el" href="classfastdeploy_1_1vision_1_1ocr_1_1Classifier.html" title="Classifier object is used to load the classification model provided by PaddleOCR. ...">Classifier</a> serials model. </p>
