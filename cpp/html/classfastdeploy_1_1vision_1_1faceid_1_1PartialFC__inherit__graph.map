@@ -1,4 +1,0 @@
-<map id="fastdeploy::vision::faceid::PartialFC" name="fastdeploy::vision::faceid::PartialFC">
-<area shape="rect" id="node2" href="$classfastdeploy_1_1vision_1_1faceid_1_1InsightFaceRecognitionModel.html" title="CosFace model object used when to load a CosFace model exported by IngsightFace. " alt="" coords="5,80,232,136"/>
-<area shape="rect" id="node3" href="$classfastdeploy_1_1FastDeployModel.html" title="Base model object for all the vision models. " alt="" coords="14,5,223,32"/>
-</map>

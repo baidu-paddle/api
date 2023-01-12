@@ -87,9 +87,6 @@ Namespaces</h2></td></tr>
 <tr class="memitem:namespacefastdeploy_1_1vision_1_1facedet"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefastdeploy_1_1vision_1_1facedet.html">facedet</a></td></tr>
 <tr class="memdesc:namespacefastdeploy_1_1vision_1_1facedet"><td class="mdescLeft">&#160;</td><td class="mdescRight">All object face detection model APIs are defined inside this namespace. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespacefastdeploy_1_1vision_1_1faceid"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefastdeploy_1_1vision_1_1faceid.html">faceid</a></td></tr>
-<tr class="memdesc:namespacefastdeploy_1_1vision_1_1faceid"><td class="mdescLeft">&#160;</td><td class="mdescRight">All object face recognition model APIs are defined inside this namespace. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespacefastdeploy_1_1vision_1_1keypointdetection"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefastdeploy_1_1vision_1_1keypointdetection.html">keypointdetection</a></td></tr>
 <tr class="memdesc:namespacefastdeploy_1_1vision_1_1keypointdetection"><td class="mdescLeft">&#160;</td><td class="mdescRight">All keypoint detection model APIs are defined inside this namespace. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -182,10 +179,120 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="name
 <tr class="memitem:af9a0bd9dfe78e2a1f2463c7b45cd092a"><td class="memItemLeft" align="right" valign="top">cv::Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefastdeploy_1_1vision.html#af9a0bd9dfe78e2a1f2463c7b45cd092a">VisSegmentation</a> (const cv::Mat &amp;im, const <a class="el" href="structfastdeploy_1_1vision_1_1SegmentationResult.html">SegmentationResult</a> &amp;result, float weight=0.5)</td></tr>
 <tr class="memdesc:af9a0bd9dfe78e2a1f2463c7b45cd092a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show the visualized results for segmentation models.  <a href="#af9a0bd9dfe78e2a1f2463c7b45cd092a">More...</a><br /></td></tr>
 <tr class="separator:af9a0bd9dfe78e2a1f2463c7b45cd092a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25c7997cdd652d2aadfbee748d39ca9a"><td class="memItemLeft" align="right" valign="top">cv::Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefastdeploy_1_1vision.html#a25c7997cdd652d2aadfbee748d39ca9a">SwapBackground</a> (const cv::Mat &amp;im, const cv::Mat &amp;background, const <a class="el" href="structfastdeploy_1_1vision_1_1MattingResult.html">MattingResult</a> &amp;result, bool remove_small_connected_area=false)</td></tr>
+<tr class="memdesc:a25c7997cdd652d2aadfbee748d39ca9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Swap the image background with <a class="el" href="structfastdeploy_1_1vision_1_1MattingResult.html" title="Matting result structure for all the Matting models. ">MattingResult</a>.  <a href="#a25c7997cdd652d2aadfbee748d39ca9a">More...</a><br /></td></tr>
+<tr class="separator:a25c7997cdd652d2aadfbee748d39ca9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7093455d513b51f762ba62438a8954aa"><td class="memItemLeft" align="right" valign="top">cv::Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefastdeploy_1_1vision.html#a7093455d513b51f762ba62438a8954aa">SwapBackground</a> (const cv::Mat &amp;im, const cv::Mat &amp;background, const <a class="el" href="structfastdeploy_1_1vision_1_1SegmentationResult.html">SegmentationResult</a> &amp;result, int background_label)</td></tr>
+<tr class="memdesc:a7093455d513b51f762ba62438a8954aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Swap the image background with <a class="el" href="structfastdeploy_1_1vision_1_1SegmentationResult.html" title="Segmentation result structure for all the segmentation models. ">SegmentationResult</a>.  <a href="#a7093455d513b51f762ba62438a8954aa">More...</a><br /></td></tr>
+<tr class="separator:a7093455d513b51f762ba62438a8954aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>All C++ FastDeploy Vision Models APIs are defined inside this namespace. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
+<a id="a25c7997cdd652d2aadfbee748d39ca9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25c7997cdd652d2aadfbee748d39ca9a">&#9670;&nbsp;</a></span>SwapBackground() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FASTDEPLOY_DECL cv::Mat fastdeploy::vision::SwapBackground </td>
+          <td>(</td>
+          <td class="paramtype">const cv::Mat &amp;&#160;</td>
+          <td class="paramname"><em>im</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const cv::Mat &amp;&#160;</td>
+          <td class="paramname"><em>background</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structfastdeploy_1_1vision_1_1MattingResult.html">MattingResult</a> &amp;&#160;</td>
+          <td class="paramname"><em>result</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>remove_small_connected_area</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Swap the image background with <a class="el" href="structfastdeploy_1_1vision_1_1MattingResult.html" title="Matting result structure for all the Matting models. ">MattingResult</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">im</td><td>the input image data, comes from cv::imread(), is a 3-D array with layout HWC, BGR format </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">background</td><td>the background image data, comes from cv::imread(), is a 3-D array with layout HWC, BGR format </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">result</td><td>the <a class="el" href="structfastdeploy_1_1vision_1_1MattingResult.html" title="Matting result structure for all the Matting models. ">MattingResult</a> produced by model </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">remove_small_connected_area</td><td>if remove_small_connected_area==true, the visualized result will not include the small connected areas </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>cv::Mat type stores the visualized results </dd></dl>
+
+</div>
+</div>
+<a id="a7093455d513b51f762ba62438a8954aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7093455d513b51f762ba62438a8954aa">&#9670;&nbsp;</a></span>SwapBackground() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FASTDEPLOY_DECL cv::Mat fastdeploy::vision::SwapBackground </td>
+          <td>(</td>
+          <td class="paramtype">const cv::Mat &amp;&#160;</td>
+          <td class="paramname"><em>im</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const cv::Mat &amp;&#160;</td>
+          <td class="paramname"><em>background</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structfastdeploy_1_1vision_1_1SegmentationResult.html">SegmentationResult</a> &amp;&#160;</td>
+          <td class="paramname"><em>result</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>background_label</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Swap the image background with <a class="el" href="structfastdeploy_1_1vision_1_1SegmentationResult.html" title="Segmentation result structure for all the segmentation models. ">SegmentationResult</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">im</td><td>the input image data, comes from cv::imread(), is a 3-D array with layout HWC, BGR format </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">background</td><td>the background image data, comes from cv::imread(), is a 3-D array with layout HWC, BGR format </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">result</td><td>the <a class="el" href="structfastdeploy_1_1vision_1_1SegmentationResult.html" title="Segmentation result structure for all the segmentation models. ">SegmentationResult</a> produced by model </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">background_label</td><td>the background label number in <a class="el" href="structfastdeploy_1_1vision_1_1SegmentationResult.html" title="Segmentation result structure for all the segmentation models. ">SegmentationResult</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>cv::Mat type stores the visualized results </dd></dl>
+
+</div>
+</div>
 <a id="a4da25a5c565e131cb63459bd37ce94b5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4da25a5c565e131cb63459bd37ce94b5">&#9670;&nbsp;</a></span>VisClassification() <span class="overload">[1/2]</span></h2>
 

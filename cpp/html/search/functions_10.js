@@ -11,6 +11,7 @@ var searchData=
   ['yolov7',['YOLOv7',['../classfastdeploy_1_1vision_1_1detection_1_1YOLOv7.html#a4fd9c1ed294439aa9ebd27655312824a',1,'fastdeploy::vision::detection::YOLOv7']]],
   ['yolov7end2endort',['YOLOv7End2EndORT',['../classfastdeploy_1_1vision_1_1detection_1_1YOLOv7End2EndORT.html#aa3001638a15e1167b272c459c39c6a42',1,'fastdeploy::vision::detection::YOLOv7End2EndORT']]],
   ['yolov7end2endtrt',['YOLOv7End2EndTRT',['../classfastdeploy_1_1vision_1_1detection_1_1YOLOv7End2EndTRT.html#af1e942698c0b0c5f2b33e3de27333cd8',1,'fastdeploy::vision::detection::YOLOv7End2EndTRT']]],
+  ['yolov7face',['YOLOv7Face',['../classfastdeploy_1_1vision_1_1facedet_1_1YOLOv7Face.html#aad183ed119c4c46db26d68a07e9dc118',1,'fastdeploy::vision::facedet::YOLOv7Face']]],
   ['yolov7postprocessor',['YOLOv7Postprocessor',['../classfastdeploy_1_1vision_1_1detection_1_1YOLOv7Postprocessor.html#ab1c74ebd91896a9048caee81bba0b53b',1,'fastdeploy::vision::detection::YOLOv7Postprocessor']]],
   ['yolov7preprocessor',['YOLOv7Preprocessor',['../classfastdeploy_1_1vision_1_1detection_1_1YOLOv7Preprocessor.html#ac91588440390a2dfefc560ed73bf2c40',1,'fastdeploy::vision::detection::YOLOv7Preprocessor']]],
   ['yolox',['YOLOX',['../classfastdeploy_1_1vision_1_1detection_1_1YOLOX.html#ab6d79f4439b1f8ae3a641f5e7b69dd4a',1,'fastdeploy::vision::detection::YOLOX']]]

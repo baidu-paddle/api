@@ -4,6 +4,8 @@ var searchData=
   ['init',['Init',['../structfastdeploy_1_1Runtime.html#a98b851d166bb19124ee9dd08bbb8a947',1,'fastdeploy::Runtime']]],
   ['initialized',['Initialized',['../classfastdeploy_1_1FastDeployModel.html#a0e24ccd23bc807080f1c43d24e8cc254',1,'fastdeploy::FastDeployModel::Initialized()'],['../classfastdeploy_1_1pipeline_1_1PPOCRv2.html#a0c3908092f9e900fe5210135816ef9a9',1,'fastdeploy::pipeline::PPOCRv2::Initialized()']]],
   ['inputinfoofruntime',['InputInfoOfRuntime',['../classfastdeploy_1_1FastDeployModel.html#a94143c8aae113fa89a835aa35cf67be7',1,'fastdeploy::FastDeployModel']]],
-  ['insightfacerecognitionmodel',['InsightFaceRecognitionModel',['../classfastdeploy_1_1vision_1_1faceid_1_1InsightFaceRecognitionModel.html#a0b584640f822b157d129e456a2b4b326',1,'fastdeploy::vision::faceid::InsightFaceRecognitionModel']]],
+  ['insightfacerecognitionbase',['InsightFaceRecognitionBase',['../classfastdeploy_1_1vision_1_1faceid_1_1InsightFaceRecognitionBase.html#a226278898b1ef6c85b519b43c3b6253b',1,'fastdeploy::vision::faceid::InsightFaceRecognitionBase']]],
+  ['insightfacerecognitionpostprocessor',['InsightFaceRecognitionPostprocessor',['../classfastdeploy_1_1vision_1_1faceid_1_1InsightFaceRecognitionPostprocessor.html#a55c46fc6fb7838f9391b70a4763bd06e',1,'fastdeploy::vision::faceid::InsightFaceRecognitionPostprocessor']]],
+  ['insightfacerecognitionpreprocessor',['InsightFaceRecognitionPreprocessor',['../classfastdeploy_1_1vision_1_1faceid_1_1InsightFaceRecognitionPreprocessor.html#adeb92e28619539c282b3b74d2ab3484a',1,'fastdeploy::vision::faceid::InsightFaceRecognitionPreprocessor']]],
   ['isbackendavailable',['IsBackendAvailable',['../namespacefastdeploy.html#a2b9546db2f09b69775f7280bff403476',1,'fastdeploy']]]
 ];

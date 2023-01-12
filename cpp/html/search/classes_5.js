@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['insightfacerecognitionmodel',['InsightFaceRecognitionModel',['../classfastdeploy_1_1vision_1_1faceid_1_1InsightFaceRecognitionModel.html',1,'fastdeploy::vision::faceid']]]
+  ['insightfacerecognitionbase',['InsightFaceRecognitionBase',['../classfastdeploy_1_1vision_1_1faceid_1_1InsightFaceRecognitionBase.html',1,'fastdeploy::vision::faceid']]],
+  ['insightfacerecognitionpostprocessor',['InsightFaceRecognitionPostprocessor',['../classfastdeploy_1_1vision_1_1faceid_1_1InsightFaceRecognitionPostprocessor.html',1,'fastdeploy::vision::faceid']]],
+  ['insightfacerecognitionpreprocessor',['InsightFaceRecognitionPreprocessor',['../classfastdeploy_1_1vision_1_1faceid_1_1InsightFaceRecognitionPreprocessor.html',1,'fastdeploy::vision::faceid']]]
 ];

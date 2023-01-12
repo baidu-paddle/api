@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['l2_5fnormalize',['l2_normalize',['../classfastdeploy_1_1vision_1_1faceid_1_1InsightFaceRecognitionModel.html#a0e90fa1945a391c4df42f3de7d91dd8e',1,'fastdeploy::vision::faceid::InsightFaceRecognitionModel']]],
   ['label_5fids',['label_ids',['../structfastdeploy_1_1vision_1_1ClassifyResult.html#abc363715ec277df47f264ef6584325b5',1,'fastdeploy::vision::ClassifyResult::label_ids()'],['../structfastdeploy_1_1vision_1_1DetectionResult.html#a9fef1ae104b2658b073e2c87ea8508fd',1,'fastdeploy::vision::DetectionResult::label_ids()']]],
   ['label_5fmap',['label_map',['../structfastdeploy_1_1vision_1_1SegmentationResult.html#a5dac98bb82fcaecd9e2617bfd0cfdf23',1,'fastdeploy::vision::SegmentationResult']]],
   ['landmarks',['landmarks',['../structfastdeploy_1_1vision_1_1FaceDetectionResult.html#a3492786ff23a702db20449012c6b1440',1,'fastdeploy::vision::FaceDetectionResult::landmarks()'],['../structfastdeploy_1_1vision_1_1FaceAlignmentResult.html#affd5cb42c2b329c10a92476e283acfea',1,'fastdeploy::vision::FaceAlignmentResult::landmarks()']]],
