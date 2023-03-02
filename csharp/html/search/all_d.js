@@ -1,0 +1,9 @@
+var searchData=
+[
+  ['text',['text',['../classfastdeploy_1_1vision_1_1OCRResult.html#a4e3b6b44b15c51a297a62c58919592b9',1,'fastdeploy::vision::OCRResult']]],
+  ['tood',['TOOD',['../classfastdeploy_1_1vision_1_1detection_1_1TOOD.html',1,'fastdeploy::vision::detection']]],
+  ['torchscript',['TORCHSCRIPT',['../namespacefastdeploy.html#a3493c6d2ca1a50ca5506a0e195d0d723ad451160999e3ec06ab7b356fb5c5f9dd',1,'fastdeploy']]],
+  ['tostring',['ToString',['../classfastdeploy_1_1vision_1_1Mask.html#a6b27a45dbc35e41e1bc2c3a82cfc3bc1',1,'fastdeploy.vision.Mask.ToString()'],['../classfastdeploy_1_1vision_1_1ClassifyResult.html#acf7e5b0b64c8b8df3b239c45c27de9f6',1,'fastdeploy.vision.ClassifyResult.ToString()'],['../classfastdeploy_1_1vision_1_1DetectionResult.html#aec79c4d67b454d204fda9054b4f489e8',1,'fastdeploy.vision.DetectionResult.ToString()'],['../classfastdeploy_1_1vision_1_1OCRResult.html#a69bc7f0baa575ab072e867213a1d3e1a',1,'fastdeploy.vision.OCRResult.ToString()'],['../classfastdeploy_1_1vision_1_1SegmentationResult.html#a245891a812aa6281cbe724d3540ede2b',1,'fastdeploy.vision.SegmentationResult.ToString()']]],
+  ['ttfnet',['TTFNet',['../classfastdeploy_1_1vision_1_1detection_1_1TTFNet.html',1,'fastdeploy::vision::detection']]],
+  ['type',['type',['../classfastdeploy_1_1vision_1_1Mask.html#a923c7e025d379bad8a82bb8595a4443b',1,'fastdeploy.vision.Mask.type()'],['../classfastdeploy_1_1vision_1_1ClassifyResult.html#a110957f8b67c5f6ba776d38e31328c4b',1,'fastdeploy.vision.ClassifyResult.type()'],['../classfastdeploy_1_1vision_1_1DetectionResult.html#a7f51247ccb01176124dad3097b948175',1,'fastdeploy.vision.DetectionResult.type()'],['../classfastdeploy_1_1vision_1_1OCRResult.html#a3913c9ed6b7187418a03949cd777703e',1,'fastdeploy.vision.OCRResult.type()'],['../classfastdeploy_1_1vision_1_1SegmentationResult.html#a4486c999621112615bd415f4fd4f7dec',1,'fastdeploy.vision.SegmentationResult.type()']]]
+];
