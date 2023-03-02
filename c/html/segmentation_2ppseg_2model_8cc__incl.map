@@ -1,0 +1,9 @@
+<map id="/work/Develop/FastDeploy/c_api/fastdeploy_capi/vision/segmentation/ppseg/model.cc" name="/work/Develop/FastDeploy/c_api/fastdeploy_capi/vision/segmentation/ppseg/model.cc">
+<area shape="rect" id="node2" href="$segmentation_2ppseg_2model_8h.html" title="fastdeploy_capi/vision\l/segmentation/ppseg/model.h" alt="" coords="252,124,468,165"/>
+<area shape="rect" id="node10" href="$internal_2types__internal_8h.html" title="fastdeploy_capi/internal\l/types_internal.h" alt="" coords="577,124,756,165"/>
+<area shape="rect" id="node3" href="$fd__common_8h.html" title="fastdeploy_capi/core\l/fd_common.h" alt="" coords="5,392,163,433"/>
+<area shape="rect" id="node6" href="$fd__type_8h.html" title="fastdeploy_capi/core\l/fd_type.h" alt="" coords="304,303,461,344"/>
+<area shape="rect" id="node8" href="$runtime__option_8h.html" title="fastdeploy_capi/runtime\l/runtime_option.h" alt="" coords="270,213,450,255"/>
+<area shape="rect" id="node9" href="$result_8h.html" title="fastdeploy_capi/vision\l/result.h" alt="" coords="77,213,245,255"/>
+<area shape="rect" id="node7" href="$enum__variables_8h.html" title="fastdeploy_capi/runtime\l/enum_variables.h" alt="" coords="187,392,367,433"/>
+</map>

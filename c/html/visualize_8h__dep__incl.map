@@ -1,0 +1,6 @@
+<map id="/work/Develop/FastDeploy/c_api/fastdeploy_capi/vision/visualize.h" name="/work/Develop/FastDeploy/c_api/fastdeploy_capi/vision/visualize.h">
+<area shape="rect" id="node2" href="$detection_2contrib_2yolo_2model_8cc.html" title="/work/Develop/FastDeploy\l/c_api/fastdeploy_capi\l/vision/detection/contrib\l/yolo/model.cc" alt="" coords="5,109,197,180"/>
+<area shape="rect" id="node3" href="$detection_2ppdet_2model_8cc.html" title="/work/Develop/FastDeploy\l/c_api/fastdeploy_capi\l/vision/detection/ppdet\l/model.cc" alt="" coords="221,109,413,180"/>
+<area shape="rect" id="node4" href="$ocr_2ppocr_2model_8cc.html" title="/work/Develop/FastDeploy\l/c_api/fastdeploy_capi\l/vision/ocr/ppocr/model.cc" alt="" coords="437,117,629,173"/>
+<area shape="rect" id="node5" href="$visualize_8cc.html" title="/work/Develop/FastDeploy\l/c_api/fastdeploy_capi\l/vision/visualize.cc" alt="" coords="653,117,845,173"/>
+</map>

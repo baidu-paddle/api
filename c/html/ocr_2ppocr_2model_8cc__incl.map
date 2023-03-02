@@ -1,0 +1,11 @@
+<map id="/work/Develop/FastDeploy/c_api/fastdeploy_capi/vision/ocr/ppocr/model.cc" name="/work/Develop/FastDeploy/c_api/fastdeploy_capi/vision/ocr/ppocr/model.cc">
+<area shape="rect" id="node2" href="$ocr_2ppocr_2model_8h.html" title="fastdeploy_capi/vision\l/ocr/ppocr/model.h" alt="" coords="231,109,399,151"/>
+<area shape="rect" id="node11" href="$internal_2types__internal_8h.html" title="fastdeploy_capi/internal\l/types_internal.h" alt="" coords="759,109,937,151"/>
+<area shape="rect" id="node14" href="$visualize_8h.html" title="fastdeploy_capi/vision\l/visualize.h" alt="" coords="423,109,591,151"/>
+<area shape="rect" id="node3" href="$fd__common_8h.html" title="fastdeploy_capi/core\l/fd_common.h" alt="" coords="299,377,456,419"/>
+<area shape="rect" id="node6" href="$fd__type_8h.html" title="fastdeploy_capi/core\l/fd_type.h" alt="" coords="543,288,700,329"/>
+<area shape="rect" id="node8" href="$runtime__option_8h.html" title="fastdeploy_capi/runtime\l/runtime_option.h" alt="" coords="474,199,654,240"/>
+<area shape="rect" id="node9" href="$result_8h.html" title="fastdeploy_capi/vision\l/result.h" alt="" coords="231,199,399,240"/>
+<area shape="rect" id="node10" href="$ocr_2ppocr_2base__define_8h.html" title="fastdeploy_capi/vision\l/ocr/ppocr/base_define.h" alt="" coords="26,199,206,240"/>
+<area shape="rect" id="node7" href="$enum__variables_8h.html" title="fastdeploy_capi/runtime\l/enum_variables.h" alt="" coords="531,377,711,419"/>
+</map>
