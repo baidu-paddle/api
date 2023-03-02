@@ -1,0 +1,11 @@
+<map id="/work/Develop/FastDeploy/c_api/fastdeploy_capi/vision/detection/contrib/yolo/model.cc" name="/work/Develop/FastDeploy/c_api/fastdeploy_capi/vision/detection/contrib/yolo/model.cc">
+<area shape="rect" id="node2" href="$detection_2contrib_2yolo_2model_8h.html" title="fastdeploy_capi/vision\l/detection/contrib/yolo\l/model.h" alt="" coords="220,124,388,180"/>
+<area shape="rect" id="node11" href="$internal_2types__internal_8h.html" title="fastdeploy_capi/internal\l/types_internal.h" alt="" coords="748,131,927,173"/>
+<area shape="rect" id="node14" href="$visualize_8h.html" title="fastdeploy_capi/vision\l/visualize.h" alt="" coords="412,131,580,173"/>
+<area shape="rect" id="node3" href="$fd__common_8h.html" title="fastdeploy_capi/core\l/fd_common.h" alt="" coords="288,421,446,463"/>
+<area shape="rect" id="node6" href="$fd__type_8h.html" title="fastdeploy_capi/core\l/fd_type.h" alt="" coords="532,332,690,373"/>
+<area shape="rect" id="node8" href="$runtime__option_8h.html" title="fastdeploy_capi/runtime\l/runtime_option.h" alt="" coords="464,235,644,277"/>
+<area shape="rect" id="node9" href="$result_8h.html" title="fastdeploy_capi/vision\l/result.h" alt="" coords="220,235,388,277"/>
+<area shape="rect" id="node10" href="$detection_2contrib_2yolo_2base__define_8h.html" title="fastdeploy_capi/vision\l/detection/contrib/yolo\l/base_define.h" alt="" coords="28,228,196,284"/>
+<area shape="rect" id="node7" href="$enum__variables_8h.html" title="fastdeploy_capi/runtime\l/enum_variables.h" alt="" coords="521,421,701,463"/>
+</map>

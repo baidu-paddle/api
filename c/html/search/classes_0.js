@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['fd_5fc_5fclassifyresult',['FD_C_ClassifyResult',['../structFD__C__ClassifyResult.html',1,'']]],
+  ['fd_5fc_5fcstr',['FD_C_Cstr',['../structFD__C__Cstr.html',1,'']]],
+  ['fd_5fc_5fdetectionresult',['FD_C_DetectionResult',['../structFD__C__DetectionResult.html',1,'']]],
+  ['fd_5fc_5fmask',['FD_C_Mask',['../structFD__C__Mask.html',1,'']]],
+  ['fd_5fc_5focrresult',['FD_C_OCRResult',['../structFD__C__OCRResult.html',1,'']]],
+  ['fd_5fc_5fonedimarraycstr',['FD_C_OneDimArrayCstr',['../structFD__C__OneDimArrayCstr.html',1,'']]],
+  ['fd_5fc_5fonedimarrayfloat',['FD_C_OneDimArrayFloat',['../structFD__C__OneDimArrayFloat.html',1,'']]],
+  ['fd_5fc_5fonedimarrayint32',['FD_C_OneDimArrayInt32',['../structFD__C__OneDimArrayInt32.html',1,'']]],
+  ['fd_5fc_5fonedimarrayint64',['FD_C_OneDimArrayInt64',['../structFD__C__OneDimArrayInt64.html',1,'']]],
+  ['fd_5fc_5fonedimarrayint8',['FD_C_OneDimArrayInt8',['../structFD__C__OneDimArrayInt8.html',1,'']]],
+  ['fd_5fc_5fonedimarraysize',['FD_C_OneDimArraySize',['../structFD__C__OneDimArraySize.html',1,'']]],
+  ['fd_5fc_5fonedimarrayuint8',['FD_C_OneDimArrayUint8',['../structFD__C__OneDimArrayUint8.html',1,'']]],
+  ['fd_5fc_5fonedimclassifyresult',['FD_C_OneDimClassifyResult',['../structFD__C__OneDimClassifyResult.html',1,'']]],
+  ['fd_5fc_5fonedimdetectionresult',['FD_C_OneDimDetectionResult',['../structFD__C__OneDimDetectionResult.html',1,'']]],
+  ['fd_5fc_5fonedimmask',['FD_C_OneDimMask',['../structFD__C__OneDimMask.html',1,'']]],
+  ['fd_5fc_5fonedimmat',['FD_C_OneDimMat',['../structFD__C__OneDimMat.html',1,'']]],
+  ['fd_5fc_5fonedimocrresult',['FD_C_OneDimOCRResult',['../structFD__C__OneDimOCRResult.html',1,'']]],
+  ['fd_5fc_5fonedimsegmentationresult',['FD_C_OneDimSegmentationResult',['../structFD__C__OneDimSegmentationResult.html',1,'']]],
+  ['fd_5fc_5fruntimeoptionwrapper',['FD_C_RuntimeOptionWrapper',['../structFD__C__RuntimeOptionWrapper.html',1,'']]],
+  ['fd_5fc_5fsegmentationresult',['FD_C_SegmentationResult',['../structFD__C__SegmentationResult.html',1,'']]],
+  ['fd_5fc_5fthreedimarrayint32',['FD_C_ThreeDimArrayInt32',['../structFD__C__ThreeDimArrayInt32.html',1,'']]],
+  ['fd_5fc_5ftwodimarrayfloat',['FD_C_TwoDimArrayFloat',['../structFD__C__TwoDimArrayFloat.html',1,'']]],
+  ['fd_5fc_5ftwodimarrayint32',['FD_C_TwoDimArrayInt32',['../structFD__C__TwoDimArrayInt32.html',1,'']]],
+  ['fd_5fc_5ftwodimarrayint8',['FD_C_TwoDimArrayInt8',['../structFD__C__TwoDimArrayInt8.html',1,'']]],
+  ['fd_5fc_5ftwodimarraysize',['FD_C_TwoDimArraySize',['../structFD__C__TwoDimArraySize.html',1,'']]]
+];

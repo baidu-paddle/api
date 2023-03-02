@@ -1,0 +1,25 @@
+<map id="/work/Develop/FastDeploy/c_api/fastdeploy_capi/core/fd_common.h" name="/work/Develop/FastDeploy/c_api/fastdeploy_capi/core/fd_common.h">
+<area shape="rect" id="node2" href="$fd__type_8cc.html" title="/work/Develop/FastDeploy\l/c_api/fastdeploy_capi\l/core/fd_type.cc" alt="" coords="291,213,483,269"/>
+<area shape="rect" id="node3" href="$fd__type_8h.html" title="/work/Develop/FastDeploy\l/c_api/fastdeploy_capi\l/core/fd_type.h" alt="" coords="1059,109,1251,165"/>
+<area shape="rect" id="node15" href="$classification_2ppcls_2model_8h.html" title="/work/Develop/FastDeploy\l/c_api/fastdeploy_capi\l/vision/classification/ppcls\l/model.h" alt="" coords="664,317,856,388"/>
+<area shape="rect" id="node16" href="$detection_2contrib_2yolo_2model_8h.html" title="/work/Develop/FastDeploy\l/c_api/fastdeploy_capi\l/vision/detection/contrib\l/yolo/model.h" alt="" coords="1147,317,1339,388"/>
+<area shape="rect" id="node17" href="$detection_2ppdet_2model_8h.html" title="/work/Develop/FastDeploy\l/c_api/fastdeploy_capi\l/vision/detection/ppdet\l/model.h" alt="" coords="1413,317,1605,388"/>
+<area shape="rect" id="node18" href="$ocr_2ppocr_2model_8h.html" title="/work/Develop/FastDeploy\l/c_api/fastdeploy_capi\l/vision/ocr/ppocr/model.h" alt="" coords="1845,325,2037,381"/>
+<area shape="rect" id="node19" href="$segmentation_2ppseg_2model_8h.html" title="/work/Develop/FastDeploy\l/c_api/fastdeploy_capi\l/vision/segmentation/ppseg\l/model.h" alt="" coords="437,317,640,388"/>
+<area shape="rect" id="node21" href="$result_8h.html" title="/work/Develop/FastDeploy\l/c_api/fastdeploy_capi\l/vision/result.h" alt="" coords="1243,213,1435,269"/>
+<area shape="rect" id="node22" href="$visualize_8h.html" title="/work/Develop/FastDeploy\l/c_api/fastdeploy_capi\l/vision/visualize.h" alt="" coords="1629,325,1821,381"/>
+<area shape="rect" id="node4" href="$internal_2types__internal_8h.html" title="/work/Develop/FastDeploy\l/c_api/fastdeploy_capi\l/internal/types_internal.h" alt="" coords="931,325,1123,381"/>
+<area shape="rect" id="node14" href="$runtime__option_8h.html" title="/work/Develop/FastDeploy\l/c_api/fastdeploy_capi\l/runtime/runtime_option.h" alt="" coords="925,213,1117,269"/>
+<area shape="rect" id="node20" href="$vision_8h.html" title="/work/Develop/FastDeploy\l/c_api/fastdeploy_capi\l/vision.h" alt="" coords="221,325,413,381"/>
+<area shape="rect" id="node23" href="$vision_2types__internal_8h.html" title="/work/Develop/FastDeploy\l/c_api/fastdeploy_capi\l/vision/types_internal.h" alt="" coords="557,213,749,269"/>
+<area shape="rect" id="node5" href="$internal_2types__internal_8cc.html" title="/work/Develop/FastDeploy\l/c_api/fastdeploy_capi\l/internal/types_internal.cc" alt="" coords="848,443,1040,499"/>
+<area shape="rect" id="node6" href="$runtime__option_8cc.html" title="/work/Develop/FastDeploy\l/c_api/fastdeploy_capi\l/runtime/runtime_option.cc" alt="" coords="625,443,823,499"/>
+<area shape="rect" id="node7" href="$classification_2ppcls_2model_8cc.html" title="/work/Develop/FastDeploy\l/c_api/fastdeploy_capi\l/vision/classification/ppcls\l/model.cc" alt="" coords="408,436,600,507"/>
+<area shape="rect" id="node8" href="$detection_2contrib_2yolo_2model_8cc.html" title="/work/Develop/FastDeploy\l/c_api/fastdeploy_capi\l/vision/detection/contrib\l/yolo/model.cc" alt="" coords="1280,436,1472,507"/>
+<area shape="rect" id="node9" href="$detection_2ppdet_2model_8cc.html" title="/work/Develop/FastDeploy\l/c_api/fastdeploy_capi\l/vision/detection/ppdet\l/model.cc" alt="" coords="1712,436,1904,507"/>
+<area shape="rect" id="node10" href="$ocr_2ppocr_2model_8cc.html" title="/work/Develop/FastDeploy\l/c_api/fastdeploy_capi\l/vision/ocr/ppocr/model.cc" alt="" coords="1928,443,2120,499"/>
+<area shape="rect" id="node11" href="$result_8cc.html" title="/work/Develop/FastDeploy\l/c_api/fastdeploy_capi\l/vision/result.cc" alt="" coords="1064,443,1256,499"/>
+<area shape="rect" id="node12" href="$segmentation_2ppseg_2model_8cc.html" title="/work/Develop/FastDeploy\l/c_api/fastdeploy_capi\l/vision/segmentation/ppseg\l/model.cc" alt="" coords="181,436,384,507"/>
+<area shape="rect" id="node13" href="$visualize_8cc.html" title="/work/Develop/FastDeploy\l/c_api/fastdeploy_capi\l/vision/visualize.cc" alt="" coords="1496,443,1688,499"/>
+<area shape="rect" id="node24" href="$vision_2types__internal_8cc.html" title="/work/Develop/FastDeploy\l/c_api/fastdeploy_capi\l/vision/types_internal.cc" alt="" coords="5,325,197,381"/>
+</map>

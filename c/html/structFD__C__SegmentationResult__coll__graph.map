@@ -1,0 +1,5 @@
+<map id="FD_C_SegmentationResult" name="FD_C_SegmentationResult">
+<area shape="rect" id="node2" href="$structFD__C__OneDimArrayInt64.html" title="FD_C_OneDimArrayInt64" alt="" coords="5,5,188,32"/>
+<area shape="rect" id="node3" href="$structFD__C__OneDimArrayFloat.html" title="FD_C_OneDimArrayFloat" alt="" coords="212,5,395,32"/>
+<area shape="rect" id="node4" href="$structFD__C__OneDimArrayUint8.html" title="FD_C_OneDimArrayUint8" alt="" coords="419,5,604,32"/>
+</map>
