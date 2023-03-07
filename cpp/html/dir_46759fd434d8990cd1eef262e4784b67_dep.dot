@@ -1,0 +1,9 @@
+digraph "/build/FastDeploy/fastdeploy/runtime/backends/lite" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_c60a478ed5bf04c89f9fa5bac9257057 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="backends" fontname="Helvetica", fontsize="10", URL="dir_c60a478ed5bf04c89f9fa5bac9257057.html"]
+  dir_46759fd434d8990cd1eef262e4784b67 [shape=box, label="lite", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_46759fd434d8990cd1eef262e4784b67.html"];
+  }
+}

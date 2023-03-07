@@ -1,0 +1,13 @@
+digraph "/build/FastDeploy/fastdeploy/vision/keypointdet" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_e0f97e9c6c2e64a15c9e5b824b806a92 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="vision" fontname="Helvetica", fontsize="10", URL="dir_e0f97e9c6c2e64a15c9e5b824b806a92.html"]
+  subgraph clusterdir_a919d5ad62dc3f73baf4e163cfa9f025 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_a919d5ad62dc3f73baf4e163cfa9f025.html"];
+    dir_a919d5ad62dc3f73baf4e163cfa9f025 [shape=plaintext label="keypointdet"];
+    dir_798782b47008fe87ff440139b753bc04 [shape=box label="pptinypose" color="black" fillcolor="white" style="filled" URL="dir_798782b47008fe87ff440139b753bc04.html"];
+  }
+  }
+}

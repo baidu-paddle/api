@@ -1,0 +1,9 @@
+digraph "/build/FastDeploy/fastdeploy/vision/facedet/ppdet/blazeface" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_9d32393e4c6f50db8b54f02bc8e99eaf {
+    graph [ bgcolor="#ddddee", pencolor="black", label="ppdet" fontname="Helvetica", fontsize="10", URL="dir_9d32393e4c6f50db8b54f02bc8e99eaf.html"]
+  dir_97a3afdae30ed77b4d65142a9c293e9d [shape=box, label="blazeface", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_97a3afdae30ed77b4d65142a9c293e9d.html"];
+  }
+}

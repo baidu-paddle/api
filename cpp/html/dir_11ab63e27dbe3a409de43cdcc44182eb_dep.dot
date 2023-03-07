@@ -1,0 +1,9 @@
+digraph "/build/FastDeploy/fastdeploy/runtime/backends/sophgo" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_c60a478ed5bf04c89f9fa5bac9257057 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="backends" fontname="Helvetica", fontsize="10", URL="dir_c60a478ed5bf04c89f9fa5bac9257057.html"]
+  dir_11ab63e27dbe3a409de43cdcc44182eb [shape=box, label="sophgo", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_11ab63e27dbe3a409de43cdcc44182eb.html"];
+  }
+}

@@ -1,0 +1,13 @@
+digraph "/build/FastDeploy/fastdeploy/vision/classification/contrib" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_22b8b81e4d74cdc2e5416b91f24d235f {
+    graph [ bgcolor="#ddddee", pencolor="black", label="classification" fontname="Helvetica", fontsize="10", URL="dir_22b8b81e4d74cdc2e5416b91f24d235f.html"]
+  subgraph clusterdir_808c35517b3cb81f4e7fdfa58b6e9454 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_808c35517b3cb81f4e7fdfa58b6e9454.html"];
+    dir_808c35517b3cb81f4e7fdfa58b6e9454 [shape=plaintext label="contrib"];
+    dir_908ceebea1854930b5b982afd32b588d [shape=box label="yolov5cls" color="black" fillcolor="white" style="filled" URL="dir_908ceebea1854930b5b982afd32b588d.html"];
+  }
+  }
+}

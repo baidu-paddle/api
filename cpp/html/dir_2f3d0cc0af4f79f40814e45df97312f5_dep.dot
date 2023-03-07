@@ -1,0 +1,13 @@
+digraph "/build/FastDeploy/fastdeploy/vision/faceid" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_e0f97e9c6c2e64a15c9e5b824b806a92 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="vision" fontname="Helvetica", fontsize="10", URL="dir_e0f97e9c6c2e64a15c9e5b824b806a92.html"]
+  subgraph clusterdir_2f3d0cc0af4f79f40814e45df97312f5 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_2f3d0cc0af4f79f40814e45df97312f5.html"];
+    dir_2f3d0cc0af4f79f40814e45df97312f5 [shape=plaintext label="faceid"];
+    dir_2a18469bc7f82037599e9c777d0a80e5 [shape=box label="contrib" color="red" fillcolor="white" style="filled" URL="dir_2a18469bc7f82037599e9c777d0a80e5.html"];
+  }
+  }
+}

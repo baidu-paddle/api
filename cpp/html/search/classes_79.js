@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['yolor',['YOLOR',['../classfastdeploy_1_1vision_1_1detection_1_1YOLOR.html',1,'fastdeploy::vision::detection']]],
+  ['yolov5',['YOLOv5',['../classfastdeploy_1_1vision_1_1detection_1_1YOLOv5.html',1,'fastdeploy::vision::detection']]],
+  ['yolov5cls',['YOLOv5Cls',['../classfastdeploy_1_1vision_1_1classification_1_1YOLOv5Cls.html',1,'fastdeploy::vision::classification']]],
+  ['yolov5clspostprocessor',['YOLOv5ClsPostprocessor',['../classfastdeploy_1_1vision_1_1classification_1_1YOLOv5ClsPostprocessor.html',1,'fastdeploy::vision::classification']]],
+  ['yolov5clspreprocessor',['YOLOv5ClsPreprocessor',['../classfastdeploy_1_1vision_1_1classification_1_1YOLOv5ClsPreprocessor.html',1,'fastdeploy::vision::classification']]],
+  ['yolov5face',['YOLOv5Face',['../classfastdeploy_1_1vision_1_1facedet_1_1YOLOv5Face.html',1,'fastdeploy::vision::facedet']]],
+  ['yolov5lite',['YOLOv5Lite',['../classfastdeploy_1_1vision_1_1detection_1_1YOLOv5Lite.html',1,'fastdeploy::vision::detection']]],
+  ['yolov5postprocessor',['YOLOv5Postprocessor',['../classfastdeploy_1_1vision_1_1detection_1_1YOLOv5Postprocessor.html',1,'fastdeploy::vision::detection']]],
+  ['yolov5preprocessor',['YOLOv5Preprocessor',['../classfastdeploy_1_1vision_1_1detection_1_1YOLOv5Preprocessor.html',1,'fastdeploy::vision::detection']]],
+  ['yolov5seg',['YOLOv5Seg',['../classfastdeploy_1_1vision_1_1detection_1_1YOLOv5Seg.html',1,'fastdeploy::vision::detection']]],
+  ['yolov5segpostprocessor',['YOLOv5SegPostprocessor',['../classfastdeploy_1_1vision_1_1detection_1_1YOLOv5SegPostprocessor.html',1,'fastdeploy::vision::detection']]],
+  ['yolov5segpreprocessor',['YOLOv5SegPreprocessor',['../classfastdeploy_1_1vision_1_1detection_1_1YOLOv5SegPreprocessor.html',1,'fastdeploy::vision::detection']]],
+  ['yolov6',['YOLOv6',['../classfastdeploy_1_1vision_1_1detection_1_1YOLOv6.html',1,'fastdeploy::vision::detection']]],
+  ['yolov7',['YOLOv7',['../classfastdeploy_1_1vision_1_1detection_1_1YOLOv7.html',1,'fastdeploy::vision::detection']]],
+  ['yolov7end2endort',['YOLOv7End2EndORT',['../classfastdeploy_1_1vision_1_1detection_1_1YOLOv7End2EndORT.html',1,'fastdeploy::vision::detection']]],
+  ['yolov7end2endtrt',['YOLOv7End2EndTRT',['../classfastdeploy_1_1vision_1_1detection_1_1YOLOv7End2EndTRT.html',1,'fastdeploy::vision::detection']]],
+  ['yolov7face',['YOLOv7Face',['../classfastdeploy_1_1vision_1_1facedet_1_1YOLOv7Face.html',1,'fastdeploy::vision::facedet']]],
+  ['yolov7postprocessor',['YOLOv7Postprocessor',['../classfastdeploy_1_1vision_1_1detection_1_1YOLOv7Postprocessor.html',1,'fastdeploy::vision::detection']]],
+  ['yolov7preprocessor',['YOLOv7Preprocessor',['../classfastdeploy_1_1vision_1_1detection_1_1YOLOv7Preprocessor.html',1,'fastdeploy::vision::detection']]],
+  ['yolov8',['YOLOv8',['../classfastdeploy_1_1vision_1_1detection_1_1YOLOv8.html',1,'fastdeploy::vision::detection']]],
+  ['yolov8postprocessor',['YOLOv8Postprocessor',['../classfastdeploy_1_1vision_1_1detection_1_1YOLOv8Postprocessor.html',1,'fastdeploy::vision::detection']]],
+  ['yolov8preprocessor',['YOLOv8Preprocessor',['../classfastdeploy_1_1vision_1_1detection_1_1YOLOv8Preprocessor.html',1,'fastdeploy::vision::detection']]],
+  ['yolox',['YOLOX',['../classfastdeploy_1_1vision_1_1detection_1_1YOLOX.html',1,'fastdeploy::vision::detection']]]
+];

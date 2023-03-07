@@ -1,0 +1,7 @@
+var searchData=
+[
+  ['label_5fids',['label_ids',['../structfastdeploy_1_1vision_1_1ClassifyResult.html#abc363715ec277df47f264ef6584325b5',1,'fastdeploy::vision::ClassifyResult::label_ids()'],['../structfastdeploy_1_1vision_1_1DetectionResult.html#a9fef1ae104b2658b073e2c87ea8508fd',1,'fastdeploy::vision::DetectionResult::label_ids()']]],
+  ['label_5fmap',['label_map',['../structfastdeploy_1_1vision_1_1SegmentationResult.html#a5dac98bb82fcaecd9e2617bfd0cfdf23',1,'fastdeploy::vision::SegmentationResult']]],
+  ['landmarks',['landmarks',['../structfastdeploy_1_1vision_1_1FaceDetectionResult.html#a3492786ff23a702db20449012c6b1440',1,'fastdeploy::vision::FaceDetectionResult::landmarks()'],['../structfastdeploy_1_1vision_1_1FaceAlignmentResult.html#affd5cb42c2b329c10a92476e283acfea',1,'fastdeploy::vision::FaceAlignmentResult::landmarks()']]],
+  ['landmarks_5fper_5fface',['landmarks_per_face',['../structfastdeploy_1_1vision_1_1FaceDetectionResult.html#ae8ea5ea58e6f02377e8781ff1d71fa94',1,'fastdeploy::vision::FaceDetectionResult::landmarks_per_face()'],['../classfastdeploy_1_1vision_1_1facedet_1_1RetinaFace.html#a7076aab9d853bf6e5cd9c36fc81d7912',1,'fastdeploy::vision::facedet::RetinaFace::landmarks_per_face()'],['../classfastdeploy_1_1vision_1_1facedet_1_1SCRFD.html#a03adcfc7b756c8d9b4dc6b7172b00041',1,'fastdeploy::vision::facedet::SCRFD::landmarks_per_face()'],['../classfastdeploy_1_1vision_1_1facedet_1_1YOLOv5Face.html#ae7775a829c593df52d22e628b0905bf9',1,'fastdeploy::vision::facedet::YOLOv5Face::landmarks_per_face()']]]
+];
