@@ -1,4 +1,0 @@
-<map id="fastdeploy::vision::detection::YOLOv7End2EndTRT" name="fastdeploy::vision::detection::YOLOv7End2EndTRT">
-<area shape="rect" id="node2" href="$classfastdeploy_1_1FastDeployModel.html" title="Base model object for all the vision models. " alt="" coords="15,95,225,121"/>
-<area shape="rect" id="node3" href="$structfastdeploy_1_1RuntimeOption.html" title="Option object used when create a new Runtime object. " alt="" coords="23,5,217,32"/>
-</map>

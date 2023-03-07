@@ -1,4 +1,0 @@
-<map id="fastdeploy::vision::faceid::InsightFaceRecognitionBase" name="fastdeploy::vision::faceid::InsightFaceRecognitionBase">
-<area shape="rect" id="node2" href="$classfastdeploy_1_1FastDeployModel.html" title="Base model object for all the vision models. " alt="" coords="30,95,239,121"/>
-<area shape="rect" id="node3" href="$structfastdeploy_1_1RuntimeOption.html" title="Option object used when create a new Runtime object. " alt="" coords="37,5,232,32"/>
-</map>

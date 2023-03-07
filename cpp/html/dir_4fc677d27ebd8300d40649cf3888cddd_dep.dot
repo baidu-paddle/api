@@ -1,0 +1,9 @@
+digraph "/build/FastDeploy/fastdeploy/vision/facealign/contrib" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_ecd0b05b6c637947f79c1ec62f012185 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="facealign" fontname="Helvetica", fontsize="10", URL="dir_ecd0b05b6c637947f79c1ec62f012185.html"]
+  dir_4fc677d27ebd8300d40649cf3888cddd [shape=box, label="contrib", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_4fc677d27ebd8300d40649cf3888cddd.html"];
+  }
+}

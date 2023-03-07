@@ -1,4 +1,0 @@
-<map id="fastdeploy::pipeline::PPOCRv2" name="fastdeploy::pipeline::PPOCRv2">
-<area shape="rect" id="node3" href="$classfastdeploy_1_1pipeline_1_1PPOCRv3.html" title="PPOCRv3 is used to load PP&#45;OCRv3 series models provided by PaddleOCR. " alt="" coords="35,169,185,211"/>
-<area shape="rect" id="node2" href="$classfastdeploy_1_1FastDeployModel.html" title="Base model object for all the vision models. " alt="" coords="5,5,215,32"/>
-</map>

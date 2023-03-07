@@ -1,0 +1,9 @@
+digraph "/build/FastDeploy/fastdeploy/runtime/backends/paddle" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_c60a478ed5bf04c89f9fa5bac9257057 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="backends" fontname="Helvetica", fontsize="10", URL="dir_c60a478ed5bf04c89f9fa5bac9257057.html"]
+  dir_56585676d366742c7750fcbadd2a286d [shape=box, label="paddle", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_56585676d366742c7750fcbadd2a286d.html"];
+  }
+}

@@ -1,0 +1,13 @@
+digraph "/build/FastDeploy/fastdeploy/vision/generation" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_e0f97e9c6c2e64a15c9e5b824b806a92 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="vision" fontname="Helvetica", fontsize="10", URL="dir_e0f97e9c6c2e64a15c9e5b824b806a92.html"]
+  subgraph clusterdir_a38b47ae66a57a7e7f1e752171fad7e4 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_a38b47ae66a57a7e7f1e752171fad7e4.html"];
+    dir_a38b47ae66a57a7e7f1e752171fad7e4 [shape=plaintext label="generation"];
+    dir_c02af358857d6748b09a9878a34e1f2d [shape=box label="contrib" color="black" fillcolor="white" style="filled" URL="dir_c02af358857d6748b09a9878a34e1f2d.html"];
+  }
+  }
+}

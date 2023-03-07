@@ -1,0 +1,14 @@
+digraph "/build/FastDeploy/fastdeploy/vision/detection" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_e0f97e9c6c2e64a15c9e5b824b806a92 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="vision" fontname="Helvetica", fontsize="10", URL="dir_e0f97e9c6c2e64a15c9e5b824b806a92.html"]
+  subgraph clusterdir_7817d03007f8bb180ec8194ac813b235 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_7817d03007f8bb180ec8194ac813b235.html"];
+    dir_7817d03007f8bb180ec8194ac813b235 [shape=plaintext label="detection"];
+    dir_ba3dba1dccf97f3da1e49516e41dc82f [shape=box label="contrib" color="red" fillcolor="white" style="filled" URL="dir_ba3dba1dccf97f3da1e49516e41dc82f.html"];
+    dir_f20c174b2383399a920f1a50e614fe3a [shape=box label="ppdet" color="black" fillcolor="white" style="filled" URL="dir_f20c174b2383399a920f1a50e614fe3a.html"];
+  }
+  }
+}

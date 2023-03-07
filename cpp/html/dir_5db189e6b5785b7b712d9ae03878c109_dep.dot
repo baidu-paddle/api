@@ -1,0 +1,9 @@
+digraph "/build/FastDeploy/fastdeploy/vision/detection/contrib/yolov8" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_ba3dba1dccf97f3da1e49516e41dc82f {
+    graph [ bgcolor="#ddddee", pencolor="black", label="contrib" fontname="Helvetica", fontsize="10", URL="dir_ba3dba1dccf97f3da1e49516e41dc82f.html"]
+  dir_5db189e6b5785b7b712d9ae03878c109 [shape=box, label="yolov8", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_5db189e6b5785b7b712d9ae03878c109.html"];
+  }
+}
