@@ -1,9 +1,0 @@
-digraph "/build/FastDeploy/fastdeploy/vision/tracking/pptracking" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  subgraph clusterdir_36b64c7ed6f9107703f403b339cf9290 {
-    graph [ bgcolor="#ddddee", pencolor="black", label="tracking" fontname="Helvetica", fontsize="10", URL="dir_36b64c7ed6f9107703f403b339cf9290.html"]
-  dir_76ca42e7797d7e0bde42cc457b92d9d8 [shape=box, label="pptracking", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_76ca42e7797d7e0bde42cc457b92d9d8.html"];
-  }
-}

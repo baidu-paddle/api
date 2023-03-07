@@ -1,9 +1,0 @@
-digraph "/build/FastDeploy/fastdeploy/function" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  subgraph clusterdir_8d8bcaa4a1ea2c1dd055659904dbf261 {
-    graph [ bgcolor="#ddddee", pencolor="black", label="fastdeploy" fontname="Helvetica", fontsize="10", URL="dir_8d8bcaa4a1ea2c1dd055659904dbf261.html"]
-  dir_b927003db6c1e6311134207651d4683f [shape=box, label="function", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_b927003db6c1e6311134207651d4683f.html"];
-  }
-}

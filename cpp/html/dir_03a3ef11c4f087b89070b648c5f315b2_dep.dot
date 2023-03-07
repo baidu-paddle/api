@@ -1,9 +1,0 @@
-digraph "/build/FastDeploy/fastdeploy/vision/utils" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  subgraph clusterdir_e0f97e9c6c2e64a15c9e5b824b806a92 {
-    graph [ bgcolor="#ddddee", pencolor="black", label="vision" fontname="Helvetica", fontsize="10", URL="dir_e0f97e9c6c2e64a15c9e5b824b806a92.html"]
-  dir_03a3ef11c4f087b89070b648c5f315b2 [shape=box, label="utils", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_03a3ef11c4f087b89070b648c5f315b2.html"];
-  }
-}

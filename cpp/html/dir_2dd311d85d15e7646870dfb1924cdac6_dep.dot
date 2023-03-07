@@ -1,9 +1,0 @@
-digraph "/build/FastDeploy/fastdeploy/runtime/backends/poros/common" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  subgraph clusterdir_f5257545808b54e84784b6da2710da6b {
-    graph [ bgcolor="#ddddee", pencolor="black", label="poros" fontname="Helvetica", fontsize="10", URL="dir_f5257545808b54e84784b6da2710da6b.html"]
-  dir_2dd311d85d15e7646870dfb1924cdac6 [shape=box, label="common", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_2dd311d85d15e7646870dfb1924cdac6.html"];
-  }
-}

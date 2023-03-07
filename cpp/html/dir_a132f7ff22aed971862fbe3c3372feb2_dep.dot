@@ -1,9 +1,0 @@
-digraph "/build/FastDeploy/fastdeploy/vision/faceid/contrib/insightface" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  subgraph clusterdir_2a18469bc7f82037599e9c777d0a80e5 {
-    graph [ bgcolor="#ddddee", pencolor="black", label="contrib" fontname="Helvetica", fontsize="10", URL="dir_2a18469bc7f82037599e9c777d0a80e5.html"]
-  dir_a132f7ff22aed971862fbe3c3372feb2 [shape=box, label="insightface", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_a132f7ff22aed971862fbe3c3372feb2.html"];
-  }
-}

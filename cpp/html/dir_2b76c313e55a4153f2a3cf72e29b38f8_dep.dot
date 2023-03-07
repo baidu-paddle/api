@@ -1,9 +1,0 @@
-digraph "/build/FastDeploy/fastdeploy/runtime/backends/tensorrt/ops" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  subgraph clusterdir_194914856f96296a815def5c6c29f66d {
-    graph [ bgcolor="#ddddee", pencolor="black", label="tensorrt" fontname="Helvetica", fontsize="10", URL="dir_194914856f96296a815def5c6c29f66d.html"]
-  dir_2b76c313e55a4153f2a3cf72e29b38f8 [shape=box, label="ops", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_2b76c313e55a4153f2a3cf72e29b38f8.html"];
-  }
-}

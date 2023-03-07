@@ -1,9 +1,0 @@
-digraph "/build/FastDeploy/fastdeploy/vision/classification/ppcls" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  subgraph clusterdir_22b8b81e4d74cdc2e5416b91f24d235f {
-    graph [ bgcolor="#ddddee", pencolor="black", label="classification" fontname="Helvetica", fontsize="10", URL="dir_22b8b81e4d74cdc2e5416b91f24d235f.html"]
-  dir_84595fb8c5ff1989a68ada445b8dc08e [shape=box, label="ppcls", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_84595fb8c5ff1989a68ada445b8dc08e.html"];
-  }
-}

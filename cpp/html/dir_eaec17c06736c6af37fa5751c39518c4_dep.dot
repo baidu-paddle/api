@@ -1,9 +1,0 @@
-digraph "/build/FastDeploy/fastdeploy/benchmark" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  subgraph clusterdir_8d8bcaa4a1ea2c1dd055659904dbf261 {
-    graph [ bgcolor="#ddddee", pencolor="black", label="fastdeploy" fontname="Helvetica", fontsize="10", URL="dir_8d8bcaa4a1ea2c1dd055659904dbf261.html"]
-  dir_eaec17c06736c6af37fa5751c39518c4 [shape=box, label="benchmark", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_eaec17c06736c6af37fa5751c39518c4.html"];
-  }
-}

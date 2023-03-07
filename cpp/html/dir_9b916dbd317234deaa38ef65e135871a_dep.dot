@@ -1,9 +1,0 @@
-digraph "/build/FastDeploy/fastdeploy/vision/common/image_decoder" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  subgraph clusterdir_89f9fd388517215d18ff4e3b7af7443e {
-    graph [ bgcolor="#ddddee", pencolor="black", label="common" fontname="Helvetica", fontsize="10", URL="dir_89f9fd388517215d18ff4e3b7af7443e.html"]
-  dir_9b916dbd317234deaa38ef65e135871a [shape=box, label="image_decoder", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_9b916dbd317234deaa38ef65e135871a.html"];
-  }
-}
