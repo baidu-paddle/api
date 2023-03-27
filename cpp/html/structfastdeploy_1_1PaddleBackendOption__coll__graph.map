@@ -1,0 +1,4 @@
+<map id="fastdeploy::PaddleBackendOption" name="fastdeploy::PaddleBackendOption">
+<area shape="rect" id="node2" href="$structfastdeploy_1_1IpuOption.html" title="Option object to configure GraphCore IPU. " alt="" coords="5,5,167,32"/>
+<area shape="rect" id="node3" href="$structfastdeploy_1_1TrtBackendOption.html" title="Option object to configure TensorRT backend. " alt="" coords="191,5,405,32"/>
+</map>

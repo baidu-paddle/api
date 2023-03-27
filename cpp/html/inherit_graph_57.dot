@@ -1,7 +1,0 @@
-digraph "Graphical Class Hierarchy"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node1 [label="fastdeploy::vision\l::segmentation::PaddleSegPreprocessor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classfastdeploy_1_1vision_1_1segmentation_1_1PaddleSegPreprocessor.html",tooltip="Preprocessor object for PaddleSeg serials model. "];
-}

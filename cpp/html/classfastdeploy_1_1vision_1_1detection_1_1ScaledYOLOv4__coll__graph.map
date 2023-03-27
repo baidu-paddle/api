@@ -1,0 +1,11 @@
+<map id="fastdeploy::vision::detection::ScaledYOLOv4" name="fastdeploy::vision::detection::ScaledYOLOv4">
+<area shape="rect" id="node2" href="$classfastdeploy_1_1FastDeployModel.html" title="Base model object for all the vision models. " alt="" coords="1089,155,1299,181"/>
+<area shape="rect" id="node3" href="$structfastdeploy_1_1RuntimeOption.html" title="Option object used when create a new Runtime object. " alt="" coords="743,155,937,181"/>
+<area shape="rect" id="node4" href="$structfastdeploy_1_1OrtBackendOption.html" title="Option object to configure ONNX Runtime backend. " alt="" coords="342,5,559,32"/>
+<area shape="rect" id="node5" href="$structfastdeploy_1_1PaddleBackendOption.html" title="Option object to configure Paddle Inference backend. " alt="" coords="352,57,549,98"/>
+<area shape="rect" id="node6" href="$structfastdeploy_1_1IpuOption.html" title="Option object to configure GraphCore IPU. " alt="" coords="31,35,193,61"/>
+<area shape="rect" id="node7" href="$structfastdeploy_1_1TrtBackendOption.html" title="Option object to configure TensorRT backend. " alt="" coords="5,104,219,131"/>
+<area shape="rect" id="node8" href="$structfastdeploy_1_1LiteBackendOption.html" title="Option object to configure Paddle Lite backend. " alt="" coords="340,185,561,212"/>
+<area shape="rect" id="node9" href="$structfastdeploy_1_1OpenVINOBackendOption.html" title="Option object to configure OpenVINO backend. " alt="" coords="340,237,561,278"/>
+<area shape="rect" id="node10" href="$structfastdeploy_1_1PorosBackendOption.html" title="Option object to configure Poros backend. " alt="" coords="355,302,546,343"/>
+</map>

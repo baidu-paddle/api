@@ -1,9 +1,0 @@
-digraph "/build/FastDeploy/fastdeploy/vision/facedet/contrib/yolov7face" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  subgraph clusterdir_bfa4890a7a8355af879703425b226b70 {
-    graph [ bgcolor="#ddddee", pencolor="black", label="contrib" fontname="Helvetica", fontsize="10", URL="dir_bfa4890a7a8355af879703425b226b70.html"]
-  dir_55bb9e303d61e06b15018d799e3cc91e [shape=box, label="yolov7face", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_55bb9e303d61e06b15018d799e3cc91e.html"];
-  }
-}

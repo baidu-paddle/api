@@ -1,7 +1,0 @@
-digraph "Graphical Class Hierarchy"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node1 [label="fastdeploy::pipeline\l::PPTinyPose",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classfastdeploy_1_1pipeline_1_1PPTinyPose.html",tooltip="PPTinyPose Pipeline object used when to load a detection model + pptinypose model. "];
-}

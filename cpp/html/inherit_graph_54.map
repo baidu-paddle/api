@@ -1,0 +1,8 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classfastdeploy_1_1vision_1_1ProcessorManager.html" title="ProcessorManager for Preprocess. " alt="" coords="5,151,155,193"/>
+<area shape="rect" id="node2" href="$classfastdeploy_1_1vision_1_1classification_1_1PaddleClasPreprocessor.html" title="Preprocessor object for PaddleClas serials model. " alt="" coords="230,5,425,61"/>
+<area shape="rect" id="node3" href="$classfastdeploy_1_1vision_1_1detection_1_1PaddleDetPreprocessor.html" title="Preprocessor object for PaddleDet serials model. " alt="" coords="203,86,452,127"/>
+<area shape="rect" id="node4" href="$classfastdeploy_1_1vision_1_1ocr_1_1ClassifierPreprocessor.html" title="Preprocessor object for Classifier serials model. " alt="" coords="226,151,429,193"/>
+<area shape="rect" id="node5" href="$classfastdeploy_1_1vision_1_1ocr_1_1DBDetectorPreprocessor.html" title="Preprocessor object for DBDetector serials model. " alt="" coords="219,217,436,258"/>
+<area shape="rect" id="node6" href="$classfastdeploy_1_1vision_1_1ocr_1_1RecognizerPreprocessor.html" title="Preprocessor object for PaddleClas serials model. " alt="" coords="221,282,434,323"/>
+</map>
