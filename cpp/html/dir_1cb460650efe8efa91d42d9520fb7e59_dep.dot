@@ -1,9 +1,0 @@
-digraph "/build/FastDeploy/fastdeploy/vision/matting/ppmatting" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  subgraph clusterdir_2e97703dae4e901bcdac129cf980fe59 {
-    graph [ bgcolor="#ddddee", pencolor="black", label="matting" fontname="Helvetica", fontsize="10", URL="dir_2e97703dae4e901bcdac129cf980fe59.html"]
-  dir_1cb460650efe8efa91d42d9520fb7e59 [shape=box, label="ppmatting", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_1cb460650efe8efa91d42d9520fb7e59.html"];
-  }
-}

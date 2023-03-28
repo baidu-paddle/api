@@ -1,9 +1,0 @@
-digraph "/build/FastDeploy/fastdeploy/runtime/backends/openvino" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  subgraph clusterdir_c60a478ed5bf04c89f9fa5bac9257057 {
-    graph [ bgcolor="#ddddee", pencolor="black", label="backends" fontname="Helvetica", fontsize="10", URL="dir_c60a478ed5bf04c89f9fa5bac9257057.html"]
-  dir_9cca61441274236e748b32784037ed61 [shape=box, label="openvino", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_9cca61441274236e748b32784037ed61.html"];
-  }
-}
