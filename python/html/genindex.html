@@ -1,256 +1,251 @@
 
+
 <!DOCTYPE html>
 
-<html lang="en">
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Index &#8212; FastDeploy Python API latest documentation</title>
-    
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
-    
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'genindex';</script>
     <link rel="index" title="Index" href="#" />
     <link rel="search" title="Search" href="search.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
     
-    <div class="container-fluid" id="banner"></div>
-
     
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="index.html">
-      
-      
-      
-      <h1 class="site-logo" id="site-title">FastDeploy Python API latest documentation</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Vision Task Model API (视觉任务模型API)
- </span>
-</p>
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">FastDeploy Python API latest documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Vision Task Model API (视觉任务模型API)</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="object_detection.html">
-   Object Detection(目标检测)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="ocr.html">
-   OCR(文字识别)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="semantic_segmentation.html">
-   Semantic Segmentation(语义分割)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="image_classification.html">
-   Image Classification(图像分类)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="keypoint_detection.html">
-   Keypoint Detection(关键点检测)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="matting.html">
-   Matting(图像抠图)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="face_recognition.html">
-   Face Recognition(人脸识别)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="face_detection.html">
-   Face Detection(人脸检测)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="face_alignment.html">
-   Face Alignment(人脸对齐)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="headpose.html">
-   Headpose(头部姿态)
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="object_detection.html">Object Detection(目标检测)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ocr.html">OCR(文字识别)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="semantic_segmentation.html">Semantic Segmentation(语义分割)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="image_classification.html">Image Classification(图像分类)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="keypoint_detection.html">Keypoint Detection(关键点检测)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matting.html">Matting(图像抠图)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="face_recognition.html">Face Recognition(人脸识别)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="face_detection.html">Face Detection(人脸检测)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="face_alignment.html">Face Alignment(人脸对齐)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="headpose.html">Headpose(头部姿态)</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Predict Result Struct (预测结果结构体)
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Predict Result Struct (预测结果结构体)</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="vision_results_en.html">
-   Description of Vision Results
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="vision_results_en.html">Description of Vision Results</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  FastDeploy Runtime API (多后端推理引擎API)
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">FastDeploy Runtime API (多后端推理引擎API)</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="runtime.html">
-   Runtime(模型推理Runtime)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="runtime_option.html">
-   Runtime Option(Runtime配置)
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="runtime.html">Runtime(模型推理Runtime)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="runtime_option.html">Runtime Option(Runtime配置)</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Vision Processor (图像预处理库)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="vision_processor.html">Vision Processor(多硬件图像处理库)</a></li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
-          
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
 
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
 <div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
 
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
-    <div class="header-article__right">
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
 <button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
     </div>
 </div>
 
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-</div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1></h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                    </div>
-                </div>
-            </div>
-            <main id="main-content" role="main">
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
 
 <h1 id="index">Index</h1>
 
@@ -262,13 +257,16 @@ title="Fullscreen mode"
  | <a href="#E"><strong>E</strong></a>
  | <a href="#F"><strong>F</strong></a>
  | <a href="#G"><strong>G</strong></a>
+ | <a href="#H"><strong>H</strong></a>
  | <a href="#I"><strong>I</strong></a>
  | <a href="#L"><strong>L</strong></a>
  | <a href="#M"><strong>M</strong></a>
  | <a href="#N"><strong>N</strong></a>
+ | <a href="#O"><strong>O</strong></a>
  | <a href="#P"><strong>P</strong></a>
  | <a href="#R"><strong>R</strong></a>
  | <a href="#S"><strong>S</strong></a>
+ | <a href="#T"><strong>T</strong></a>
  | <a href="#U"><strong>U</strong></a>
  | <a href="#V"><strong>V</strong></a>
  | <a href="#Y"><strong>Y</strong></a>
@@ -280,24 +278,10 @@ title="Fullscreen mode"
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="face_recognition.html#fastdeploy.vision.faceid.AdaFace">AdaFace (class in fastdeploy.vision.faceid)</a>
 </li>
-      <li><a href="face_recognition.html#fastdeploy.vision.faceid.AdaFace.alpha">alpha (fastdeploy.vision.faceid.AdaFace property)</a>
-
-      <ul>
-        <li><a href="face_recognition.html#fastdeploy.vision.faceid.ArcFace.alpha">(fastdeploy.vision.faceid.ArcFace property)</a>
+      <li><a href="matting.html#fastdeploy.vision.matting.MODNet.alpha">alpha (fastdeploy.vision.matting.MODNet property)</a>
 </li>
-        <li><a href="face_recognition.html#fastdeploy.vision.faceid.CosFace.alpha">(fastdeploy.vision.faceid.CosFace property)</a>
-</li>
-        <li><a href="face_recognition.html#fastdeploy.vision.faceid.PartialFC.alpha">(fastdeploy.vision.faceid.PartialFC property)</a>
-</li>
-        <li><a href="face_recognition.html#fastdeploy.vision.faceid.VPL.alpha">(fastdeploy.vision.faceid.VPL property)</a>
-</li>
-        <li><a href="matting.html#fastdeploy.vision.matting.MODNet.alpha">(fastdeploy.vision.matting.MODNet property)</a>
-</li>
-      </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="object_detection.html#fastdeploy.vision.detection.PaddleDetPostprocessor.apply_decode_and_nms">apply_decode_and_nms() (fastdeploy.vision.detection.PaddleDetPostprocessor method)</a>
-</li>
       <li><a href="semantic_segmentation.html#fastdeploy.vision.segmentation.PaddleSegPostprocessor.apply_softmax">apply_softmax (fastdeploy.vision.segmentation.PaddleSegPostprocessor property)</a>
 </li>
       <li><a href="face_recognition.html#fastdeploy.vision.faceid.ArcFace">ArcFace (class in fastdeploy.vision.faceid)</a>
@@ -311,6 +295,8 @@ title="Fullscreen mode"
       <li><a href="image_classification.html#fastdeploy.vision.classification.PaddleClasModel.batch_predict">batch_predict() (fastdeploy.vision.classification.PaddleClasModel method)</a>
 
       <ul>
+        <li><a href="image_classification.html#fastdeploy.vision.classification.YOLOv5Cls.batch_predict">(fastdeploy.vision.classification.YOLOv5Cls method)</a>
+</li>
         <li><a href="object_detection.html#fastdeploy.vision.detection.FasterRCNN.batch_predict">(fastdeploy.vision.detection.FasterRCNN method)</a>
 </li>
         <li><a href="object_detection.html#fastdeploy.vision.detection.MaskRCNN.batch_predict">(fastdeploy.vision.detection.MaskRCNN method)</a>
@@ -327,6 +313,16 @@ title="Fullscreen mode"
 </li>
         <li><a href="object_detection.html#fastdeploy.vision.detection.YOLOv7.batch_predict">(fastdeploy.vision.detection.YOLOv7 method)</a>
 </li>
+        <li><a href="face_recognition.html#fastdeploy.vision.faceid.AdaFace.batch_predict">(fastdeploy.vision.faceid.AdaFace method)</a>
+</li>
+        <li><a href="face_recognition.html#fastdeploy.vision.faceid.ArcFace.batch_predict">(fastdeploy.vision.faceid.ArcFace method)</a>
+</li>
+        <li><a href="face_recognition.html#fastdeploy.vision.faceid.CosFace.batch_predict">(fastdeploy.vision.faceid.CosFace method)</a>
+</li>
+        <li><a href="face_recognition.html#fastdeploy.vision.faceid.PartialFC.batch_predict">(fastdeploy.vision.faceid.PartialFC method)</a>
+</li>
+        <li><a href="face_recognition.html#fastdeploy.vision.faceid.VPL.batch_predict">(fastdeploy.vision.faceid.VPL method)</a>
+</li>
         <li><a href="ocr.html#fastdeploy.vision.ocr.Classifier.batch_predict">(fastdeploy.vision.ocr.Classifier method)</a>
 </li>
         <li><a href="ocr.html#fastdeploy.vision.ocr.DBDetector.batch_predict">(fastdeploy.vision.ocr.DBDetector method)</a>
@@ -342,21 +338,11 @@ title="Fullscreen mode"
       </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="face_recognition.html#fastdeploy.vision.faceid.AdaFace.beta">beta (fastdeploy.vision.faceid.AdaFace property)</a>
-
-      <ul>
-        <li><a href="face_recognition.html#fastdeploy.vision.faceid.ArcFace.beta">(fastdeploy.vision.faceid.ArcFace property)</a>
+      <li><a href="matting.html#fastdeploy.vision.matting.MODNet.beta">beta (fastdeploy.vision.matting.MODNet property)</a>
 </li>
-        <li><a href="face_recognition.html#fastdeploy.vision.faceid.CosFace.beta">(fastdeploy.vision.faceid.CosFace property)</a>
-</li>
-        <li><a href="face_recognition.html#fastdeploy.vision.faceid.PartialFC.beta">(fastdeploy.vision.faceid.PartialFC property)</a>
-</li>
-        <li><a href="face_recognition.html#fastdeploy.vision.faceid.VPL.beta">(fastdeploy.vision.faceid.VPL property)</a>
-</li>
-        <li><a href="matting.html#fastdeploy.vision.matting.MODNet.beta">(fastdeploy.vision.matting.MODNet property)</a>
-</li>
-      </ul></li>
       <li><a href="runtime.html#fastdeploy.Runtime.bind_input_tensor">bind_input_tensor() (fastdeploy.Runtime method)</a>
+</li>
+      <li><a href="runtime.html#fastdeploy.Runtime.bind_output_tensor">bind_output_tensor() (fastdeploy.Runtime method)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -364,7 +350,15 @@ title="Fullscreen mode"
 <h2 id="C">C</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="vision_processor.html#fastdeploy.vision.common.processors.Cast">Cast (class in fastdeploy.vision.common.processors)</a>
+</li>
+      <li><a href="vision_processor.html#fastdeploy.vision.common.processors.CenterCrop">CenterCrop (class in fastdeploy.vision.common.processors)</a>
+</li>
       <li><a href="ocr.html#fastdeploy.vision.ocr.Classifier">Classifier (class in fastdeploy.vision.ocr)</a>
+</li>
+      <li><a href="ocr.html#fastdeploy.vision.ocr.ClassifierPostprocessor">ClassifierPostprocessor (class in fastdeploy.vision.ocr)</a>
+</li>
+      <li><a href="ocr.html#fastdeploy.vision.ocr.ClassifierPreprocessor">ClassifierPreprocessor (class in fastdeploy.vision.ocr)</a>
 </li>
       <li><a href="image_classification.html#fastdeploy.vision.classification.PaddleClasModel.clone">clone() (fastdeploy.vision.classification.PaddleClasModel method)</a>
 
@@ -381,11 +375,23 @@ title="Fullscreen mode"
 </li>
         <li><a href="object_detection.html#fastdeploy.vision.detection.PPYOLOE.clone">(fastdeploy.vision.detection.PPYOLOE method)</a>
 </li>
+        <li><a href="ocr.html#fastdeploy.vision.ocr.Classifier.clone">(fastdeploy.vision.ocr.Classifier method)</a>
+</li>
+        <li><a href="ocr.html#fastdeploy.vision.ocr.DBDetector.clone">(fastdeploy.vision.ocr.DBDetector method)</a>
+</li>
+        <li><a href="ocr.html#fastdeploy.vision.ocr.PPOCRv2.clone">(fastdeploy.vision.ocr.PPOCRv2 method)</a>
+</li>
+        <li><a href="ocr.html#fastdeploy.vision.ocr.PPOCRv3.clone">(fastdeploy.vision.ocr.PPOCRv3 method)</a>
+</li>
+        <li><a href="ocr.html#fastdeploy.vision.ocr.Recognizer.clone">(fastdeploy.vision.ocr.Recognizer method)</a>
+</li>
         <li><a href="semantic_segmentation.html#fastdeploy.vision.segmentation.PaddleSegModel.clone">(fastdeploy.vision.segmentation.PaddleSegModel method)</a>
 </li>
       </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="ocr.html#fastdeploy.vision.ocr.ClassifierPostprocessor.cls_thresh">cls_thresh (fastdeploy.vision.ocr.ClassifierPostprocessor property)</a>
+</li>
       <li><a href="runtime.html#fastdeploy.Runtime.compile">compile() (fastdeploy.Runtime method)</a>
 </li>
       <li><a href="object_detection.html#fastdeploy.vision.detection.YOLOv5Postprocessor.conf_threshold">conf_threshold (fastdeploy.vision.detection.YOLOv5Postprocessor property)</a>
@@ -404,25 +410,69 @@ title="Fullscreen mode"
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="ocr.html#fastdeploy.vision.ocr.DBDetector">DBDetector (class in fastdeploy.vision.ocr)</a>
 </li>
+      <li><a href="ocr.html#fastdeploy.vision.ocr.DBDetectorPostprocessor">DBDetectorPostprocessor (class in fastdeploy.vision.ocr)</a>
+</li>
+      <li><a href="ocr.html#fastdeploy.vision.ocr.DBDetectorPreprocessor">DBDetectorPreprocessor (class in fastdeploy.vision.ocr)</a>
+</li>
       <li><a href="runtime_option.html#fastdeploy.RuntimeOption.delete_paddle_backend_pass">delete_paddle_backend_pass() (fastdeploy.RuntimeOption method)</a>
+</li>
+      <li><a href="ocr.html#fastdeploy.vision.ocr.DBDetectorPostprocessor.det_db_box_thresh">det_db_box_thresh (fastdeploy.vision.ocr.DBDetectorPostprocessor property)</a>
+</li>
+      <li><a href="ocr.html#fastdeploy.vision.ocr.DBDetectorPostprocessor.det_db_score_mode">det_db_score_mode (fastdeploy.vision.ocr.DBDetectorPostprocessor property)</a>
+</li>
+      <li><a href="ocr.html#fastdeploy.vision.ocr.DBDetectorPostprocessor.det_db_thresh">det_db_thresh (fastdeploy.vision.ocr.DBDetectorPostprocessor property)</a>
+</li>
+      <li><a href="ocr.html#fastdeploy.vision.ocr.DBDetectorPostprocessor.det_db_unclip_ratio">det_db_unclip_ratio (fastdeploy.vision.ocr.DBDetectorPostprocessor property)</a>
 </li>
       <li><a href="runtime_option.html#fastdeploy.RuntimeOption.disable_lite_fp16">disable_lite_fp16() (fastdeploy.RuntimeOption method)</a>
 </li>
-      <li><a href="face_detection.html#fastdeploy.vision.facedet.SCRFD.disable_normalize_and_permute">disable_normalize_and_permute() (fastdeploy.vision.facedet.SCRFD method)</a>
+      <li><a href="image_classification.html#fastdeploy.vision.classification.PaddleClasPreprocessor.disable_normalize">disable_normalize() (fastdeploy.vision.classification.PaddleClasPreprocessor method)</a>
 
       <ul>
-        <li><a href="semantic_segmentation.html#fastdeploy.vision.segmentation.PaddleSegPreprocessor.disable_normalize_and_permute">(fastdeploy.vision.segmentation.PaddleSegPreprocessor method)</a>
+        <li><a href="object_detection.html#fastdeploy.vision.detection.PaddleDetPreprocessor.disable_normalize">(fastdeploy.vision.detection.PaddleDetPreprocessor method)</a>
+</li>
+        <li><a href="face_detection.html#fastdeploy.vision.facedet.SCRFD.disable_normalize">(fastdeploy.vision.facedet.SCRFD method)</a>
+</li>
+        <li><a href="keypoint_detection.html#fastdeploy.vision.keypointdetection.PPTinyPose.disable_normalize">(fastdeploy.vision.keypointdetection.PPTinyPose method)</a>
+</li>
+        <li><a href="ocr.html#fastdeploy.vision.ocr.ClassifierPreprocessor.disable_normalize">(fastdeploy.vision.ocr.ClassifierPreprocessor method)</a>
+</li>
+        <li><a href="ocr.html#fastdeploy.vision.ocr.DBDetectorPreprocessor.disable_normalize">(fastdeploy.vision.ocr.DBDetectorPreprocessor method)</a>
+</li>
+        <li><a href="ocr.html#fastdeploy.vision.ocr.RecognizerPreprocessor.disable_normalize">(fastdeploy.vision.ocr.RecognizerPreprocessor method)</a>
+</li>
+        <li><a href="semantic_segmentation.html#fastdeploy.vision.segmentation.PaddleSegPreprocessor.disable_normalize">(fastdeploy.vision.segmentation.PaddleSegPreprocessor method)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="runtime_option.html#fastdeploy.RuntimeOption.disable_paddle_log_info">disable_paddle_log_info() (fastdeploy.RuntimeOption method)</a>
 </li>
       <li><a href="runtime_option.html#fastdeploy.RuntimeOption.disable_paddle_trt_collect_shape">disable_paddle_trt_collect_shape() (fastdeploy.RuntimeOption method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="runtime_option.html#fastdeploy.RuntimeOption.disable_paddle_trt_ops">disable_paddle_trt_ops() (fastdeploy.RuntimeOption method)</a>
 </li>
+      <li><a href="image_classification.html#fastdeploy.vision.classification.PaddleClasPreprocessor.disable_permute">disable_permute() (fastdeploy.vision.classification.PaddleClasPreprocessor method)</a>
+
+      <ul>
+        <li><a href="object_detection.html#fastdeploy.vision.detection.PaddleDetPreprocessor.disable_permute">(fastdeploy.vision.detection.PaddleDetPreprocessor method)</a>
+</li>
+        <li><a href="face_detection.html#fastdeploy.vision.facedet.SCRFD.disable_permute">(fastdeploy.vision.facedet.SCRFD method)</a>
+</li>
+        <li><a href="keypoint_detection.html#fastdeploy.vision.keypointdetection.PPTinyPose.disable_permute">(fastdeploy.vision.keypointdetection.PPTinyPose method)</a>
+</li>
+        <li><a href="ocr.html#fastdeploy.vision.ocr.ClassifierPreprocessor.disable_permute">(fastdeploy.vision.ocr.ClassifierPreprocessor method)</a>
+</li>
+        <li><a href="ocr.html#fastdeploy.vision.ocr.DBDetectorPreprocessor.disable_permute">(fastdeploy.vision.ocr.DBDetectorPreprocessor method)</a>
+</li>
+        <li><a href="ocr.html#fastdeploy.vision.ocr.RecognizerPreprocessor.disable_permute">(fastdeploy.vision.ocr.RecognizerPreprocessor method)</a>
+</li>
+        <li><a href="semantic_segmentation.html#fastdeploy.vision.segmentation.PaddleSegPreprocessor.disable_permute">(fastdeploy.vision.segmentation.PaddleSegPreprocessor method)</a>
+</li>
+      </ul></li>
       <li><a href="runtime_option.html#fastdeploy.RuntimeOption.disable_pinned_memory">disable_pinned_memory() (fastdeploy.RuntimeOption method)</a>
+</li>
+      <li><a href="runtime_option.html#fastdeploy.RuntimeOption.disable_profiling">disable_profiling() (fastdeploy.RuntimeOption method)</a>
 </li>
       <li><a href="runtime_option.html#fastdeploy.RuntimeOption.disable_trt_fp16">disable_trt_fp16() (fastdeploy.RuntimeOption method)</a>
 </li>
@@ -454,6 +504,8 @@ title="Fullscreen mode"
 </li>
       <li><a href="runtime_option.html#fastdeploy.RuntimeOption.enable_pinned_memory">enable_pinned_memory() (fastdeploy.RuntimeOption method)</a>
 </li>
+      <li><a href="runtime_option.html#fastdeploy.RuntimeOption.enable_profiling">enable_profiling() (fastdeploy.RuntimeOption method)</a>
+</li>
       <li><a href="runtime_option.html#fastdeploy.RuntimeOption.enable_trt_fp16">enable_trt_fp16() (fastdeploy.RuntimeOption method)</a>
 </li>
   </ul></td>
@@ -480,11 +532,105 @@ title="Fullscreen mode"
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="runtime.html#fastdeploy.Runtime.get_input_info">get_input_info() (fastdeploy.Runtime method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="runtime.html#fastdeploy.Runtime.get_output_info">get_output_info() (fastdeploy.Runtime method)</a>
 </li>
       <li><a href="runtime.html#fastdeploy.Runtime.get_output_tensor">get_output_tensor() (fastdeploy.Runtime method)</a>
+</li>
+      <li><a href="runtime.html#fastdeploy.Runtime.get_profile_time">get_profile_time() (fastdeploy.Runtime method)</a>
+
+      <ul>
+        <li><a href="image_classification.html#fastdeploy.vision.classification.PaddleClasModel.get_profile_time">(fastdeploy.vision.classification.PaddleClasModel method)</a>
+</li>
+        <li><a href="image_classification.html#fastdeploy.vision.classification.ResNet.get_profile_time">(fastdeploy.vision.classification.ResNet method)</a>
+</li>
+        <li><a href="image_classification.html#fastdeploy.vision.classification.YOLOv5Cls.get_profile_time">(fastdeploy.vision.classification.YOLOv5Cls method)</a>
+</li>
+        <li><a href="object_detection.html#fastdeploy.vision.detection.FasterRCNN.get_profile_time">(fastdeploy.vision.detection.FasterRCNN method)</a>
+</li>
+        <li><a href="object_detection.html#fastdeploy.vision.detection.MaskRCNN.get_profile_time">(fastdeploy.vision.detection.MaskRCNN method)</a>
+</li>
+        <li><a href="object_detection.html#fastdeploy.vision.detection.NanoDetPlus.get_profile_time">(fastdeploy.vision.detection.NanoDetPlus method)</a>
+</li>
+        <li><a href="object_detection.html#fastdeploy.vision.detection.PaddleYOLOX.get_profile_time">(fastdeploy.vision.detection.PaddleYOLOX method)</a>, <a href="object_detection.html#fastdeploy.vision.detection.PaddleYOLOX.get_profile_time">[1]</a>
+</li>
+        <li><a href="object_detection.html#fastdeploy.vision.detection.PicoDet.get_profile_time">(fastdeploy.vision.detection.PicoDet method)</a>
+</li>
+        <li><a href="object_detection.html#fastdeploy.vision.detection.PPYOLO.get_profile_time">(fastdeploy.vision.detection.PPYOLO method)</a>
+</li>
+        <li><a href="object_detection.html#fastdeploy.vision.detection.PPYOLOE.get_profile_time">(fastdeploy.vision.detection.PPYOLOE method)</a>
+</li>
+        <li><a href="object_detection.html#fastdeploy.vision.detection.ScaledYOLOv4.get_profile_time">(fastdeploy.vision.detection.ScaledYOLOv4 method)</a>
+</li>
+        <li><a href="object_detection.html#fastdeploy.vision.detection.YOLOR.get_profile_time">(fastdeploy.vision.detection.YOLOR method)</a>, <a href="object_detection.html#fastdeploy.vision.detection.YOLOR.get_profile_time">[1]</a>
+</li>
+        <li><a href="object_detection.html#fastdeploy.vision.detection.YOLOv5.get_profile_time">(fastdeploy.vision.detection.YOLOv5 method)</a>
+</li>
+        <li><a href="object_detection.html#fastdeploy.vision.detection.YOLOv5Lite.get_profile_time">(fastdeploy.vision.detection.YOLOv5Lite method)</a>
+</li>
+        <li><a href="object_detection.html#fastdeploy.vision.detection.YOLOv6.get_profile_time">(fastdeploy.vision.detection.YOLOv6 method)</a>
+</li>
+        <li><a href="object_detection.html#fastdeploy.vision.detection.YOLOv7.get_profile_time">(fastdeploy.vision.detection.YOLOv7 method)</a>
+</li>
+        <li><a href="object_detection.html#fastdeploy.vision.detection.YOLOv7End2EndORT.get_profile_time">(fastdeploy.vision.detection.YOLOv7End2EndORT method)</a>
+</li>
+        <li><a href="object_detection.html#fastdeploy.vision.detection.YOLOv7End2EndTRT.get_profile_time">(fastdeploy.vision.detection.YOLOv7End2EndTRT method)</a>
+</li>
+        <li><a href="object_detection.html#fastdeploy.vision.detection.YOLOX.get_profile_time">(fastdeploy.vision.detection.YOLOX method)</a>
+</li>
+        <li><a href="face_alignment.html#fastdeploy.vision.facealign.FaceLandmark1000.get_profile_time">(fastdeploy.vision.facealign.FaceLandmark1000 method)</a>
+</li>
+        <li><a href="face_alignment.html#fastdeploy.vision.facealign.PFLD.get_profile_time">(fastdeploy.vision.facealign.PFLD method)</a>
+</li>
+        <li><a href="face_alignment.html#fastdeploy.vision.facealign.PIPNet.get_profile_time">(fastdeploy.vision.facealign.PIPNet method)</a>
+</li>
+        <li><a href="face_detection.html#fastdeploy.vision.facedet.RetinaFace.get_profile_time">(fastdeploy.vision.facedet.RetinaFace method)</a>
+</li>
+        <li><a href="face_detection.html#fastdeploy.vision.facedet.SCRFD.get_profile_time">(fastdeploy.vision.facedet.SCRFD method)</a>
+</li>
+        <li><a href="face_detection.html#fastdeploy.vision.facedet.UltraFace.get_profile_time">(fastdeploy.vision.facedet.UltraFace method)</a>
+</li>
+        <li><a href="face_detection.html#fastdeploy.vision.facedet.YOLOv5Face.get_profile_time">(fastdeploy.vision.facedet.YOLOv5Face method)</a>
+</li>
+        <li><a href="face_recognition.html#fastdeploy.vision.faceid.AdaFace.get_profile_time">(fastdeploy.vision.faceid.AdaFace method)</a>
+</li>
+        <li><a href="face_recognition.html#fastdeploy.vision.faceid.ArcFace.get_profile_time">(fastdeploy.vision.faceid.ArcFace method)</a>
+</li>
+        <li><a href="face_recognition.html#fastdeploy.vision.faceid.CosFace.get_profile_time">(fastdeploy.vision.faceid.CosFace method)</a>
+</li>
+        <li><a href="face_recognition.html#fastdeploy.vision.faceid.PartialFC.get_profile_time">(fastdeploy.vision.faceid.PartialFC method)</a>
+</li>
+        <li><a href="face_recognition.html#fastdeploy.vision.faceid.VPL.get_profile_time">(fastdeploy.vision.faceid.VPL method)</a>
+</li>
+        <li><a href="headpose.html#fastdeploy.vision.headpose.FSANet.get_profile_time">(fastdeploy.vision.headpose.FSANet method)</a>
+</li>
+        <li><a href="keypoint_detection.html#fastdeploy.vision.keypointdetection.PPTinyPose.get_profile_time">(fastdeploy.vision.keypointdetection.PPTinyPose method)</a>
+</li>
+        <li><a href="matting.html#fastdeploy.vision.matting.MODNet.get_profile_time">(fastdeploy.vision.matting.MODNet method)</a>
+</li>
+        <li><a href="matting.html#fastdeploy.vision.matting.PPMatting.get_profile_time">(fastdeploy.vision.matting.PPMatting method)</a>
+</li>
+        <li><a href="matting.html#fastdeploy.vision.matting.RobustVideoMatting.get_profile_time">(fastdeploy.vision.matting.RobustVideoMatting method)</a>
+</li>
+        <li><a href="ocr.html#fastdeploy.vision.ocr.Classifier.get_profile_time">(fastdeploy.vision.ocr.Classifier method)</a>
+</li>
+        <li><a href="ocr.html#fastdeploy.vision.ocr.DBDetector.get_profile_time">(fastdeploy.vision.ocr.DBDetector method)</a>
+</li>
+        <li><a href="ocr.html#fastdeploy.vision.ocr.PPOCRv2.get_profile_time">(fastdeploy.vision.ocr.PPOCRv2 method)</a>
+</li>
+        <li><a href="ocr.html#fastdeploy.vision.ocr.PPOCRv3.get_profile_time">(fastdeploy.vision.ocr.PPOCRv3 method)</a>
+</li>
+        <li><a href="ocr.html#fastdeploy.vision.ocr.Recognizer.get_profile_time">(fastdeploy.vision.ocr.Recognizer method)</a>
+</li>
+        <li><a href="semantic_segmentation.html#fastdeploy.vision.segmentation.PaddleSegModel.get_profile_time">(fastdeploy.vision.segmentation.PaddleSegModel method)</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="H">H</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="vision_processor.html#fastdeploy.vision.common.processors.HWC2CHW">HWC2CHW (class in fastdeploy.vision.common.processors)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -494,6 +640,8 @@ title="Fullscreen mode"
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="runtime.html#fastdeploy.Runtime.infer">infer() (fastdeploy.Runtime method)</a>
 </li>
+      <li><a href="image_classification.html#fastdeploy.vision.classification.PaddleClasPreprocessor.initial_resize_on_cpu">initial_resize_on_cpu() (fastdeploy.vision.classification.PaddleClasPreprocessor method)</a>
+</li>
       <li><a href="object_detection.html#fastdeploy.vision.detection.YOLOv5Lite.is_decode_exported">is_decode_exported (fastdeploy.vision.detection.YOLOv5Lite property)</a>
 
       <ul>
@@ -502,7 +650,7 @@ title="Fullscreen mode"
       </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="runtime_option.html#fastdeploy.RuntimeOption.is_dynamic">is_dynamic (fastdeploy.RuntimeOption property)</a>
+      <li><a href="object_detection.html#fastdeploy.vision.detection.YOLOv5Preprocessor.is_mini_pad">is_mini_pad (fastdeploy.vision.detection.YOLOv5Preprocessor property)</a>
 </li>
       <li><a href="object_detection.html#fastdeploy.vision.detection.YOLOv5Preprocessor.is_scale_up">is_scale_up (fastdeploy.vision.detection.YOLOv5Preprocessor property)</a>
 
@@ -518,20 +666,6 @@ title="Fullscreen mode"
 <h2 id="L">L</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="face_recognition.html#fastdeploy.vision.faceid.AdaFace.l2_normalize">l2_normalize (fastdeploy.vision.faceid.AdaFace property)</a>
-
-      <ul>
-        <li><a href="face_recognition.html#fastdeploy.vision.faceid.ArcFace.l2_normalize">(fastdeploy.vision.faceid.ArcFace property)</a>
-</li>
-        <li><a href="face_recognition.html#fastdeploy.vision.faceid.CosFace.l2_normalize">(fastdeploy.vision.faceid.CosFace property)</a>
-</li>
-        <li><a href="face_recognition.html#fastdeploy.vision.faceid.PartialFC.l2_normalize">(fastdeploy.vision.faceid.PartialFC property)</a>
-</li>
-        <li><a href="face_recognition.html#fastdeploy.vision.faceid.VPL.l2_normalize">(fastdeploy.vision.faceid.VPL property)</a>
-</li>
-      </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="face_detection.html#fastdeploy.vision.facedet.RetinaFace.landmarks_per_face">landmarks_per_face (fastdeploy.vision.facedet.RetinaFace property)</a>
 
       <ul>
@@ -540,8 +674,6 @@ title="Fullscreen mode"
         <li><a href="face_detection.html#fastdeploy.vision.facedet.YOLOv5Face.landmarks_per_face">(fastdeploy.vision.facedet.YOLOv5Face property)</a>
 </li>
       </ul></li>
-      <li><a href="runtime_option.html#fastdeploy.RuntimeOption.long_to_int">long_to_int (fastdeploy.RuntimeOption property)</a>
-</li>
   </ul></td>
 </tr></table>
 
@@ -551,6 +683,8 @@ title="Fullscreen mode"
       <li><a href="object_detection.html#fastdeploy.vision.detection.MaskRCNN">MaskRCNN (class in fastdeploy.vision.detection)</a>
 </li>
       <li><a href="face_detection.html#fastdeploy.vision.facedet.SCRFD.max_nms">max_nms (fastdeploy.vision.facedet.SCRFD property)</a>
+</li>
+      <li><a href="ocr.html#fastdeploy.vision.ocr.DBDetectorPreprocessor.max_side_len">max_side_len (fastdeploy.vision.ocr.DBDetectorPreprocessor property)</a>
 </li>
       <li><a href="image_classification.html#fastdeploy.vision.classification.ResNet.mean_vals">mean_vals (fastdeploy.vision.classification.ResNet property)</a>
 
@@ -580,8 +714,12 @@ title="Fullscreen mode"
         <li><a href="object_detection.html#fastdeploy.vision.detection.YOLOv7Postprocessor.nms_threshold">(fastdeploy.vision.detection.YOLOv7Postprocessor property)</a>
 </li>
       </ul></li>
+      <li><a href="vision_processor.html#fastdeploy.vision.common.processors.Normalize">Normalize (class in fastdeploy.vision.common.processors)</a>
+</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="vision_processor.html#fastdeploy.vision.common.processors.NormalizeAndPermute">NormalizeAndPermute (class in fastdeploy.vision.common.processors)</a>
+</li>
       <li><a href="face_detection.html#fastdeploy.vision.facedet.SCRFD.num_anchors">num_anchors (fastdeploy.vision.facedet.SCRFD property)</a>
 </li>
       <li><a href="runtime.html#fastdeploy.Runtime.num_inputs">num_inputs() (fastdeploy.Runtime method)</a>
@@ -593,15 +731,33 @@ title="Fullscreen mode"
   </ul></td>
 </tr></table>
 
+<h2 id="O">O</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="runtime_option.html#fastdeploy.RuntimeOption.openvino_option">openvino_option (fastdeploy.RuntimeOption property)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="runtime_option.html#fastdeploy.RuntimeOption.ort_option">ort_option (fastdeploy.RuntimeOption property)</a>
+</li>
+  </ul></td>
+</tr></table>
+
 <h2 id="P">P</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="vision_processor.html#fastdeploy.vision.common.processors.Pad">Pad (class in fastdeploy.vision.common.processors)</a>
+</li>
       <li><a href="object_detection.html#fastdeploy.vision.detection.YOLOv5Preprocessor.padding_value">padding_value (fastdeploy.vision.detection.YOLOv5Preprocessor property)</a>
 
       <ul>
         <li><a href="object_detection.html#fastdeploy.vision.detection.YOLOv7Preprocessor.padding_value">(fastdeploy.vision.detection.YOLOv7Preprocessor property)</a>
 </li>
       </ul></li>
+      <li><a href="runtime_option.html#fastdeploy.RuntimeOption.paddle_infer_option">paddle_infer_option (fastdeploy.RuntimeOption property)</a>
+</li>
+      <li><a href="runtime_option.html#fastdeploy.RuntimeOption.paddle_lite_option">paddle_lite_option (fastdeploy.RuntimeOption property)</a>
+</li>
       <li><a href="image_classification.html#fastdeploy.vision.classification.PaddleClasModel">PaddleClasModel (class in fastdeploy.vision.classification)</a>
 </li>
       <li><a href="image_classification.html#fastdeploy.vision.classification.PaddleClasPostprocessor">PaddleClasPostprocessor (class in fastdeploy.vision.classification)</a>
@@ -620,6 +776,8 @@ title="Fullscreen mode"
 </li>
       <li><a href="object_detection.html#fastdeploy.vision.detection.PaddleYOLOX">PaddleYOLOX (class in fastdeploy.vision.detection)</a>, <a href="object_detection.html#fastdeploy.vision.detection.PaddleYOLOX">[1]</a>
 </li>
+      <li><a href="vision_processor.html#fastdeploy.vision.common.processors.PadToSize">PadToSize (class in fastdeploy.vision.common.processors)</a>
+</li>
       <li><a href="face_recognition.html#fastdeploy.vision.faceid.PartialFC">PartialFC (class in fastdeploy.vision.faceid)</a>
 </li>
       <li><a href="face_alignment.html#fastdeploy.vision.facealign.PFLD">PFLD (class in fastdeploy.vision.facealign)</a>
@@ -628,9 +786,13 @@ title="Fullscreen mode"
 </li>
       <li><a href="face_alignment.html#fastdeploy.vision.facealign.PIPNet">PIPNet (class in fastdeploy.vision.facealign)</a>
 </li>
+      <li><a href="runtime_option.html#fastdeploy.RuntimeOption.poros_option">poros_option (fastdeploy.RuntimeOption property)</a>
+</li>
       <li><a href="image_classification.html#fastdeploy.vision.classification.PaddleClasModel.postprocessor">postprocessor (fastdeploy.vision.classification.PaddleClasModel property)</a>
 
       <ul>
+        <li><a href="image_classification.html#fastdeploy.vision.classification.YOLOv5Cls.postprocessor">(fastdeploy.vision.classification.YOLOv5Cls property)</a>
+</li>
         <li><a href="object_detection.html#fastdeploy.vision.detection.FasterRCNN.postprocessor">(fastdeploy.vision.detection.FasterRCNN property)</a>
 </li>
         <li><a href="object_detection.html#fastdeploy.vision.detection.MaskRCNN.postprocessor">(fastdeploy.vision.detection.MaskRCNN property)</a>
@@ -646,6 +808,16 @@ title="Fullscreen mode"
         <li><a href="object_detection.html#fastdeploy.vision.detection.YOLOv5.postprocessor">(fastdeploy.vision.detection.YOLOv5 property)</a>
 </li>
         <li><a href="object_detection.html#fastdeploy.vision.detection.YOLOv7.postprocessor">(fastdeploy.vision.detection.YOLOv7 property)</a>
+</li>
+        <li><a href="face_recognition.html#fastdeploy.vision.faceid.AdaFace.postprocessor">(fastdeploy.vision.faceid.AdaFace property)</a>
+</li>
+        <li><a href="face_recognition.html#fastdeploy.vision.faceid.ArcFace.postprocessor">(fastdeploy.vision.faceid.ArcFace property)</a>
+</li>
+        <li><a href="face_recognition.html#fastdeploy.vision.faceid.CosFace.postprocessor">(fastdeploy.vision.faceid.CosFace property)</a>
+</li>
+        <li><a href="face_recognition.html#fastdeploy.vision.faceid.PartialFC.postprocessor">(fastdeploy.vision.faceid.PartialFC property)</a>
+</li>
+        <li><a href="face_recognition.html#fastdeploy.vision.faceid.VPL.postprocessor">(fastdeploy.vision.faceid.VPL property)</a>
 </li>
         <li><a href="semantic_segmentation.html#fastdeploy.vision.segmentation.PaddleSegModel.postprocessor">(fastdeploy.vision.segmentation.PaddleSegModel property)</a>
 </li>
@@ -753,6 +925,8 @@ title="Fullscreen mode"
       <li><a href="image_classification.html#fastdeploy.vision.classification.PaddleClasModel.preprocessor">preprocessor (fastdeploy.vision.classification.PaddleClasModel property)</a>
 
       <ul>
+        <li><a href="image_classification.html#fastdeploy.vision.classification.YOLOv5Cls.preprocessor">(fastdeploy.vision.classification.YOLOv5Cls property)</a>
+</li>
         <li><a href="object_detection.html#fastdeploy.vision.detection.FasterRCNN.preprocessor">(fastdeploy.vision.detection.FasterRCNN property)</a>
 </li>
         <li><a href="object_detection.html#fastdeploy.vision.detection.MaskRCNN.preprocessor">(fastdeploy.vision.detection.MaskRCNN property)</a>
@@ -769,9 +943,23 @@ title="Fullscreen mode"
 </li>
         <li><a href="object_detection.html#fastdeploy.vision.detection.YOLOv7.preprocessor">(fastdeploy.vision.detection.YOLOv7 property)</a>
 </li>
+        <li><a href="face_recognition.html#fastdeploy.vision.faceid.AdaFace.preprocessor">(fastdeploy.vision.faceid.AdaFace property)</a>
+</li>
+        <li><a href="face_recognition.html#fastdeploy.vision.faceid.ArcFace.preprocessor">(fastdeploy.vision.faceid.ArcFace property)</a>
+</li>
+        <li><a href="face_recognition.html#fastdeploy.vision.faceid.CosFace.preprocessor">(fastdeploy.vision.faceid.CosFace property)</a>
+</li>
+        <li><a href="face_recognition.html#fastdeploy.vision.faceid.PartialFC.preprocessor">(fastdeploy.vision.faceid.PartialFC property)</a>
+</li>
+        <li><a href="face_recognition.html#fastdeploy.vision.faceid.VPL.preprocessor">(fastdeploy.vision.faceid.VPL property)</a>
+</li>
         <li><a href="semantic_segmentation.html#fastdeploy.vision.segmentation.PaddleSegModel.preprocessor">(fastdeploy.vision.segmentation.PaddleSegModel property)</a>
 </li>
       </ul></li>
+      <li><a href="vision_processor.html#fastdeploy.vision.common.processors.Processor">Processor (class in fastdeploy.vision.common.processors)</a>
+</li>
+      <li><a href="vision_processor.html#fastdeploy.vision.common.manager.PyProcessorManager">PyProcessorManager (class in fastdeploy.vision.common.manager)</a>
+</li>
   </ul></td>
 </tr></table>
 
@@ -780,7 +968,15 @@ title="Fullscreen mode"
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="ocr.html#fastdeploy.vision.ocr.Recognizer">Recognizer (class in fastdeploy.vision.ocr)</a>
 </li>
+      <li><a href="ocr.html#fastdeploy.vision.ocr.RecognizerPostprocessor">RecognizerPostprocessor (class in fastdeploy.vision.ocr)</a>
+</li>
+      <li><a href="ocr.html#fastdeploy.vision.ocr.RecognizerPreprocessor">RecognizerPreprocessor (class in fastdeploy.vision.ocr)</a>
+</li>
       <li><a href="object_detection.html#fastdeploy.vision.detection.NanoDetPlus.reg_max">reg_max (fastdeploy.vision.detection.NanoDetPlus property)</a>
+</li>
+      <li><a href="vision_processor.html#fastdeploy.vision.common.processors.Resize">Resize (class in fastdeploy.vision.common.processors)</a>
+</li>
+      <li><a href="vision_processor.html#fastdeploy.vision.common.processors.ResizeByShort">ResizeByShort (class in fastdeploy.vision.common.processors)</a>
 </li>
       <li><a href="image_classification.html#fastdeploy.vision.classification.ResNet">ResNet (class in fastdeploy.vision.classification)</a>
 </li>
@@ -805,6 +1001,18 @@ title="Fullscreen mode"
 </li>
         <li><a href="object_detection.html#fastdeploy.vision.detection.YOLOv7Preprocessor.run">(fastdeploy.vision.detection.YOLOv7Preprocessor method)</a>
 </li>
+        <li><a href="ocr.html#fastdeploy.vision.ocr.ClassifierPostprocessor.run">(fastdeploy.vision.ocr.ClassifierPostprocessor method)</a>
+</li>
+        <li><a href="ocr.html#fastdeploy.vision.ocr.ClassifierPreprocessor.run">(fastdeploy.vision.ocr.ClassifierPreprocessor method)</a>
+</li>
+        <li><a href="ocr.html#fastdeploy.vision.ocr.DBDetectorPostprocessor.run">(fastdeploy.vision.ocr.DBDetectorPostprocessor method)</a>
+</li>
+        <li><a href="ocr.html#fastdeploy.vision.ocr.DBDetectorPreprocessor.run">(fastdeploy.vision.ocr.DBDetectorPreprocessor method)</a>
+</li>
+        <li><a href="ocr.html#fastdeploy.vision.ocr.RecognizerPostprocessor.run">(fastdeploy.vision.ocr.RecognizerPostprocessor method)</a>
+</li>
+        <li><a href="ocr.html#fastdeploy.vision.ocr.RecognizerPreprocessor.run">(fastdeploy.vision.ocr.RecognizerPreprocessor method)</a>
+</li>
         <li><a href="semantic_segmentation.html#fastdeploy.vision.segmentation.PaddleSegPostprocessor.run">(fastdeploy.vision.segmentation.PaddleSegPostprocessor method)</a>
 </li>
         <li><a href="semantic_segmentation.html#fastdeploy.vision.segmentation.PaddleSegPreprocessor.run">(fastdeploy.vision.segmentation.PaddleSegPreprocessor method)</a>
@@ -828,10 +1036,38 @@ title="Fullscreen mode"
 </li>
       <li><a href="runtime_option.html#fastdeploy.RuntimeOption.set_cpu_thread_num">set_cpu_thread_num() (fastdeploy.RuntimeOption method)</a>
 </li>
+      <li><a href="runtime_option.html#fastdeploy.RuntimeOption.set_encryption_key">set_encryption_key() (fastdeploy.RuntimeOption method)</a>
+</li>
+      <li><a href="runtime_option.html#fastdeploy.RuntimeOption.set_external_raw_stream">set_external_raw_stream() (fastdeploy.RuntimeOption method)</a>
+</li>
+      <li><a href="runtime_option.html#fastdeploy.RuntimeOption.set_lite_context_properties">set_lite_context_properties() (fastdeploy.RuntimeOption method)</a>
+</li>
+      <li><a href="runtime_option.html#fastdeploy.RuntimeOption.set_lite_dynamic_shape_info">set_lite_dynamic_shape_info() (fastdeploy.RuntimeOption method)</a>
+</li>
+      <li><a href="runtime_option.html#fastdeploy.RuntimeOption.set_lite_mixed_precision_quantization_config_path">set_lite_mixed_precision_quantization_config_path() (fastdeploy.RuntimeOption method)</a>
+</li>
+      <li><a href="runtime_option.html#fastdeploy.RuntimeOption.set_lite_model_cache_dir">set_lite_model_cache_dir() (fastdeploy.RuntimeOption method)</a>
+</li>
       <li><a href="runtime_option.html#fastdeploy.RuntimeOption.set_lite_power_mode">set_lite_power_mode() (fastdeploy.RuntimeOption method)</a>
+</li>
+      <li><a href="runtime_option.html#fastdeploy.RuntimeOption.set_lite_subgraph_partition_config_buffer">set_lite_subgraph_partition_config_buffer() (fastdeploy.RuntimeOption method)</a>
+</li>
+      <li><a href="runtime_option.html#fastdeploy.RuntimeOption.set_lite_subgraph_partition_path">set_lite_subgraph_partition_path() (fastdeploy.RuntimeOption method)</a>
+</li>
+      <li><a href="runtime_option.html#fastdeploy.RuntimeOption.set_model_buffer">set_model_buffer() (fastdeploy.RuntimeOption method)</a>
 </li>
       <li><a href="runtime_option.html#fastdeploy.RuntimeOption.set_model_path">set_model_path() (fastdeploy.RuntimeOption method)</a>
 </li>
+      <li><a href="object_detection.html#fastdeploy.vision.detection.PaddleDetPostprocessor.set_nms_option">set_nms_option() (fastdeploy.vision.detection.PaddleDetPostprocessor method)</a>
+</li>
+      <li><a href="ocr.html#fastdeploy.vision.ocr.ClassifierPreprocessor.set_normalize">set_normalize() (fastdeploy.vision.ocr.ClassifierPreprocessor method)</a>
+
+      <ul>
+        <li><a href="ocr.html#fastdeploy.vision.ocr.DBDetectorPreprocessor.set_normalize">(fastdeploy.vision.ocr.DBDetectorPreprocessor method)</a>
+</li>
+        <li><a href="ocr.html#fastdeploy.vision.ocr.RecognizerPreprocessor.set_normalize">(fastdeploy.vision.ocr.RecognizerPreprocessor method)</a>
+</li>
+      </ul></li>
       <li><a href="runtime_option.html#fastdeploy.RuntimeOption.set_openvino_cpu_operators">set_openvino_cpu_operators() (fastdeploy.RuntimeOption method)</a>
 </li>
       <li><a href="runtime_option.html#fastdeploy.RuntimeOption.set_openvino_device">set_openvino_device() (fastdeploy.RuntimeOption method)</a>
@@ -852,11 +1088,11 @@ title="Fullscreen mode"
 </li>
       <li><a href="runtime_option.html#fastdeploy.RuntimeOption.set_trt_max_workspace_size">set_trt_max_workspace_size() (fastdeploy.RuntimeOption method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="image_classification.html#fastdeploy.vision.classification.ResNet.size">size (fastdeploy.vision.classification.ResNet property)</a>
 
       <ul>
-        <li><a href="image_classification.html#fastdeploy.vision.classification.YOLOv5Cls.size">(fastdeploy.vision.classification.YOLOv5Cls property)</a>
-</li>
         <li><a href="object_detection.html#fastdeploy.vision.detection.NanoDetPlus.size">(fastdeploy.vision.detection.NanoDetPlus property)</a>
 </li>
         <li><a href="object_detection.html#fastdeploy.vision.detection.ScaledYOLOv4.size">(fastdeploy.vision.detection.ScaledYOLOv4 property)</a>
@@ -891,16 +1127,6 @@ title="Fullscreen mode"
 </li>
         <li><a href="face_detection.html#fastdeploy.vision.facedet.YOLOv5Face.size">(fastdeploy.vision.facedet.YOLOv5Face property)</a>
 </li>
-        <li><a href="face_recognition.html#fastdeploy.vision.faceid.AdaFace.size">(fastdeploy.vision.faceid.AdaFace property)</a>
-</li>
-        <li><a href="face_recognition.html#fastdeploy.vision.faceid.ArcFace.size">(fastdeploy.vision.faceid.ArcFace property)</a>
-</li>
-        <li><a href="face_recognition.html#fastdeploy.vision.faceid.CosFace.size">(fastdeploy.vision.faceid.CosFace property)</a>
-</li>
-        <li><a href="face_recognition.html#fastdeploy.vision.faceid.PartialFC.size">(fastdeploy.vision.faceid.PartialFC property)</a>
-</li>
-        <li><a href="face_recognition.html#fastdeploy.vision.faceid.VPL.size">(fastdeploy.vision.faceid.VPL property)</a>
-</li>
         <li><a href="headpose.html#fastdeploy.vision.headpose.FSANet.size">(fastdeploy.vision.headpose.FSANet property)</a>
 </li>
         <li><a href="matting.html#fastdeploy.vision.matting.MODNet.size">(fastdeploy.vision.matting.MODNet property)</a>
@@ -908,8 +1134,6 @@ title="Fullscreen mode"
         <li><a href="matting.html#fastdeploy.vision.matting.RobustVideoMatting.size">(fastdeploy.vision.matting.RobustVideoMatting property)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="image_classification.html#fastdeploy.vision.classification.ResNet.std_vals">std_vals (fastdeploy.vision.classification.ResNet property)</a>
 
       <ul>
@@ -918,22 +1142,24 @@ title="Fullscreen mode"
       </ul></li>
       <li><a href="semantic_segmentation.html#fastdeploy.vision.segmentation.PaddleSegPostprocessor.store_score_map">store_score_map (fastdeploy.vision.segmentation.PaddleSegPostprocessor property)</a>
 </li>
-      <li><a href="face_recognition.html#fastdeploy.vision.faceid.AdaFace.swap_rb">swap_rb (fastdeploy.vision.faceid.AdaFace property)</a>
+      <li><a href="object_detection.html#fastdeploy.vision.detection.YOLOv5Preprocessor.stride">stride (fastdeploy.vision.detection.YOLOv5Preprocessor property)</a>
+</li>
+      <li><a href="vision_processor.html#fastdeploy.vision.common.processors.StridePad">StridePad (class in fastdeploy.vision.common.processors)</a>
+</li>
+      <li><a href="matting.html#fastdeploy.vision.matting.MODNet.swap_rb">swap_rb (fastdeploy.vision.matting.MODNet property)</a>
 
       <ul>
-        <li><a href="face_recognition.html#fastdeploy.vision.faceid.ArcFace.swap_rb">(fastdeploy.vision.faceid.ArcFace property)</a>
-</li>
-        <li><a href="face_recognition.html#fastdeploy.vision.faceid.CosFace.swap_rb">(fastdeploy.vision.faceid.CosFace property)</a>
-</li>
-        <li><a href="face_recognition.html#fastdeploy.vision.faceid.PartialFC.swap_rb">(fastdeploy.vision.faceid.PartialFC property)</a>
-</li>
-        <li><a href="face_recognition.html#fastdeploy.vision.faceid.VPL.swap_rb">(fastdeploy.vision.faceid.VPL property)</a>
-</li>
-        <li><a href="matting.html#fastdeploy.vision.matting.MODNet.swap_rb">(fastdeploy.vision.matting.MODNet property)</a>
-</li>
         <li><a href="matting.html#fastdeploy.vision.matting.RobustVideoMatting.swap_rb">(fastdeploy.vision.matting.RobustVideoMatting property)</a>
 </li>
       </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="T">T</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="runtime_option.html#fastdeploy.RuntimeOption.trt_option">trt_option (fastdeploy.RuntimeOption property)</a>
+</li>
   </ul></td>
 </tr></table>
 
@@ -942,25 +1168,37 @@ title="Fullscreen mode"
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="face_detection.html#fastdeploy.vision.facedet.UltraFace">UltraFace (class in fastdeploy.vision.facedet)</a>
 </li>
-      <li><a href="runtime_option.html#fastdeploy.RuntimeOption.unconst_ops_thres">unconst_ops_thres (fastdeploy.RuntimeOption property)</a>
+      <li><a href="runtime_option.html#fastdeploy.RuntimeOption.use_ascend">use_ascend() (fastdeploy.RuntimeOption method)</a>
 </li>
       <li><a href="runtime_option.html#fastdeploy.RuntimeOption.use_cpu">use_cpu() (fastdeploy.RuntimeOption method)</a>
 </li>
-      <li><a href="keypoint_detection.html#fastdeploy.vision.keypointdetection.PPTinyPose.use_dark">use_dark (fastdeploy.vision.keypointdetection.PPTinyPose property)</a>
-</li>
-      <li><a href="runtime_option.html#fastdeploy.RuntimeOption.use_gpu">use_gpu() (fastdeploy.RuntimeOption method)</a>
+      <li><a href="image_classification.html#fastdeploy.vision.classification.PaddleClasPreprocessor.use_cuda">use_cuda() (fastdeploy.vision.classification.PaddleClasPreprocessor method)</a>
 
       <ul>
-        <li><a href="image_classification.html#fastdeploy.vision.classification.PaddleClasPreprocessor.use_gpu">(fastdeploy.vision.classification.PaddleClasPreprocessor method)</a>
+        <li><a href="vision_processor.html#fastdeploy.vision.common.manager.PyProcessorManager.use_cuda">(fastdeploy.vision.common.manager.PyProcessorManager method)</a>
+</li>
+        <li><a href="object_detection.html#fastdeploy.vision.detection.PaddleDetPreprocessor.use_cuda">(fastdeploy.vision.detection.PaddleDetPreprocessor method)</a>
+</li>
+        <li><a href="ocr.html#fastdeploy.vision.ocr.ClassifierPreprocessor.use_cuda">(fastdeploy.vision.ocr.ClassifierPreprocessor method)</a>
+</li>
+        <li><a href="ocr.html#fastdeploy.vision.ocr.DBDetectorPreprocessor.use_cuda">(fastdeploy.vision.ocr.DBDetectorPreprocessor method)</a>
+</li>
+        <li><a href="ocr.html#fastdeploy.vision.ocr.RecognizerPreprocessor.use_cuda">(fastdeploy.vision.ocr.RecognizerPreprocessor method)</a>
 </li>
       </ul></li>
-      <li><a href="face_detection.html#fastdeploy.vision.facedet.SCRFD.use_kps">use_kps (fastdeploy.vision.facedet.SCRFD property)</a>
+      <li><a href="keypoint_detection.html#fastdeploy.vision.keypointdetection.PPTinyPose.use_dark">use_dark (fastdeploy.vision.keypointdetection.PPTinyPose property)</a>
 </li>
-      <li><a href="runtime_option.html#fastdeploy.RuntimeOption.use_lite_backend">use_lite_backend() (fastdeploy.RuntimeOption method)</a>
+      <li><a href="ocr.html#fastdeploy.vision.ocr.DBDetectorPostprocessor.use_dilation">use_dilation (fastdeploy.vision.ocr.DBDetectorPostprocessor property)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="runtime_option.html#fastdeploy.RuntimeOption.use_nvidia_tf32">use_nvidia_tf32 (fastdeploy.RuntimeOption property)</a>
+      <li><a href="runtime_option.html#fastdeploy.RuntimeOption.use_gpu">use_gpu() (fastdeploy.RuntimeOption method)</a>
+</li>
+      <li><a href="face_detection.html#fastdeploy.vision.facedet.SCRFD.use_kps">use_kps (fastdeploy.vision.facedet.SCRFD property)</a>
+</li>
+      <li><a href="runtime_option.html#fastdeploy.RuntimeOption.use_kunlunxin">use_kunlunxin() (fastdeploy.RuntimeOption method)</a>
+</li>
+      <li><a href="runtime_option.html#fastdeploy.RuntimeOption.use_lite_backend">use_lite_backend() (fastdeploy.RuntimeOption method)</a>
 </li>
       <li><a href="runtime_option.html#fastdeploy.RuntimeOption.use_openvino_backend">use_openvino_backend() (fastdeploy.RuntimeOption method)</a>
 </li>
@@ -973,6 +1211,8 @@ title="Fullscreen mode"
       <li><a href="runtime_option.html#fastdeploy.RuntimeOption.use_paddle_lite_backend">use_paddle_lite_backend() (fastdeploy.RuntimeOption method)</a>
 </li>
       <li><a href="runtime_option.html#fastdeploy.RuntimeOption.use_poros_backend">use_poros_backend() (fastdeploy.RuntimeOption method)</a>
+</li>
+      <li><a href="runtime_option.html#fastdeploy.RuntimeOption.use_sophgo">use_sophgo() (fastdeploy.RuntimeOption method)</a>
 </li>
       <li><a href="runtime_option.html#fastdeploy.RuntimeOption.use_trt_backend">use_trt_backend() (fastdeploy.RuntimeOption method)</a>
 </li>
@@ -1053,36 +1293,67 @@ title="Fullscreen mode"
 
 
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
   
-    By PaddlePaddle<br/>
-  
-      &copy; Copyright 2022, PaddlePaddle.<br/>
-</p>
-        </footer>
-    </div>
+  <div class="footer-item">
     
-</div>
+<p class="component-author">
+By PaddlePaddle
+</p>
 
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022, PaddlePaddle.
+      <br/>
+    
+  </p>
 
-      </div>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div></div>
+          </footer>
+        
+
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

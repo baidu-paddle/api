@@ -1,0 +1,461 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fastdeploy.vision.common.processors &#8212; FastDeploy Python API latest documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+
+  
+  <link href="../../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+
+    <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/fastdeploy/vision/common/processors';</script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../../../index.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">FastDeploy Python API latest documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Vision Task Model API (视觉任务模型API)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../../object_detection.html">Object Detection(目标检测)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ocr.html">OCR(文字识别)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../semantic_segmentation.html">Semantic Segmentation(语义分割)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../image_classification.html">Image Classification(图像分类)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../keypoint_detection.html">Keypoint Detection(关键点检测)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../matting.html">Matting(图像抠图)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../face_recognition.html">Face Recognition(人脸识别)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../face_detection.html">Face Detection(人脸检测)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../face_alignment.html">Face Alignment(人脸对齐)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../headpose.html">Headpose(头部姿态)</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Predict Result Struct (预测结果结构体)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../../vision_results_en.html">Description of Vision Results</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">FastDeploy Runtime API (多后端推理引擎API)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../../runtime.html">Runtime(模型推理Runtime)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../runtime_option.html">Runtime Option(Runtime配置)</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Vision Processor (图像预处理库)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../../vision_processor.html">Vision Processor(多硬件图像处理库)</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <h1>Source code for fastdeploy.vision.common.processors</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">absolute_import</span>
+<span class="kn">from</span> <span class="nn">...</span> <span class="kn">import</span> <span class="n">c_lib_wrap</span> <span class="k">as</span> <span class="n">C</span>
+
+
+<div class="viewcode-block" id="Processor"><a class="viewcode-back" href="../../../../vision_processor.html#fastdeploy.vision.common.processors.Processor">[docs]</a><span class="k">class</span> <span class="nc">Processor</span><span class="p">():</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">processor</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mat</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;call for processing input.</span>
+
+<span class="sd">        :param mat: The input data FDMat or FDMatBatch.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">processor</span><span class="p">(</span><span class="n">mat</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="ResizeByShort"><a class="viewcode-back" href="../../../../vision_processor.html#fastdeploy.vision.common.processors.ResizeByShort">[docs]</a><span class="k">class</span> <span class="nc">ResizeByShort</span><span class="p">(</span><span class="n">Processor</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target_size</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">interp</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">use_scale</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">max_hw</span><span class="o">=</span><span class="p">[]):</span>
+        <span class="sd">&quot;&quot;&quot;Create a ResizeByShort operation with the given parameters.</span>
+
+<span class="sd">        :param target_size: The target short size to resize the image</span>
+<span class="sd">        :param interp: Optionally, the interpolation mode for resizing image</span>
+<span class="sd">        :param use_scale: Optionally, whether to scale image</span>
+<span class="sd">        :param max_hw: Max spatial size which is used by ResizeByShort</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">processor</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">vision</span><span class="o">.</span><span class="n">processors</span><span class="o">.</span><span class="n">ResizeByShort</span><span class="p">(</span><span class="n">target_size</span><span class="p">,</span> <span class="n">interp</span><span class="p">,</span>
+                                                           <span class="n">use_scale</span><span class="p">,</span> <span class="n">max_hw</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="CenterCrop"><a class="viewcode-back" href="../../../../vision_processor.html#fastdeploy.vision.common.processors.CenterCrop">[docs]</a><span class="k">class</span> <span class="nc">CenterCrop</span><span class="p">(</span><span class="n">Processor</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Create a CenterCrop operation with the given parameters.</span>
+
+<span class="sd">        :param width: Desired width of the cropped image</span>
+<span class="sd">        :param height: Desired height of the cropped image</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">processor</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">vision</span><span class="o">.</span><span class="n">processors</span><span class="o">.</span><span class="n">CenterCrop</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Pad"><a class="viewcode-back" href="../../../../vision_processor.html#fastdeploy.vision.common.processors.Pad">[docs]</a><span class="k">class</span> <span class="nc">Pad</span><span class="p">(</span><span class="n">Processor</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">top</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">bottom</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">left</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">right</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="p">[]):</span>
+        <span class="sd">&quot;&quot;&quot;Create a Pad operation with the given parameters.</span>
+
+<span class="sd">        :param top: The top padding</span>
+<span class="sd">        :param bottom: The bottom padding</span>
+<span class="sd">        :param left: The left padding</span>
+<span class="sd">        :param right: The right padding</span>
+<span class="sd">        :param value: the value that is used to pad on the input image</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">processor</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">vision</span><span class="o">.</span><span class="n">processors</span><span class="o">.</span><span class="n">Pad</span><span class="p">(</span><span class="n">top</span><span class="p">,</span> <span class="n">bottom</span><span class="p">,</span> <span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">,</span>
+                                                 <span class="n">value</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="NormalizeAndPermute"><a class="viewcode-back" href="../../../../vision_processor.html#fastdeploy.vision.common.processors.NormalizeAndPermute">[docs]</a><span class="k">class</span> <span class="nc">NormalizeAndPermute</span><span class="p">(</span><span class="n">Processor</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                 <span class="n">mean</span><span class="o">=</span><span class="p">[],</span>
+                 <span class="n">std</span><span class="o">=</span><span class="p">[],</span>
+                 <span class="n">is_scale</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                 <span class="nb">min</span><span class="o">=</span><span class="p">[],</span>
+                 <span class="nb">max</span><span class="o">=</span><span class="p">[],</span>
+                 <span class="n">swap_rb</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Creae a Normalize and a Permute operation with the given parameters.</span>
+
+<span class="sd">        :param mean: A list containing the mean of each channel</span>
+<span class="sd">        :param std: A list containing the standard deviation of each channel</span>
+<span class="sd">        :param is_scale: Specifies if the image are being scaled or not</span>
+<span class="sd">        :param min: A list containing the minimum value of each channel</span>
+<span class="sd">        :param max: A list containing the maximum value of each channel</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">processor</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">vision</span><span class="o">.</span><span class="n">processors</span><span class="o">.</span><span class="n">NormalizeAndPermute</span><span class="p">(</span>
+            <span class="n">mean</span><span class="p">,</span> <span class="n">std</span><span class="p">,</span> <span class="n">is_scale</span><span class="p">,</span> <span class="nb">min</span><span class="p">,</span> <span class="nb">max</span><span class="p">,</span> <span class="n">swap_rb</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Cast"><a class="viewcode-back" href="../../../../vision_processor.html#fastdeploy.vision.common.processors.Cast">[docs]</a><span class="k">class</span> <span class="nc">Cast</span><span class="p">(</span><span class="n">Processor</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;float&quot;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Creat a new cast opereaton with given dtype</span>
+
+<span class="sd">        :param dtype: Target dtype of the output</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">processor</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">vision</span><span class="o">.</span><span class="n">processors</span><span class="o">.</span><span class="n">Cast</span><span class="p">(</span><span class="n">dtype</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="HWC2CHW"><a class="viewcode-back" href="../../../../vision_processor.html#fastdeploy.vision.common.processors.HWC2CHW">[docs]</a><span class="k">class</span> <span class="nc">HWC2CHW</span><span class="p">(</span><span class="n">Processor</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Creat a new hwc2chw processor with default dtype.</span>
+
+<span class="sd">        :return An instance of processor `HWC2CHW`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">processor</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">vision</span><span class="o">.</span><span class="n">processors</span><span class="o">.</span><span class="n">HWC2CHW</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="Normalize"><a class="viewcode-back" href="../../../../vision_processor.html#fastdeploy.vision.common.processors.Normalize">[docs]</a><span class="k">class</span> <span class="nc">Normalize</span><span class="p">(</span><span class="n">Processor</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mean</span><span class="p">,</span> <span class="n">std</span><span class="p">,</span> <span class="n">is_scale</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="nb">min</span><span class="o">=</span><span class="p">[],</span> <span class="nb">max</span><span class="o">=</span><span class="p">[],</span>
+                 <span class="n">swap_rb</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Creat a new normalize opereator with given paremeters.</span>
+
+<span class="sd">        :param mean: A list containing the mean of each channel</span>
+<span class="sd">        :param std: A list containing the standard deviation of each channel</span>
+<span class="sd">        :param is_scale: Specifies if the image are being scaled or not</span>
+<span class="sd">        :param min: A list containing the minimum value of each channel</span>
+<span class="sd">        :param max: A list containing the maximum value of each channel</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">processor</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">vision</span><span class="o">.</span><span class="n">processors</span><span class="o">.</span><span class="n">Normalize</span><span class="p">(</span><span class="n">mean</span><span class="p">,</span> <span class="n">std</span><span class="p">,</span> <span class="n">is_scale</span><span class="p">,</span>
+                                                       <span class="nb">min</span><span class="p">,</span> <span class="nb">max</span><span class="p">,</span> <span class="n">swap_rb</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="PadToSize"><a class="viewcode-back" href="../../../../vision_processor.html#fastdeploy.vision.common.processors.PadToSize">[docs]</a><span class="k">class</span> <span class="nc">PadToSize</span><span class="p">(</span><span class="n">Processor</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="p">[]):</span>
+        <span class="sd">&quot;&quot;&quot;Create a new PadToSize opereator with given parameters.</span>
+
+<span class="sd">        :param width: Desired width of the output image</span>
+<span class="sd">        :param height: Desired height of the output image</span>
+<span class="sd">        :param value: Values to pad with</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">processor</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">vision</span><span class="o">.</span><span class="n">processors</span><span class="o">.</span><span class="n">PadToSize</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Resize"><a class="viewcode-back" href="../../../../vision_processor.html#fastdeploy.vision.common.processors.Resize">[docs]</a><span class="k">class</span> <span class="nc">Resize</span><span class="p">(</span><span class="n">Processor</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                 <span class="n">width</span><span class="p">,</span>
+                 <span class="n">height</span><span class="p">,</span>
+                 <span class="n">scale_w</span><span class="o">=-</span><span class="mf">1.0</span><span class="p">,</span>
+                 <span class="n">scale_h</span><span class="o">=-</span><span class="mf">1.0</span><span class="p">,</span>
+                 <span class="n">interp</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                 <span class="n">use_scale</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Create a Resize operation with the given parameters.</span>
+
+<span class="sd">        :param width: Desired width of the output image</span>
+<span class="sd">        :param height: Desired height of the output image</span>
+<span class="sd">        :param scale_w: Scales the width in x-direction</span>
+<span class="sd">        :param scale_h: Scales the height in y-direction</span>
+<span class="sd">        :param interp: Optionally, the interpolation mode for resizing image</span>
+<span class="sd">        :param use_scale: Optionally, whether to scale image</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">processor</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">vision</span><span class="o">.</span><span class="n">processors</span><span class="o">.</span><span class="n">Resize</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">scale_w</span><span class="p">,</span>
+                                                    <span class="n">scale_h</span><span class="p">,</span> <span class="n">interp</span><span class="p">,</span> <span class="n">use_scale</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="StridePad"><a class="viewcode-back" href="../../../../vision_processor.html#fastdeploy.vision.common.processors.StridePad">[docs]</a><span class="k">class</span> <span class="nc">StridePad</span><span class="p">(</span><span class="n">Processor</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stride</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="p">[]):</span>
+        <span class="sd">&quot;&quot;&quot;Create a StridePad processor with given parameters.</span>
+
+<span class="sd">        :param stride: Stride of the processor</span>
+<span class="sd">        :param value: Values to pad with</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">processor</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">vision</span><span class="o">.</span><span class="n">processors</span><span class="o">.</span><span class="n">StridePad</span><span class="p">(</span><span class="n">stride</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span></div>
+</pre></div>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By PaddlePaddle
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022, PaddlePaddle.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div></div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

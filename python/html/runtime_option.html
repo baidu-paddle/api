@@ -1,345 +1,377 @@
 
+
 <!DOCTYPE html>
 
-<html lang="en">
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Runtime Option(Runtime配置) &#8212; FastDeploy Python API latest documentation</title>
-    
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
-    
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'runtime_option';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Vision Processor(多硬件图像处理库)" href="vision_processor.html" />
     <link rel="prev" title="Runtime(模型推理Runtime)" href="runtime.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
     
-    <div class="container-fluid" id="banner"></div>
-
     
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="index.html">
-      
-      
-      
-      <h1 class="site-logo" id="site-title">FastDeploy Python API latest documentation</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Vision Task Model API (视觉任务模型API)
- </span>
-</p>
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">FastDeploy Python API latest documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Vision Task Model API (视觉任务模型API)</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="object_detection.html">
-   Object Detection(目标检测)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="ocr.html">
-   OCR(文字识别)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="semantic_segmentation.html">
-   Semantic Segmentation(语义分割)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="image_classification.html">
-   Image Classification(图像分类)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="keypoint_detection.html">
-   Keypoint Detection(关键点检测)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="matting.html">
-   Matting(图像抠图)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="face_recognition.html">
-   Face Recognition(人脸识别)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="face_detection.html">
-   Face Detection(人脸检测)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="face_alignment.html">
-   Face Alignment(人脸对齐)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="headpose.html">
-   Headpose(头部姿态)
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="object_detection.html">Object Detection(目标检测)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ocr.html">OCR(文字识别)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="semantic_segmentation.html">Semantic Segmentation(语义分割)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="image_classification.html">Image Classification(图像分类)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="keypoint_detection.html">Keypoint Detection(关键点检测)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matting.html">Matting(图像抠图)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="face_recognition.html">Face Recognition(人脸识别)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="face_detection.html">Face Detection(人脸检测)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="face_alignment.html">Face Alignment(人脸对齐)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="headpose.html">Headpose(头部姿态)</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Predict Result Struct (预测结果结构体)
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Predict Result Struct (预测结果结构体)</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="vision_results_en.html">
-   Description of Vision Results
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="vision_results_en.html">Description of Vision Results</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  FastDeploy Runtime API (多后端推理引擎API)
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">FastDeploy Runtime API (多后端推理引擎API)</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="runtime.html">
-   Runtime(模型推理Runtime)
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Runtime Option(Runtime配置)
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="runtime.html">Runtime(模型推理Runtime)</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Runtime Option(Runtime配置)</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Vision Processor (图像预处理库)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="vision_processor.html">Vision Processor(多硬件图像处理库)</a></li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/runtime_option.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
 </div>
 
 
-          
 
 
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
-
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
 <button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="_sources/runtime_option.md.txt"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.md</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#fastdeploy-runtimeoption">
-   fastdeploy.RuntimeOption
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Runtime Option(Runtime配置)</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#fastdeploy-runtimeoption">
-   fastdeploy.RuntimeOption
-  </a>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Runtime Option(Runtime配置)</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy-runtimeoption">fastdeploy.RuntimeOption</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption"><code class="docutils literal notranslate"><span class="pre">RuntimeOption</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.delete_paddle_backend_pass"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.delete_paddle_backend_pass()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.disable_lite_fp16"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.disable_lite_fp16()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.disable_paddle_log_info"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.disable_paddle_log_info()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.disable_paddle_trt_collect_shape"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.disable_paddle_trt_collect_shape()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.disable_paddle_trt_ops"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.disable_paddle_trt_ops()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.disable_pinned_memory"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.disable_pinned_memory()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.disable_profiling"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.disable_profiling()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.disable_trt_fp16"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.disable_trt_fp16()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.enable_lite_fp16"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.enable_lite_fp16()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.enable_paddle_log_info"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.enable_paddle_log_info()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.enable_paddle_to_trt"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.enable_paddle_to_trt()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.enable_paddle_trt_collect_shape"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.enable_paddle_trt_collect_shape()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.enable_pinned_memory"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.enable_pinned_memory()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.enable_profiling"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.enable_profiling()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.enable_trt_fp16"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.enable_trt_fp16()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.openvino_option"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.openvino_option</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.ort_option"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.ort_option</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.paddle_infer_option"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.paddle_infer_option</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.paddle_lite_option"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.paddle_lite_option</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.poros_option"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.poros_option</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.set_cpu_thread_num"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.set_cpu_thread_num()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.set_encryption_key"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.set_encryption_key()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.set_external_raw_stream"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.set_external_raw_stream()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.set_lite_context_properties"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.set_lite_context_properties()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.set_lite_dynamic_shape_info"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.set_lite_dynamic_shape_info()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.set_lite_mixed_precision_quantization_config_path"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.set_lite_mixed_precision_quantization_config_path()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.set_lite_model_cache_dir"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.set_lite_model_cache_dir()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.set_lite_power_mode"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.set_lite_power_mode()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.set_lite_subgraph_partition_config_buffer"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.set_lite_subgraph_partition_config_buffer()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.set_lite_subgraph_partition_path"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.set_lite_subgraph_partition_path()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.set_model_buffer"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.set_model_buffer()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.set_model_path"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.set_model_path()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.set_openvino_cpu_operators"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.set_openvino_cpu_operators()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.set_openvino_device"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.set_openvino_device()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.set_openvino_shape_info"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.set_openvino_shape_info()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.set_ort_graph_opt_level"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.set_ort_graph_opt_level()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.set_paddle_mkldnn"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.set_paddle_mkldnn()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.set_paddle_mkldnn_cache_size"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.set_paddle_mkldnn_cache_size()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.set_trt_cache_file"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.set_trt_cache_file()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.set_trt_input_shape"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.set_trt_input_shape()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.set_trt_max_batch_size"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.set_trt_max_batch_size()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.set_trt_max_workspace_size"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.set_trt_max_workspace_size()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.trt_option"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.trt_option</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.use_ascend"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.use_ascend()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.use_cpu"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.use_cpu()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.use_gpu"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.use_gpu()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.use_kunlunxin"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.use_kunlunxin()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.use_lite_backend"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.use_lite_backend()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.use_openvino_backend"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.use_openvino_backend()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.use_ort_backend"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.use_ort_backend()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.use_paddle_backend"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.use_paddle_backend()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.use_paddle_infer_backend"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.use_paddle_infer_backend()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.use_paddle_lite_backend"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.use_paddle_lite_backend()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.use_poros_backend"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.use_poros_backend()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.use_sophgo"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.use_sophgo()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.use_trt_backend"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.use_trt_backend()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <section id="runtime-option-runtime">
-<h1>Runtime Option(Runtime配置)<a class="headerlink" href="#runtime-option-runtime" title="Permalink to this headline">#</a></h1>
+<h1>Runtime Option(Runtime配置)<a class="headerlink" href="#runtime-option-runtime" title="Permalink to this heading">#</a></h1>
 <section id="fastdeploy-runtimeoption">
-<h2>fastdeploy.RuntimeOption<a class="headerlink" href="#fastdeploy-runtimeoption" title="Permalink to this headline">#</a></h2>
+<h2>fastdeploy.RuntimeOption<a class="headerlink" href="#fastdeploy-runtimeoption" title="Permalink to this heading">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="fastdeploy.RuntimeOption">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.</span></span><span class="sig-name descname"><span class="pre">RuntimeOption</span></span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption" title="Permalink to this definition">#</a></dt>
@@ -382,6 +414,12 @@ title="Print to PDF"
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.RuntimeOption.disable_profiling">
+<span class="sig-name descname"><span class="pre">disable_profiling</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.disable_profiling"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.disable_profiling" title="Permalink to this definition">#</a></dt>
+<dd><p>Set the profile mode as ‘false’.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="fastdeploy.RuntimeOption.disable_trt_fp16">
 <span class="sig-name descname"><span class="pre">disable_trt_fp16</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.disable_trt_fp16"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.disable_trt_fp16" title="Permalink to this definition">#</a></dt>
 <dd><p>Disable half precision inference while suing TensorRT backend.</p>
@@ -418,36 +456,58 @@ title="Print to PDF"
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.RuntimeOption.enable_profiling">
+<span class="sig-name descname"><span class="pre">enable_profiling</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inclue_h2d_d2h</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repeat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">warmup</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">50</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.enable_profiling"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.enable_profiling" title="Permalink to this definition">#</a></dt>
+<dd><p>Set the profile mode as ‘true’.
+:param inclue_h2d_d2h Whether to include time of H2D_D2H for time of runtime.
+:param repeat Repeat times for runtime inference.
+:param warmup Warmup times for runtime inference.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="fastdeploy.RuntimeOption.enable_trt_fp16">
 <span class="sig-name descname"><span class="pre">enable_trt_fp16</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.enable_trt_fp16"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.enable_trt_fp16" title="Permalink to this definition">#</a></dt>
 <dd><p>Enable half precision inference while using TensorRT backend, notice that not all the Nvidia GPU support FP16, in those cases, will fallback to FP32 inference.</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="fastdeploy.RuntimeOption.is_dynamic">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_dynamic</span></span><a class="headerlink" href="#fastdeploy.RuntimeOption.is_dynamic" title="Permalink to this definition">#</a></dt>
-<dd><p>Only for Poros backend</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>value</strong> – (bool)Whether to enable dynamic shape, default False</p>
-</dd>
-</dl>
+<dt class="sig sig-object py" id="fastdeploy.RuntimeOption.openvino_option">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">openvino_option</span></span><a class="headerlink" href="#fastdeploy.RuntimeOption.openvino_option" title="Permalink to this definition">#</a></dt>
+<dd><p>Get OpenVINOOption object to configure OpenVINO backend</p>
+<p>:return OpenVINOOption</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="fastdeploy.RuntimeOption.long_to_int">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">long_to_int</span></span><a class="headerlink" href="#fastdeploy.RuntimeOption.long_to_int" title="Permalink to this definition">#</a></dt>
-<dd><p>Only for Poros backend</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>value</strong> – (bool)Whether to convert long dtype to int dtype, default True</p>
-</dd>
-</dl>
+<dt class="sig sig-object py" id="fastdeploy.RuntimeOption.ort_option">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ort_option</span></span><a class="headerlink" href="#fastdeploy.RuntimeOption.ort_option" title="Permalink to this definition">#</a></dt>
+<dd><p>Get OrtBackendOption object to configure ONNX Runtime backend</p>
+<p>:return OrtBackendOption</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fastdeploy.RuntimeOption.paddle_infer_option">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">paddle_infer_option</span></span><a class="headerlink" href="#fastdeploy.RuntimeOption.paddle_infer_option" title="Permalink to this definition">#</a></dt>
+<dd><p>Get PaddleBackendOption object to configure Paddle Inference backend</p>
+<p>:return PaddleBackendOption</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fastdeploy.RuntimeOption.paddle_lite_option">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">paddle_lite_option</span></span><a class="headerlink" href="#fastdeploy.RuntimeOption.paddle_lite_option" title="Permalink to this definition">#</a></dt>
+<dd><p>Get LiteBackendOption object to configure Paddle Lite backend</p>
+<p>:return LiteBackendOption</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fastdeploy.RuntimeOption.poros_option">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">poros_option</span></span><a class="headerlink" href="#fastdeploy.RuntimeOption.poros_option" title="Permalink to this definition">#</a></dt>
+<dd><p>Get PorosBackendOption object to configure Poros backend</p>
+<p>:return PorosBackendOption</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="fastdeploy.RuntimeOption.set_cpu_thread_num">
-<span class="sig-name descname"><span class="pre">set_cpu_thread_num</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">thread_num</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.set_cpu_thread_num"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.set_cpu_thread_num" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">set_cpu_thread_num</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">thread_num</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.set_cpu_thread_num"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.set_cpu_thread_num" title="Permalink to this definition">#</a></dt>
 <dd><p>Set number of threads if inference with CPU</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -457,9 +517,67 @@ title="Print to PDF"
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.RuntimeOption.set_encryption_key">
+<span class="sig-name descname"><span class="pre">set_encryption_key</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">encryption_key</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.set_encryption_key"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.set_encryption_key" title="Permalink to this definition">#</a></dt>
+<dd><p>When loading encrypted model, encryption_key is required to decrypte model
+:param encryption_key: (str)The key for decrypting model</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.RuntimeOption.set_external_raw_stream">
+<span class="sig-name descname"><span class="pre">set_external_raw_stream</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cuda_stream</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.set_external_raw_stream"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.set_external_raw_stream" title="Permalink to this definition">#</a></dt>
+<dd><p>Set the external raw stream used by fastdeploy runtime.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.RuntimeOption.set_lite_context_properties">
+<span class="sig-name descname"><span class="pre">set_lite_context_properties</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">context_properties</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.set_lite_context_properties"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.set_lite_context_properties" title="Permalink to this definition">#</a></dt>
+<dd><p>Set nnadapter context properties for Paddle Lite backend.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.RuntimeOption.set_lite_dynamic_shape_info">
+<span class="sig-name descname"><span class="pre">set_lite_dynamic_shape_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dynamic_shape_info</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.set_lite_dynamic_shape_info"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.set_lite_dynamic_shape_info" title="Permalink to this definition">#</a></dt>
+<dd><p>Set nnadapter dynamic shape info for Paddle Lite backend.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.RuntimeOption.set_lite_mixed_precision_quantization_config_path">
+<span class="sig-name descname"><span class="pre">set_lite_mixed_precision_quantization_config_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mixed_precision_quantization_config_path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.set_lite_mixed_precision_quantization_config_path"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.set_lite_mixed_precision_quantization_config_path" title="Permalink to this definition">#</a></dt>
+<dd><p>Set nnadapter mixed precision quantization config path for Paddle Lite backend..</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.RuntimeOption.set_lite_model_cache_dir">
+<span class="sig-name descname"><span class="pre">set_lite_model_cache_dir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_cache_dir</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.set_lite_model_cache_dir"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.set_lite_model_cache_dir" title="Permalink to this definition">#</a></dt>
+<dd><p>Set nnadapter model cache dir for Paddle Lite backend.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="fastdeploy.RuntimeOption.set_lite_power_mode">
 <span class="sig-name descname"><span class="pre">set_lite_power_mode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mode</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.set_lite_power_mode"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.set_lite_power_mode" title="Permalink to this definition">#</a></dt>
 <dd><p>Set POWER mode while using Paddle Lite backend on ARM CPU.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.RuntimeOption.set_lite_subgraph_partition_config_buffer">
+<span class="sig-name descname"><span class="pre">set_lite_subgraph_partition_config_buffer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">subgraph_partition_buffer</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.set_lite_subgraph_partition_config_buffer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.set_lite_subgraph_partition_config_buffer" title="Permalink to this definition">#</a></dt>
+<dd><p>Set nnadapter subgraph partition buffer for Paddle Lite backend.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.RuntimeOption.set_lite_subgraph_partition_path">
+<span class="sig-name descname"><span class="pre">set_lite_subgraph_partition_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">subgraph_partition_path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.set_lite_subgraph_partition_path"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.set_lite_subgraph_partition_path" title="Permalink to this definition">#</a></dt>
+<dd><p>Set nnadapter subgraph partition path for Paddle Lite backend.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.RuntimeOption.set_model_buffer">
+<span class="sig-name descname"><span class="pre">set_model_buffer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_buffer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_buffer=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.PADDLE:</span> <span class="pre">1&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.set_model_buffer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.set_model_buffer" title="Permalink to this definition">#</a></dt>
+<dd><p>Specify the memory buffer of model and parameter. Used when model and params are loaded directly from memory
+:param model_buffer: (bytes)The memory buffer of model
+:param params_buffer: (bytes)The memory buffer of the parameters
+:param model_format: (ModelFormat)Format of model, support ModelFormat.PADDLE/ModelFormat.ONNX/ModelFormat.TORCHSCRIPT</p>
 </dd></dl>
 
 <dl class="py method">
@@ -471,7 +589,7 @@ title="Print to PDF"
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>model_path</strong> – (str)Path of model file</p></li>
 <li><p><strong>params_path</strong> – (str)Path of parameters file</p></li>
-<li><p><strong>model_format</strong> – (ModelFormat)Format of model, support ModelFormat.PADDLE/ModelFormat.ONNX</p></li>
+<li><p><strong>model_format</strong> – (ModelFormat)Format of model, support ModelFormat.PADDLE/ModelFormat.ONNX/ModelFormat.TORCHSCRIPT</p></li>
 </ul>
 </dd>
 </dl>
@@ -480,7 +598,10 @@ title="Print to PDF"
 <dl class="py method">
 <dt class="sig sig-object py" id="fastdeploy.RuntimeOption.set_openvino_cpu_operators">
 <span class="sig-name descname"><span class="pre">set_openvino_cpu_operators</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">operators</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.set_openvino_cpu_operators"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.set_openvino_cpu_operators" title="Permalink to this definition">#</a></dt>
-<dd><p>While using OpenVINO backend and intel GPU, this interface specifies unsupported operators to run on CPU</p>
+<dd><dl class="simple">
+<dt>While using OpenVINO backend and intel GPU, this interface specifies unsupported operators to run on CPU</dt><dd><p>This interface is deprecated, please use <cite>RuntimeOption.openvino_option.set_cpu_operators</cite> instead.</p>
+</dd>
+</dl>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>operators</strong> – (list of string)list of operators’ name, e.g [“MulticlasNms”]</p>
@@ -491,13 +612,17 @@ title="Print to PDF"
 <dl class="py method">
 <dt class="sig sig-object py" id="fastdeploy.RuntimeOption.set_openvino_device">
 <span class="sig-name descname"><span class="pre">set_openvino_device</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'CPU'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.set_openvino_device"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.set_openvino_device" title="Permalink to this definition">#</a></dt>
-<dd><p>Set device name for OpenVINO, default ‘CPU’, can also be ‘AUTO’, ‘GPU’, ‘GPU.1’….</p>
+<dd><p>Set device name for OpenVINO, default ‘CPU’, can also be ‘AUTO’, ‘GPU’, ‘GPU.1’….
+This interface is deprecated, please use <cite>RuntimeOption.openvino_option.set_device</cite> instead.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="fastdeploy.RuntimeOption.set_openvino_shape_info">
 <span class="sig-name descname"><span class="pre">set_openvino_shape_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shape_info</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.set_openvino_shape_info"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.set_openvino_shape_info" title="Permalink to this definition">#</a></dt>
-<dd><p>Set shape information of the models’ inputs, used for GPU to fix the shape</p>
+<dd><dl class="simple">
+<dt>Set shape information of the models’ inputs, used for GPU to fix the shape</dt><dd><p>This interface is deprecated, please use <cite>RuntimeOption.openvino_option.set_shape_info</cite> instead.</p>
+</dd>
+</dl>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>shape_info</strong> – (dict{str, list of int})Shape information of model’s inputs, e.g {“image”: [1, 3, 640, 640], “scale_factor”: [1, 2]}</p>
@@ -507,7 +632,7 @@ title="Print to PDF"
 
 <dl class="py method">
 <dt class="sig sig-object py" id="fastdeploy.RuntimeOption.set_ort_graph_opt_level">
-<span class="sig-name descname"><span class="pre">set_ort_graph_opt_level</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.set_ort_graph_opt_level"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.set_ort_graph_opt_level" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">set_ort_graph_opt_level</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.set_ort_graph_opt_level"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.set_ort_graph_opt_level" title="Permalink to this definition">#</a></dt>
 <dd><p>Set graph optimization level for ONNX Runtime backend</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -568,14 +693,16 @@ title="Print to PDF"
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="fastdeploy.RuntimeOption.unconst_ops_thres">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">unconst_ops_thres</span></span><a class="headerlink" href="#fastdeploy.RuntimeOption.unconst_ops_thres" title="Permalink to this definition">#</a></dt>
-<dd><p>Only for Poros backend</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>value</strong> – (int)Minimum number of subgraph OPs, default 10</p>
-</dd>
-</dl>
+<dt class="sig sig-object py" id="fastdeploy.RuntimeOption.trt_option">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">trt_option</span></span><a class="headerlink" href="#fastdeploy.RuntimeOption.trt_option" title="Permalink to this definition">#</a></dt>
+<dd><p>Get TrtBackendOption object to configure TensorRT backend</p>
+<p>:return TrtBackendOption</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.RuntimeOption.use_ascend">
+<span class="sig-name descname"><span class="pre">use_ascend</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.use_ascend"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.use_ascend" title="Permalink to this definition">#</a></dt>
+<dd><p>Inference with Huawei Ascend NPU</p>
 </dd></dl>
 
 <dl class="py method">
@@ -596,20 +723,33 @@ title="Print to PDF"
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.RuntimeOption.use_kunlunxin">
+<span class="sig-name descname"><span class="pre">use_kunlunxin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">device_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">l3_workspace_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">16777216</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">locked</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autotune</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autotune_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">precision</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'int16'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">adaptive_seqlen</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enable_multi_stream</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.use_kunlunxin"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.use_kunlunxin" title="Permalink to this definition">#</a></dt>
+<dd><p>Inference with KunlunXin XPU</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>device_id</strong> – (int)The index of KunlunXin XPU will be used for inference, default 0</p></li>
+<li><p><strong>l3_workspace_size</strong> – (int)The size of the video memory allocated by the l3 cache, the maximum is 16M, default 16M</p></li>
+<li><p><strong>locked</strong> – (bool)Whether the allocated L3 cache can be locked. If false, it means that the L3 cache is not locked,
+and the allocated L3 cache can be shared by multiple models, and multiple models</p></li>
+<li><p><strong>autotune</strong> – (bool)Whether to autotune the conv operator in the model.
+If true, when the conv operator of a certain dimension is executed for the first time,
+it will automatically search for a better algorithm to improve the performance of subsequent conv operators of the same dimension.</p></li>
+<li><p><strong>autotune_file</strong> – (str)Specify the path of the autotune file. If autotune_file is specified,
+the algorithm specified in the file will be used and autotune will not be performed again.</p></li>
+<li><p><strong>precision</strong> – (str)Calculation accuracy of multi_encoder</p></li>
+<li><p><strong>adaptive_seqlen</strong> – (bool)adaptive_seqlen Is the input of multi_encoder variable length</p></li>
+<li><p><strong>enable_multi_stream</strong> – (bool)Whether to enable the multi stream of KunlunXin XPU.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="fastdeploy.RuntimeOption.use_lite_backend">
 <span class="sig-name descname"><span class="pre">use_lite_backend</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.use_lite_backend"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.use_lite_backend" title="Permalink to this definition">#</a></dt>
 <dd><p>Use Paddle Lite backend, support inference Paddle model on ARM CPU.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="fastdeploy.RuntimeOption.use_nvidia_tf32">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">use_nvidia_tf32</span></span><a class="headerlink" href="#fastdeploy.RuntimeOption.use_nvidia_tf32" title="Permalink to this definition">#</a></dt>
-<dd><p>Only for Poros backend</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>value</strong> – (bool)The calculation accuracy of tf32 mode exists on the A card, which can bring some performance improvements, default False</p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -649,6 +789,12 @@ title="Print to PDF"
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.RuntimeOption.use_sophgo">
+<span class="sig-name descname"><span class="pre">use_sophgo</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.use_sophgo"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.use_sophgo" title="Permalink to this definition">#</a></dt>
+<dd><p>Inference with SOPHGO TPU</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="fastdeploy.RuntimeOption.use_trt_backend">
 <span class="sig-name descname"><span class="pre">use_trt_backend</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/runtime.html#RuntimeOption.use_trt_backend"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.RuntimeOption.use_trt_backend" title="Permalink to this definition">#</a></dt>
 <dd><p>Use TensorRT backend, support inference Paddle/ONNX model on Nvidia GPU.</p>
@@ -660,43 +806,160 @@ title="Print to PDF"
 </section>
 
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="runtime.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Runtime(模型推理Runtime)</p>
-        </div>
+
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="runtime.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Runtime(模型推理Runtime)</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="vision_processor.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Vision Processor(多硬件图像处理库)</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy-runtimeoption">fastdeploy.RuntimeOption</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption"><code class="docutils literal notranslate"><span class="pre">RuntimeOption</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.delete_paddle_backend_pass"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.delete_paddle_backend_pass()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.disable_lite_fp16"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.disable_lite_fp16()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.disable_paddle_log_info"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.disable_paddle_log_info()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.disable_paddle_trt_collect_shape"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.disable_paddle_trt_collect_shape()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.disable_paddle_trt_ops"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.disable_paddle_trt_ops()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.disable_pinned_memory"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.disable_pinned_memory()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.disable_profiling"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.disable_profiling()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.disable_trt_fp16"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.disable_trt_fp16()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.enable_lite_fp16"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.enable_lite_fp16()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.enable_paddle_log_info"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.enable_paddle_log_info()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.enable_paddle_to_trt"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.enable_paddle_to_trt()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.enable_paddle_trt_collect_shape"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.enable_paddle_trt_collect_shape()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.enable_pinned_memory"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.enable_pinned_memory()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.enable_profiling"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.enable_profiling()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.enable_trt_fp16"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.enable_trt_fp16()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.openvino_option"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.openvino_option</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.ort_option"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.ort_option</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.paddle_infer_option"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.paddle_infer_option</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.paddle_lite_option"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.paddle_lite_option</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.poros_option"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.poros_option</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.set_cpu_thread_num"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.set_cpu_thread_num()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.set_encryption_key"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.set_encryption_key()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.set_external_raw_stream"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.set_external_raw_stream()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.set_lite_context_properties"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.set_lite_context_properties()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.set_lite_dynamic_shape_info"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.set_lite_dynamic_shape_info()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.set_lite_mixed_precision_quantization_config_path"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.set_lite_mixed_precision_quantization_config_path()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.set_lite_model_cache_dir"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.set_lite_model_cache_dir()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.set_lite_power_mode"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.set_lite_power_mode()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.set_lite_subgraph_partition_config_buffer"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.set_lite_subgraph_partition_config_buffer()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.set_lite_subgraph_partition_path"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.set_lite_subgraph_partition_path()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.set_model_buffer"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.set_model_buffer()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.set_model_path"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.set_model_path()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.set_openvino_cpu_operators"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.set_openvino_cpu_operators()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.set_openvino_device"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.set_openvino_device()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.set_openvino_shape_info"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.set_openvino_shape_info()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.set_ort_graph_opt_level"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.set_ort_graph_opt_level()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.set_paddle_mkldnn"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.set_paddle_mkldnn()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.set_paddle_mkldnn_cache_size"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.set_paddle_mkldnn_cache_size()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.set_trt_cache_file"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.set_trt_cache_file()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.set_trt_input_shape"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.set_trt_input_shape()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.set_trt_max_batch_size"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.set_trt_max_batch_size()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.set_trt_max_workspace_size"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.set_trt_max_workspace_size()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.trt_option"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.trt_option</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.use_ascend"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.use_ascend()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.use_cpu"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.use_cpu()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.use_gpu"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.use_gpu()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.use_kunlunxin"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.use_kunlunxin()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.use_lite_backend"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.use_lite_backend()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.use_openvino_backend"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.use_openvino_backend()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.use_ort_backend"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.use_ort_backend()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.use_paddle_backend"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.use_paddle_backend()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.use_paddle_infer_backend"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.use_paddle_infer_backend()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.use_paddle_lite_backend"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.use_paddle_lite_backend()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.use_poros_backend"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.use_poros_backend()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.use_sophgo"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.use_sophgo()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.RuntimeOption.use_trt_backend"><code class="docutils literal notranslate"><span class="pre">RuntimeOption.use_trt_backend()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
   
-    By PaddlePaddle<br/>
-  
-      &copy; Copyright 2022, PaddlePaddle.<br/>
-</p>
-        </footer>
-    </div>
+  <div class="footer-item">
     
-</div>
+<p class="component-author">
+By PaddlePaddle
+</p>
 
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022, PaddlePaddle.
+      <br/>
+    
+  </p>
 
-      </div>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div></div>
+          </footer>
+        
+
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

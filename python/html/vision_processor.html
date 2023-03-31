@@ -1,0 +1,707 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Vision Processor(多硬件图像处理库) &#8212; FastDeploy Python API latest documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'vision_processor';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Runtime Option(Runtime配置)" href="runtime_option.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">FastDeploy Python API latest documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Vision Task Model API (视觉任务模型API)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="object_detection.html">Object Detection(目标检测)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ocr.html">OCR(文字识别)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="semantic_segmentation.html">Semantic Segmentation(语义分割)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="image_classification.html">Image Classification(图像分类)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="keypoint_detection.html">Keypoint Detection(关键点检测)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matting.html">Matting(图像抠图)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="face_recognition.html">Face Recognition(人脸识别)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="face_detection.html">Face Detection(人脸检测)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="face_alignment.html">Face Alignment(人脸对齐)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="headpose.html">Headpose(头部姿态)</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Predict Result Struct (预测结果结构体)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="vision_results_en.html">Description of Vision Results</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">FastDeploy Runtime API (多后端推理引擎API)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="runtime.html">Runtime(模型推理Runtime)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="runtime_option.html">Runtime Option(Runtime配置)</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Vision Processor (图像预处理库)</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Vision Processor(多硬件图像处理库)</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/vision_processor.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Vision Processor(多硬件图像处理库)</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy-vision-common-manager-pyprocessormanager">fastdeploy.vision.common.manager.PyProcessorManager</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.common.manager.PyProcessorManager"><code class="docutils literal notranslate"><span class="pre">PyProcessorManager</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.common.manager.PyProcessorManager.use_cuda"><code class="docutils literal notranslate"><span class="pre">PyProcessorManager.use_cuda()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy-vision-common-processors-processor">fastdeploy.vision.common.processors.Processor</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.common.processors.Processor"><code class="docutils literal notranslate"><span class="pre">Processor</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy-vision-common-processors-resizebyshort">fastdeploy.vision.common.processors.ResizeByShort</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.common.processors.ResizeByShort"><code class="docutils literal notranslate"><span class="pre">ResizeByShort</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy-vision-common-processors-resize">fastdeploy.vision.common.processors.Resize</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.common.processors.Resize"><code class="docutils literal notranslate"><span class="pre">Resize</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy-vision-common-processors-centercrop">fastdeploy.vision.common.processors.CenterCrop</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.common.processors.CenterCrop"><code class="docutils literal notranslate"><span class="pre">CenterCrop</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy-vision-common-processors-cast">fastdeploy.vision.common.processors.Cast</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.common.processors.Cast"><code class="docutils literal notranslate"><span class="pre">Cast</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy-vision-common-processors-hwc2chw">fastdeploy.vision.common.processors.HWC2CHW</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.common.processors.HWC2CHW"><code class="docutils literal notranslate"><span class="pre">HWC2CHW</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy-vision-common-processors-normalize">fastdeploy.vision.common.processors.Normalize</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.common.processors.Normalize"><code class="docutils literal notranslate"><span class="pre">Normalize</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy-vision-common-processors-normalizeandpermute">fastdeploy.vision.common.processors.NormalizeAndPermute</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.common.processors.NormalizeAndPermute"><code class="docutils literal notranslate"><span class="pre">NormalizeAndPermute</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy-vision-common-processors-pad">fastdeploy.vision.common.processors.Pad</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.common.processors.Pad"><code class="docutils literal notranslate"><span class="pre">Pad</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy-vision-common-processors-padtosize">fastdeploy.vision.common.processors.PadToSize</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.common.processors.PadToSize"><code class="docutils literal notranslate"><span class="pre">PadToSize</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy-vision-common-processors-stridepad">fastdeploy.vision.common.processors.StridePad</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.common.processors.StridePad"><code class="docutils literal notranslate"><span class="pre">StridePad</span></code></a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="vision-processor">
+<h1>Vision Processor(多硬件图像处理库)<a class="headerlink" href="#vision-processor" title="Permalink to this heading">#</a></h1>
+<section id="fastdeploy-vision-common-manager-pyprocessormanager">
+<h2>fastdeploy.vision.common.manager.PyProcessorManager<a class="headerlink" href="#fastdeploy-vision-common-manager-pyprocessormanager" title="Permalink to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="fastdeploy.vision.common.manager.PyProcessorManager">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.common.manager.</span></span><span class="sig-name descname"><span class="pre">PyProcessorManager</span></span><a class="reference internal" href="_modules/fastdeploy/vision/common/manager.html#PyProcessorManager"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.common.manager.PyProcessorManager" title="Permalink to this definition">#</a></dt>
+<dd><p>PyProcessorManager is used to define a customized processor in python</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.vision.common.manager.PyProcessorManager.use_cuda">
+<span class="sig-name descname"><span class="pre">use_cuda</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">enable_cv_cuda</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gpu_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/common/manager.html#PyProcessorManager.use_cuda"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.common.manager.PyProcessorManager.use_cuda" title="Permalink to this definition">#</a></dt>
+<dd><p>Use CUDA processors</p>
+<dl class="field-list simple">
+<dt class="field-odd">Param</dt>
+<dd class="field-odd"><p>enable_cv_cuda: Ture: use CV-CUDA, False: use CUDA only</p>
+</dd>
+<dt class="field-even">Param</dt>
+<dd class="field-even"><p>gpu_id: GPU device id</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="fastdeploy-vision-common-processors-processor">
+<h2>fastdeploy.vision.common.processors.Processor<a class="headerlink" href="#fastdeploy-vision-common-processors-processor" title="Permalink to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="fastdeploy.vision.common.processors.Processor">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.common.processors.</span></span><span class="sig-name descname"><span class="pre">Processor</span></span><a class="reference internal" href="_modules/fastdeploy/vision/common/processors.html#Processor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.common.processors.Processor" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="fastdeploy-vision-common-processors-resizebyshort">
+<h2>fastdeploy.vision.common.processors.ResizeByShort<a class="headerlink" href="#fastdeploy-vision-common-processors-resizebyshort" title="Permalink to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="fastdeploy.vision.common.processors.ResizeByShort">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.common.processors.</span></span><span class="sig-name descname"><span class="pre">ResizeByShort</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_hw</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/common/processors.html#ResizeByShort"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.common.processors.ResizeByShort" title="Permalink to this definition">#</a></dt>
+<dd><p>Create a ResizeByShort operation with the given parameters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>target_size</strong> – The target short size to resize the image</p></li>
+<li><p><strong>interp</strong> – Optionally, the interpolation mode for resizing image</p></li>
+<li><p><strong>use_scale</strong> – Optionally, whether to scale image</p></li>
+<li><p><strong>max_hw</strong> – Max spatial size which is used by ResizeByShort</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="fastdeploy-vision-common-processors-resize">
+<h2>fastdeploy.vision.common.processors.Resize<a class="headerlink" href="#fastdeploy-vision-common-processors-resize" title="Permalink to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="fastdeploy.vision.common.processors.Resize">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.common.processors.</span></span><span class="sig-name descname"><span class="pre">Resize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale_w</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale_h</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/common/processors.html#Resize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.common.processors.Resize" title="Permalink to this definition">#</a></dt>
+<dd><p>Create a Resize operation with the given parameters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>width</strong> – Desired width of the output image</p></li>
+<li><p><strong>height</strong> – Desired height of the output image</p></li>
+<li><p><strong>scale_w</strong> – Scales the width in x-direction</p></li>
+<li><p><strong>scale_h</strong> – Scales the height in y-direction</p></li>
+<li><p><strong>interp</strong> – Optionally, the interpolation mode for resizing image</p></li>
+<li><p><strong>use_scale</strong> – Optionally, whether to scale image</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="fastdeploy-vision-common-processors-centercrop">
+<h2>fastdeploy.vision.common.processors.CenterCrop<a class="headerlink" href="#fastdeploy-vision-common-processors-centercrop" title="Permalink to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="fastdeploy.vision.common.processors.CenterCrop">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.common.processors.</span></span><span class="sig-name descname"><span class="pre">CenterCrop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/common/processors.html#CenterCrop"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.common.processors.CenterCrop" title="Permalink to this definition">#</a></dt>
+<dd><p>Create a CenterCrop operation with the given parameters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>width</strong> – Desired width of the cropped image</p></li>
+<li><p><strong>height</strong> – Desired height of the cropped image</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="fastdeploy-vision-common-processors-cast">
+<h2>fastdeploy.vision.common.processors.Cast<a class="headerlink" href="#fastdeploy-vision-common-processors-cast" title="Permalink to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="fastdeploy.vision.common.processors.Cast">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.common.processors.</span></span><span class="sig-name descname"><span class="pre">Cast</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'float'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/common/processors.html#Cast"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.common.processors.Cast" title="Permalink to this definition">#</a></dt>
+<dd><p>Creat a new cast opereaton with given dtype</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>dtype</strong> – Target dtype of the output</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="fastdeploy-vision-common-processors-hwc2chw">
+<h2>fastdeploy.vision.common.processors.HWC2CHW<a class="headerlink" href="#fastdeploy-vision-common-processors-hwc2chw" title="Permalink to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="fastdeploy.vision.common.processors.HWC2CHW">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.common.processors.</span></span><span class="sig-name descname"><span class="pre">HWC2CHW</span></span><a class="reference internal" href="_modules/fastdeploy/vision/common/processors.html#HWC2CHW"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.common.processors.HWC2CHW" title="Permalink to this definition">#</a></dt>
+<dd><p>Creat a new hwc2chw processor with default dtype.</p>
+<p>:return An instance of processor <cite>HWC2CHW</cite></p>
+</dd></dl>
+
+</section>
+<section id="fastdeploy-vision-common-processors-normalize">
+<h2>fastdeploy.vision.common.processors.Normalize<a class="headerlink" href="#fastdeploy-vision-common-processors-normalize" title="Permalink to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="fastdeploy.vision.common.processors.Normalize">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.common.processors.</span></span><span class="sig-name descname"><span class="pre">Normalize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mean</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">std</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">swap_rb</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/common/processors.html#Normalize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.common.processors.Normalize" title="Permalink to this definition">#</a></dt>
+<dd><p>Creat a new normalize opereator with given paremeters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mean</strong> – A list containing the mean of each channel</p></li>
+<li><p><strong>std</strong> – A list containing the standard deviation of each channel</p></li>
+<li><p><strong>is_scale</strong> – Specifies if the image are being scaled or not</p></li>
+<li><p><strong>min</strong> – A list containing the minimum value of each channel</p></li>
+<li><p><strong>max</strong> – A list containing the maximum value of each channel</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="fastdeploy-vision-common-processors-normalizeandpermute">
+<h2>fastdeploy.vision.common.processors.NormalizeAndPermute<a class="headerlink" href="#fastdeploy-vision-common-processors-normalizeandpermute" title="Permalink to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="fastdeploy.vision.common.processors.NormalizeAndPermute">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.common.processors.</span></span><span class="sig-name descname"><span class="pre">NormalizeAndPermute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mean</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">std</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">swap_rb</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/common/processors.html#NormalizeAndPermute"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.common.processors.NormalizeAndPermute" title="Permalink to this definition">#</a></dt>
+<dd><p>Creae a Normalize and a Permute operation with the given parameters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mean</strong> – A list containing the mean of each channel</p></li>
+<li><p><strong>std</strong> – A list containing the standard deviation of each channel</p></li>
+<li><p><strong>is_scale</strong> – Specifies if the image are being scaled or not</p></li>
+<li><p><strong>min</strong> – A list containing the minimum value of each channel</p></li>
+<li><p><strong>max</strong> – A list containing the maximum value of each channel</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="fastdeploy-vision-common-processors-pad">
+<h2>fastdeploy.vision.common.processors.Pad<a class="headerlink" href="#fastdeploy-vision-common-processors-pad" title="Permalink to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="fastdeploy.vision.common.processors.Pad">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.common.processors.</span></span><span class="sig-name descname"><span class="pre">Pad</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">top</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bottom</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">left</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">right</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/common/processors.html#Pad"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.common.processors.Pad" title="Permalink to this definition">#</a></dt>
+<dd><p>Create a Pad operation with the given parameters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>top</strong> – The top padding</p></li>
+<li><p><strong>bottom</strong> – The bottom padding</p></li>
+<li><p><strong>left</strong> – The left padding</p></li>
+<li><p><strong>right</strong> – The right padding</p></li>
+<li><p><strong>value</strong> – the value that is used to pad on the input image</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="fastdeploy-vision-common-processors-padtosize">
+<h2>fastdeploy.vision.common.processors.PadToSize<a class="headerlink" href="#fastdeploy-vision-common-processors-padtosize" title="Permalink to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="fastdeploy.vision.common.processors.PadToSize">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.common.processors.</span></span><span class="sig-name descname"><span class="pre">PadToSize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/common/processors.html#PadToSize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.common.processors.PadToSize" title="Permalink to this definition">#</a></dt>
+<dd><p>Create a new PadToSize opereator with given parameters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>width</strong> – Desired width of the output image</p></li>
+<li><p><strong>height</strong> – Desired height of the output image</p></li>
+<li><p><strong>value</strong> – Values to pad with</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="fastdeploy-vision-common-processors-stridepad">
+<h2>fastdeploy.vision.common.processors.StridePad<a class="headerlink" href="#fastdeploy-vision-common-processors-stridepad" title="Permalink to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="fastdeploy.vision.common.processors.StridePad">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.common.processors.</span></span><span class="sig-name descname"><span class="pre">StridePad</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stride</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/common/processors.html#StridePad"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.common.processors.StridePad" title="Permalink to this definition">#</a></dt>
+<dd><p>Create a StridePad processor with given parameters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>stride</strong> – Stride of the processor</p></li>
+<li><p><strong>value</strong> – Values to pad with</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="runtime_option.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Runtime Option(Runtime配置)</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy-vision-common-manager-pyprocessormanager">fastdeploy.vision.common.manager.PyProcessorManager</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.common.manager.PyProcessorManager"><code class="docutils literal notranslate"><span class="pre">PyProcessorManager</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.common.manager.PyProcessorManager.use_cuda"><code class="docutils literal notranslate"><span class="pre">PyProcessorManager.use_cuda()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy-vision-common-processors-processor">fastdeploy.vision.common.processors.Processor</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.common.processors.Processor"><code class="docutils literal notranslate"><span class="pre">Processor</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy-vision-common-processors-resizebyshort">fastdeploy.vision.common.processors.ResizeByShort</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.common.processors.ResizeByShort"><code class="docutils literal notranslate"><span class="pre">ResizeByShort</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy-vision-common-processors-resize">fastdeploy.vision.common.processors.Resize</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.common.processors.Resize"><code class="docutils literal notranslate"><span class="pre">Resize</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy-vision-common-processors-centercrop">fastdeploy.vision.common.processors.CenterCrop</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.common.processors.CenterCrop"><code class="docutils literal notranslate"><span class="pre">CenterCrop</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy-vision-common-processors-cast">fastdeploy.vision.common.processors.Cast</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.common.processors.Cast"><code class="docutils literal notranslate"><span class="pre">Cast</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy-vision-common-processors-hwc2chw">fastdeploy.vision.common.processors.HWC2CHW</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.common.processors.HWC2CHW"><code class="docutils literal notranslate"><span class="pre">HWC2CHW</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy-vision-common-processors-normalize">fastdeploy.vision.common.processors.Normalize</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.common.processors.Normalize"><code class="docutils literal notranslate"><span class="pre">Normalize</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy-vision-common-processors-normalizeandpermute">fastdeploy.vision.common.processors.NormalizeAndPermute</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.common.processors.NormalizeAndPermute"><code class="docutils literal notranslate"><span class="pre">NormalizeAndPermute</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy-vision-common-processors-pad">fastdeploy.vision.common.processors.Pad</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.common.processors.Pad"><code class="docutils literal notranslate"><span class="pre">Pad</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy-vision-common-processors-padtosize">fastdeploy.vision.common.processors.PadToSize</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.common.processors.PadToSize"><code class="docutils literal notranslate"><span class="pre">PadToSize</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy-vision-common-processors-stridepad">fastdeploy.vision.common.processors.StridePad</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.common.processors.StridePad"><code class="docutils literal notranslate"><span class="pre">StridePad</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By PaddlePaddle
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022, PaddlePaddle.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div></div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
