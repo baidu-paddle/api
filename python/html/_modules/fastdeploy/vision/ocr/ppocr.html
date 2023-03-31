@@ -1,256 +1,251 @@
 
+
 <!DOCTYPE html>
 
-<html lang="en">
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>fastdeploy.vision.ocr.ppocr &#8212; FastDeploy Python API latest documentation</title>
-    
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../../../../_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
-    
+    <link rel="stylesheet" href="../../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
 
     <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
     <script src="../../../../_static/jquery.js"></script>
     <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../../_static/doctools.js"></script>
-    <script src="../../../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/fastdeploy/vision/ocr/ppocr';</script>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
     
-    <div class="container-fluid" id="banner"></div>
-
     
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../../../../index.html">
-      
-      
-      
-      <h1 class="site-logo" id="site-title">FastDeploy Python API latest documentation</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../../../../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Vision Task Model API (视觉任务模型API)
- </span>
-</p>
+<a class="navbar-brand logo" href="../../../../index.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">FastDeploy Python API latest documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Vision Task Model API (视觉任务模型API)</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../../object_detection.html">
-   Object Detection(目标检测)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../../ocr.html">
-   OCR(文字识别)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../../semantic_segmentation.html">
-   Semantic Segmentation(语义分割)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../../image_classification.html">
-   Image Classification(图像分类)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../../keypoint_detection.html">
-   Keypoint Detection(关键点检测)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../../matting.html">
-   Matting(图像抠图)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../../face_recognition.html">
-   Face Recognition(人脸识别)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../../face_detection.html">
-   Face Detection(人脸检测)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../../face_alignment.html">
-   Face Alignment(人脸对齐)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../../headpose.html">
-   Headpose(头部姿态)
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../object_detection.html">Object Detection(目标检测)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ocr.html">OCR(文字识别)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../semantic_segmentation.html">Semantic Segmentation(语义分割)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../image_classification.html">Image Classification(图像分类)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../keypoint_detection.html">Keypoint Detection(关键点检测)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../matting.html">Matting(图像抠图)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../face_recognition.html">Face Recognition(人脸识别)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../face_detection.html">Face Detection(人脸检测)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../face_alignment.html">Face Alignment(人脸对齐)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../headpose.html">Headpose(头部姿态)</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Predict Result Struct (预测结果结构体)
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Predict Result Struct (预测结果结构体)</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../../vision_results_en.html">
-   Description of Vision Results
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../vision_results_en.html">Description of Vision Results</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  FastDeploy Runtime API (多后端推理引擎API)
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">FastDeploy Runtime API (多后端推理引擎API)</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../../runtime.html">
-   Runtime(模型推理Runtime)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../../runtime_option.html">
-   Runtime Option(Runtime配置)
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../runtime.html">Runtime(模型推理Runtime)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../runtime_option.html">Runtime Option(Runtime配置)</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Vision Processor (图像预处理库)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../../vision_processor.html">Vision Processor(多硬件图像处理库)</a></li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
-          
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
 
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
 <div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
 
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
-    <div class="header-article__right">
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
 <button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
     </div>
 </div>
 
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-</div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1></h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                    </div>
-                </div>
-            </div>
-            <main id="main-content" role="main">
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <h1>Source code for fastdeploy.vision.ocr.ppocr</h1><div class="highlight"><pre>
 <span></span><span class="c1"># # Copyright (c) 2022 PaddlePaddle Authors. All Rights Reserved.</span>
 <span class="c1"># #</span>
@@ -270,86 +265,99 @@ title="Fullscreen mode"
 <span class="kn">import</span> <span class="nn">logging</span>
 <span class="kn">from</span> <span class="nn">....</span> <span class="kn">import</span> <span class="n">FastDeployModel</span><span class="p">,</span> <span class="n">ModelFormat</span>
 <span class="kn">from</span> <span class="nn">....</span> <span class="kn">import</span> <span class="n">c_lib_wrap</span> <span class="k">as</span> <span class="n">C</span>
+<span class="kn">from</span> <span class="nn">...common</span> <span class="kn">import</span> <span class="n">ProcessorManager</span>
 
 
 <span class="k">def</span> <span class="nf">sort_boxes</span><span class="p">(</span><span class="n">boxes</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">C</span><span class="o">.</span><span class="n">vision</span><span class="o">.</span><span class="n">ocr</span><span class="o">.</span><span class="n">sort_boxes</span><span class="p">(</span><span class="n">boxes</span><span class="p">)</span>
 
 
-<span class="k">class</span> <span class="nc">DBDetectorPreprocessor</span><span class="p">:</span>
+<div class="viewcode-block" id="DBDetectorPreprocessor"><a class="viewcode-back" href="../../../../ocr.html#fastdeploy.vision.ocr.DBDetectorPreprocessor">[docs]</a><span class="k">class</span> <span class="nc">DBDetectorPreprocessor</span><span class="p">(</span><span class="n">ProcessorManager</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Create a preprocessor for DBDetectorModel</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Create a preprocessor for DBDetectorModel</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_preprocessor</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">vision</span><span class="o">.</span><span class="n">ocr</span><span class="o">.</span><span class="n">DBDetectorPreprocessor</span><span class="p">()</span>
-
-    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_ims</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Preprocess input images for DBDetectorModel</span>
-<span class="sd">        :param: input_ims: (list of numpy.ndarray) The input image</span>
-<span class="sd">        :return: pair(list of FDTensor, list of std::array&lt;int, 4&gt;)</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_preprocessor</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">input_ims</span><span class="p">)</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">DBDetectorPreprocessor</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_manager</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">vision</span><span class="o">.</span><span class="n">ocr</span><span class="o">.</span><span class="n">DBDetectorPreprocessor</span><span class="p">()</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">max_side_len</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_preprocessor</span><span class="o">.</span><span class="n">max_side_len</span>
+        <span class="sd">&quot;&quot;&quot;Get max_side_len value.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_manager</span><span class="o">.</span><span class="n">max_side_len</span>
 
     <span class="nd">@max_side_len</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">max_side_len</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Set max_side_len value.</span>
+<span class="sd">        :param: value: (int) max_side_len value</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span>
             <span class="n">value</span><span class="p">,</span> <span class="nb">int</span><span class="p">),</span> <span class="s2">&quot;The value to set `max_side_len` must be type of int.&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_preprocessor</span><span class="o">.</span><span class="n">max_side_len</span> <span class="o">=</span> <span class="n">value</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_manager</span><span class="o">.</span><span class="n">max_side_len</span> <span class="o">=</span> <span class="n">value</span>
+
+<div class="viewcode-block" id="DBDetectorPreprocessor.set_normalize"><a class="viewcode-back" href="../../../../ocr.html#fastdeploy.vision.ocr.DBDetectorPreprocessor.set_normalize">[docs]</a>    <span class="k">def</span> <span class="nf">set_normalize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mean</span><span class="p">,</span> <span class="n">std</span><span class="p">,</span> <span class="n">is_scale</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Set preprocess normalize parameters, please call this API to</span>
+<span class="sd">           customize the normalize parameters, otherwise it will use the default</span>
+<span class="sd">           normalize parameters.</span>
+<span class="sd">        :param: mean: (list of float) mean values</span>
+<span class="sd">        :param: std: (list of float) std values</span>
+<span class="sd">        :param: is_scale: (boolean) whether to scale</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_manager</span><span class="o">.</span><span class="n">set_normalize</span><span class="p">(</span><span class="n">mean</span><span class="p">,</span> <span class="n">std</span><span class="p">,</span> <span class="n">is_scale</span><span class="p">)</span></div>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">is_scale</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_preprocessor</span><span class="o">.</span><span class="n">is_scale</span>
+    <span class="k">def</span> <span class="nf">static_shape_infer</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_manager</span><span class="o">.</span><span class="n">static_shape_infer</span>
 
-    <span class="nd">@is_scale</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">is_scale</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+    <span class="nd">@static_shape_infer</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">static_shape_infer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
         <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span>
-            <span class="n">value</span><span class="p">,</span> <span class="nb">bool</span><span class="p">),</span> <span class="s2">&quot;The value to set `is_scale` must be type of bool.&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_preprocessor</span><span class="o">.</span><span class="n">is_scale</span> <span class="o">=</span> <span class="n">value</span>
+            <span class="n">value</span><span class="p">,</span>
+            <span class="nb">bool</span><span class="p">),</span> <span class="s2">&quot;The value to set `static_shape_infer` must be type of bool.&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_manager</span><span class="o">.</span><span class="n">static_shape_infer</span> <span class="o">=</span> <span class="n">value</span>
 
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">scale</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_preprocessor</span><span class="o">.</span><span class="n">scale</span>
+<div class="viewcode-block" id="DBDetectorPreprocessor.disable_normalize"><a class="viewcode-back" href="../../../../ocr.html#fastdeploy.vision.ocr.DBDetectorPreprocessor.disable_normalize">[docs]</a>    <span class="k">def</span> <span class="nf">disable_normalize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This function will disable normalize in preprocessing step.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_manager</span><span class="o">.</span><span class="n">disable_normalize</span><span class="p">()</span></div>
 
-    <span class="nd">@scale</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">scale</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
-        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span>
-            <span class="n">value</span><span class="p">,</span> <span class="nb">list</span><span class="p">),</span> <span class="s2">&quot;The value to set `scale` must be type of list.&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_preprocessor</span><span class="o">.</span><span class="n">scale</span> <span class="o">=</span> <span class="n">value</span>
-
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">mean</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_preprocessor</span><span class="o">.</span><span class="n">mean</span>
-
-    <span class="nd">@mean</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">mean</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
-        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span>
-            <span class="n">value</span><span class="p">,</span> <span class="nb">list</span><span class="p">),</span> <span class="s2">&quot;The value to set `mean` must be type of list.&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_preprocessor</span><span class="o">.</span><span class="n">mean</span> <span class="o">=</span> <span class="n">value</span>
+<div class="viewcode-block" id="DBDetectorPreprocessor.disable_permute"><a class="viewcode-back" href="../../../../ocr.html#fastdeploy.vision.ocr.DBDetectorPreprocessor.disable_permute">[docs]</a>    <span class="k">def</span> <span class="nf">disable_permute</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This function will disable hwc2chw in preprocessing step.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_manager</span><span class="o">.</span><span class="n">disable_permute</span><span class="p">()</span></div></div>
 
 
-<span class="k">class</span> <span class="nc">DBDetectorPostprocessor</span><span class="p">:</span>
+<div class="viewcode-block" id="DBDetectorPostprocessor"><a class="viewcode-back" href="../../../../ocr.html#fastdeploy.vision.ocr.DBDetectorPostprocessor">[docs]</a><span class="k">class</span> <span class="nc">DBDetectorPostprocessor</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Create a postprocessor for DBDetectorModel</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Create a postprocessor for DBDetectorModel</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_postprocessor</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">vision</span><span class="o">.</span><span class="n">ocr</span><span class="o">.</span><span class="n">DBDetectorPostprocessor</span><span class="p">()</span>
 
-    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">runtime_results</span><span class="p">,</span> <span class="n">batch_det_img_info</span><span class="p">):</span>
+<div class="viewcode-block" id="DBDetectorPostprocessor.run"><a class="viewcode-back" href="../../../../ocr.html#fastdeploy.vision.ocr.DBDetectorPostprocessor.run">[docs]</a>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">runtime_results</span><span class="p">,</span> <span class="n">batch_det_img_info</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Postprocess the runtime results for DBDetectorModel</span>
+
 <span class="sd">        :param: runtime_results: (list of FDTensor or list of pyArray)The output FDTensor results from runtime</span>
 <span class="sd">        :param: batch_det_img_info: (list of std::array&lt;int, 4&gt;)The output of det_preprocessor</span>
 <span class="sd">        :return: list of Result(If the runtime_results is predict by batched samples, the length of this list equals to the batch size)</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_postprocessor</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">runtime_results</span><span class="p">,</span> <span class="n">batch_det_img_info</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_postprocessor</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">runtime_results</span><span class="p">,</span> <span class="n">batch_det_img_info</span><span class="p">)</span></div>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">det_db_thresh</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return the det_db_thresh of DBDetectorPostprocessor</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_postprocessor</span><span class="o">.</span><span class="n">det_db_thresh</span>
 
     <span class="nd">@det_db_thresh</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">det_db_thresh</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Set the det_db_thresh for DBDetectorPostprocessor</span>
+
+<span class="sd">        :param: value : the det_db_thresh value</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span>
             <span class="n">value</span><span class="p">,</span>
             <span class="nb">float</span><span class="p">),</span> <span class="s2">&quot;The value to set `det_db_thresh` must be type of float.&quot;</span>
@@ -357,10 +365,17 @@ title="Fullscreen mode"
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">det_db_box_thresh</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return the det_db_box_thresh of DBDetectorPostprocessor</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_postprocessor</span><span class="o">.</span><span class="n">det_db_box_thresh</span>
 
     <span class="nd">@det_db_box_thresh</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">det_db_box_thresh</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Set the det_db_box_thresh for DBDetectorPostprocessor</span>
+
+<span class="sd">        :param: value : the det_db_box_thresh value</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span>
             <span class="n">value</span><span class="p">,</span> <span class="nb">float</span>
         <span class="p">),</span> <span class="s2">&quot;The value to set `det_db_box_thresh` must be type of float.&quot;</span>
@@ -368,10 +383,17 @@ title="Fullscreen mode"
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">det_db_unclip_ratio</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return the det_db_unclip_ratio of DBDetectorPostprocessor</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_postprocessor</span><span class="o">.</span><span class="n">det_db_unclip_ratio</span>
 
     <span class="nd">@det_db_unclip_ratio</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">det_db_unclip_ratio</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Set the det_db_unclip_ratio for DBDetectorPostprocessor</span>
+
+<span class="sd">        :param: value : the det_db_unclip_ratio value</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span>
             <span class="n">value</span><span class="p">,</span> <span class="nb">float</span>
         <span class="p">),</span> <span class="s2">&quot;The value to set `det_db_unclip_ratio` must be type of float.&quot;</span>
@@ -379,10 +401,17 @@ title="Fullscreen mode"
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">det_db_score_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return the det_db_score_mode of DBDetectorPostprocessor</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_postprocessor</span><span class="o">.</span><span class="n">det_db_score_mode</span>
 
     <span class="nd">@det_db_score_mode</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">det_db_score_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Set the det_db_score_mode for DBDetectorPostprocessor</span>
+
+<span class="sd">        :param: value : the det_db_score_mode value</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span>
             <span class="n">value</span><span class="p">,</span>
             <span class="nb">str</span><span class="p">),</span> <span class="s2">&quot;The value to set `det_db_score_mode` must be type of str.&quot;</span>
@@ -390,14 +419,21 @@ title="Fullscreen mode"
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">use_dilation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return the use_dilation of DBDetectorPostprocessor</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_postprocessor</span><span class="o">.</span><span class="n">use_dilation</span>
 
     <span class="nd">@use_dilation</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">use_dilation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Set the use_dilation for DBDetectorPostprocessor</span>
+
+<span class="sd">        :param: value : the use_dilation value</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span>
             <span class="n">value</span><span class="p">,</span>
             <span class="nb">bool</span><span class="p">),</span> <span class="s2">&quot;The value to set `use_dilation` must be type of bool.&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_postprocessor</span><span class="o">.</span><span class="n">use_dilation</span> <span class="o">=</span> <span class="n">value</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_postprocessor</span><span class="o">.</span><span class="n">use_dilation</span> <span class="o">=</span> <span class="n">value</span></div>
 
 
 <div class="viewcode-block" id="DBDetector"><a class="viewcode-back" href="../../../../ocr.html#fastdeploy.vision.ocr.DBDetector">[docs]</a><span class="k">class</span> <span class="nc">DBDetector</span><span class="p">(</span><span class="n">FastDeployModel</span><span class="p">):</span>
@@ -424,6 +460,19 @@ title="Fullscreen mode"
             <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">initialized</span><span class="p">,</span> <span class="s2">&quot;DBDetector initialize failed.&quot;</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_runnable</span> <span class="o">=</span> <span class="kc">True</span>
 
+<div class="viewcode-block" id="DBDetector.clone"><a class="viewcode-back" href="../../../../ocr.html#fastdeploy.vision.ocr.DBDetector.clone">[docs]</a>    <span class="k">def</span> <span class="nf">clone</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Clone OCR detection model object</span>
+
+<span class="sd">        :return: a new OCR detection model object</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">class</span> <span class="nc">DBDetectorClone</span><span class="p">(</span><span class="n">DBDetector</span><span class="p">):</span>
+            <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_model</span> <span class="o">=</span> <span class="n">model</span>
+
+        <span class="n">clone_model</span> <span class="o">=</span> <span class="n">DBDetectorClone</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">clone</span><span class="p">())</span>
+        <span class="k">return</span> <span class="n">clone_model</span></div>
+
 <div class="viewcode-block" id="DBDetector.predict"><a class="viewcode-back" href="../../../../ocr.html#fastdeploy.vision.ocr.DBDetector.predict">[docs]</a>    <span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_image</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Predict an input image</span>
 <span class="sd">        :param input_image: (numpy.ndarray)The input image data, 3-D array with layout HWC, BGR format</span>
@@ -446,17 +495,9 @@ title="Fullscreen mode"
     <span class="k">def</span> <span class="nf">preprocessor</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">preprocessor</span>
 
-    <span class="nd">@preprocessor</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">preprocessor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">preprocessor</span> <span class="o">=</span> <span class="n">value</span>
-
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">postprocessor</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">postprocessor</span>
-
-    <span class="nd">@postprocessor</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">postprocessor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">postprocessor</span> <span class="o">=</span> <span class="n">value</span>
 
     <span class="c1"># Det Preprocessor Property</span>
     <span class="nd">@property</span>
@@ -468,36 +509,6 @@ title="Fullscreen mode"
         <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span>
             <span class="n">value</span><span class="p">,</span> <span class="nb">int</span><span class="p">),</span> <span class="s2">&quot;The value to set `max_side_len` must be type of int.&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">preprocessor</span><span class="o">.</span><span class="n">max_side_len</span> <span class="o">=</span> <span class="n">value</span>
-
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">is_scale</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">preprocessor</span><span class="o">.</span><span class="n">is_scale</span>
-
-    <span class="nd">@is_scale</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">is_scale</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
-        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span>
-            <span class="n">value</span><span class="p">,</span> <span class="nb">bool</span><span class="p">),</span> <span class="s2">&quot;The value to set `is_scale` must be type of bool.&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">preprocessor</span><span class="o">.</span><span class="n">is_scale</span> <span class="o">=</span> <span class="n">value</span>
-
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">scale</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">preprocessor</span><span class="o">.</span><span class="n">scale</span>
-
-    <span class="nd">@scale</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">scale</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
-        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span>
-            <span class="n">value</span><span class="p">,</span> <span class="nb">list</span><span class="p">),</span> <span class="s2">&quot;The value to set `scale` must be type of list.&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">preprocessor</span><span class="o">.</span><span class="n">scale</span> <span class="o">=</span> <span class="n">value</span>
-
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">mean</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">preprocessor</span><span class="o">.</span><span class="n">mean</span>
-
-    <span class="nd">@mean</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">mean</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
-        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span>
-            <span class="n">value</span><span class="p">,</span> <span class="nb">list</span><span class="p">),</span> <span class="s2">&quot;The value to set `mean` must be type of list.&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">preprocessor</span><span class="o">.</span><span class="n">mean</span> <span class="o">=</span> <span class="n">value</span>
 
     <span class="c1"># Det Ppstprocessor Property</span>
     <span class="nd">@property</span>
@@ -556,84 +567,77 @@ title="Fullscreen mode"
         <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">postprocessor</span><span class="o">.</span><span class="n">use_dilation</span> <span class="o">=</span> <span class="n">value</span></div>
 
 
-<span class="k">class</span> <span class="nc">ClassifierPreprocessor</span><span class="p">:</span>
+<div class="viewcode-block" id="ClassifierPreprocessor"><a class="viewcode-back" href="../../../../ocr.html#fastdeploy.vision.ocr.ClassifierPreprocessor">[docs]</a><span class="k">class</span> <span class="nc">ClassifierPreprocessor</span><span class="p">(</span><span class="n">ProcessorManager</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Create a preprocessor for ClassifierModel</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_preprocessor</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">vision</span><span class="o">.</span><span class="n">ocr</span><span class="o">.</span><span class="n">ClassifierPreprocessor</span><span class="p">()</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">ClassifierPreprocessor</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_manager</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">vision</span><span class="o">.</span><span class="n">ocr</span><span class="o">.</span><span class="n">ClassifierPreprocessor</span><span class="p">()</span>
 
-    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_ims</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Preprocess input images for ClassifierModel</span>
-<span class="sd">        :param: input_ims: (list of numpy.ndarray)The input image</span>
-<span class="sd">        :return: list of FDTensor</span>
+<div class="viewcode-block" id="ClassifierPreprocessor.set_normalize"><a class="viewcode-back" href="../../../../ocr.html#fastdeploy.vision.ocr.ClassifierPreprocessor.set_normalize">[docs]</a>    <span class="k">def</span> <span class="nf">set_normalize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mean</span><span class="p">,</span> <span class="n">std</span><span class="p">,</span> <span class="n">is_scale</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Set preprocess normalize parameters, please call this API to</span>
+<span class="sd">           customize the normalize parameters, otherwise it will use the default</span>
+<span class="sd">           normalize parameters.</span>
+<span class="sd">        :param: mean: (list of float) mean values</span>
+<span class="sd">        :param: std: (list of float) std values</span>
+<span class="sd">        :param: is_scale: (boolean) whether to scale</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_preprocessor</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">input_ims</span><span class="p">)</span>
-
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">is_scale</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_preprocessor</span><span class="o">.</span><span class="n">is_scale</span>
-
-    <span class="nd">@is_scale</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">is_scale</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
-        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span>
-            <span class="n">value</span><span class="p">,</span> <span class="nb">bool</span><span class="p">),</span> <span class="s2">&quot;The value to set `is_scale` must be type of bool.&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_preprocessor</span><span class="o">.</span><span class="n">is_scale</span> <span class="o">=</span> <span class="n">value</span>
-
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">scale</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_preprocessor</span><span class="o">.</span><span class="n">scale</span>
-
-    <span class="nd">@scale</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">scale</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
-        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span>
-            <span class="n">value</span><span class="p">,</span> <span class="nb">list</span><span class="p">),</span> <span class="s2">&quot;The value to set `scale` must be type of list.&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_preprocessor</span><span class="o">.</span><span class="n">scale</span> <span class="o">=</span> <span class="n">value</span>
-
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">mean</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_preprocessor</span><span class="o">.</span><span class="n">mean</span>
-
-    <span class="nd">@mean</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">mean</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
-        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span>
-            <span class="n">value</span><span class="p">,</span> <span class="nb">list</span><span class="p">),</span> <span class="s2">&quot;The value to set `mean` must be type of list.&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_preprocessor</span><span class="o">.</span><span class="n">mean</span> <span class="o">=</span> <span class="n">value</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_manager</span><span class="o">.</span><span class="n">set_normalize</span><span class="p">(</span><span class="n">mean</span><span class="p">,</span> <span class="n">std</span><span class="p">,</span> <span class="n">is_scale</span><span class="p">)</span></div>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">cls_image_shape</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_preprocessor</span><span class="o">.</span><span class="n">cls_image_shape</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_manager</span><span class="o">.</span><span class="n">cls_image_shape</span>
 
     <span class="nd">@cls_image_shape</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">cls_image_shape</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
         <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span>
             <span class="n">value</span><span class="p">,</span>
             <span class="nb">list</span><span class="p">),</span> <span class="s2">&quot;The value to set `cls_image_shape` must be type of list.&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_preprocessor</span><span class="o">.</span><span class="n">cls_image_shape</span> <span class="o">=</span> <span class="n">value</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_manager</span><span class="o">.</span><span class="n">cls_image_shape</span> <span class="o">=</span> <span class="n">value</span>
+
+<div class="viewcode-block" id="ClassifierPreprocessor.disable_normalize"><a class="viewcode-back" href="../../../../ocr.html#fastdeploy.vision.ocr.ClassifierPreprocessor.disable_normalize">[docs]</a>    <span class="k">def</span> <span class="nf">disable_normalize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This function will disable normalize in preprocessing step.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_manager</span><span class="o">.</span><span class="n">disable_normalize</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="ClassifierPreprocessor.disable_permute"><a class="viewcode-back" href="../../../../ocr.html#fastdeploy.vision.ocr.ClassifierPreprocessor.disable_permute">[docs]</a>    <span class="k">def</span> <span class="nf">disable_permute</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This function will disable hwc2chw in preprocessing step.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_manager</span><span class="o">.</span><span class="n">disable_permute</span><span class="p">()</span></div></div>
 
 
-<span class="k">class</span> <span class="nc">ClassifierPostprocessor</span><span class="p">:</span>
+<div class="viewcode-block" id="ClassifierPostprocessor"><a class="viewcode-back" href="../../../../ocr.html#fastdeploy.vision.ocr.ClassifierPostprocessor">[docs]</a><span class="k">class</span> <span class="nc">ClassifierPostprocessor</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Create a postprocessor for ClassifierModel</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_postprocessor</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">vision</span><span class="o">.</span><span class="n">ocr</span><span class="o">.</span><span class="n">ClassifierPostprocessor</span><span class="p">()</span>
 
-    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">runtime_results</span><span class="p">):</span>
+<div class="viewcode-block" id="ClassifierPostprocessor.run"><a class="viewcode-back" href="../../../../ocr.html#fastdeploy.vision.ocr.ClassifierPostprocessor.run">[docs]</a>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">runtime_results</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Postprocess the runtime results for ClassifierModel</span>
 <span class="sd">        :param: runtime_results: (list of FDTensor or list of pyArray)The output FDTensor results from runtime</span>
 <span class="sd">        :return: list of Result(If the runtime_results is predict by batched samples, the length of this list equals to the batch size)</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_postprocessor</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">runtime_results</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_postprocessor</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">runtime_results</span><span class="p">)</span></div>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">cls_thresh</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return the cls_thresh of ClassifierPostprocessor</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_postprocessor</span><span class="o">.</span><span class="n">cls_thresh</span>
 
     <span class="nd">@cls_thresh</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">cls_thresh</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Set the cls_thresh for ClassifierPostprocessor</span>
+
+<span class="sd">        :param: value: the value of cls_thresh</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span>
             <span class="n">value</span><span class="p">,</span>
             <span class="nb">float</span><span class="p">),</span> <span class="s2">&quot;The value to set `cls_thresh` must be type of float.&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_postprocessor</span><span class="o">.</span><span class="n">cls_thresh</span> <span class="o">=</span> <span class="n">value</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_postprocessor</span><span class="o">.</span><span class="n">cls_thresh</span> <span class="o">=</span> <span class="n">value</span></div>
 
 
 <div class="viewcode-block" id="Classifier"><a class="viewcode-back" href="../../../../ocr.html#fastdeploy.vision.ocr.Classifier">[docs]</a><span class="k">class</span> <span class="nc">Classifier</span><span class="p">(</span><span class="n">FastDeployModel</span><span class="p">):</span>
@@ -659,6 +663,18 @@ title="Fullscreen mode"
                 <span class="n">model_file</span><span class="p">,</span> <span class="n">params_file</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_runtime_option</span><span class="p">,</span> <span class="n">model_format</span><span class="p">)</span>
             <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">initialized</span><span class="p">,</span> <span class="s2">&quot;Classifier initialize failed.&quot;</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_runnable</span> <span class="o">=</span> <span class="kc">True</span>
+
+<div class="viewcode-block" id="Classifier.clone"><a class="viewcode-back" href="../../../../ocr.html#fastdeploy.vision.ocr.Classifier.clone">[docs]</a>    <span class="k">def</span> <span class="nf">clone</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Clone OCR classification model object</span>
+<span class="sd">        :return: a new OCR classification model object</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">class</span> <span class="nc">ClassifierClone</span><span class="p">(</span><span class="n">Classifier</span><span class="p">):</span>
+            <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_model</span> <span class="o">=</span> <span class="n">model</span>
+
+        <span class="n">clone_model</span> <span class="o">=</span> <span class="n">ClassifierClone</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">clone</span><span class="p">())</span>
+        <span class="k">return</span> <span class="n">clone_model</span></div>
 
 <div class="viewcode-block" id="Classifier.predict"><a class="viewcode-back" href="../../../../ocr.html#fastdeploy.vision.ocr.Classifier.predict">[docs]</a>    <span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_image</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Predict an input image</span>
@@ -694,37 +710,6 @@ title="Fullscreen mode"
     <span class="k">def</span> <span class="nf">postprocessor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">postprocessor</span> <span class="o">=</span> <span class="n">value</span>
 
-    <span class="c1"># Cls Preprocessor Property</span>
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">is_scale</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">preprocessor</span><span class="o">.</span><span class="n">is_scale</span>
-
-    <span class="nd">@is_scale</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">is_scale</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
-        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span>
-            <span class="n">value</span><span class="p">,</span> <span class="nb">bool</span><span class="p">),</span> <span class="s2">&quot;The value to set `is_scale` must be type of bool.&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">preprocessor</span><span class="o">.</span><span class="n">is_scale</span> <span class="o">=</span> <span class="n">value</span>
-
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">scale</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">preprocessor</span><span class="o">.</span><span class="n">scale</span>
-
-    <span class="nd">@scale</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">scale</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
-        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span>
-            <span class="n">value</span><span class="p">,</span> <span class="nb">list</span><span class="p">),</span> <span class="s2">&quot;The value to set `scale` must be type of list.&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">preprocessor</span><span class="o">.</span><span class="n">scale</span> <span class="o">=</span> <span class="n">value</span>
-
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">mean</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">preprocessor</span><span class="o">.</span><span class="n">mean</span>
-
-    <span class="nd">@mean</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">mean</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
-        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span>
-            <span class="n">value</span><span class="p">,</span> <span class="nb">list</span><span class="p">),</span> <span class="s2">&quot;The value to set `mean` must be type of list.&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">preprocessor</span><span class="o">.</span><span class="n">mean</span> <span class="o">=</span> <span class="n">value</span>
-
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">cls_image_shape</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">preprocessor</span><span class="o">.</span><span class="n">cls_image_shape</span>
@@ -749,74 +734,70 @@ title="Fullscreen mode"
         <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">postprocessor</span><span class="o">.</span><span class="n">cls_thresh</span> <span class="o">=</span> <span class="n">value</span></div>
 
 
-<span class="k">class</span> <span class="nc">RecognizerPreprocessor</span><span class="p">:</span>
+<div class="viewcode-block" id="RecognizerPreprocessor"><a class="viewcode-back" href="../../../../ocr.html#fastdeploy.vision.ocr.RecognizerPreprocessor">[docs]</a><span class="k">class</span> <span class="nc">RecognizerPreprocessor</span><span class="p">(</span><span class="n">ProcessorManager</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Create a preprocessor for RecognizerModel</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_preprocessor</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">vision</span><span class="o">.</span><span class="n">ocr</span><span class="o">.</span><span class="n">RecognizerPreprocessor</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_manager</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">vision</span><span class="o">.</span><span class="n">ocr</span><span class="o">.</span><span class="n">RecognizerPreprocessor</span><span class="p">()</span>
 
-    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_ims</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Preprocess input images for RecognizerModel</span>
-<span class="sd">        :param: input_ims: (list of numpy.ndarray)The input image</span>
-<span class="sd">        :return: list of FDTensor</span>
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">static_shape_infer</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_manager</span><span class="o">.</span><span class="n">static_shape_infer</span>
+
+    <span class="nd">@static_shape_infer</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">static_shape_infer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span>
+            <span class="n">value</span><span class="p">,</span>
+            <span class="nb">bool</span><span class="p">),</span> <span class="s2">&quot;The value to set `static_shape_infer` must be type of bool.&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_manager</span><span class="o">.</span><span class="n">static_shape_infer</span> <span class="o">=</span> <span class="n">value</span>
+
+<div class="viewcode-block" id="RecognizerPreprocessor.set_normalize"><a class="viewcode-back" href="../../../../ocr.html#fastdeploy.vision.ocr.RecognizerPreprocessor.set_normalize">[docs]</a>    <span class="k">def</span> <span class="nf">set_normalize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mean</span><span class="p">,</span> <span class="n">std</span><span class="p">,</span> <span class="n">is_scale</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Set preprocess normalize parameters, please call this API to</span>
+<span class="sd">           customize the normalize parameters, otherwise it will use the default</span>
+<span class="sd">           normalize parameters.</span>
+<span class="sd">        :param: mean: (list of float) mean values</span>
+<span class="sd">        :param: std: (list of float) std values</span>
+<span class="sd">        :param: is_scale: (boolean) whether to scale</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_preprocessor</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">input_ims</span><span class="p">)</span>
-
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">is_scale</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_preprocessor</span><span class="o">.</span><span class="n">is_scale</span>
-
-    <span class="nd">@is_scale</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">is_scale</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
-        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span>
-            <span class="n">value</span><span class="p">,</span> <span class="nb">bool</span><span class="p">),</span> <span class="s2">&quot;The value to set `is_scale` must be type of bool.&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_preprocessor</span><span class="o">.</span><span class="n">is_scale</span> <span class="o">=</span> <span class="n">value</span>
-
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">scale</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_preprocessor</span><span class="o">.</span><span class="n">scale</span>
-
-    <span class="nd">@scale</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">scale</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
-        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span>
-            <span class="n">value</span><span class="p">,</span> <span class="nb">list</span><span class="p">),</span> <span class="s2">&quot;The value to set `scale` must be type of list.&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_preprocessor</span><span class="o">.</span><span class="n">scale</span> <span class="o">=</span> <span class="n">value</span>
-
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">mean</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_preprocessor</span><span class="o">.</span><span class="n">mean</span>
-
-    <span class="nd">@mean</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">mean</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
-        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span>
-            <span class="n">value</span><span class="p">,</span> <span class="nb">list</span><span class="p">),</span> <span class="s2">&quot;The value to set `mean` must be type of list.&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_preprocessor</span><span class="o">.</span><span class="n">mean</span> <span class="o">=</span> <span class="n">value</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_manager</span><span class="o">.</span><span class="n">set_normalize</span><span class="p">(</span><span class="n">mean</span><span class="p">,</span> <span class="n">std</span><span class="p">,</span> <span class="n">is_scale</span><span class="p">)</span></div>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">rec_image_shape</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_preprocessor</span><span class="o">.</span><span class="n">rec_image_shape</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_manager</span><span class="o">.</span><span class="n">rec_image_shape</span>
 
     <span class="nd">@rec_image_shape</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">rec_image_shape</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
         <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span>
             <span class="n">value</span><span class="p">,</span>
             <span class="nb">list</span><span class="p">),</span> <span class="s2">&quot;The value to set `rec_image_shape` must be type of list.&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_preprocessor</span><span class="o">.</span><span class="n">rec_image_shape</span> <span class="o">=</span> <span class="n">value</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_manager</span><span class="o">.</span><span class="n">rec_image_shape</span> <span class="o">=</span> <span class="n">value</span>
+
+<div class="viewcode-block" id="RecognizerPreprocessor.disable_normalize"><a class="viewcode-back" href="../../../../ocr.html#fastdeploy.vision.ocr.RecognizerPreprocessor.disable_normalize">[docs]</a>    <span class="k">def</span> <span class="nf">disable_normalize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This function will disable normalize in preprocessing step.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_manager</span><span class="o">.</span><span class="n">disable_normalize</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="RecognizerPreprocessor.disable_permute"><a class="viewcode-back" href="../../../../ocr.html#fastdeploy.vision.ocr.RecognizerPreprocessor.disable_permute">[docs]</a>    <span class="k">def</span> <span class="nf">disable_permute</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This function will disable hwc2chw in preprocessing step.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_manager</span><span class="o">.</span><span class="n">disable_permute</span><span class="p">()</span></div></div>
 
 
-<span class="k">class</span> <span class="nc">RecognizerPostprocessor</span><span class="p">:</span>
+<div class="viewcode-block" id="RecognizerPostprocessor"><a class="viewcode-back" href="../../../../ocr.html#fastdeploy.vision.ocr.RecognizerPostprocessor">[docs]</a><span class="k">class</span> <span class="nc">RecognizerPostprocessor</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">label_path</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Create a postprocessor for RecognizerModel</span>
 <span class="sd">        :param label_path: (str)Path of label file</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_postprocessor</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">vision</span><span class="o">.</span><span class="n">ocr</span><span class="o">.</span><span class="n">RecognizerPostprocessor</span><span class="p">(</span><span class="n">label_path</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">runtime_results</span><span class="p">):</span>
+<div class="viewcode-block" id="RecognizerPostprocessor.run"><a class="viewcode-back" href="../../../../ocr.html#fastdeploy.vision.ocr.RecognizerPostprocessor.run">[docs]</a>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">runtime_results</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Postprocess the runtime results for RecognizerModel</span>
 <span class="sd">        :param: runtime_results: (list of FDTensor or list of pyArray)The output FDTensor results from runtime</span>
 <span class="sd">        :return: list of Result(If the runtime_results is predict by batched samples, the length of this list equals to the batch size)</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_postprocessor</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">runtime_results</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_postprocessor</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">runtime_results</span><span class="p">)</span></div></div>
 
 
 <div class="viewcode-block" id="Recognizer"><a class="viewcode-back" href="../../../../ocr.html#fastdeploy.vision.ocr.Recognizer">[docs]</a><span class="k">class</span> <span class="nc">Recognizer</span><span class="p">(</span><span class="n">FastDeployModel</span><span class="p">):</span>
@@ -845,6 +826,18 @@ title="Fullscreen mode"
                 <span class="n">model_format</span><span class="p">)</span>
             <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">initialized</span><span class="p">,</span> <span class="s2">&quot;Recognizer initialize failed.&quot;</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_runnable</span> <span class="o">=</span> <span class="kc">True</span>
+
+<div class="viewcode-block" id="Recognizer.clone"><a class="viewcode-back" href="../../../../ocr.html#fastdeploy.vision.ocr.Recognizer.clone">[docs]</a>    <span class="k">def</span> <span class="nf">clone</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Clone OCR recognition model object</span>
+<span class="sd">        :return: a new OCR recognition model object</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">class</span> <span class="nc">RecognizerClone</span><span class="p">(</span><span class="n">Recognizer</span><span class="p">):</span>
+            <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_model</span> <span class="o">=</span> <span class="n">model</span>
+
+        <span class="n">clone_model</span> <span class="o">=</span> <span class="n">RecognizerClone</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">clone</span><span class="p">())</span>
+        <span class="k">return</span> <span class="n">clone_model</span></div>
 
 <div class="viewcode-block" id="Recognizer.predict"><a class="viewcode-back" href="../../../../ocr.html#fastdeploy.vision.ocr.Recognizer.predict">[docs]</a>    <span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_image</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Predict an input image</span>
@@ -881,34 +874,15 @@ title="Fullscreen mode"
         <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">postprocessor</span> <span class="o">=</span> <span class="n">value</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">is_scale</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">preprocessor</span><span class="o">.</span><span class="n">is_scale</span>
+    <span class="k">def</span> <span class="nf">static_shape_infer</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">preprocessor</span><span class="o">.</span><span class="n">static_shape_infer</span>
 
-    <span class="nd">@is_scale</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">is_scale</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+    <span class="nd">@static_shape_infer</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">static_shape_infer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
         <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span>
-            <span class="n">value</span><span class="p">,</span> <span class="nb">bool</span><span class="p">),</span> <span class="s2">&quot;The value to set `is_scale` must be type of bool.&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">preprocessor</span><span class="o">.</span><span class="n">is_scale</span> <span class="o">=</span> <span class="n">value</span>
-
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">scale</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">preprocessor</span><span class="o">.</span><span class="n">scale</span>
-
-    <span class="nd">@scale</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">scale</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
-        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span>
-            <span class="n">value</span><span class="p">,</span> <span class="nb">list</span><span class="p">),</span> <span class="s2">&quot;The value to set `scale` must be type of list.&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">preprocessor</span><span class="o">.</span><span class="n">scale</span> <span class="o">=</span> <span class="n">value</span>
-
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">mean</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">preprocessor</span><span class="o">.</span><span class="n">mean</span>
-
-    <span class="nd">@mean</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">mean</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
-        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span>
-            <span class="n">value</span><span class="p">,</span> <span class="nb">list</span><span class="p">),</span> <span class="s2">&quot;The value to set `mean` must be type of list.&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">preprocessor</span><span class="o">.</span><span class="n">mean</span> <span class="o">=</span> <span class="n">value</span>
+            <span class="n">value</span><span class="p">,</span>
+            <span class="nb">bool</span><span class="p">),</span> <span class="s2">&quot;The value to set `static_shape_infer` must be type of bool.&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">preprocessor</span><span class="o">.</span><span class="n">static_shape_infer</span> <span class="o">=</span> <span class="n">value</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">rec_image_shape</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -932,47 +906,59 @@ title="Fullscreen mode"
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">assert</span> <span class="n">det_model</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">rec_model</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;The det_model and rec_model cannot be None.&quot;</span>
         <span class="k">if</span> <span class="n">cls_model</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">system</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">vision</span><span class="o">.</span><span class="n">ocr</span><span class="o">.</span><span class="n">PPOCRv3</span><span class="p">(</span><span class="n">det_model</span><span class="o">.</span><span class="n">_model</span><span class="p">,</span>
-                                               <span class="n">rec_model</span><span class="o">.</span><span class="n">_model</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">system_</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">vision</span><span class="o">.</span><span class="n">ocr</span><span class="o">.</span><span class="n">PPOCRv3</span><span class="p">(</span><span class="n">det_model</span><span class="o">.</span><span class="n">_model</span><span class="p">,</span>
+                                                <span class="n">rec_model</span><span class="o">.</span><span class="n">_model</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">system</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">vision</span><span class="o">.</span><span class="n">ocr</span><span class="o">.</span><span class="n">PPOCRv3</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">system_</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">vision</span><span class="o">.</span><span class="n">ocr</span><span class="o">.</span><span class="n">PPOCRv3</span><span class="p">(</span>
                 <span class="n">det_model</span><span class="o">.</span><span class="n">_model</span><span class="p">,</span> <span class="n">cls_model</span><span class="o">.</span><span class="n">_model</span><span class="p">,</span> <span class="n">rec_model</span><span class="o">.</span><span class="n">_model</span><span class="p">)</span>
+
+<div class="viewcode-block" id="PPOCRv3.clone"><a class="viewcode-back" href="../../../../ocr.html#fastdeploy.vision.ocr.PPOCRv3.clone">[docs]</a>    <span class="k">def</span> <span class="nf">clone</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Clone PPOCRv3 pipeline object</span>
+<span class="sd">        :return: a new PPOCRv3 pipeline object</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">class</span> <span class="nc">PPOCRv3Clone</span><span class="p">(</span><span class="n">PPOCRv3</span><span class="p">):</span>
+            <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">system</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">system_</span> <span class="o">=</span> <span class="n">system</span>
+
+        <span class="n">clone_model</span> <span class="o">=</span> <span class="n">PPOCRv3Clone</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">system_</span><span class="o">.</span><span class="n">clone</span><span class="p">())</span>
+        <span class="k">return</span> <span class="n">clone_model</span></div>
 
 <div class="viewcode-block" id="PPOCRv3.predict"><a class="viewcode-back" href="../../../../ocr.html#fastdeploy.vision.ocr.PPOCRv3.predict">[docs]</a>    <span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_image</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Predict an input image</span>
 <span class="sd">        :param input_image: (numpy.ndarray)The input image data, 3-D array with layout HWC, BGR format</span>
 <span class="sd">        :return: OCRResult</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">system</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">input_image</span><span class="p">)</span></div>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">system_</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">input_image</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="PPOCRv3.batch_predict"><a class="viewcode-back" href="../../../../ocr.html#fastdeploy.vision.ocr.PPOCRv3.batch_predict">[docs]</a>    <span class="k">def</span> <span class="nf">batch_predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">images</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Predict a batch of input image</span>
 <span class="sd">        :param images: (list of numpy.ndarray) The input image list, each element is a 3-D array with layout HWC, BGR format</span>
 <span class="sd">        :return: OCRBatchResult</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">system</span><span class="o">.</span><span class="n">batch_predict</span><span class="p">(</span><span class="n">images</span><span class="p">)</span></div>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">system_</span><span class="o">.</span><span class="n">batch_predict</span><span class="p">(</span><span class="n">images</span><span class="p">)</span></div>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">cls_batch_size</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">system</span><span class="o">.</span><span class="n">cls_batch_size</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">system_</span><span class="o">.</span><span class="n">cls_batch_size</span>
 
     <span class="nd">@cls_batch_size</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">cls_batch_size</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
         <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span>
             <span class="n">value</span><span class="p">,</span>
             <span class="nb">int</span><span class="p">),</span> <span class="s2">&quot;The value to set `cls_batch_size` must be type of int.&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">system</span><span class="o">.</span><span class="n">cls_batch_size</span> <span class="o">=</span> <span class="n">value</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">system_</span><span class="o">.</span><span class="n">cls_batch_size</span> <span class="o">=</span> <span class="n">value</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">rec_batch_size</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">system</span><span class="o">.</span><span class="n">rec_batch_size</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">system_</span><span class="o">.</span><span class="n">rec_batch_size</span>
 
     <span class="nd">@rec_batch_size</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">rec_batch_size</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
         <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span>
             <span class="n">value</span><span class="p">,</span>
             <span class="nb">int</span><span class="p">),</span> <span class="s2">&quot;The value to set `rec_batch_size` must be type of int.&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">system</span><span class="o">.</span><span class="n">rec_batch_size</span> <span class="o">=</span> <span class="n">value</span></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">system_</span><span class="o">.</span><span class="n">rec_batch_size</span> <span class="o">=</span> <span class="n">value</span></div>
 
 
 <span class="k">class</span> <span class="nc">PPOCRSystemv3</span><span class="p">(</span><span class="n">PPOCRv3</span><span class="p">):</span>
@@ -996,11 +982,23 @@ title="Fullscreen mode"
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">assert</span> <span class="n">det_model</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">rec_model</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;The det_model and rec_model cannot be None.&quot;</span>
         <span class="k">if</span> <span class="n">cls_model</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">system</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">vision</span><span class="o">.</span><span class="n">ocr</span><span class="o">.</span><span class="n">PPOCRv2</span><span class="p">(</span><span class="n">det_model</span><span class="o">.</span><span class="n">_model</span><span class="p">,</span>
-                                               <span class="n">rec_model</span><span class="o">.</span><span class="n">_model</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">system_</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">vision</span><span class="o">.</span><span class="n">ocr</span><span class="o">.</span><span class="n">PPOCRv2</span><span class="p">(</span><span class="n">det_model</span><span class="o">.</span><span class="n">_model</span><span class="p">,</span>
+                                                <span class="n">rec_model</span><span class="o">.</span><span class="n">_model</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">system</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">vision</span><span class="o">.</span><span class="n">ocr</span><span class="o">.</span><span class="n">PPOCRv2</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">system_</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">vision</span><span class="o">.</span><span class="n">ocr</span><span class="o">.</span><span class="n">PPOCRv2</span><span class="p">(</span>
                 <span class="n">det_model</span><span class="o">.</span><span class="n">_model</span><span class="p">,</span> <span class="n">cls_model</span><span class="o">.</span><span class="n">_model</span><span class="p">,</span> <span class="n">rec_model</span><span class="o">.</span><span class="n">_model</span><span class="p">)</span>
+
+<div class="viewcode-block" id="PPOCRv2.clone"><a class="viewcode-back" href="../../../../ocr.html#fastdeploy.vision.ocr.PPOCRv2.clone">[docs]</a>    <span class="k">def</span> <span class="nf">clone</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Clone PPOCRv3 pipeline object</span>
+<span class="sd">        :return: a new PPOCRv3 pipeline object</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">class</span> <span class="nc">PPOCRv2Clone</span><span class="p">(</span><span class="n">PPOCRv2</span><span class="p">):</span>
+            <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">system</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">system_</span> <span class="o">=</span> <span class="n">system</span>
+
+        <span class="n">clone_model</span> <span class="o">=</span> <span class="n">PPOCRv2Clone</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">system_</span><span class="o">.</span><span class="n">clone</span><span class="p">())</span>
+        <span class="k">return</span> <span class="n">clone_model</span></div>
 
 <div class="viewcode-block" id="PPOCRv2.predict"><a class="viewcode-back" href="../../../../ocr.html#fastdeploy.vision.ocr.PPOCRv2.predict">[docs]</a>    <span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_image</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Predict an input image</span>
@@ -1008,7 +1006,7 @@ title="Fullscreen mode"
 <span class="sd">        :param input_image: (numpy.ndarray)The input image data, 3-D array with layout HWC, BGR format</span>
 <span class="sd">        :return: OCRResult</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">system</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">input_image</span><span class="p">)</span></div>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">system_</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">input_image</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="PPOCRv2.batch_predict"><a class="viewcode-back" href="../../../../ocr.html#fastdeploy.vision.ocr.PPOCRv2.batch_predict">[docs]</a>    <span class="k">def</span> <span class="nf">batch_predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">images</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Predict a batch of input image</span>
@@ -1016,29 +1014,29 @@ title="Fullscreen mode"
 <span class="sd">        :return: OCRBatchResult</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">system</span><span class="o">.</span><span class="n">batch_predict</span><span class="p">(</span><span class="n">images</span><span class="p">)</span></div>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">system_</span><span class="o">.</span><span class="n">batch_predict</span><span class="p">(</span><span class="n">images</span><span class="p">)</span></div>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">cls_batch_size</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">system</span><span class="o">.</span><span class="n">cls_batch_size</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">system_</span><span class="o">.</span><span class="n">cls_batch_size</span>
 
     <span class="nd">@cls_batch_size</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">cls_batch_size</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
         <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span>
             <span class="n">value</span><span class="p">,</span>
             <span class="nb">int</span><span class="p">),</span> <span class="s2">&quot;The value to set `cls_batch_size` must be type of int.&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">system</span><span class="o">.</span><span class="n">cls_batch_size</span> <span class="o">=</span> <span class="n">value</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">system_</span><span class="o">.</span><span class="n">cls_batch_size</span> <span class="o">=</span> <span class="n">value</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">rec_batch_size</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">system</span><span class="o">.</span><span class="n">rec_batch_size</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">system_</span><span class="o">.</span><span class="n">rec_batch_size</span>
 
     <span class="nd">@rec_batch_size</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">rec_batch_size</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
         <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span>
             <span class="n">value</span><span class="p">,</span>
             <span class="nb">int</span><span class="p">),</span> <span class="s2">&quot;The value to set `rec_batch_size` must be type of int.&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">system</span><span class="o">.</span><span class="n">rec_batch_size</span> <span class="o">=</span> <span class="n">value</span></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">system_</span><span class="o">.</span><span class="n">rec_batch_size</span> <span class="o">=</span> <span class="n">value</span></div>
 
 
 <span class="k">class</span> <span class="nc">PPOCRSystemv2</span><span class="p">(</span><span class="n">PPOCRv2</span><span class="p">):</span>
@@ -1052,36 +1050,67 @@ title="Fullscreen mode"
         <span class="k">return</span> <span class="nb">super</span><span class="p">(</span><span class="n">PPOCRSystemv2</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">input_image</span><span class="p">)</span>
 </pre></div>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
   
-    By PaddlePaddle<br/>
-  
-      &copy; Copyright 2022, PaddlePaddle.<br/>
-</p>
-        </footer>
-    </div>
+  <div class="footer-item">
     
-</div>
+<p class="component-author">
+By PaddlePaddle
+</p>
 
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022, PaddlePaddle.
+      <br/>
+    
+  </p>
 
-      </div>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div></div>
+          </footer>
+        
+
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../../../../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

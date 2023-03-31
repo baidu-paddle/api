@@ -1,0 +1,541 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fastdeploy.vision.faceid.contrib.insightface &#8212; FastDeploy Python API latest documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../../_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../../../../../_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../../../../../_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+
+  
+  <link href="../../../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="../../../../../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+
+    <script data-url_root="../../../../../" id="documentation_options" src="../../../../../_static/documentation_options.js"></script>
+    <script src="../../../../../_static/jquery.js"></script>
+    <script src="../../../../../_static/underscore.js"></script>
+    <script src="../../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../../../_static/doctools.js"></script>
+    <script src="../../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/fastdeploy/vision/faceid/contrib/insightface';</script>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../../../../index.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">FastDeploy Python API latest documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Vision Task Model API (视觉任务模型API)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../object_detection.html">Object Detection(目标检测)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ocr.html">OCR(文字识别)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../semantic_segmentation.html">Semantic Segmentation(语义分割)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../image_classification.html">Image Classification(图像分类)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../keypoint_detection.html">Keypoint Detection(关键点检测)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../matting.html">Matting(图像抠图)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../face_recognition.html">Face Recognition(人脸识别)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../face_detection.html">Face Detection(人脸检测)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../face_alignment.html">Face Alignment(人脸对齐)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../headpose.html">Headpose(头部姿态)</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Predict Result Struct (预测结果结构体)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../vision_results_en.html">Description of Vision Results</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">FastDeploy Runtime API (多后端推理引擎API)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../runtime.html">Runtime(模型推理Runtime)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../runtime_option.html">Runtime Option(Runtime配置)</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Vision Processor (图像预处理库)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../vision_processor.html">Vision Processor(多硬件图像处理库)</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <h1>Source code for fastdeploy.vision.faceid.contrib.insightface</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Copyright (c) 2022 PaddlePaddle Authors. All Rights Reserved.</span>
+<span class="c1">#</span>
+<span class="c1"># Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
+<span class="c1"># you may not use this file except in compliance with the License.</span>
+<span class="c1"># You may obtain a copy of the License at</span>
+<span class="c1">#</span>
+<span class="c1">#     http://www.apache.org/licenses/LICENSE-2.0</span>
+<span class="c1">#</span>
+<span class="c1"># Unless required by applicable law or agreed to in writing, software</span>
+<span class="c1"># distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
+<span class="c1"># WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
+<span class="c1"># See the License for the specific language governing permissions and</span>
+<span class="c1"># limitations under the License.</span>
+
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">absolute_import</span>
+<span class="kn">from</span> <span class="nn">.....</span> <span class="kn">import</span> <span class="n">FastDeployModel</span><span class="p">,</span> <span class="n">ModelFormat</span>
+<span class="kn">from</span> <span class="nn">.....</span> <span class="kn">import</span> <span class="n">c_lib_wrap</span> <span class="k">as</span> <span class="n">C</span>
+
+
+<span class="k">class</span> <span class="nc">InsightFaceRecognitionPreprocessor</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Create a preprocessor for InsightFaceRecognition Model</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_preprocessor</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">vision</span><span class="o">.</span><span class="n">faceid</span><span class="o">.</span><span class="n">InsightFaceRecognitionPreprocessor</span><span class="p">(</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_ims</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Preprocess input images for InsightFaceRecognition Model</span>
+
+<span class="sd">        :param: input_ims: (list of numpy.ndarray)The input image</span>
+<span class="sd">        :return: list of FDTensor, include image, scale_factor, im_shape</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_preprocessor</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">input_ims</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">size</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Argument for image preprocessing step, tuple of (width, height),</span>
+<span class="sd">        decide the target size after resize, default (112, 112)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_preprocessor</span><span class="o">.</span><span class="n">size</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">alpha</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Argument for image preprocessing step, alpha values for normalization,</span>
+<span class="sd">        default alpha = {1.f / 127.5f, 1.f / 127.5f, 1.f / 127.5f};</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_preprocessor</span><span class="o">.</span><span class="n">alpha</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">beta</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Argument for image preprocessing step, beta values for normalization,</span>
+<span class="sd">        default beta = {-1.f, -1.f, -1.f}</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_preprocessor</span><span class="o">.</span><span class="n">beta</span>
+
+    <span class="k">def</span> <span class="nf">disable_normalize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This function will disable normalize in preprocessing step.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_preprocessor</span><span class="o">.</span><span class="n">disable_normalize</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">disable_permute</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This function will disable hwc2chw in preprocessing step.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_preprocessor</span><span class="o">.</span><span class="n">disable_permute</span><span class="p">()</span>
+
+
+<span class="k">class</span> <span class="nc">InsightFaceRecognitionPostprocessor</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Create a postprocessor for InsightFaceRecognition Model</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_postprocessor</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">vision</span><span class="o">.</span><span class="n">faceid</span><span class="o">.</span><span class="n">InsightFaceRecognitionPostprocessor</span><span class="p">(</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">runtime_results</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Postprocess the runtime results for PaddleClas Model</span>
+
+<span class="sd">        :param: runtime_results: (list of FDTensor)The output FDTensor results from runtime</span>
+<span class="sd">        :return: list of FaceRecognitionResult(If the runtime_results is predict by batched samples, the length of this list equals to the batch size)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_postprocessor</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">runtime_results</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">l2_normalize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        confidence threshold for postprocessing, default is 0.5</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_postprocessor</span><span class="o">.</span><span class="n">l2_normalize</span>
+
+
+<span class="k">class</span> <span class="nc">InsightFaceRecognitionBase</span><span class="p">(</span><span class="n">FastDeployModel</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                 <span class="n">model_file</span><span class="p">,</span>
+                 <span class="n">params_file</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+                 <span class="n">runtime_option</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">model_format</span><span class="o">=</span><span class="n">ModelFormat</span><span class="o">.</span><span class="n">ONNX</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Load a InsightFaceRecognitionBase model exported by PaddleClas.</span>
+
+<span class="sd">        :param model_file: (str)Path of model file, e.g InsightFaceRecognitionBase/model.pdmodel</span>
+<span class="sd">        :param params_file: (str)Path of parameters file, e.g InsightFaceRecognitionBase/model.pdiparams, if the model_fomat is ModelFormat.ONNX, this param will be ignored, can be set as empty string</span>
+<span class="sd">        :param runtime_option: (fastdeploy.RuntimeOption)RuntimeOption for inference this model, if it&#39;s None, will use the default backend on CPU</span>
+<span class="sd">        :param model_format: (fastdeploy.ModelForamt)Model format of the loaded model</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">InsightFaceRecognitionBase</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">runtime_option</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_model</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">vision</span><span class="o">.</span><span class="n">faceid</span><span class="o">.</span><span class="n">InsightFaceRecognitionBase</span><span class="p">(</span>
+            <span class="n">model_file</span><span class="p">,</span> <span class="n">params_file</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_runtime_option</span><span class="p">,</span> <span class="n">model_format</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">initialized</span><span class="p">,</span> <span class="s2">&quot;InsightFaceRecognitionBase model initialize failed.&quot;</span>
+
+    <span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">im</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Detect an input image</span>
+
+<span class="sd">        :param im: (numpy.ndarray)The input image data, 3-D array with layout HWC, BGR format</span>
+<span class="sd">        :return: DetectionResult</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">assert</span> <span class="n">im</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;The input image data is None.&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">im</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">batch_predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">images</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Detect a batch of input image list</span>
+
+<span class="sd">        :param im: (list of numpy.ndarray) The input image list, each element is a 3-D array with layout HWC, BGR format</span>
+<span class="sd">        :return list of DetectionResult</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">batch_predict</span><span class="p">(</span><span class="n">images</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">preprocessor</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get InsightFaceRecognitionPreprocessor object of the loaded model</span>
+
+<span class="sd">        :return InsightFaceRecognitionPreprocessor</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">preprocessor</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">postprocessor</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Get InsightFaceRecognitionPostprocessor object of the loaded model</span>
+
+<span class="sd">        :return InsightFaceRecognitionPostprocessor</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_model</span><span class="o">.</span><span class="n">postprocessor</span>
+
+
+<div class="viewcode-block" id="ArcFace"><a class="viewcode-back" href="../../../../../face_recognition.html#fastdeploy.vision.faceid.ArcFace">[docs]</a><span class="k">class</span> <span class="nc">ArcFace</span><span class="p">(</span><span class="n">InsightFaceRecognitionBase</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                 <span class="n">model_file</span><span class="p">,</span>
+                 <span class="n">params_file</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+                 <span class="n">runtime_option</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">model_format</span><span class="o">=</span><span class="n">ModelFormat</span><span class="o">.</span><span class="n">ONNX</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Load a ArcFace model exported by PaddleClas.</span>
+<span class="sd">        :param model_file: (str)Path of model file, e.g ArcFace/model.pdmodel</span>
+<span class="sd">        :param params_file: (str)Path of parameters file, e.g ArcFace/model.pdiparams, if the model_fomat is ModelFormat.ONNX, this param will be ignored, can be set as empty string</span>
+<span class="sd">        :param runtime_option: (fastdeploy.RuntimeOption)RuntimeOption for inference this model, if it&#39;s None, will use the default backend on CPU</span>
+<span class="sd">        :param model_format: (fastdeploy.ModelForamt)Model format of the loaded model</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="nb">super</span><span class="p">(</span><span class="n">InsightFaceRecognitionBase</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">runtime_option</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_model</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">vision</span><span class="o">.</span><span class="n">faceid</span><span class="o">.</span><span class="n">ArcFace</span><span class="p">(</span>
+            <span class="n">model_file</span><span class="p">,</span> <span class="n">params_file</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_runtime_option</span><span class="p">,</span> <span class="n">model_format</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">initialized</span><span class="p">,</span> <span class="s2">&quot;ArcFace model initialize failed.&quot;</span></div>
+
+
+<div class="viewcode-block" id="CosFace"><a class="viewcode-back" href="../../../../../face_recognition.html#fastdeploy.vision.faceid.CosFace">[docs]</a><span class="k">class</span> <span class="nc">CosFace</span><span class="p">(</span><span class="n">InsightFaceRecognitionBase</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                 <span class="n">model_file</span><span class="p">,</span>
+                 <span class="n">params_file</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+                 <span class="n">runtime_option</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">model_format</span><span class="o">=</span><span class="n">ModelFormat</span><span class="o">.</span><span class="n">ONNX</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Load a CosFace model exported by PaddleClas.</span>
+<span class="sd">        :param model_file: (str)Path of model file, e.g CosFace/model.pdmodel</span>
+<span class="sd">        :param params_file: (str)Path of parameters file, e.g CosFace/model.pdiparams, if the model_fomat is ModelFormat.ONNX, this param will be ignored, can be set as empty string</span>
+<span class="sd">        :param runtime_option: (fastdeploy.RuntimeOption)RuntimeOption for inference this model, if it&#39;s None, will use the default backend on CPU</span>
+<span class="sd">        :param model_format: (fastdeploy.ModelForamt)Model format of the loaded model</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="nb">super</span><span class="p">(</span><span class="n">InsightFaceRecognitionBase</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">runtime_option</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_model</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">vision</span><span class="o">.</span><span class="n">faceid</span><span class="o">.</span><span class="n">CosFace</span><span class="p">(</span>
+            <span class="n">model_file</span><span class="p">,</span> <span class="n">params_file</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_runtime_option</span><span class="p">,</span> <span class="n">model_format</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">initialized</span><span class="p">,</span> <span class="s2">&quot;CosFace model initialize failed.&quot;</span></div>
+
+
+<div class="viewcode-block" id="PartialFC"><a class="viewcode-back" href="../../../../../face_recognition.html#fastdeploy.vision.faceid.PartialFC">[docs]</a><span class="k">class</span> <span class="nc">PartialFC</span><span class="p">(</span><span class="n">InsightFaceRecognitionBase</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                 <span class="n">model_file</span><span class="p">,</span>
+                 <span class="n">params_file</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+                 <span class="n">runtime_option</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">model_format</span><span class="o">=</span><span class="n">ModelFormat</span><span class="o">.</span><span class="n">ONNX</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Load a PartialFC model exported by PaddleClas.</span>
+<span class="sd">        :param model_file: (str)Path of model file, e.g PartialFC/model.pdmodel</span>
+<span class="sd">        :param params_file: (str)Path of parameters file, e.g PartialFC/model.pdiparams, if the model_fomat is ModelFormat.ONNX, this param will be ignored, can be set as empty string</span>
+<span class="sd">        :param runtime_option: (fastdeploy.RuntimeOption)RuntimeOption for inference this model, if it&#39;s None, will use the default backend on CPU</span>
+<span class="sd">        :param model_format: (fastdeploy.ModelForamt)Model format of the loaded model</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="nb">super</span><span class="p">(</span><span class="n">InsightFaceRecognitionBase</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">runtime_option</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_model</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">vision</span><span class="o">.</span><span class="n">faceid</span><span class="o">.</span><span class="n">PartialFC</span><span class="p">(</span>
+            <span class="n">model_file</span><span class="p">,</span> <span class="n">params_file</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_runtime_option</span><span class="p">,</span> <span class="n">model_format</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">initialized</span><span class="p">,</span> <span class="s2">&quot;PartialFC model initialize failed.&quot;</span></div>
+
+
+<div class="viewcode-block" id="VPL"><a class="viewcode-back" href="../../../../../face_recognition.html#fastdeploy.vision.faceid.VPL">[docs]</a><span class="k">class</span> <span class="nc">VPL</span><span class="p">(</span><span class="n">InsightFaceRecognitionBase</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                 <span class="n">model_file</span><span class="p">,</span>
+                 <span class="n">params_file</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+                 <span class="n">runtime_option</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">model_format</span><span class="o">=</span><span class="n">ModelFormat</span><span class="o">.</span><span class="n">ONNX</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Load a VPL model exported by PaddleClas.</span>
+<span class="sd">        :param model_file: (str)Path of model file, e.g VPL/model.pdmodel</span>
+<span class="sd">        :param params_file: (str)Path of parameters file, e.g VPL/model.pdiparams, if the model_fomat is ModelFormat.ONNX, this param will be ignored, can be set as empty string</span>
+<span class="sd">        :param runtime_option: (fastdeploy.RuntimeOption)RuntimeOption for inference this model, if it&#39;s None, will use the default backend on CPU</span>
+<span class="sd">        :param model_format: (fastdeploy.ModelForamt)Model format of the loaded model</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="nb">super</span><span class="p">(</span><span class="n">InsightFaceRecognitionBase</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">runtime_option</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_model</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">vision</span><span class="o">.</span><span class="n">faceid</span><span class="o">.</span><span class="n">VPL</span><span class="p">(</span><span class="n">model_file</span><span class="p">,</span> <span class="n">params_file</span><span class="p">,</span>
+                                          <span class="bp">self</span><span class="o">.</span><span class="n">_runtime_option</span><span class="p">,</span> <span class="n">model_format</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">initialized</span><span class="p">,</span> <span class="s2">&quot;VPL model initialize failed.&quot;</span></div>
+</pre></div>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By PaddlePaddle
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022, PaddlePaddle.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div></div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="../../../../../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

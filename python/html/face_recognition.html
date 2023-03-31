@@ -1,694 +1,664 @@
 
+
 <!DOCTYPE html>
 
-<html lang="en">
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Face Recognition(人脸识别) &#8212; FastDeploy Python API latest documentation</title>
-    
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
-    
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'face_recognition';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Face Detection(人脸检测)" href="face_detection.html" />
     <link rel="prev" title="Matting(图像抠图)" href="matting.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
     
-    <div class="container-fluid" id="banner"></div>
-
     
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="index.html">
-      
-      
-      
-      <h1 class="site-logo" id="site-title">FastDeploy Python API latest documentation</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Vision Task Model API (视觉任务模型API)
- </span>
-</p>
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">FastDeploy Python API latest documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Vision Task Model API (视觉任务模型API)</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="object_detection.html">
-   Object Detection(目标检测)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="ocr.html">
-   OCR(文字识别)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="semantic_segmentation.html">
-   Semantic Segmentation(语义分割)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="image_classification.html">
-   Image Classification(图像分类)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="keypoint_detection.html">
-   Keypoint Detection(关键点检测)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="matting.html">
-   Matting(图像抠图)
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Face Recognition(人脸识别)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="face_detection.html">
-   Face Detection(人脸检测)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="face_alignment.html">
-   Face Alignment(人脸对齐)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="headpose.html">
-   Headpose(头部姿态)
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="object_detection.html">Object Detection(目标检测)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ocr.html">OCR(文字识别)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="semantic_segmentation.html">Semantic Segmentation(语义分割)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="image_classification.html">Image Classification(图像分类)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="keypoint_detection.html">Keypoint Detection(关键点检测)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matting.html">Matting(图像抠图)</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Face Recognition(人脸识别)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="face_detection.html">Face Detection(人脸检测)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="face_alignment.html">Face Alignment(人脸对齐)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="headpose.html">Headpose(头部姿态)</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Predict Result Struct (预测结果结构体)
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Predict Result Struct (预测结果结构体)</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="vision_results_en.html">
-   Description of Vision Results
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="vision_results_en.html">Description of Vision Results</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  FastDeploy Runtime API (多后端推理引擎API)
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">FastDeploy Runtime API (多后端推理引擎API)</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="runtime.html">
-   Runtime(模型推理Runtime)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="runtime_option.html">
-   Runtime Option(Runtime配置)
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="runtime.html">Runtime(模型推理Runtime)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="runtime_option.html">Runtime Option(Runtime配置)</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Vision Processor (图像预处理库)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="vision_processor.html">Vision Processor(多硬件图像处理库)</a></li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/face_recognition.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
 </div>
 
 
-          
 
 
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
-
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
 <button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="_sources/face_recognition.md.txt"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.md</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#fastdeploy-vision-faceid-adaface">
-   fastdeploy.vision.faceid.AdaFace
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#fastdeploy-vision-faceid-cosface">
-   fastdeploy.vision.faceid.CosFace
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#fastdeploy-vision-faceid-arcface">
-   fastdeploy.vision.faceid.ArcFace
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#fastdeploy-vision-faceid-partialfc">
-   fastdeploy.vision.faceid.PartialFC
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#fastdeploy-vision-faceid-vpl">
-   fastdeploy.vision.faceid.VPL
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Face Recognition(人脸识别)</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#fastdeploy-vision-faceid-adaface">
-   fastdeploy.vision.faceid.AdaFace
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#fastdeploy-vision-faceid-cosface">
-   fastdeploy.vision.faceid.CosFace
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#fastdeploy-vision-faceid-arcface">
-   fastdeploy.vision.faceid.ArcFace
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#fastdeploy-vision-faceid-partialfc">
-   fastdeploy.vision.faceid.PartialFC
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#fastdeploy-vision-faceid-vpl">
-   fastdeploy.vision.faceid.VPL
-  </a>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Face Recognition(人脸识别)</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy-vision-faceid-adaface">fastdeploy.vision.faceid.AdaFace</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.faceid.AdaFace"><code class="docutils literal notranslate"><span class="pre">AdaFace</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.faceid.AdaFace.batch_predict"><code class="docutils literal notranslate"><span class="pre">AdaFace.batch_predict()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.faceid.AdaFace.get_profile_time"><code class="docutils literal notranslate"><span class="pre">AdaFace.get_profile_time()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.faceid.AdaFace.postprocessor"><code class="docutils literal notranslate"><span class="pre">AdaFace.postprocessor</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.faceid.AdaFace.predict"><code class="docutils literal notranslate"><span class="pre">AdaFace.predict()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.faceid.AdaFace.preprocessor"><code class="docutils literal notranslate"><span class="pre">AdaFace.preprocessor</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy-vision-faceid-cosface">fastdeploy.vision.faceid.CosFace</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.faceid.CosFace"><code class="docutils literal notranslate"><span class="pre">CosFace</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.faceid.CosFace.batch_predict"><code class="docutils literal notranslate"><span class="pre">CosFace.batch_predict()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.faceid.CosFace.get_profile_time"><code class="docutils literal notranslate"><span class="pre">CosFace.get_profile_time()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.faceid.CosFace.postprocessor"><code class="docutils literal notranslate"><span class="pre">CosFace.postprocessor</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.faceid.CosFace.predict"><code class="docutils literal notranslate"><span class="pre">CosFace.predict()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.faceid.CosFace.preprocessor"><code class="docutils literal notranslate"><span class="pre">CosFace.preprocessor</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy-vision-faceid-arcface">fastdeploy.vision.faceid.ArcFace</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.faceid.ArcFace"><code class="docutils literal notranslate"><span class="pre">ArcFace</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.faceid.ArcFace.batch_predict"><code class="docutils literal notranslate"><span class="pre">ArcFace.batch_predict()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.faceid.ArcFace.get_profile_time"><code class="docutils literal notranslate"><span class="pre">ArcFace.get_profile_time()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.faceid.ArcFace.postprocessor"><code class="docutils literal notranslate"><span class="pre">ArcFace.postprocessor</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.faceid.ArcFace.predict"><code class="docutils literal notranslate"><span class="pre">ArcFace.predict()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.faceid.ArcFace.preprocessor"><code class="docutils literal notranslate"><span class="pre">ArcFace.preprocessor</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy-vision-faceid-partialfc">fastdeploy.vision.faceid.PartialFC</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.faceid.PartialFC"><code class="docutils literal notranslate"><span class="pre">PartialFC</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.faceid.PartialFC.batch_predict"><code class="docutils literal notranslate"><span class="pre">PartialFC.batch_predict()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.faceid.PartialFC.get_profile_time"><code class="docutils literal notranslate"><span class="pre">PartialFC.get_profile_time()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.faceid.PartialFC.postprocessor"><code class="docutils literal notranslate"><span class="pre">PartialFC.postprocessor</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.faceid.PartialFC.predict"><code class="docutils literal notranslate"><span class="pre">PartialFC.predict()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.faceid.PartialFC.preprocessor"><code class="docutils literal notranslate"><span class="pre">PartialFC.preprocessor</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy-vision-faceid-vpl">fastdeploy.vision.faceid.VPL</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.faceid.VPL"><code class="docutils literal notranslate"><span class="pre">VPL</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.faceid.VPL.batch_predict"><code class="docutils literal notranslate"><span class="pre">VPL.batch_predict()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.faceid.VPL.get_profile_time"><code class="docutils literal notranslate"><span class="pre">VPL.get_profile_time()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.faceid.VPL.postprocessor"><code class="docutils literal notranslate"><span class="pre">VPL.postprocessor</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.faceid.VPL.predict"><code class="docutils literal notranslate"><span class="pre">VPL.predict()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.faceid.VPL.preprocessor"><code class="docutils literal notranslate"><span class="pre">VPL.preprocessor</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <section id="face-recognition">
-<h1>Face Recognition(人脸识别)<a class="headerlink" href="#face-recognition" title="Permalink to this headline">#</a></h1>
+<h1>Face Recognition(人脸识别)<a class="headerlink" href="#face-recognition" title="Permalink to this heading">#</a></h1>
 <section id="fastdeploy-vision-faceid-adaface">
-<h2>fastdeploy.vision.faceid.AdaFace<a class="headerlink" href="#fastdeploy-vision-faceid-adaface" title="Permalink to this headline">#</a></h2>
+<h2>fastdeploy.vision.faceid.AdaFace<a class="headerlink" href="#fastdeploy-vision-faceid-adaface" title="Permalink to this heading">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="fastdeploy.vision.faceid.AdaFace">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.faceid.</span></span><span class="sig-name descname"><span class="pre">AdaFace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.PADDLE:</span> <span class="pre">1&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/faceid/contrib/adaface.html#AdaFace"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.faceid.AdaFace" title="Permalink to this definition">#</a></dt>
-<dd><p>Load a AdaFace model exported by InsigtFace.</p>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.faceid.</span></span><span class="sig-name descname"><span class="pre">AdaFace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.ONNX:</span> <span class="pre">2&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/faceid/contrib/adaface.html#AdaFace"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.faceid.AdaFace" title="Permalink to this definition">#</a></dt>
+<dd><p>Load a AdaFace model exported by PaddleClas.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>model_file</strong> – (str)Path of model file, e.g ./adaface.onnx</p></li>
-<li><p><strong>params_file</strong> – (str)Path of parameters file, e.g yolox/model.pdiparams, if the model_fomat is ModelFormat.ONNX, this param will be ignored, can be set as empty string</p></li>
+<li><p><strong>model_file</strong> – (str)Path of model file, e.g adaface/model.pdmodel</p></li>
+<li><p><strong>params_file</strong> – (str)Path of parameters file, e.g adaface/model.pdiparams, if the model_fomat is ModelFormat.ONNX, this param will be ignored, can be set as empty string</p></li>
 <li><p><strong>runtime_option</strong> – (fastdeploy.RuntimeOption)RuntimeOption for inference this model, if it’s None, will use the default backend on CPU</p></li>
 <li><p><strong>model_format</strong> – (fastdeploy.ModelForamt)Model format of the loaded model</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="py property">
-<dt class="sig sig-object py" id="fastdeploy.vision.faceid.AdaFace.alpha">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">alpha</span></span><a class="headerlink" href="#fastdeploy.vision.faceid.AdaFace.alpha" title="Permalink to this definition">#</a></dt>
-<dd><p>Argument for image preprocessing step, alpha value for normalization, default alpha = [1.f / 127.5f, 1.f / 127.5f, 1.f / 127.5f]</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.vision.faceid.AdaFace.batch_predict">
+<span class="sig-name descname"><span class="pre">batch_predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">images</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/faceid/contrib/adaface.html#AdaFace.batch_predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.faceid.AdaFace.batch_predict" title="Permalink to this definition">#</a></dt>
+<dd><p>Detect a batch of input image list</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>im</strong> – (list of numpy.ndarray) The input image list, each element is a 3-D array with layout HWC, BGR format</p>
+</dd>
+</dl>
+<p>:return list of DetectionResult</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.vision.faceid.AdaFace.get_profile_time">
+<span class="sig-name descname"><span class="pre">get_profile_time</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fastdeploy.vision.faceid.AdaFace.get_profile_time" title="Permalink to this definition">#</a></dt>
+<dd><p>Get profile time of Runtime after the profile process is done.</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="fastdeploy.vision.faceid.AdaFace.beta">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">beta</span></span><a class="headerlink" href="#fastdeploy.vision.faceid.AdaFace.beta" title="Permalink to this definition">#</a></dt>
-<dd><p>Argument for image preprocessing step, beta values for normalization, default beta = {-1.f, -1.f, -1.f}</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="fastdeploy.vision.faceid.AdaFace.l2_normalize">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">l2_normalize</span></span><a class="headerlink" href="#fastdeploy.vision.faceid.AdaFace.l2_normalize" title="Permalink to this definition">#</a></dt>
-<dd><p>Argument for image preprocessing step, whether to apply l2 normalize to embedding values, default False;</p>
+<dt class="sig sig-object py" id="fastdeploy.vision.faceid.AdaFace.postprocessor">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">postprocessor</span></span><a class="headerlink" href="#fastdeploy.vision.faceid.AdaFace.postprocessor" title="Permalink to this definition">#</a></dt>
+<dd><p>Get AdaFacePostprocessor object of the loaded model</p>
+<p>:return AdaFacePostprocessor</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="fastdeploy.vision.faceid.AdaFace.predict">
-<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_image</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/faceid/contrib/adaface.html#AdaFace.predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.faceid.AdaFace.predict" title="Permalink to this definition">#</a></dt>
-<dd><p>Predict the face recognition result for an input image</p>
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">im</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/faceid/contrib/adaface.html#AdaFace.predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.faceid.AdaFace.predict" title="Permalink to this definition">#</a></dt>
+<dd><p>Detect an input image</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>input_image</strong> – (numpy.ndarray)The input image data, 3-D array with layout HWC, BGR format</p>
+<dd class="field-odd"><p><strong>im</strong> – (numpy.ndarray)The input image data, 3-D array with layout HWC, BGR format</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>FaceRecognitionResult</p>
+<dd class="field-even"><p>DetectionResult</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="fastdeploy.vision.faceid.AdaFace.size">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#fastdeploy.vision.faceid.AdaFace.size" title="Permalink to this definition">#</a></dt>
-<dd><p>Argument for image preprocessing step, the preprocess image size, tuple of (width, height), default (112, 112)</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="fastdeploy.vision.faceid.AdaFace.swap_rb">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">swap_rb</span></span><a class="headerlink" href="#fastdeploy.vision.faceid.AdaFace.swap_rb" title="Permalink to this definition">#</a></dt>
-<dd><p>Argument for image preprocessing step, whether to swap the B and R channel, such as BGR-&gt;RGB, default True.</p>
+<dt class="sig sig-object py" id="fastdeploy.vision.faceid.AdaFace.preprocessor">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">preprocessor</span></span><a class="headerlink" href="#fastdeploy.vision.faceid.AdaFace.preprocessor" title="Permalink to this definition">#</a></dt>
+<dd><p>Get AdaFacePreprocessor object of the loaded model</p>
+<p>:return AdaFacePreprocessor</p>
 </dd></dl>
 
 </dd></dl>
 
 </section>
 <section id="fastdeploy-vision-faceid-cosface">
-<h2>fastdeploy.vision.faceid.CosFace<a class="headerlink" href="#fastdeploy-vision-faceid-cosface" title="Permalink to this headline">#</a></h2>
+<h2>fastdeploy.vision.faceid.CosFace<a class="headerlink" href="#fastdeploy-vision-faceid-cosface" title="Permalink to this heading">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="fastdeploy.vision.faceid.CosFace">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.faceid.</span></span><span class="sig-name descname"><span class="pre">CosFace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.ONNX:</span> <span class="pre">2&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/faceid/contrib/cosface.html#CosFace"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.faceid.CosFace" title="Permalink to this definition">#</a></dt>
-<dd><p>Load a CosFace model exported by InsigtFace.</p>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.faceid.</span></span><span class="sig-name descname"><span class="pre">CosFace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.ONNX:</span> <span class="pre">2&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/faceid/contrib/insightface.html#CosFace"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.faceid.CosFace" title="Permalink to this definition">#</a></dt>
+<dd><p>Load a CosFace model exported by PaddleClas.
+:param model_file: (str)Path of model file, e.g CosFace/model.pdmodel
+:param params_file: (str)Path of parameters file, e.g CosFace/model.pdiparams, if the model_fomat is ModelFormat.ONNX, this param will be ignored, can be set as empty string
+:param runtime_option: (fastdeploy.RuntimeOption)RuntimeOption for inference this model, if it’s None, will use the default backend on CPU
+:param model_format: (fastdeploy.ModelForamt)Model format of the loaded model</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.vision.faceid.CosFace.batch_predict">
+<span class="sig-name descname"><span class="pre">batch_predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">images</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fastdeploy.vision.faceid.CosFace.batch_predict" title="Permalink to this definition">#</a></dt>
+<dd><p>Detect a batch of input image list</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>model_file</strong> – (str)Path of model file, e.g ./cosface.onnx</p></li>
-<li><p><strong>params_file</strong> – (str)Path of parameters file, e.g yolox/model.pdiparams, if the model_fomat is ModelFormat.ONNX, this param will be ignored, can be set as empty string</p></li>
-<li><p><strong>runtime_option</strong> – (fastdeploy.RuntimeOption)RuntimeOption for inference this model, if it’s None, will use the default backend on CPU</p></li>
-<li><p><strong>model_format</strong> – (fastdeploy.ModelForamt)Model format of the loaded model</p></li>
-</ul>
+<dd class="field-odd"><p><strong>im</strong> – (list of numpy.ndarray) The input image list, each element is a 3-D array with layout HWC, BGR format</p>
 </dd>
 </dl>
-<dl class="py property">
-<dt class="sig sig-object py" id="fastdeploy.vision.faceid.CosFace.alpha">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">alpha</span></span><a class="headerlink" href="#fastdeploy.vision.faceid.CosFace.alpha" title="Permalink to this definition">#</a></dt>
-<dd><p>Argument for image preprocessing step, alpha value for normalization, default alpha = [1.f / 127.5f, 1.f / 127.5f, 1.f / 127.5f]</p>
+<p>:return list of DetectionResult</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.vision.faceid.CosFace.get_profile_time">
+<span class="sig-name descname"><span class="pre">get_profile_time</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fastdeploy.vision.faceid.CosFace.get_profile_time" title="Permalink to this definition">#</a></dt>
+<dd><p>Get profile time of Runtime after the profile process is done.</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="fastdeploy.vision.faceid.CosFace.beta">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">beta</span></span><a class="headerlink" href="#fastdeploy.vision.faceid.CosFace.beta" title="Permalink to this definition">#</a></dt>
-<dd><p>Argument for image preprocessing step, beta values for normalization, default beta = {-1.f, -1.f, -1.f}</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="fastdeploy.vision.faceid.CosFace.l2_normalize">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">l2_normalize</span></span><a class="headerlink" href="#fastdeploy.vision.faceid.CosFace.l2_normalize" title="Permalink to this definition">#</a></dt>
-<dd><p>Argument for image preprocessing step, whether to apply l2 normalize to embedding values, default False;</p>
+<dt class="sig sig-object py" id="fastdeploy.vision.faceid.CosFace.postprocessor">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">postprocessor</span></span><a class="headerlink" href="#fastdeploy.vision.faceid.CosFace.postprocessor" title="Permalink to this definition">#</a></dt>
+<dd><p>Get InsightFaceRecognitionPostprocessor object of the loaded model</p>
+<p>:return InsightFaceRecognitionPostprocessor</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="fastdeploy.vision.faceid.CosFace.predict">
-<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_image</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/faceid/contrib/cosface.html#CosFace.predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.faceid.CosFace.predict" title="Permalink to this definition">#</a></dt>
-<dd><p>Predict the face recognition result for an input image</p>
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">im</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fastdeploy.vision.faceid.CosFace.predict" title="Permalink to this definition">#</a></dt>
+<dd><p>Detect an input image</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>input_image</strong> – (numpy.ndarray)The input image data, 3-D array with layout HWC, BGR format</p>
+<dd class="field-odd"><p><strong>im</strong> – (numpy.ndarray)The input image data, 3-D array with layout HWC, BGR format</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>FaceRecognitionResult</p>
+<dd class="field-even"><p>DetectionResult</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="fastdeploy.vision.faceid.CosFace.size">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#fastdeploy.vision.faceid.CosFace.size" title="Permalink to this definition">#</a></dt>
-<dd><p>Argument for image preprocessing step, the preprocess image size, tuple of (width, height), default (112, 112)</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="fastdeploy.vision.faceid.CosFace.swap_rb">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">swap_rb</span></span><a class="headerlink" href="#fastdeploy.vision.faceid.CosFace.swap_rb" title="Permalink to this definition">#</a></dt>
-<dd><p>Argument for image preprocessing step, whether to swap the B and R channel, such as BGR-&gt;RGB, default True.</p>
+<dt class="sig sig-object py" id="fastdeploy.vision.faceid.CosFace.preprocessor">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">preprocessor</span></span><a class="headerlink" href="#fastdeploy.vision.faceid.CosFace.preprocessor" title="Permalink to this definition">#</a></dt>
+<dd><p>Get InsightFaceRecognitionPreprocessor object of the loaded model</p>
+<p>:return InsightFaceRecognitionPreprocessor</p>
 </dd></dl>
 
 </dd></dl>
 
 </section>
 <section id="fastdeploy-vision-faceid-arcface">
-<h2>fastdeploy.vision.faceid.ArcFace<a class="headerlink" href="#fastdeploy-vision-faceid-arcface" title="Permalink to this headline">#</a></h2>
+<h2>fastdeploy.vision.faceid.ArcFace<a class="headerlink" href="#fastdeploy-vision-faceid-arcface" title="Permalink to this heading">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="fastdeploy.vision.faceid.ArcFace">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.faceid.</span></span><span class="sig-name descname"><span class="pre">ArcFace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.ONNX:</span> <span class="pre">2&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/faceid/contrib/arcface.html#ArcFace"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.faceid.ArcFace" title="Permalink to this definition">#</a></dt>
-<dd><p>Load a ArcFace model exported by InsigtFace.</p>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.faceid.</span></span><span class="sig-name descname"><span class="pre">ArcFace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.ONNX:</span> <span class="pre">2&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/faceid/contrib/insightface.html#ArcFace"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.faceid.ArcFace" title="Permalink to this definition">#</a></dt>
+<dd><p>Load a ArcFace model exported by PaddleClas.
+:param model_file: (str)Path of model file, e.g ArcFace/model.pdmodel
+:param params_file: (str)Path of parameters file, e.g ArcFace/model.pdiparams, if the model_fomat is ModelFormat.ONNX, this param will be ignored, can be set as empty string
+:param runtime_option: (fastdeploy.RuntimeOption)RuntimeOption for inference this model, if it’s None, will use the default backend on CPU
+:param model_format: (fastdeploy.ModelForamt)Model format of the loaded model</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.vision.faceid.ArcFace.batch_predict">
+<span class="sig-name descname"><span class="pre">batch_predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">images</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fastdeploy.vision.faceid.ArcFace.batch_predict" title="Permalink to this definition">#</a></dt>
+<dd><p>Detect a batch of input image list</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>model_file</strong> – (str)Path of model file, e.g ./arcface.onnx</p></li>
-<li><p><strong>params_file</strong> – (str)Path of parameters file, e.g yolox/model.pdiparams, if the model_fomat is ModelFormat.ONNX, this param will be ignored, can be set as empty string</p></li>
-<li><p><strong>runtime_option</strong> – (fastdeploy.RuntimeOption)RuntimeOption for inference this model, if it’s None, will use the default backend on CPU</p></li>
-<li><p><strong>model_format</strong> – (fastdeploy.ModelForamt)Model format of the loaded model</p></li>
-</ul>
+<dd class="field-odd"><p><strong>im</strong> – (list of numpy.ndarray) The input image list, each element is a 3-D array with layout HWC, BGR format</p>
 </dd>
 </dl>
-<dl class="py property">
-<dt class="sig sig-object py" id="fastdeploy.vision.faceid.ArcFace.alpha">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">alpha</span></span><a class="headerlink" href="#fastdeploy.vision.faceid.ArcFace.alpha" title="Permalink to this definition">#</a></dt>
-<dd><p>Argument for image preprocessing step, alpha value for normalization, default alpha = [1.f / 127.5f, 1.f / 127.5f, 1.f / 127.5f]</p>
+<p>:return list of DetectionResult</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.vision.faceid.ArcFace.get_profile_time">
+<span class="sig-name descname"><span class="pre">get_profile_time</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fastdeploy.vision.faceid.ArcFace.get_profile_time" title="Permalink to this definition">#</a></dt>
+<dd><p>Get profile time of Runtime after the profile process is done.</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="fastdeploy.vision.faceid.ArcFace.beta">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">beta</span></span><a class="headerlink" href="#fastdeploy.vision.faceid.ArcFace.beta" title="Permalink to this definition">#</a></dt>
-<dd><p>Argument for image preprocessing step, beta values for normalization, default beta = {-1.f, -1.f, -1.f}</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="fastdeploy.vision.faceid.ArcFace.l2_normalize">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">l2_normalize</span></span><a class="headerlink" href="#fastdeploy.vision.faceid.ArcFace.l2_normalize" title="Permalink to this definition">#</a></dt>
-<dd><p>Argument for image preprocessing step, whether to apply l2 normalize to embedding values, default False;</p>
+<dt class="sig sig-object py" id="fastdeploy.vision.faceid.ArcFace.postprocessor">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">postprocessor</span></span><a class="headerlink" href="#fastdeploy.vision.faceid.ArcFace.postprocessor" title="Permalink to this definition">#</a></dt>
+<dd><p>Get InsightFaceRecognitionPostprocessor object of the loaded model</p>
+<p>:return InsightFaceRecognitionPostprocessor</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="fastdeploy.vision.faceid.ArcFace.predict">
-<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_image</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/faceid/contrib/arcface.html#ArcFace.predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.faceid.ArcFace.predict" title="Permalink to this definition">#</a></dt>
-<dd><p>Predict the face recognition result for an input image</p>
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">im</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fastdeploy.vision.faceid.ArcFace.predict" title="Permalink to this definition">#</a></dt>
+<dd><p>Detect an input image</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>input_image</strong> – (numpy.ndarray)The input image data, 3-D array with layout HWC, BGR format</p>
+<dd class="field-odd"><p><strong>im</strong> – (numpy.ndarray)The input image data, 3-D array with layout HWC, BGR format</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>FaceRecognitionResult</p>
+<dd class="field-even"><p>DetectionResult</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="fastdeploy.vision.faceid.ArcFace.size">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#fastdeploy.vision.faceid.ArcFace.size" title="Permalink to this definition">#</a></dt>
-<dd><p>Argument for image preprocessing step, the preprocess image size, tuple of (width, height), default (112, 112)</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="fastdeploy.vision.faceid.ArcFace.swap_rb">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">swap_rb</span></span><a class="headerlink" href="#fastdeploy.vision.faceid.ArcFace.swap_rb" title="Permalink to this definition">#</a></dt>
-<dd><p>Argument for image preprocessing step, whether to swap the B and R channel, such as BGR-&gt;RGB, default True.</p>
+<dt class="sig sig-object py" id="fastdeploy.vision.faceid.ArcFace.preprocessor">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">preprocessor</span></span><a class="headerlink" href="#fastdeploy.vision.faceid.ArcFace.preprocessor" title="Permalink to this definition">#</a></dt>
+<dd><p>Get InsightFaceRecognitionPreprocessor object of the loaded model</p>
+<p>:return InsightFaceRecognitionPreprocessor</p>
 </dd></dl>
 
 </dd></dl>
 
 </section>
 <section id="fastdeploy-vision-faceid-partialfc">
-<h2>fastdeploy.vision.faceid.PartialFC<a class="headerlink" href="#fastdeploy-vision-faceid-partialfc" title="Permalink to this headline">#</a></h2>
+<h2>fastdeploy.vision.faceid.PartialFC<a class="headerlink" href="#fastdeploy-vision-faceid-partialfc" title="Permalink to this heading">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="fastdeploy.vision.faceid.PartialFC">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.faceid.</span></span><span class="sig-name descname"><span class="pre">PartialFC</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.ONNX:</span> <span class="pre">2&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/faceid/contrib/partial_fc.html#PartialFC"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.faceid.PartialFC" title="Permalink to this definition">#</a></dt>
-<dd><p>Load a PartialFC model exported by InsigtFace.</p>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.faceid.</span></span><span class="sig-name descname"><span class="pre">PartialFC</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.ONNX:</span> <span class="pre">2&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/faceid/contrib/insightface.html#PartialFC"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.faceid.PartialFC" title="Permalink to this definition">#</a></dt>
+<dd><p>Load a PartialFC model exported by PaddleClas.
+:param model_file: (str)Path of model file, e.g PartialFC/model.pdmodel
+:param params_file: (str)Path of parameters file, e.g PartialFC/model.pdiparams, if the model_fomat is ModelFormat.ONNX, this param will be ignored, can be set as empty string
+:param runtime_option: (fastdeploy.RuntimeOption)RuntimeOption for inference this model, if it’s None, will use the default backend on CPU
+:param model_format: (fastdeploy.ModelForamt)Model format of the loaded model</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.vision.faceid.PartialFC.batch_predict">
+<span class="sig-name descname"><span class="pre">batch_predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">images</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fastdeploy.vision.faceid.PartialFC.batch_predict" title="Permalink to this definition">#</a></dt>
+<dd><p>Detect a batch of input image list</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>model_file</strong> – (str)Path of model file, e.g ./partial_fc.onnx</p></li>
-<li><p><strong>params_file</strong> – (str)Path of parameters file, e.g yolox/model.pdiparams, if the model_fomat is ModelFormat.ONNX, this param will be ignored, can be set as empty string</p></li>
-<li><p><strong>runtime_option</strong> – (fastdeploy.RuntimeOption)RuntimeOption for inference this model, if it’s None, will use the default backend on CPU</p></li>
-<li><p><strong>model_format</strong> – (fastdeploy.ModelForamt)Model format of the loaded model</p></li>
-</ul>
+<dd class="field-odd"><p><strong>im</strong> – (list of numpy.ndarray) The input image list, each element is a 3-D array with layout HWC, BGR format</p>
 </dd>
 </dl>
-<dl class="py property">
-<dt class="sig sig-object py" id="fastdeploy.vision.faceid.PartialFC.alpha">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">alpha</span></span><a class="headerlink" href="#fastdeploy.vision.faceid.PartialFC.alpha" title="Permalink to this definition">#</a></dt>
-<dd><p>Argument for image preprocessing step, alpha value for normalization, default alpha = [1.f / 127.5f, 1.f / 127.5f, 1.f / 127.5f]</p>
+<p>:return list of DetectionResult</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.vision.faceid.PartialFC.get_profile_time">
+<span class="sig-name descname"><span class="pre">get_profile_time</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fastdeploy.vision.faceid.PartialFC.get_profile_time" title="Permalink to this definition">#</a></dt>
+<dd><p>Get profile time of Runtime after the profile process is done.</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="fastdeploy.vision.faceid.PartialFC.beta">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">beta</span></span><a class="headerlink" href="#fastdeploy.vision.faceid.PartialFC.beta" title="Permalink to this definition">#</a></dt>
-<dd><p>Argument for image preprocessing step, beta values for normalization, default beta = {-1.f, -1.f, -1.f}</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="fastdeploy.vision.faceid.PartialFC.l2_normalize">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">l2_normalize</span></span><a class="headerlink" href="#fastdeploy.vision.faceid.PartialFC.l2_normalize" title="Permalink to this definition">#</a></dt>
-<dd><p>Argument for image preprocessing step, whether to apply l2 normalize to embedding values, default False;</p>
+<dt class="sig sig-object py" id="fastdeploy.vision.faceid.PartialFC.postprocessor">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">postprocessor</span></span><a class="headerlink" href="#fastdeploy.vision.faceid.PartialFC.postprocessor" title="Permalink to this definition">#</a></dt>
+<dd><p>Get InsightFaceRecognitionPostprocessor object of the loaded model</p>
+<p>:return InsightFaceRecognitionPostprocessor</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="fastdeploy.vision.faceid.PartialFC.predict">
-<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_image</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/faceid/contrib/partial_fc.html#PartialFC.predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.faceid.PartialFC.predict" title="Permalink to this definition">#</a></dt>
-<dd><p>Predict the face recognition result for an input image</p>
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">im</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fastdeploy.vision.faceid.PartialFC.predict" title="Permalink to this definition">#</a></dt>
+<dd><p>Detect an input image</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>input_image</strong> – (numpy.ndarray)The input image data, 3-D array with layout HWC, BGR format</p>
+<dd class="field-odd"><p><strong>im</strong> – (numpy.ndarray)The input image data, 3-D array with layout HWC, BGR format</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>FaceRecognitionResult</p>
+<dd class="field-even"><p>DetectionResult</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="fastdeploy.vision.faceid.PartialFC.size">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#fastdeploy.vision.faceid.PartialFC.size" title="Permalink to this definition">#</a></dt>
-<dd><p>Argument for image preprocessing step, the preprocess image size, tuple of (width, height), default (112, 112)</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="fastdeploy.vision.faceid.PartialFC.swap_rb">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">swap_rb</span></span><a class="headerlink" href="#fastdeploy.vision.faceid.PartialFC.swap_rb" title="Permalink to this definition">#</a></dt>
-<dd><p>Argument for image preprocessing step, whether to swap the B and R channel, such as BGR-&gt;RGB, default True.</p>
+<dt class="sig sig-object py" id="fastdeploy.vision.faceid.PartialFC.preprocessor">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">preprocessor</span></span><a class="headerlink" href="#fastdeploy.vision.faceid.PartialFC.preprocessor" title="Permalink to this definition">#</a></dt>
+<dd><p>Get InsightFaceRecognitionPreprocessor object of the loaded model</p>
+<p>:return InsightFaceRecognitionPreprocessor</p>
 </dd></dl>
 
 </dd></dl>
 
 </section>
 <section id="fastdeploy-vision-faceid-vpl">
-<h2>fastdeploy.vision.faceid.VPL<a class="headerlink" href="#fastdeploy-vision-faceid-vpl" title="Permalink to this headline">#</a></h2>
+<h2>fastdeploy.vision.faceid.VPL<a class="headerlink" href="#fastdeploy-vision-faceid-vpl" title="Permalink to this heading">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="fastdeploy.vision.faceid.VPL">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.faceid.</span></span><span class="sig-name descname"><span class="pre">VPL</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.ONNX:</span> <span class="pre">2&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/faceid/contrib/vpl.html#VPL"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.faceid.VPL" title="Permalink to this definition">#</a></dt>
-<dd><p>Load a VPL model exported by InsigtFace.</p>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fastdeploy.vision.faceid.</span></span><span class="sig-name descname"><span class="pre">VPL</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params_file=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">runtime_option=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format=&lt;ModelFormat.ONNX:</span> <span class="pre">2&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/faceid/contrib/insightface.html#VPL"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.faceid.VPL" title="Permalink to this definition">#</a></dt>
+<dd><p>Load a VPL model exported by PaddleClas.
+:param model_file: (str)Path of model file, e.g VPL/model.pdmodel
+:param params_file: (str)Path of parameters file, e.g VPL/model.pdiparams, if the model_fomat is ModelFormat.ONNX, this param will be ignored, can be set as empty string
+:param runtime_option: (fastdeploy.RuntimeOption)RuntimeOption for inference this model, if it’s None, will use the default backend on CPU
+:param model_format: (fastdeploy.ModelForamt)Model format of the loaded model</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.vision.faceid.VPL.batch_predict">
+<span class="sig-name descname"><span class="pre">batch_predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">images</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fastdeploy.vision.faceid.VPL.batch_predict" title="Permalink to this definition">#</a></dt>
+<dd><p>Detect a batch of input image list</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>model_file</strong> – (str)Path of model file, e.g ./vpl.onnx</p></li>
-<li><p><strong>params_file</strong> – (str)Path of parameters file, e.g yolox/model.pdiparams, if the model_fomat is ModelFormat.ONNX, this param will be ignored, can be set as empty string</p></li>
-<li><p><strong>runtime_option</strong> – (fastdeploy.RuntimeOption)RuntimeOption for inference this model, if it’s None, will use the default backend on CPU</p></li>
-<li><p><strong>model_format</strong> – (fastdeploy.ModelForamt)Model format of the loaded model</p></li>
-</ul>
+<dd class="field-odd"><p><strong>im</strong> – (list of numpy.ndarray) The input image list, each element is a 3-D array with layout HWC, BGR format</p>
 </dd>
 </dl>
-<dl class="py property">
-<dt class="sig sig-object py" id="fastdeploy.vision.faceid.VPL.alpha">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">alpha</span></span><a class="headerlink" href="#fastdeploy.vision.faceid.VPL.alpha" title="Permalink to this definition">#</a></dt>
-<dd><p>Argument for image preprocessing step, alpha value for normalization, default alpha = [1.f / 127.5f, 1.f / 127.5f, 1.f / 127.5f]</p>
+<p>:return list of DetectionResult</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fastdeploy.vision.faceid.VPL.get_profile_time">
+<span class="sig-name descname"><span class="pre">get_profile_time</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fastdeploy.vision.faceid.VPL.get_profile_time" title="Permalink to this definition">#</a></dt>
+<dd><p>Get profile time of Runtime after the profile process is done.</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="fastdeploy.vision.faceid.VPL.beta">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">beta</span></span><a class="headerlink" href="#fastdeploy.vision.faceid.VPL.beta" title="Permalink to this definition">#</a></dt>
-<dd><p>Argument for image preprocessing step, beta values for normalization, default beta = {-1.f, -1.f, -1.f}</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="fastdeploy.vision.faceid.VPL.l2_normalize">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">l2_normalize</span></span><a class="headerlink" href="#fastdeploy.vision.faceid.VPL.l2_normalize" title="Permalink to this definition">#</a></dt>
-<dd><p>Argument for image preprocessing step, whether to apply l2 normalize to embedding values, default False;</p>
+<dt class="sig sig-object py" id="fastdeploy.vision.faceid.VPL.postprocessor">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">postprocessor</span></span><a class="headerlink" href="#fastdeploy.vision.faceid.VPL.postprocessor" title="Permalink to this definition">#</a></dt>
+<dd><p>Get InsightFaceRecognitionPostprocessor object of the loaded model</p>
+<p>:return InsightFaceRecognitionPostprocessor</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="fastdeploy.vision.faceid.VPL.predict">
-<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_image</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/fastdeploy/vision/faceid/contrib/vpl.html#VPL.predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fastdeploy.vision.faceid.VPL.predict" title="Permalink to this definition">#</a></dt>
-<dd><p>Predict the face recognition result for an input image</p>
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">im</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fastdeploy.vision.faceid.VPL.predict" title="Permalink to this definition">#</a></dt>
+<dd><p>Detect an input image</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>input_image</strong> – (numpy.ndarray)The input image data, 3-D array with layout HWC, BGR format</p>
+<dd class="field-odd"><p><strong>im</strong> – (numpy.ndarray)The input image data, 3-D array with layout HWC, BGR format</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>FaceRecognitionResult</p>
+<dd class="field-even"><p>DetectionResult</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="fastdeploy.vision.faceid.VPL.size">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">size</span></span><a class="headerlink" href="#fastdeploy.vision.faceid.VPL.size" title="Permalink to this definition">#</a></dt>
-<dd><p>Argument for image preprocessing step, the preprocess image size, tuple of (width, height), default (112, 112)</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="fastdeploy.vision.faceid.VPL.swap_rb">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">swap_rb</span></span><a class="headerlink" href="#fastdeploy.vision.faceid.VPL.swap_rb" title="Permalink to this definition">#</a></dt>
-<dd><p>Argument for image preprocessing step, whether to swap the B and R channel, such as BGR-&gt;RGB, default True.</p>
+<dt class="sig sig-object py" id="fastdeploy.vision.faceid.VPL.preprocessor">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">preprocessor</span></span><a class="headerlink" href="#fastdeploy.vision.faceid.VPL.preprocessor" title="Permalink to this definition">#</a></dt>
+<dd><p>Get InsightFaceRecognitionPreprocessor object of the loaded model</p>
+<p>:return InsightFaceRecognitionPreprocessor</p>
 </dd></dl>
 
 </dd></dl>
@@ -697,50 +667,153 @@ title="Print to PDF"
 </section>
 
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="matting.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Matting(图像抠图)</p>
-        </div>
+
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="matting.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Matting(图像抠图)</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="face_detection.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="face_detection.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Face Detection(人脸检测)</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy-vision-faceid-adaface">fastdeploy.vision.faceid.AdaFace</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.faceid.AdaFace"><code class="docutils literal notranslate"><span class="pre">AdaFace</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.faceid.AdaFace.batch_predict"><code class="docutils literal notranslate"><span class="pre">AdaFace.batch_predict()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.faceid.AdaFace.get_profile_time"><code class="docutils literal notranslate"><span class="pre">AdaFace.get_profile_time()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.faceid.AdaFace.postprocessor"><code class="docutils literal notranslate"><span class="pre">AdaFace.postprocessor</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.faceid.AdaFace.predict"><code class="docutils literal notranslate"><span class="pre">AdaFace.predict()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.faceid.AdaFace.preprocessor"><code class="docutils literal notranslate"><span class="pre">AdaFace.preprocessor</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy-vision-faceid-cosface">fastdeploy.vision.faceid.CosFace</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.faceid.CosFace"><code class="docutils literal notranslate"><span class="pre">CosFace</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.faceid.CosFace.batch_predict"><code class="docutils literal notranslate"><span class="pre">CosFace.batch_predict()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.faceid.CosFace.get_profile_time"><code class="docutils literal notranslate"><span class="pre">CosFace.get_profile_time()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.faceid.CosFace.postprocessor"><code class="docutils literal notranslate"><span class="pre">CosFace.postprocessor</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.faceid.CosFace.predict"><code class="docutils literal notranslate"><span class="pre">CosFace.predict()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.faceid.CosFace.preprocessor"><code class="docutils literal notranslate"><span class="pre">CosFace.preprocessor</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy-vision-faceid-arcface">fastdeploy.vision.faceid.ArcFace</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.faceid.ArcFace"><code class="docutils literal notranslate"><span class="pre">ArcFace</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.faceid.ArcFace.batch_predict"><code class="docutils literal notranslate"><span class="pre">ArcFace.batch_predict()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.faceid.ArcFace.get_profile_time"><code class="docutils literal notranslate"><span class="pre">ArcFace.get_profile_time()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.faceid.ArcFace.postprocessor"><code class="docutils literal notranslate"><span class="pre">ArcFace.postprocessor</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.faceid.ArcFace.predict"><code class="docutils literal notranslate"><span class="pre">ArcFace.predict()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.faceid.ArcFace.preprocessor"><code class="docutils literal notranslate"><span class="pre">ArcFace.preprocessor</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy-vision-faceid-partialfc">fastdeploy.vision.faceid.PartialFC</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.faceid.PartialFC"><code class="docutils literal notranslate"><span class="pre">PartialFC</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.faceid.PartialFC.batch_predict"><code class="docutils literal notranslate"><span class="pre">PartialFC.batch_predict()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.faceid.PartialFC.get_profile_time"><code class="docutils literal notranslate"><span class="pre">PartialFC.get_profile_time()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.faceid.PartialFC.postprocessor"><code class="docutils literal notranslate"><span class="pre">PartialFC.postprocessor</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.faceid.PartialFC.predict"><code class="docutils literal notranslate"><span class="pre">PartialFC.predict()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.faceid.PartialFC.preprocessor"><code class="docutils literal notranslate"><span class="pre">PartialFC.preprocessor</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy-vision-faceid-vpl">fastdeploy.vision.faceid.VPL</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.faceid.VPL"><code class="docutils literal notranslate"><span class="pre">VPL</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.faceid.VPL.batch_predict"><code class="docutils literal notranslate"><span class="pre">VPL.batch_predict()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.faceid.VPL.get_profile_time"><code class="docutils literal notranslate"><span class="pre">VPL.get_profile_time()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.faceid.VPL.postprocessor"><code class="docutils literal notranslate"><span class="pre">VPL.postprocessor</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.faceid.VPL.predict"><code class="docutils literal notranslate"><span class="pre">VPL.predict()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fastdeploy.vision.faceid.VPL.preprocessor"><code class="docutils literal notranslate"><span class="pre">VPL.preprocessor</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
   
-    By PaddlePaddle<br/>
-  
-      &copy; Copyright 2022, PaddlePaddle.<br/>
-</p>
-        </footer>
-    </div>
+  <div class="footer-item">
     
-</div>
+<p class="component-author">
+By PaddlePaddle
+</p>
 
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022, PaddlePaddle.
+      <br/>
+    
+  </p>
 
-      </div>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div></div>
+          </footer>
+        
+
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>
